@@ -1,0 +1,8 @@
+book_filename: "introduction_to_statistics"
+output_dir: docs
+delete_merged_file: true
+edit: https://github.com/amlanbanerjee/introduction_to_statistics/edit/master/%s
+view: https://github.com/amlanbanerjee/introduction_to_statistics/blob/master/%s
+language:
+  ui:
+    chapter_name: "Chapter "

@@ -1,0 +1,333 @@
+# Estimating Parameters and Determining Sample Sizes
+
+
+**Learning Outcome**
+
+---
+Perform calculations to estimate parameters using confidence intervals based on the normal distribution and t-distribution.
+---
+
+
+In this chapter, we will use sample data to estimate values of population parameters (such as a population proportions or population mean). We will learn how to construct a confidence interval estimate of a population proportion and interpret such confidence interval estimates. Finally, we will learn how to determine the sample size necessary to estimate a population proportion.
+
+
+## Estimate a Population Proportion 
+
+This section presents methods for using a sample proportion $(\hat p)$ to make an inference about the value of the corresponding population proportion $(p)$. 
+
+
+#### Point Estimate {-}
+
+A **point estimate** is a single value used to estimate a population parameter.
+
+For example, the sample proportion $\hat p$ is the best point estimate (also called *unbiased estimator*) of the population proportion $p$.
+
+---
+
+**Unbiased Estimator: ** An unbiased estimator is a statistic that targets the value of the corresponding population parameter in the sense that the sampling distribution of the statistic has a mean that is equal to the corresponding population parameter. 
+
+For example, the statistic $\hat p$ targets the population proportion $p$, $E(\mathbf {\hat p} ) = p.$
+
+Also, $\hat p$ is the consistent estimator of $p$ because as the sample size $n$ increases to indefinitely, the resulting sequences of $\hat p$ converges in probability to $p$. 
+
+![Consistent Estimator](Consistency_of_estimator.png)
+
+
+${T_1, T_2, T_3, ...}$ is a sequence of estimators for parameter $\theta_0$, the true value of which is $4$. This sequence is consistent: the estimators are getting more and more concentrated near the true value $\theta_0$. The limiting distribution of the sequence is a degenerate random variable which equals $\theta_0$ with probability $1$.
+
+An unbiased estimator can be inconsistent - meaning its expected value is equal to the population parameter, but it does not consistently converge to any value as $n$ increases. 
+
+On the other hand, a **consistent estimator** can be biased - meaning it consistently converges to the correct population parameter, but its expected value is higher or lower than the targeted value.   
+
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Consistent_estimator)
+
+---
+
+## Confidence Intervals
+
+A point estimate provides a single plausible value for a parameter. However, a point
+estimate is rarely perfect; usually there is some error in the estimate. In addition to
+supplying a point estimate of a parameter, a next logical step would be to provide a
+plausible range of values for the parameter.
+
+A **confidence interval or (interval estimate)** is a range (or an interval) of values used to estimate the true value of a population parameter. A confidence interval is sometimes abbreviated as CI.  
+
+The **confidence level** is the probability $1-\alpha$ (such as $0.95$, or $95\%$) that the confidence interval actually does contain the population parameter, assuming that the estimate process is repeated a large number of times. (The confidence level is also called the **degree of confidence**, or the **confidence coefficient**.)
+
+#### **Constructing a $95\%$ confidence interval** {-}
+
+When the sampling distribution of a point estimate can reasonably be modeled as
+normal, the point estimate we observe will be within $1.96$ standard errors of the
+true value of interest about $95\%$ of the time. Thus, a $95\%$ confidence interval
+for such a point estimate can be constructed:
+
+$\text {point estimate} \pm 1.96 \times SE$
+
+
+![95% confidence interval](95percent_confidence_interval.png)
+
+
+#### Simulating Confidence Intervals {-}
+  
+$50$ samples of size $n = 300$ were drawn from a population with proportion parameter $p = 0.30$. For each sample, a confidence interval was created to capture the true proportion $p$. How many did not capture $p = 0.30?$
+  
+  
+```{r message=FALSE, warning=FALSE, include=FALSE}
+source('95PercentConfidenceInterval.R')
+```
+  
+
+```{r echo=FALSE, out.width=750}
+knitr::include_graphics("95PercentConfidenceInterval.png")
+```
+
+
+#### Generalizing Confidence Interval {-}
+
+If the point estimate follows the normal model with standard error $SE$, then a confidence interval for the population parameter is 
+
+
+$$
+\text {point estimate} \pm z{^{\star}_{\alpha/2}} \times SE
+$$
+  
+where $z^\star$ , the **critical value**, depends on the confidence level ($CL$) selected, and $\alpha = 1-CL$
+  
+  
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+source('choosingZForCI.R')
+```
+
+```{r include=FALSE, out.width=750}
+knitr::include_graphics("choosingZForCI.png")
+```
+
+
+#### Calculating Confidence Intervals {-}
+
+**Example:** The heart patients who receive stents are $9\%$ more likely to suffer stroke from usage of the stent than those who do not have it. The estimate's standard error $(SE)$ is $0.028$. Construct a $95\%$ confidence interval for the change in strole rates from the usage of stent.
+  
+$$
+  \begin{align}
+\text {95% Confidence Interval} &= \text {point estimate} \pm 1.96 \times SE \\
+&= 0.090 \pm 1.96 \times 0.028 \\
+&=(0.035, 0.145)
+\end{align}
+$$
+  
+$$
+  \begin{align}
+\text {90% Confidence Interval} &= \text {point estimate} \pm 1.645 \times SE \\
+&= 0.090 \pm 1.645 \times 0.028 \\
+&=(0.044, 0.136)
+\end{align}
+$$
+  
+  
+### Margin of Error (ME)
+  
+The **margin of error (ME)** is the distance between the point estimate and the lower or upper bound of a confidence interval.   
+
+$$
+\begin{align}
+\text{confidence interval} &= \text {point estimate} \pm z{^{\star}_{\alpha/2}} \times SE \\
+&= \text {point estimate} \pm \text{margin of error}
+\end{align}
+$$
+  
+### Finding sample Size Using $z$ Statistic
+  
+**Example: ** A pilot study showed that $0.5\%$ of credit card offers in the mail end up with the person signing up. To be within $0.1\%$ of the true rate with $95\%$ confidence, how big does the test mailing have to be?
+  
+$$
+\begin{align}
+ME &= z{^{\star}_{\alpha/2}} \times SE \\
+ME &= z{^{\star}_{\alpha/2}} \times \sqrt \frac{\hat p \hat q}{n} \\
+0.001 &= 1.96 \times \sqrt \frac{(0.005)(0.995)}{n} \\  
+(0.001)^2 &= (1.96)^2 \times \frac{(0.005)(0.995)}{n} \\  
+n &= (1.96)^2 \times \frac{(0.005)(0.995)}{(0.001)^2} \\  
+n &= 19112
+\end{align}
+$$
+  
+  
+### Estimating a Population Mean When $\sigma$ is known 
+  
+It is extremely rare that we want to estimate an unknown value of a population mean $\mu$ but we somehow know the value of the population standard deviation $\sigma$. If we somehow do know the value of $\sigma$, the confidence interval is constructed using the standard normal distribution instead of the Student $t$ distribution.
+
+$$
+ME  = z_{\alpha/2}.\frac{\sigma}{\sqrt{n}} \text { ;  use with known } \sigma
+$$
+$$
+n = 15, \bar x = 30.9, \sigma = 2.9, CL = 95\% \\
+ME = 1.96.\frac{2.9}{\sqrt{15}} = 1.46760 \\
+\bar x - ME < \mu < \bar x + ME \\
+30.9 - 1.46760 < \mu < 30.9 + 1.46760 \\
+29.4 < \mu < 32.4 
+$$
+  
+### Estimating a Population Mean When $\sigma$ is not known 
+  
+$\text {The sample mean } \bar x \text { is the best estimate of the population mean } \mu.$
+  
+In this case, standard error to calculate CI about $\bar x$ is estimated from the sample mean. The distribution used here is called $\text{Student } t \text{ Distribution}.$
+  
+  
+### $\text {Student }  t- \text { Distribution}$
+  
+According to the Central Limit Theorem, the sampling distribution of a statistic (e.g. sample mean) will follow a normal distribution, as long as the sample size is sufficiently large ($n>30$).    
+
+But sample sizes are sometimes small, and often we do not know the standard deviation of the population. When either of these problems occur, statisticians rely on the distribution of the $\text {t-statistic (t-score)}$ with the degrees of freedom $(n-1)$, 
+
+$t = \frac {\bar x - \mu}{s/\sqrt n}$
+  
+$\text{Degrees of Freedom} = n - 1$
+  
+$\text {t-distribution }$ is determined by its **degrees of freedom.** The degrees of freedom refers to the number of independent observations in a set of data.
+
+
+**Properties of the $\text {t-Distribution:}$**
+  
+* The mean of the distribution is equal to $0$.
+* The variance is equal to $\frac {v}{v-2}$, where $v$ is the DF and $v \ge 2$. 
+
+
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+source("tDistCompareToNormalDist.R")
+source("tDistConvergeToNormalDist.R")
+```
+
+
+```{r include=FALSE, out.width=750}
+knitr::include_graphics("tDistCompareToNormalDist.png")
+```
+
+
+```{r include=FALSE, out.width=750}
+knitr::include_graphics("tDistConvergeToNormalDist.png")
+```
+
+### $t \text { Confidence Interval}$ 
+
+Find a $95\%$ confidence interval for mirex concentrations in salmon. 
+
+$$
+\begin{align}
+n &= 150 \\
+\bar x &= 0.0913 \space ppm \\
+s &= 0.0495 \space ppm \\
+df &= 150 - 1 = 149 \\ \\
+SE(\bar x) &= \frac{0.0495}{\sqrt{150}} = 0.0040 \\
+t^*_{149} &= 1.976 \\ \\
+\text {Confidence Interval of } \bar x: \\
+&\bar x \pm t^*_{149} \times SE(\bar x) \\
+&= 0.0913 \pm 1.976 \times 0.0040 \\
+&= 0.0913 \pm 0.0079 \\
+&= (0.0834, 0.0992) 
+\end{align}
+$$
+  
+
+
+### Finding Sample Size Using $t$ Stat
+
+Should you buy a movie download accelerator? To test the download times, find the minimum number of downloads that you need to do during a free trial period to obtain a $95\%$ CL with a ME < $8$ minutes. Given, $\sigma = 10 \space min$
+  
+  
+First, calculate $n$ using $z-score$
+  
+$$
+\begin{align}
+ME &< 8 \\ \\
+\text {with } z^* &= 2 \text { at 95% CL} \\ \\
+2 \times \frac {10}{\sqrt n} &< 8 \\
+n &> 6.25 \\
+n &\approx 7 \\ \\
+\end{align}
+$$
+  
+Sample size turns out to be too small for normal approximation. Therefore, re-esimate $n$ using $t-score$.
+
+$$
+  \begin{align}
+df &= 7 - 1 = 6 \\ \\
+\text {with } t^*_6 &= 2.447 \text { at 95% CL} \\ \\
+2.447 \times \frac {10}{\sqrt n} &< 8 \\
+n &> 9.36 \\
+n &\approx 10 \\ \\
+\end{align}
+$$
+  
+  
+Hence, at least 10 trial downloads need to be run to make sure ME remains less than $8$ min.
+
+
+### Choosing between Student $t$ and $z$ Distributions
+
+$$
+\begin{array}{l|c}
+conditions & \text{method} \\
+\hline
+\sigma \text{ not known; normally distributed population or n > 30} & t \\
+\hline
+\sigma \text{ known; normally distributed population or n >30} & z 
+\end{array}
+$$
+  
+### Estimating a Population Standard Deviation or Variance
+  
+This section presents methods for using a sample standard deviation $s$ (or a sample variance $s^2$) to estimate the value of the corresponding population standard deviation $\sigma$ (or population variance $\sigma^2$). 
+
+- **Point Estimate:** The sample variance $s^2$ is the best point estimator of the population variance $\sigma^2$. The sample standard deviation $s$ is commonly used as a point estimate of $\sigma$, even though it is a biased estimator.
+
+- **Confidence Interval:** When constructing a *confidence interval* estimate of a population standard deviation (or population variance), we construct the confidence interval using the $\chi^2 \text{ distribution}$. 
+
+
+
+## Chi-Squared $\chi^2$ Distribution
+
+* In a normally distributed population with variance $\sigma^2$, if we randomly select independent samples of size $n$ and, for each sample, compute the sample variance $s^2$, the sample statistic $\chi^2 = (n -1)s^2/{\sigma^2}$ has sampling distribution called the **chi-squared distribution,**
+  
+$$
+  \chi^2 = \frac{(n-1)s^2}{\sigma^2}
+$$
+  
+* $\text{Degrees of freedom: df } = n -1$
+* $\chi^2 \text{ distribution }$ is skewed to the right, unlike normal and student $t$ distributions.   
+* $\chi^2 \ge 0$   
+* The chi-squared distribution is different for each number of degrees of freedom. As the degrees of freedom increases, chi-squared distribution approaches a normal distribution.
+
+
+![](chiSquareDistributionWithInceasingDF.jpg)
+
+
+### Confidence Interval for Estimating a Population Standard Deviation or Variance
+
+**Confidence Interval for the Population Variance $\sigma^2$**  
+  
+$$
+  \frac{(n-1)s^2}{\chi^2_L} < \sigma^2 < \frac{(n-1)s^2}{\chi^2_R}
+$$
+  
+  **Confidence Interval for the Population Variance $\sigma$**
+  
+$$
+  \sqrt{\frac{(n-1)s^2}{\chi^2_L}} < \sigma < \sqrt{\frac{(n-1)s^2}{\chi^2_R}}
+$$
+  
+  
+### Confidence Interval for Estimating a Population Standard Deviation or Variance
+  
+$$
+\begin{align}
+&s = 14.29263 \\
+&n = 22 \\
+&CL = 95\%  \\ \\
+&\frac{(n-1)s^2}{\chi^2_L} < \sigma^2 < \frac{(n-1)s^2}{\chi^2_R} \\ \\
+&\frac{21.(14.29263)^2}{10.283^2} < \sigma^2 < \frac{21.(14.29263)^2}{35.479^2} \\ \\
+&120.9 < \sigma^2 < 417.2 \\
+&11.0 < \sigma < 20.4
+\end{align}
+$$

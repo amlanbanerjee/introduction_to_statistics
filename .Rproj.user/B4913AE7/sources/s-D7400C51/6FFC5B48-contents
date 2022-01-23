@@ -1,0 +1,499 @@
+---
+output: 
+  pdf_document:
+    citation_package: natbib
+    keep_tex: true
+    fig_caption: true
+    highlight: tango
+    latex_engine: pdflatex
+    template: svm-latex-ms.tex
+bibliography: master.bib
+header-includes:
+  - \usepackage{hyperref}
+  - \usepackage{array}   
+  - \usepackage{caption}
+  - \usepackage{graphicx}
+  - \usepackage{siunitx}
+  - \usepackage[table]{xcolor}
+  - \usepackage{multirow}
+  - \usepackage{hhline}
+  - \usepackage{calc}
+  - \usepackage{tabularx}
+  - \usepackage{fontawesome}
+  - \usepackage{bookmark}
+  - \usepackage[para,online,flushleft]{threeparttable}
+  - \usepackage{amsmath}
+biblio-style: apsr
+title: |
+    | *\small Work in progress* 
+    | Time Series Forecasting of NEA Membership
+thanks: "**Current version**: `r format(Sys.time(), '%B %d, %Y')`; **Corresponding author**: Amlan Banerjee, abanerjee@nea.org."
+author:
+- name: DA, EDIS
+  affiliation: Center for Innovation and Technology
+- name: Research
+  affiliation: Center for Education Policy and Implementation
+abstract: "This document provides a technical overview of the time series models estimated to forecast NEA membership. While the statistical models presented here are based on sound theoretical foundations and found to be highly accurate in fitting the historical data, to forecast NEA membership they draw on projected economic data that are based on assumptions about the future economic conditions in the US public education sector. The membership projections are intended to inform organizational decision-making; however, given the uncertainty involved with any economic forecasts, they should be interpreted and used with caution. The projections are updated monthly as the new membership data from NEA and employment  data from CPS and BLS become available."
+keywords: "NEA Membership, Public Education Sector Employment, Forecasting"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+geometry: margin=1in
+fontfamily: mathpazo # libertine
+fontsize: 12pt
+# spacing: double
+endnote: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE,
+                      message=FALSE, warning=FALSE,
+                      fig.path='figs/',
+                      cache.path = '_cache/',
+                      fig.process = function(x) {
+                      x2 = sub('-\\d+([.][a-z]+)$', '\\1', x)
+                      if (file.rename(x, x2)) x2 else x
+                      })
+```
+
+
+# \Large Introduction to Forecasting
+
+Forecasting is a common statistical practice in business, where it helps to inform organizational planning about optimal resource allocation and provides a guide to long-term strategic planning. \newline 
+
+Forecasting is about predicting the future as accurately as possible, given all of the information available, including historical data and knowledge of any future events that might impact the forecasts. It should be an integral part of the decision-making activities of the NEA management, as it can play an important role in many areas of the organization. In general, modern organizations require short-term, medium-term and long-term forecasts, depending on the specific application. \newline  
+
+**Short-term forecasts** could be used as part of personnel and scheduling planning process. In the context of NEA, short-term membership forecasts are done at the monthly level over a one- to two-year forecasting horizon. \newline
+
+
+**Medium-term forecasts** could be used to determine future resource requirements and financial planning. These forecasts are aggregated at the yearly level over a three- to five-years forecasting horizon. \newline
+
+
+**Long-term forecasts** could be used for strategic planning. These forecasts are aggregated at the annual level over a six- to ten-years forecasting horizon. \newline
+  
+Forecasting system is a dynamic process that evolves over time. It requires expertise in identifying forecasting problems, applying a range of forecasting methods, selecting appropriate methods for each problem, and evaluating and refining forecasting methods over time. It is also important to have strong organizational support for the use of formal forecasting methods if they are to be used successfully.
+
+
+# \Large Time Series Forecasting
+
+Any event that is observed sequentially over time produces time series data. The prediction methods that draw on the time series data are called time series forecasting. Now, the time series forecasting can be applied to model a situation when two conditions are satisfied:
+
+1. numerical information about the past is available;
+2. it is reasonable to assume that some aspects of the past patterns will continue into the future.
+
+
+NEA maintains a database of current and past members going back to several decades. The number of members counted on a weekly, monthly, or annual basis can be considered a time series and therefore such series can be modeled to forecast the organization's membership trend. 
+
+
+# \large NEA Membership Data
+
+Storing and tracking membership information over time in a large enterprise like NEA is a fairly complex undertaking. Maintaining accurate member records depends not only on the HQ data infrastructure but also on the State Affiliates who ultimately input the membership data into the centralized system. \newline
+
+
+For the purpose of forecasting, we divide the membership data into four mutually exclusive time series:
+
+  1) continuing membership
+  2) new membership
+  3) canceled continuing membership
+  4) canceled new membership 
+  
+Therefore, at any given time,  
+
+$$
+\text{ total membership } =  
+\text{ (continuing } + 
+\text{ new) }  -  
+\text{ (canceled continuing } + 
+\text{ canceled new) } 
+$$  
+Each of the above time series is further divided into nine series based on membership type and employer level: 
+
+$$
+\{ \text { Professional, ESP, Other } \}  \times  \{  \text { PK-12, HE, Other \}}
+$$
+
+Each series demonstrates unique characteristics and requires selection of appropriate forecasting methods to deal with it. The chart below shows NEA's monthly counts of continuing PK-12 professional membership. The annual cyclical pattern of the time series gives us a glimpse of how the membership accounting system works. At the beginning of each school year, the vast majority of the continuing members are batch-processed in September; however, the State Affiliates continue to process memberships throughout the year (at much smaller scale) - which gives the cumulative series a concave shape between September and August. The sharp drop from August to September suggests that not all continuing members are processed right way in September. The difference between two consecutive peaks in August shows the net loss or gain of continuing membership. This pattern repeats every membership year. \newline
+
+
+![NEA Monthly Membership (SY 2005 - 2022) : PK-12, Professional, Continuing](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/note_membership_continuing.png)
+
+
+\bigskip
+
+
+The time series above exhibits a pattern that is comprised of multiple components - trend, seasonality (*a fixed pattern that repeats at the same time of the year*), and random noise (*includes data entry anomalies*). One of the first steps of time series modeling is to split the series into several components to improve our understanding of the time series and  make a determination about what components should be extracted to improve forecast accuracy.
+
+
+---
+
+**Note on count data:** Time series models are commonly applied to the data that have a continuous sample space. But data often comes in the form of counts such as NEA membership data. Although discrete (count) quantitative variables are handled differently in statistical theory than continuous quantitative data, in practice this rarely matters provided the counts observed at any given time point are sufficiently large. If the minimum count is at least 100, which is true to any time series we analyze here, then the difference between a continuous sample space $[100, \infty]$ and the discrete sample space $\{ 100, 101, 102, \cdots \}$  has no perceivable effect on the forecasts. 
+
+---
+
+
+
+# \Large STL Decomposition
+
+In this project, we employ a robust time series decomposition method called **STL (Seasonal and Trend decomposition using Loess).**[^1] The STL algorithm is designed to handle any type of decomposition, regardless of the length of the seasonality window. The seasonal component is allowed to change over time and the smoothness of trend cycle can be controlled by the modeler. It can be robust to outliers, so that occasional unusual observations will not affect the estimates of the trend-cycle and seasonal components; rather they will be collected by the remainder component. \newline
+
+[^1]: Cleveland, R. B., Cleveland, W. S., McRae, J. E., & Terpenning, I. J. (1990). STL: A seasonal-trend decomposition procedure based on loess. Journal of Official Statistics, 6(1), 3â33. [http://bit.ly/stl1990](http://bit.ly/stl1990)
+
+
+The STL decomposition equation can be written as: 
+
+\begin{equation}
+y_t = T_t + S_t + R_t
+\end{equation}
+
+
+where, $y_t$ is the observed time series, $T_t$ is the smoothed trend component, $S_t$ is the seasonal component, and $R_t$ is the remainder component. \newline
+
+The strength of the trend component is defined as: 
+
+$$
+\displaystyle F_T = \text{max} \bigg( 0,1 - \dfrac{VAR(R_t)}{Var(T_t + R_t)} \bigg)
+$$
+
+This gives a measure of the strength of the trend between $0$ and $1$. For strongly trended data, the seasonally adjusted data should have much more variation than the remainder component. Hence, $F_T$ will be close to $1$. \newline
+
+The strength of seasonality is defined similarly, but with respect to the detrended data rather than the seasonally adjusted data: 
+
+$$
+\displaystyle F_S = \text{max} \bigg( 0,1 - \dfrac{VAR(R_t)}{Var(S_t + R_t)} \bigg)
+$$
+
+A series with seasonal strength $F_S$ close to $0$ exhibits almost no seasonality, while a series with strong seasonality will have $F_S$ close to $1$ because $Var(R_t)$ will be much smaller than $Var(S_t + R_t)$. \newline 
+
+
+![STL Decomposition: NEA Monthly Membership (SY 2005 - 2022)](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/note_membership_STL.png)
+
+
+Figure 2 shows STL decomposition of the membership time series. The series is decomposed into three components - (1) a downward sloping trend-cycle $(T_t)$; (2) a yearly seasonal component $(S_t)$; and (3) a remainder component or the noise in the data $(R_t)$, which consists of random fluctuations and data processing irregularities. \newline
+
+The trend strength,  $F_T = 0.88$, indicates that the series is strongly trended, and 
+the seasonality strength $F_S = 0.813$, indicates that it is also strongly seasonal. \newline
+
+To remove the noise from the data, we subtracted the reminder component from the original time series. The resulting time series $y_t = T_t + S_t$, i.e. the combination of trend-cycle and seasonal components, shown in Figure 3, was subsequently fitted with an appropriate time series model and generated forecasts. \newline
+
+
+![Adjusted NEA Monthly Membership (SY 2005 - 2022)](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/note_membership_STL_minus_remainder.png)
+
+
+# \Large Autocorrelation
+
+Autocorrelation measures the linear relationship between lagged values of a time series. This exploratory analysis of the time series is conducted to inform appropriate selection of modeling methodology. The bottom panel of Figure 4 shows the autocorrelation function (ACF) and partial autocorrelation function (PACF) plots for the monthly membership time series. The ACF  plot shows a trend characterized by the large positive autocorrelations for small lags. The autocorrelations in the data are also larger at 12-month seasonal lag, indicating seasonality. Therefore, we find that the NEA membership data is characterized by trend, seasonality, and autocorrelation.
+
+
+
+![ACF Plot of Adjusted NEA Monthly Membership Time Series](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/correlogram.png)
+
+
+# \Large Autoregressive Time Series Models
+
+To describe the autocorrelation in the data, we apply AutoRegressive Integrated Moving Average (ARIMA) class of models, which are remarkably flexible at handling a wide range of different time series patterns. \newline
+
+
+Seasonal ARIMA models are identified by four components ($p, d, q, m$). The generalized equation of a seasonal ARIMA model can be written as:
+
+
+
+\begin{equation}\label{eq:arima}
+  (1-\phi_1B - \cdots - \phi_p B^p)(1- \Phi_{1,p} B^m)(1-B)^d(1-B^m)y_t = 
+  (1+\theta_1 B + \cdots + \theta_q B^q)(1 + \Theta_{1,q} B^m) \epsilon_t
+\end{equation}
+
+
+where, 
+
+$y_t$ is the observed time series to be modeled. 
+
+$\epsilon_t$ is the random noise in the time series.
+
+$B$ is the backshift notation: $B^my_t = y_{t-m}$. 
+
+$p$ is the order of the autoregressive part. 
+
+$d$ is the degree of first differencing. 
+
+$q$ is the order of the moving average. 
+
+$m$ is the season period (e.g. number of observation per year).  
+
+$\phi, \theta$ are the model parameters estimated from the data.  \newline
+
+
+We further extended the ARIMA models in order to allow other exogenous economic factors relevant to NEA's membership dynamics to be included in the models. These extended versions of the ARIMA models are called **dynamic regression models.** The added regression component to model (\ref{eq:arima}) can be written in the following form:
+
+\begin{equation}
+y_t = \beta_0 + \beta_1 U_t + \beta_1 N_t + \beta_2 H_t + \beta_3 L_t + \beta_4 Q_t + \beta_5 S_t + \beta_6 P_t + 
+\beta_7 J_t + \beta_8 V_t + \eta_t
+\end{equation}
+
+where,
+
+$U =$ public education sector unemployment rate  
+
+$N =$ public education sector not in labor force rate  
+
+$H =$ public education sector hires rate  
+
+$L =$ public education sector layoffs rate    
+
+$Q =$ public education sector quits rate  
+
+$S =$ public education sector other separations rate  
+
+$P =$ consumer price index  
+
+$J =$ categorical indicator for Janus ruling  
+
+$V =$ categorical indicator for Covid-19  
+
+$\eta =$ random noise  \newline
+
+The relationship between $\epsilon_t$ and $\eta_t$ follows eq (\ref{eq:arima}),
+
+
+
+\begin{equation}
+  (1-\phi_1B - \cdots - \phi_p B^p)(1- \Phi_{1,p} B^m)(1-B)^d(1-B^m)\eta_t = 
+  (1+\theta_1 B + \cdots + \theta_q B^q)(1 + \Theta_{1,q} B^m) \epsilon_t
+\end{equation}  \newline
+
+Notice that the model has two error terms here â the error from the regression model, which we denote by 
+$\eta_t$, and the error from the ARIMA model, which we denote by $\epsilon_t$. Only the ARIMA model errors are assumed to be white noise. \newline
+
+
+# \large Neural Network Autoregression (NNAR)
+
+We estimated ARIMA models within the neural network framework. We employed a feed-forward network in which the neurons are organized in three layers: (1) the bottom layer identifies the lagged values of the original membership and employment time series; (2) the hidden middle layer is useful for fitting non-linear structure in the data; and (3) the top layer identifies the predictions. NNAR models offer remarkable flexibility in modeling nonlinear relationships and functional forms, without the restrictions imposed by the ARIMA on the model parameters to ensure stationarity. In its generalized form, an $\displaystyle NNAR(p, P=1, k)_m$ model has inputs $y_{t-1}, y_{t-2}, \cdots, y_{t-p}, y_{t-m}, y_{t-2m}, \cdots, y_{t-Pm}$ and $k$ neurons in the hidden layer. \newline
+
+
+We consistently applied the NNAR modeling methodology described above to forecast various time series presented in this document. Some hyperparameters were needed to be tuned  to improve model accuracy and to achieve realistic forecasts. \newline
+
+
+This following sections document the forecasts estimated from various time series. 
+
+
+# \Large Forecasts: Professional Membership
+
+In this section, we present the forecasts for the following four time series:  
+
+1. PK-12 professional continuing
+2. PK-12 professional new
+3. PK-12 professional canceled-continuing
+4. PK-12 professional canceled-new  
+
+
+# \large 1. PK-12 Professional Continuing Membership
+
+
+The time series chart shows the monthly count of continuing PK-12 professional members.  
+
+![Projection of NEA Monthly Membership (SY 2022 - 2031) : PK-12, Professional, Continuing](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/professional_k12_continuing_forecasts.png)
+
+
+
+# \large 2. PK-12 Professional New Membership
+
+The time series chart shows the monthly count of new PK-12 professional members. The counts spike in each September because it is when the vast majority of the new membership applications are processed.  
+
+![Projection of NEA Monthly Membership (SY 2022 - 2031) : PK-12, Professional, New](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/professional_k12_new_forecasts.png){width=85%}
+
+# \large 3. PK-12 Professional Canceled-Continuing
+
+The time series chart shows the monthly count of new PK-12 professional continuing members who canceled membership. The counts spike in each September because it is when the vast majority of the cancellations are processed. 
+
+
+
+![Projection of NEA Monthly Canceled Membership (SY 2022 - 2031) : PK-12, Professional, Continuing](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/professional_k12_continuing_cancel_forecasts.png){width=85%}
+
+
+# \large 4. PK-12 Professional Canceled-New
+
+The time series chart shows the monthly count of new PK-12 professional new members who canceled membership. The counts spike in each September because it is when the vast majority of the cancellations are processed. 
+
+
+![Projection of NEA Monthly Canceled Membership (SY 2022 - 2031) : PK-12, Professional, New](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/professional_k12_new_cancel_forecasts.png){width=85%}
+
+# \large Total PK-12 Professional Memberships
+
+
+![Projection of NEA Monthly Membership (SY 2022 - 2031) : PK-12, Professional](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/professional_k12_combined_forecasts.png){width=85%}
+
+
+
+
+```{r include=FALSE}
+library(civis)
+library(dplyr)
+library(janitor)
+library(tidyverse)
+require(tables)
+require(kableExtra)
+continuing <- read_civis("model.k12_prof_continuing_forecast", database = "NEA") %>% clean_names 
+new <- read_civis("model.k12_prof_new_forecast", database = "NEA") %>% clean_names 
+cancel_new <- read_civis("model.k12_prof_cancel_new_forecast", database = "NEA") %>% clean_names 
+cancel_continuing <- read_civis("model.k12_prof_cancel_continuing_forecast", database = "NEA") %>% clean_names 
+prof_df <- bind_rows(continuing, new, cancel_new, cancel_continuing) 
+table <- prof_df %>% group_by(as.factor(membership_year), nea_assoc_status) %>% summarise(tot_membership = sum(memberships))
+table <- table %>% spread(nea_assoc_status, tot_membership) 
+table <- table %>% rowwise() %>% mutate(Total = sum(c_across(1:4)))
+```
+
+
+```{r echo=FALSE}
+kable(table, 
+      "latex", booktabs = T, linesep = "",
+      caption = "\\textbf{Annual Projection of PK-12 Professional Memberships}",
+      col.names = c("Year",
+                    "Canceled-Continuing",
+                    "Canceled-New",
+                    "Continuing",
+                    "New",
+                    "Total"),
+      format.args = list(decimal.mark = ',', big.mark = ","),
+      align=rep('r')) %>% row_spec(c(18:27), background  = "orange")
+```
+
+
+# \Large Forecasts: ESP Membership
+
+In this section, we present the forecasts for the following four time series:  
+
+1. PK-12 ESP continuing
+2. PK-12 ESP new
+3. PK-12 ESP canceled-continuing
+4. PK-12 ESP canceled-new  
+
+
+
+
+# \large 1. PK-12 ESP Continuing Membership
+
+
+The time series chart shows the monthly count of continuing PK-12 ESP members.  
+
+![Projection of NEA Monthly Membership (SY 2022 - 2031) : PK-12, ESP, Continuing](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/ESP_k12_continuing_forecasts.png)
+
+
+# \large 2. PK-12 ESP New Membership
+
+The time series chart shows the monthly count of new PK-12 ESP members. The counts spike in each September because it is when the vast majority of the new membership applications are processed.  
+
+![Projection of NEA Monthly Membership (SY 2022 - 2031) : PK-12, ESP, New](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/ESP_k12_new_forecasts.png){width=90%}
+
+
+
+# \large 3. PK-12 ESP Canceled-Continuing
+
+The time series chart shows the monthly count of new PK-12 ESP continuing members who canceled membership. 
+
+
+![Projection of NEA Monthly Canceled Membership (SY 2022 - 2031) : PK-12, ESP, Continuing](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/esp_k12_continuing_cancel_forecasts.png){width=90%}
+
+
+
+# \large 4. PK-12 ESP Canceled-New
+
+The time series chart shows the monthly count of new PK-12 ESP new members who canceled membership. 
+
+
+![Projection of NEA Monthly Canceled Membership (SY 2022 - 2031) : PK-12, ESP, New](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/esp_k12_new_cancel_forecasts.png){width=88%}
+
+
+
+
+# \large Total PK-12 ESP Memberships
+
+
+
+![Projection of NEA Monthly Membership (SY 2022 - 2031) : PK-12, ESP](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/esp_k12_combined_forecasts.png){width=88%}
+
+
+
+
+
+```{r include=FALSE}
+continuing <- read_civis("model.k12_esp_continuing_forecast", database = "NEA") %>% clean_names %>% mutate(memberships = round(memberships,0))
+new <- read_civis("model.k12_esp_new_forecast", database = "NEA") %>% clean_names 
+cancel_new <- read_civis("model.k12_esp_cancel_new_forecast", database = "NEA") %>% clean_names 
+cancel_continuing <- read_civis("model.k12_esp_cancel_continuing_forecast", database = "NEA") %>% clean_names 
+esp_df <- bind_rows(continuing, new, cancel_new, cancel_continuing) 
+table <- esp_df %>% group_by(as.factor(membership_year), nea_assoc_status) %>% summarise(tot_membership = sum(memberships))
+table <- table %>% spread(nea_assoc_status, tot_membership) 
+table <- table %>% rowwise() %>% mutate(Total = sum(c_across(1:4))) %>% mutate(Total = round(Total, 0))
+```
+
+
+```{r echo=FALSE}
+kable(table, 
+      "latex", booktabs = T, linesep = "",
+      caption = "\\textbf{Annual Projection of PK-12 ESP Memberships by Membership Year}",
+      col.names = c("Year",
+                    "Canceled-Continuing",
+                    "Canceled-New",
+                    "Continuing",
+                    "New",
+                    "Total"),
+      format.args = list(decimal.mark = '.', big.mark = ","),
+      align=rep('r')) %>% row_spec(c(18:27), background  = "orange")
+```
+
+
+
+\clearpage
+
+# \LARGE Appendix: Economic Forecasts
+
+We included multiple employment time series variables as regressors in the membership time series models. We hypothesized that economic factors such as consumer price index, unemployment, job openings, hiring, quits, and layoffs in the public education sector directly or indirectly affect union membership. We sourced each of these variables from the federal government data sets such as the current population survey and the Bureau of Labor Statistics, released on a monthly basis. We projected these variables to the same forecasting horizon as the membership model. The estimates from those projections were then used to forecast NEA memberships.  \newline
+
+
+![Public Education Sector Employment Time Series (Note: Except unemployment rate, all series are seasonally adjusted)](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/employment_timeseries.png)
+
+
+It is evidenced from the federal employment data that impacts from the Covid-19 pandemic on the public education labor market had been quite dramatic in the second and third quarters of 2020. However, the wild swings in the time series during that period appeared to be temporary. From a long-term perspective we considered those fluctuations as white noise. Hence, we removed the noise from the time series to minimize its effects on the projections. 
+
+
+# Unemployment Rate
+
+![Projection of Public Education Sector Unemployment Rates](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/unemployment_rate.png){width=91%}
+
+
+# Hiring Rate
+
+![Projection of Public Education Sector Hiring Rates](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/hiring_rate.png){width=91%}
+
+
+\newpage
+
+# Layoffs Rate
+
+![Projection of Public Education Sector Layoffs Rates](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/layoffs_rate.png){width=91%}
+
+
+
+
+# Openings Rate
+
+![Projection of Public Education Sector Openings Rates](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/openings_rate.png){width=91%}
+
+
+\newpage
+
+
+# Quits Rate
+
+![Projection of Public Education Sector Quits Rates](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/quits_rate.png){width=91%}
+
+
+
+# Other Separation Rate
+
+![Projection of Public Education Sector Quits Rates](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/other_separation_rate.png){width=91%}
+
+
+\newpage
+
+
+# Consumer Price Index
+
+![Projection of Consumer Price Index](C:/Users/abanerjee/OneDrive - National Education Association/projects/executive_dashboard/graphics/cpi.png){width=91%}

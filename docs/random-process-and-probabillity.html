@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Random Process and Probabillity | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 5 Random Process and Probabillity | Introduction to Statistics" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Random Process and Probabillity | Introduction to Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Random Process and Probabillity | Introduction to Statistics" />
+  
+  
+  
+
+<meta name="author" content="Amlan Banerjee, Ph.D." />
+
+
+<meta name="date" content="2022-01-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="describing-exploring-and-comparing-data.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Course Information</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-description"><i class="fa fa-check"></i><b>1.1</b> Course Description</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#course-outcomes"><i class="fa fa-check"></i><b>1.2</b> Course Outcomes</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#what-is-statistics"><i class="fa fa-check"></i><b>2.1</b> What is Statistics?</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction.html"><a href="introduction.html#statistical-thinking"><i class="fa fa-check"></i><b>2.2</b> Statistical Thinking</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction.html"><a href="introduction.html#types-of-data-or-variable"><i class="fa fa-check"></i><b>2.3</b> Types of Data or Variable</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction.html"><a href="introduction.html#sampling-methods"><i class="fa fa-check"></i><b>2.4</b> Sampling Methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#sampling-from-a-population"><i class="fa fa-check"></i>Sampling from a Population</a></li>
+<li class="chapter" data-level="2.4.1" data-path="introduction.html"><a href="introduction.html#simple-random-sampling-srs"><i class="fa fa-check"></i><b>2.4.1</b> Simple Random Sampling (SRS)</a></li>
+<li class="chapter" data-level="2.4.2" data-path="introduction.html"><a href="introduction.html#stratified-sampling"><i class="fa fa-check"></i><b>2.4.2</b> Stratified Sampling</a></li>
+<li class="chapter" data-level="2.4.3" data-path="introduction.html"><a href="introduction.html#cluster-sampling"><i class="fa fa-check"></i><b>2.4.3</b> Cluster Sampling</a></li>
+<li class="chapter" data-level="2.4.4" data-path="introduction.html"><a href="introduction.html#nonrandom-sampling"><i class="fa fa-check"></i><b>2.4.4</b> Nonrandom Sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="introduction.html"><a href="introduction.html#sampling-errors"><i class="fa fa-check"></i><b>2.5</b> Sampling Errors</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction.html"><a href="introduction.html#bias-and-precision"><i class="fa fa-check"></i><b>2.6</b> Bias and Precision</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#statistical-studies"><i class="fa fa-check"></i>Statistical Studies</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="introduction.html"><a href="introduction.html#observational-studies"><i class="fa fa-check"></i><b>2.7</b> Observational Studies</a></li>
+<li class="chapter" data-level="2.8" data-path="introduction.html"><a href="introduction.html#experimental-design"><i class="fa fa-check"></i><b>2.8</b> Experimental Design</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="introduction.html"><a href="introduction.html#randomized-blocked-design"><i class="fa fa-check"></i><b>2.8.1</b> Randomized Blocked Design</a></li>
+<li class="chapter" data-level="2.8.2" data-path="introduction.html"><a href="introduction.html#completely-randomized-experimental-design"><i class="fa fa-check"></i><b>2.8.2</b> Completely Randomized Experimental Design</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html"><i class="fa fa-check"></i><b>3</b> Exploring Data with Tables and Graphs</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#frequency-distribution"><i class="fa fa-check"></i><b>3.1</b> Frequency Distribution</a></li>
+<li class="chapter" data-level="3.2" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#histogram"><i class="fa fa-check"></i><b>3.2</b> Histogram</a></li>
+<li class="chapter" data-level="3.3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#other-charts"><i class="fa fa-check"></i><b>3.3</b> Other Charts</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html"><i class="fa fa-check"></i><b>4</b> Describing, Exploring, and Comparing Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-shape"><i class="fa fa-check"></i><b>4.1</b> Measures of Shape</a></li>
+<li class="chapter" data-level="4.2" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-center"><i class="fa fa-check"></i><b>4.2</b> Measures of Center</a></li>
+<li class="chapter" data-level="4.3" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-spread-or-variation"><i class="fa fa-check"></i><b>4.3</b> Measures of Spread or Variation</a></li>
+<li class="chapter" data-level="4.4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#normal-distribution-and-standard-deviation"><i class="fa fa-check"></i><b>4.4</b> Normal Distribution and Standard Deviation</a>
+<ul>
+<li class="chapter" data-level="" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#z-score"><i class="fa fa-check"></i>z-score</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#percentiles-and-quartiles"><i class="fa fa-check"></i><b>4.5</b> Percentiles and Quartiles</a></li>
+<li class="chapter" data-level="4.6" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#boxplot"><i class="fa fa-check"></i><b>4.6</b> Boxplot</a></li>
+<li class="chapter" data-level="4.7" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#group-comparison"><i class="fa fa-check"></i><b>4.7</b> Group Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="random-process-and-probabillity.html"><a href="random-process-and-probabillity.html"><i class="fa fa-check"></i><b>5</b> Random Process and Probabillity</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="random-process-and-probabillity.html"><a href="random-process-and-probabillity.html#definitions-1"><i class="fa fa-check"></i><b>5.1</b> Definitions</a></li>
+<li class="chapter" data-level="5.2" data-path="random-process-and-probabillity.html"><a href="random-process-and-probabillity.html#finding-probabilities"><i class="fa fa-check"></i><b>5.2</b> Finding Probabilities</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="random-process-and-probabillity.html"><a href="random-process-and-probabillity.html#disjoint-or-mutually-exclusive-outcomes"><i class="fa fa-check"></i><b>5.2.1</b> Disjoint or mutually exclusive outcomes</a></li>
+<li class="chapter" data-level="5.2.2" data-path="random-process-and-probabillity.html"><a href="random-process-and-probabillity.html#probabilities-when-events-are-not-disjoint-or-mutually-exclusive"><i class="fa fa-check"></i><b>5.2.2</b> Probabilities when events are NOT disjoint or mutually exclusive</a></li>
+<li class="chapter" data-level="5.2.3" data-path="random-process-and-probabillity.html"><a href="random-process-and-probabillity.html#complement-of-an-event"><i class="fa fa-check"></i><b>5.2.3</b> Complement of an event</a></li>
+<li class="chapter" data-level="5.2.4" data-path="random-process-and-probabillity.html"><a href="random-process-and-probabillity.html#multiplication-rule-for-independent-processes"><i class="fa fa-check"></i><b>5.2.4</b> Multiplication Rule | for independent processes</a></li>
+<li class="chapter" data-level="5.2.5" data-path="random-process-and-probabillity.html"><a href="random-process-and-probabillity.html#marginal-and-joint-probabilities"><i class="fa fa-check"></i><b>5.2.5</b> Marginal and joint probabilities</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="random-process-and-probabillity.html"><a href="random-process-and-probabillity.html#finding-probabilities-from-a-normal-distribution"><i class="fa fa-check"></i><b>5.3</b> Finding Probabilities from a Normal Distribution</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="random-process-and-probabillity" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Random Process and Probabillity</h1>
+<p><strong>Learning Outcome</strong></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Solve basic probability problems using ratios, proportions, two-way tables and percentages.</td>
+</tr>
+</tbody>
+</table>
+<p>In this chapter, we will extend the concept of relative frequencies to understand and calculate the probability of occurrence of a random event. We will also learn about normal distribution, its properties, and methods to calculate probabilities of random events that are described by this distribution.</p>
+<div id="definitions-1" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Definitions</h2>
+<p>An <strong>event</strong> is any collection of results or outcomes of a procedure.
+For example, tossing a coin is an event with possible outcomes <em>heads</em> and <em>tails</em>.</p>
+<p>A <strong>simple event</strong> is an event that has one outcome. For example, births of <span class="math inline">\(2\)</span> girls followed by a boy is a simple event because the only possible outcome is <span class="math inline">\(\{ggb\}\)</span>.</p>
+<p>However, births of <span class="math inline">\(2\)</span> girls <strong>and</strong> a boy is an event that has three possible outcomes
+<span class="math inline">\(\{ggb, gbg, bgg \}\)</span>.</p>
+<p>A <strong>sample space</strong> for a procedure consists of all possible simple events.
+For example, with births of three children, the sample space consists of eight different simple events <span class="math inline">\(\{ bbb, bbg, bgb, bgg, gbb, gbg, ggb, ggg\}\)</span></p>
+<p>An event is <strong>random</strong> if individual outcomes of it are unpredictable, meaning they have no apparent pattern of occurrence, but there is nonetheless a predictable distribution (i.e. the frequencies) of those different outcomes over a large number of repetitions of the event.</p>
+<p>The <strong>probability</strong> of any outcome of a random event can be defined as the proportion of times the outcome would occur in a very long series of repetitions.</p>
+<p>The probability is defined as a proportion, and it always takes values between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> (inclusively). It may also be displayed as a percentage between <span class="math inline">\(0\%\)</span> and <span class="math inline">\(100\%\)</span>.</p>
+<ul>
+<li><span class="math inline">\(0\%: \text{event is impossible}\)</span></li>
+<li><span class="math inline">\(100\%: \text{event is certain}\)</span></li>
+</ul>
+<p><strong>THEORETICAL VERSUS EXPERIMENTAL PROBABILITY</strong></p>
+<p>The <strong><em>Theoretical</em></strong> probability is the likelihood of occurring of an event. It is simply the ratio of the number of desired outcomes and the number of all possible outcomes.</p>
+<p>The <strong><em>experimental probability</em></strong> is an estimate of the likelihood of occurring of an event based on repeated trials.</p>
+<p>The <strong><em>subjective probability</em></strong> is an estimate of the likelihood of occurring of an event based on someone’s belief.</p>
+<p><span style="color:#08519c"> <strong>LAW OF LARGE NUMBERS</strong> </span></p>
+<table style="width:6%;">
+<colgroup>
+<col width="5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Consider: <strong>Rolling a 1 of a die</strong></td>
+</tr>
+<tr class="even">
+<td>If the sample space of a random experiment consists of <span class="math inline">\(n\)</span> equally likely outcomes and an event <span class="math inline">\(E\)</span> consists of <span class="math inline">\(m\)</span> of those outcomes, then</td>
+</tr>
+<tr class="odd">
+<td><span class="math display">\[\text {Theorerical Probability} : P(E) = \frac{\text{number of outcomes in the event}(m)}{\text{total number of outcomes}(n)}\]</span></td>
+</tr>
+<tr class="even">
+<td>Let <span class="math inline">\(\hat{p_n}\)</span> be the proportion of outcomes that are <span class="math inline">\(1\)</span> after the <span class="math inline">\(n\)</span> rolls. As the number of rolls <span class="math inline">\((n)\)</span> increases, <span class="math inline">\(\hat{p_n}\)</span> (the relative frequency of rolls, or the experimental probability) will converge to the theoretical probability of rolling a <span class="math inline">\(1,\space p = 1/6.\)</span> The figure shows the convergence for <span class="math inline">\(100,000\)</span> die rolls.</td>
+</tr>
+<tr class="odd">
+<td>The tendency of <span class="math inline">\(\hat{p_n}\)</span> to stabilize around <span class="math inline">\(p\)</span>, i.e. the tendency of the relative frequency to stabilize around the true probability, is described by the <strong>Law of Large Numbers.</strong></td>
+</tr>
+<tr class="even">
+<td>As more observations are collected, the observed proportion <span class="math inline">\(\hat{p_n}\)</span> of occurrences with a particular outcome after <span class="math inline">\(n\)</span> trials converges to the true probability <span class="math inline">\(p\)</span> of that outcome.</td>
+</tr>
+<tr class="odd">
+<td><strong>Die Rolls Simulation</strong></td>
+</tr>
+<tr class="even">
+<td><img src="dieProp.png" width="650px" /></td>
+</tr>
+<tr class="odd">
+<td>The figure shows the fraction of die rolls that are <span class="math inline">\(1\)</span> at each stage in a simulation.
+The relative frequency tends to get closer to the probability <span class="math inline">\(1/6 \approx 0.167\)</span> as
+the number of rolls increases.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example: Calculating Relative Frequency Probabilities</strong></p>
+<p>For a group of <span class="math inline">\(10\)</span> students in one of the author’s algebra classes, there are <span class="math inline">\(2\)</span> nursing majors <span class="math inline">\(\textbf (N)\)</span>, <span class="math inline">\(4\)</span> business majors <span class="math inline">\(\textbf (B)\)</span>, <span class="math inline">\(1\)</span> architect <span class="math inline">\(\textbf (A)\)</span> major, and <span class="math inline">\(3\)</span> undecided <span class="math inline">\(\textbf (U)\)</span> majors. None of the students are double-majors.</p>
+<ol style="list-style-type: decimal">
+<li>Find <span class="math inline">\(P(N)\)</span>.</li>
+<li>Construct a frequency and relative frequency table of the students’ majors.</li>
+<li>Find <span class="math inline">\(P(B), P(A)\)</span>, and <span class="math inline">\(P(U)\)</span>.</li>
+<li>Find <span class="math inline">\(P(\text{philosophy})\)</span>.</li>
+<li>Find the probability of randomly selecting a nursing, business, architect, OR undecided major.</li>
+<li>Find <span class="math inline">\(P(N) + P(B) + P(A) + P(U)\)</span>. Why does the result make sense?</li>
+</ol>
+<p><strong>Example: Calculating Probability of Three Children of the Same Gender</strong></p>
+<p>Assuming that births of boys and girls are equally likely, find the probability of getting children of all of the same gender when three children are born.</p>
+<p>Recall the sample space of three children: <span class="math inline">\(\{ bbb, bbg, bgb, bgg, gbb, gbg, ggb, ggg \}\)</span>, includes eight equally likely outcomes, and there are exactly two outcomes in which three children are of the same gender: <span class="math inline">\(\{ bbb, ggg \}\)</span> .</p>
+<p><span class="math display">\[
+P(\text{ three children of the same gender}) = \dfrac{2}{8} = \dfrac{1}{4} = 0.25
+\]</span></p>
+<p>A <strong>random variable</strong> is a numerical measure of an outcome from a random experiment. We often use a capital letter such as X to stand for a random variable.</p>
+<p>Let X be the outcome of rolling a six-sided die once. Find the given probability.</p>
+<p>1.<span class="math inline">\(P(X=4)\)</span></p>
+<p>2.<span class="math inline">\(P(X\le 4)\)</span></p>
+<p>3.<span class="math inline">\(P(X&gt;4)\)</span></p>
+<p>4.<span class="math inline">\(P(3 \le X \le 6)\)</span></p>
+</div>
+<div id="finding-probabilities" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Finding Probabilities</h2>
+<p>This section presents the addition and multiplication rules of calculating probabilities.</p>
+<div id="disjoint-or-mutually-exclusive-outcomes" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Disjoint or mutually exclusive outcomes</h3>
+<p>Two events or outcomes are called <strong>disjoint or mutually exclusive</strong> if they cannot both happen in the same trial.</p>
+<p>When rolling a die, the outcomes <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> are disjoint, and we compute the probability that one of these outcomes will occur by adding their separate probabilities:
+<span class="math display">\[P(1 \text{ or } 2)=P(1)+P(2)=1/6+1/6=1/3\]</span></p>
+<p><strong>What about the probability of rolling a <span class="math inline">\(1, 2, 3, 4, 5, \ or \ 6\)</span> ?</strong></p>
+<p><span class="math display">\[
+\begin{array}{ll}
+P(1 \text{ or } 2 \text{ or } 3 \text{ or } 4 \text{ or } 5 \text{ or }6) = P(1)+P(2)+P(3)+P(4)+P(5)+P(6) \\
+=1/6+1/6+1/6+1/6+1/6+1/6 =1
+\end{array}
+\]</span></p>
+<p>It is no surprise that the probability is <span class="math inline">\(1\)</span>, since it is certain that one of the six outcomes must occur.</p>
+<p><strong>ADDITION RULE OF DISJOINT OUTCOMES</strong></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>If <span class="math inline">\(A_1,...,A_k\)</span> represent <span class="math inline">\(k\)</span> disjoint outcomes, then the probability that one of them occurs is given by:</td>
+</tr>
+<tr class="even">
+<td><span class="math display">\[P(A_1\text{ or }A_2 \text{ or ... or }A_k)=P(A_1)+P(A_2)+...+P(A_k)\]</span></td>
+</tr>
+</tbody>
+</table>
+<p>Example: Consider a standard deck of cards.</p>
+<p><span class="math display">\[
+\text {4 suits}
+\left\{
+\begin{array}{ll}
+\text{hearts: } \color{red}{\heartsuit} \\
+\text{diamonds: } \color{red}{\diamondsuit} \\
+\text{clubs: } \spadesuit \\
+\text{spades: } \clubsuit
+\end{array}
+\right.
+\]</span>
+<span class="math display">\[\text{13 cards in each suit: } Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King\]</span>
+One card is dealt from a well shuffled deck.</p>
+<p><span class="math display">\[
+\begin{align}
+P(\text{the card is an ace or a king}) &amp;= P(\text{it&#39;s an ace})+P(\text {it&#39;s a king}) \\
+&amp; = 4/52+4/52 \\
+&amp; = 8/52 \\
+&amp; = 2/13
+\end{align}
+\]</span></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Venn Diagram - </strong> a diagram style to illustrate simple set relationships in probability.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Venn Diagram | When events are disjoint</strong></p>
+<p><span class="math display">\[
+\begin{align}
+P(\text{the card is an ace or a king}) &amp;= P(\text{it&#39;s an ace})+P(\text {it&#39;s a king}) \\
+&amp; = 4/52+4/52 \\
+&amp; = 2/13
+\end{align}
+\]</span></p>
+<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<pre><code>## (polygon[GRID.polygon.382], polygon[GRID.polygon.383], polygon[GRID.polygon.384], polygon[GRID.polygon.385], text[GRID.text.386], text[GRID.text.387], text[GRID.text.388], text[GRID.text.389])</code></pre>
+</div>
+<div id="probabilities-when-events-are-not-disjoint-or-mutually-exclusive" class="section level3" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Probabilities when events are NOT disjoint or mutually exclusive</h3>
+<p><span class="math display">\[
+\begin{align}
+&amp; P(\text{the card is an ace or a heart}) \\ 
+&amp;= P(\text{it&#39;s an ace})+P(\text {it&#39;s a heart})-P(\text{it&#39;s an ace &amp; heart}) \\
+&amp; = 4/52+13/52 - \underbrace{1/52}_{\text {adjustment made to avoid double-counting of the ace of hearts}} \\
+&amp; = 16/52 \\
+&amp; = 4/13
+\end{align}
+\]</span></p>
+<p><strong>Venn Diagram | When events are not disjoint</strong></p>
+<p><span class="math display">\[
+\begin{align}
+&amp; P(\text{the card is an ace or a heart}) \\
+&amp; = P(\text{it&#39;s an ace})+P(\text {it&#39;s a heart})-P(\text{it&#39;s an ace AND heart}) \\
+&amp; = 4/52+13/52 - 1/52 = 16/52
+\end{align}
+\]</span></p>
+<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<pre><code>FALSE (polygon[GRID.polygon.390], polygon[GRID.polygon.391], polygon[GRID.polygon.392], polygon[GRID.polygon.393], text[GRID.text.394], text[GRID.text.395], text[GRID.text.396], text[GRID.text.397], text[GRID.text.398])</code></pre>
+<p><strong>GENERAL ADDITION RULE OF PROBABILITIES</strong></p>
+<hr />
+<p><span class="math display">\[ \bbox[yellow,5px]
+{\color{black}{P(A \space or \space B) = P(A) + P(B) - P(A \space and \space B)}}
+\]</span>
+where <span class="math inline">\(P(A \text{ and } B)\)</span> is the probability that both events occur.</p>
+<p><strong>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive</strong>, <span class="math inline">\(P(A \space and \space B) = 0\)</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[ P(A \space or \space B) = P(A) + P(B)\]</span></p>
+<hr />
+</div>
+<div id="complement-of-an-event" class="section level3" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Complement of an event</h3>
+<p>The complement of event <span class="math inline">\(A\)</span> is denoted <span class="math inline">\(A^c\)</span>, and <span class="math inline">\(A^c\)</span> represents all outcomes not in <span class="math inline">\(A\)</span>. <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> are mathematically related:</p>
+<p><span class="math display">\[
+\begin{align}
+&amp; P(A) + P(A^c) = 1 \\
+or, \space &amp; P(A^c) = 1 - P(A) 
+\end{align}
+\]</span></p>
+<p>Example: if an event has chance <span class="math inline">\(40\%\)</span>, then the chance that it doesn’t happen is <span class="math inline">\(60\%\)</span>.</p>
+<p><strong>Venn Diagram | Exercise</strong></p>
+<p><span class="math display">\[
+\begin{align}
+P(email) &amp;=0.73 \\
+P(text)  &amp;= 0.62 \\
+P(\text {email &amp; text}) &amp;= 0.49 \\
+P(\text {only email}) &amp;= 0.73 - 0.49 = 0.24 \\
+P(\text{only text}) &amp;= 0.62 - 0.49 = 0.13 \\
+P(\text{neither email nor text}) &amp;= 1 - (0.24 + 0.49 + 0.13) = 0.14
+\end{align}
+\]</span></p>
+<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<pre><code>(polygon[GRID.polygon.399], polygon[GRID.polygon.400], polygon[GRID.polygon.401], polygon[GRID.polygon.402], text[GRID.text.403], text[GRID.text.404], text[GRID.text.405], text[GRID.text.406], text[GRID.text.407]) </code></pre>
+</div>
+<div id="multiplication-rule-for-independent-processes" class="section level3" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Multiplication Rule | for independent processes</h3>
+<p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> represent events from two different and independent processes, then the probability that both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> occur can be calculated as the product of their seprarate probabilities:</p>
+<p><span class="math display">\[P(A \text{ and } B) = P(A) \times P(B)\]</span></p>
+<p>Similarly, if there are <span class="math inline">\(k\)</span> events <span class="math inline">\(A_1,...,A_k\)</span> from <span class="math inline">\(k\)</span> independent processes, then the probability they all occur is</p>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black} {P(A_1\text{ and }A_2 \text{ and ... and }A_k)=P(A_1)\times P(A_2)\times...\times P(A_k)}
+}
+\]</span></p>
+<p><strong>Example 1:</strong>
+If a card is randomly drawn from a well-shuffled deck, what is the probability that it is the ace of hearts? [Note: Ace and Hearts are two independent events.]</p>
+<p><span class="math display">\[
+\begin{align}
+P(Ace \text{ and } Hearts) &amp;= P(Ace) \times P(Hearts) \\
+&amp;= (4/52) \times (13/52) = 1/52
+\end{align}
+\]</span></p>
+<p><strong>Example 2:</strong></p>
+<p>About <span class="math inline">\(9\%\)</span> of people are left-handed. Suppose <span class="math inline">\(5\)</span> people are selected at random from the US population.<br />
+(a) What is the probability that all are right-handed?<br />
+(b) What is the probability that all are left-handed?<br />
+(c) What is the probability that not all of them are right-handed?</p>
+<p><span class="math display">\[
+\begin{align}
+&amp;(a) \space P\text{(All are RH)} = (1-0.09)^5 = 0.624 \\
+&amp;(b) \space P\text{(All are LH)} = (0.09)^5 = 0.0000059 \\
+&amp;(c) \space P\text{(not all RH)} = 1- P(\text {all RH}) = 1-0.624 = 0.376
+\end{align}
+\]</span></p>
+<p><strong>GENERAL MULTIPLICATION RULE</strong></p>
+<hr />
+<p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> represent two outcomes or events, then</p>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{\color{black}{P(A \space and \space B) = P(A|B) \times P(B)}}
+\]</span></p>
+<hr />
+<p><strong>Example 3:</strong></p>
+<p>During the smallpox outbreak, <span class="math inline">\(96.08\%\)</span> of Boston residents were not inoculated, and <span class="math inline">\(85.88\%\)</span> of the residents who were not inoculated ended up surviving. What is the probability that a resident was not inoculated and lived?</p>
+<p>To answer the question, we want to determine <span class="math inline">\(\text {P(lived and inoculated)}\)</span>,</p>
+<p>and we are given that,</p>
+<p><span class="math display">\[
+\begin{align}
+P(\text{lived | not inoculated}) &amp;= 0.8588  \\
+P(\text {not inoculated}) &amp;= 0.9608  
+\end{align}
+\]</span></p>
+<p>Among the <span class="math inline">\(96.08\%\)</span> of people who were not inoculated, <span class="math inline">\(85.88\%\)</span> survived:</p>
+<p><span class="math display">\[
+P(\text {lived and not inoculated}) = 0.8588 \times 0.9608 = 0.8251
+\]</span></p>
+<p>This is equivalent to the General Multiplication Rule.</p>
+</div>
+<div id="marginal-and-joint-probabilities" class="section level3" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> Marginal and joint probabilities</h3>
+<p>If a probability is based on a single variable, it is a <span style="color:blue"> <em>marginal probability.</em> </span> The probability of outcomes for two or more variables or processes is called a <span style="color:#de2d26"> <em>joint probability.</em> </span></p>
+<p><strong>Exercise: Calculating Probabilities with a Contingency Table:</strong></p>
+<p>Table: College enrollment and parents’ educational attainment</p>
+<p><span class="math display">\[
+\begin{array} {l|cc|r}
+&amp; \text{parents: degree} &amp; \text{parents: no degree} &amp; \text{total} \\
+\hline
+\text {teen: college} &amp; 231 &amp; 214 &amp; 445 \\
+\text {teen: no college} &amp; 49 &amp; 298 &amp; 347 \\
+\hline
+\text {total} &amp; 280 &amp; 512 &amp; 792
+\end{array}
+\]</span></p>
+<p><strong>a) Finding Marginal and Joint Probabilities:</strong></p>
+<p><span class="math display">\[
+\begin{array} {l|cc|c}
+&amp; \text{parents: degree} &amp; \text{parents: no degree} &amp; \text{marginal} \\
+\hline
+\text {teen: college} &amp; \color{red}{0.29} &amp; \color{red}{0.27} &amp; \color{blue}{0.56} \\
+\text {teen: no college} &amp; \color{red}{0.06} &amp; \color{red}{0.38} &amp; \color{blue}{0.44} \\
+\hline
+\text {marginal} &amp; \color{blue}{0.35} &amp; \color{blue}{0.65} &amp; 1.00
+\end{array}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+&amp;\color{blue}{\text{Marginal Probability: }} P(\text{teen: college})=\frac{445}{792}=0.56 \\
+&amp;\color{red}{\text{Joint Probability: }} P(\text {teen: college and parents: no degree})=\frac{214}{792}=0.27
+\end{align}
+\]</span></p>
+<p><strong>b) Finding Conditional Probability:</strong></p>
+<hr />
+<p><strong>Conditional Probability</strong></p>
+<p>The conditional probability of the outcome of interest <span class="math inline">\(A\)</span> given condition <span class="math inline">\(B\)</span> is computed as the following:</p>
+<p><span class="math display">\[P(A|B) = \frac{P(A \text{ and } B)}{P(B)}\]</span></p>
+<hr />
+<p><span class="math display">\[
+\begin{array} {l|cc|r}
+&amp; \text{parents: degree} &amp; \text{parents: no degree} &amp; \text{total} \\
+\hline
+\text {teen: college} &amp; 231 &amp; 214 &amp; 445 \\
+\text {teen: no college} &amp; 49 &amp; 298 &amp; 347 \\
+\hline
+\text {total} &amp; 280 &amp; 512 &amp; 792
+\end{array}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+P(\text {teen college | parents degree}) &amp;= \frac{231/792}{280/792} = 0.825 \\
+P(\text {teen college | parents no degree}) &amp;= \frac{214/792}{512/792} = 0.418 \\
+P(\text {teen no college | parents degree}) &amp;= \frac{49/792}{280/792} = 0.175 \\
+P(\text {teen no college | parents no degree}) &amp;= \frac{298/792}{512/792} = 0.582
+\end{align}
+\]</span></p>
+<p><strong>c) Condition of Independence</strong></p>
+<p>Verify whether one of the following equations holds:</p>
+<hr />
+<p><span class="math display">\[ \begin{align}
+P(A|B) &amp;= P(A) \tag 1 \\
+P(A \space and \space B) &amp;=P (A) \times P(B) \tag 2 
+\end{align}
+\]</span></p>
+<hr />
+<p>Check if the equality holds in the following equation:</p>
+<p><span class="math display">\[
+\begin{align}
+P(\text{teen college | parent degree})&amp;\stackrel{?}{=} P(\text {teen college}) \\
+0.825 &amp;\ne 0.560
+\end{align}
+\]</span>
+Because both sides are not equal, teenager college attendance and parent degree are not independent.</p>
+<p><strong>Two events are mutually exclusive</strong></p>
+<p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive events, then they cannot occur at the same time. If asked to determine if events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, verify one of the following equations holds:</p>
+<hr />
+<p><span class="math display">\[
+\begin{align}
+P(\text{A and B})&amp;= 0 \tag 1 \\
+P(\text{A or B}) &amp;= P(A)+P(B) \tag 2
+\end{align}
+\]</span></p>
+<hr />
+<p>If the equation that is checked holds true, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive. If the equation does not hold, then <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are not mutually exclusive.</p>
+<p><strong>At Least One</strong></p>
+<p>A poker hand (5 cards) is dealt from a well shuffled deck. What is the chance that there is at least one ace in the hand?</p>
+<p><span class="math display">\[
+\begin{align}
+&amp;P(\text{at least one ace}) \\
+&amp;=1-P(\text{no aces}) \\
+&amp;=1-(48/52) \times (47/51) \times (46/50) \times (45/49) \times (44/48) \\
+&amp;=34.11\%
+\end{align}
+\]</span></p>
+</div>
+</div>
+<div id="finding-probabilities-from-a-normal-distribution" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Finding Probabilities from a Normal Distribution</h2>
+<p><strong>Properties of a Normal Curve</strong></p>
+<ul>
+<li><p>A normal curve is unimodal and symmetric.</p></li>
+<li><p>The mean is equal to the median.</p></li>
+<li><p>Both are the center of the curve.</p></li>
+</ul>
+<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p><strong>Empirical Rule</strong></p>
+<p>Probabilities for falling <span class="math inline">\(1,\)</span> <span class="math inline">\(2,\)</span> and <span class="math inline">\(3\)</span> standard deviations of the mean in a normal distribution.</p>
+<p><img src="6895997.png" width="800px" /></p>
+<p><strong>Linear Transformation of Normal Curve | Standardizing with Z-Scores</strong></p>
+<p>Consider a normally distributed random variable <span class="math inline">\(x\)</span> with mean <span class="math inline">\(\mu\)</span> and sd <span class="math inline">\(\sigma\)</span>: <span class="math inline">\(x \tilde \space N(\mu, \sigma)\)</span></p>
+<p>Two-step linear transformation of <span class="math inline">\(x\)</span></p>
+<ol style="list-style-type: decimal">
+<li>subtract <span class="math inline">\(\mu\)</span> from <span class="math inline">\(x\)</span><br />
+</li>
+<li>divide <span class="math inline">\((x-\mu)\)</span> by <span class="math inline">\(\sigma\)</span></li>
+</ol>
+<p><span class="math display">\[\bbox[yellow,5px]{\color{black}{\text{standard normal deviate: } z = \frac {x-\mu}{\sigma}}}\]</span></p>
+<p>The <strong>Z-score</strong> of an observation is defined as the number of standard deviations it falls above or below the mean. If the observation is one standard deviation above the mean, its Z-score is 1. If it is 1.5 standard deviations below the mean, then its Z-score is -1.5.</p>
+<p><strong>Linear Transformation | Normal Curve to Standard Normal Curve</strong></p>
+<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-41-1.png" width="672" />
+<span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}{{\text {Density at z}} = \frac {1}{\sqrt {2\pi}}\exp{-\frac{1}{2}z^2}, -\infty&lt;z&lt;+\infty}
+}
+\]</span></p>
+<p><strong>Example: Compute and Interpret a <span class="math inline">\(z\)</span>-Score</strong></p>
+<p>The 2014 draft picks for NBA basketball teams have heights that are approximately normally distributed with mean 79.1 inches and standard deviation 3.0 inches (Source: nbadraft.net). Shabazz Napier was the shortest 2014 draft pick with a height of 72 inches. Find the z-score for 72 inches. What does it mean?</p>
+<p><span class="math display">\[
+z = \frac {x - \mu}{\sigma} \\
+z = \frac {72 - 79.1}{3} \\
+z = - 2.37
+\]</span></p>
+<p>The z-score is –2.37, which means that Napier’s height is 2.37 standard deviations less than the mean.</p>
+<p><strong>Empirical Rules in terms of <span class="math inline">\(z\)</span>-scores</strong></p>
+<p>Because the z-score of an observation is the number of standard deviations that the observation is from the mean, we can restate the Empirical Rule in terms of <span class="math inline">\(z\)</span>-scores. So, if a distribution is normally distributed, then</p>
+<p><span class="math inline">\(68\%\)</span> of its z-scores lie between –1 and 1</p>
+<p><span class="math inline">\(95\%\)</span> of its z-scores lie between –2 and 2</p>
+<p><span class="math inline">\(99.7\%\)</span> of its z-scores lie between –3 and 3</p>
+<p><strong>Normal Probability Examples | z-score to percentile</strong></p>
+<div class="blue">
+<p>Cumulative SAT scores are approximated by a normal model with <span class="math inline">\(\mu = 1500 \text { and } \sigma = 300\)</span>.</p>
+</div>
+<p><strong>What is the probability that a randomly selected SAT taker scores at least 1630 on the SAT?</strong></p>
+<p><img src="satAbove1630.png" width="400px" /></p>
+<p><span class="math inline">\(z = \frac{x-\mu}{\sigma}=\frac{1630-1500}{300}=\frac{130}{300}=0.43\)</span></p>
+<p><span class="math inline">\(P(z\ge0.43)=0.3336\)</span></p>
+<p>The probability that a randomly selected score is at least 1630 on the SAT is 33%.</p>
+<p><strong>Exercise</strong></p>
+<p>People’s IQ scores are normally distributed with mean <span class="math inline">\(\textbf {100}\)</span> points and standard deviation <span class="math inline">\(\textbf {15}\)</span> points. Let X be the IQ (in points) of a randomly selected person. Find the probability that a randomly selected person has an IQ</p>
+<ol style="list-style-type: decimal">
+<li><p>less than <span class="math inline">\(\textbf {78}\)</span> points.</p></li>
+<li><p>greater than <span class="math inline">\(\textbf {117}\)</span> points.</p></li>
+</ol>
+<p><strong>Normal Probability Examples | z-score to percentile</strong></p>
+<p><strong>Edward earned a 1400 on his SAT. What is his percentile?</strong></p>
+<div class="centered">
+
+<p><img src="satBelow1400.png" width="400px" /></p>
+<p><span class="math inline">\(z = \frac{x-\mu}{\sigma}=\frac{1400-1500}{300}=\frac{100}{300}=-0.33\)</span></p>
+<p><span class="math inline">\(P(z\le-0.33)=0.3707\)</span></p>
+<p>Edward is at the <span class="math inline">\(37\)</span>th percentile.</p>
+<p><strong>Normal Probability Examples | percentile to z-score</strong></p>
+<p>Carlos believes he can get into his preferred college if he scores at least in the 80th percentile on the SAT. What score should he aim for?</p>
+<p><img src="satBelow1800.png" width="400px" /></p>
+<p>At <span class="math inline">\(80th\)</span> percentile, <span class="math inline">\(z = 0.84\)</span></p>
+<p><span class="math display">\[
+\begin{align}
+z &amp; = \frac{x-\mu}{\sigma} \\
+0.84 &amp; = \frac{x-1500}{300} \\
+0.84 \times 300 + 1500 &amp; = x \\
+x &amp; = 1752
+\end{align}
+\]</span></p>
+<p>The <span class="math inline">\(80\)</span>th percentile on the SAT corresponds to a score of <span class="math inline">\(1752\)</span>.</p>
+<p><strong>Practice Problems</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>The scores on the Wechsler IQ test are normally distributed with mean <span class="math inline">\(100\)</span> points and standard deviation <span class="math inline">\(15\)</span> points. Film director Quentin Tarantino is reported to have a z-score of <span class="math inline">\(z = 4\)</span> (Source: Chicago Tribune). What is his IQ score?</p></li>
+<li><p>A professor gives a test to her calculus students. The scores are approximately normally distributed with mean <span class="math inline">\(75\)</span> points and standard deviation <span class="math inline">\(9\)</span> points. The professor decides to give As to approximately <span class="math inline">\(10\%\)</span> of the students but not less than 10%. Find the cutoff score for an A.</p></li>
+<li><p>Maria and Roberto took tests on probability in two different sections of prestatistics. Maria scored <span class="math inline">\(91\)</span> points on a test with mean <span class="math inline">\(77\)</span> points and standard deviation 6 points. Roberto scored <span class="math inline">\(80\)</span> points on a test with mean <span class="math inline">\(68\)</span> points and standard deviation <span class="math inline">\(4\)</span> points. The test scores on each test are approximately normally distributed.</p></li>
+</ol>
+<ul>
+<li>Find the <span class="math inline">\(z\)</span>-score for Maria’s test score. What does it mean in this situation?</li>
+<li>Find the <span class="math inline">\(z\)</span>-score for Roberto’s test score. What does it mean in this situation?</li>
+<li>Assuming a typical student in one class knows the material as well as a typical student in the other class, determine whether Maria did relatively better than Roberto.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Assuming the sodium levels per serving of the low-salt chips are approximately normally distributed with mean <span class="math inline">\(85\)</span> mg and standard deviation <span class="math inline">\(5\)</span> mg, find the probability that a randomly selected bag would have at least <span class="math inline">\(104\)</span> mg of sodium per serving.</p></li>
+<li><p>What is the probability that a randomly selected data point from a normal distribution can be classified as an outlier?</p></li>
+</ol>
+<p><span class="math display">\[ Q_3 + 1.5 \times IQR \le \text {outlier} \\
+\text {outlier} \le Q_1 - 1.5 \times IQR
+\]</span></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="describing-exploring-and-comparing-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 3
+},
+"edit": {
+"link": "https://github.com/amlanbanerjee/introduction_to_statistics/edit/master/05-probability.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/amlanbanerjee/introduction_to_statistics/blob/master/05-probability.Rmd",
+"text": null
+},
+"download": "book.pdf",
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

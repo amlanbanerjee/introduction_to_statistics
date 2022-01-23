@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Normal Probability Distributions | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 6 Normal Probability Distributions | Introduction to Statistics" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Normal Probability Distributions | Introduction to Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Normal Probability Distributions | Introduction to Statistics" />
+  
+  
+  
+
+<meta name="author" content="Amlan Banerjee, Ph.D." />
+
+
+<meta name="date" content="2022-01-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="discrete-probability-distributions.html"/>
+<link rel="next" href="estimating-parameters-and-determining-sample-sizes.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Course Information</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-description"><i class="fa fa-check"></i><b>1.1</b> Course Description</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#course-outcomes"><i class="fa fa-check"></i><b>1.2</b> Course Outcomes</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#what-is-statistics"><i class="fa fa-check"></i><b>2.1</b> What is Statistics?</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction.html"><a href="introduction.html#statistical-thinking"><i class="fa fa-check"></i><b>2.2</b> Statistical Thinking</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction.html"><a href="introduction.html#types-of-data-or-variable"><i class="fa fa-check"></i><b>2.3</b> Types of Data or Variable</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction.html"><a href="introduction.html#sampling-methods"><i class="fa fa-check"></i><b>2.4</b> Sampling Methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#sampling-from-a-population"><i class="fa fa-check"></i>Sampling from a Population</a></li>
+<li class="chapter" data-level="2.4.1" data-path="introduction.html"><a href="introduction.html#simple-random-sampling-srs"><i class="fa fa-check"></i><b>2.4.1</b> Simple Random Sampling (SRS)</a></li>
+<li class="chapter" data-level="2.4.2" data-path="introduction.html"><a href="introduction.html#stratified-sampling"><i class="fa fa-check"></i><b>2.4.2</b> Stratified Sampling</a></li>
+<li class="chapter" data-level="2.4.3" data-path="introduction.html"><a href="introduction.html#cluster-sampling"><i class="fa fa-check"></i><b>2.4.3</b> Cluster Sampling</a></li>
+<li class="chapter" data-level="2.4.4" data-path="introduction.html"><a href="introduction.html#nonrandom-sampling"><i class="fa fa-check"></i><b>2.4.4</b> Nonrandom Sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="introduction.html"><a href="introduction.html#sampling-errors"><i class="fa fa-check"></i><b>2.5</b> Sampling Errors</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction.html"><a href="introduction.html#bias-and-precision"><i class="fa fa-check"></i><b>2.6</b> Bias and Precision</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#statistical-studies"><i class="fa fa-check"></i>Statistical Studies</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="introduction.html"><a href="introduction.html#observational-studies"><i class="fa fa-check"></i><b>2.7</b> Observational Studies</a></li>
+<li class="chapter" data-level="2.8" data-path="introduction.html"><a href="introduction.html#experimental-design"><i class="fa fa-check"></i><b>2.8</b> Experimental Design</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="introduction.html"><a href="introduction.html#randomized-blocked-design"><i class="fa fa-check"></i><b>2.8.1</b> Randomized Blocked Design</a></li>
+<li class="chapter" data-level="2.8.2" data-path="introduction.html"><a href="introduction.html#completely-randomized-experimental-design"><i class="fa fa-check"></i><b>2.8.2</b> Completely Randomized Experimental Design</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html"><i class="fa fa-check"></i><b>3</b> Exploring Data with Tables and Graphs</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#frequency-distribution"><i class="fa fa-check"></i><b>3.1</b> Frequency Distribution</a></li>
+<li class="chapter" data-level="3.2" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#histogram"><i class="fa fa-check"></i><b>3.2</b> Histogram</a></li>
+<li class="chapter" data-level="3.3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#other-charts"><i class="fa fa-check"></i><b>3.3</b> Other Charts</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html"><i class="fa fa-check"></i><b>4</b> Describing, Exploring, and Comparing Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-shape"><i class="fa fa-check"></i><b>4.1</b> Measures of Shape</a></li>
+<li class="chapter" data-level="4.2" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-center"><i class="fa fa-check"></i><b>4.2</b> Measures of Center</a></li>
+<li class="chapter" data-level="4.3" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-spread-or-variation"><i class="fa fa-check"></i><b>4.3</b> Measures of Spread or Variation</a></li>
+<li class="chapter" data-level="4.4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#normal-distribution-and-standard-deviation"><i class="fa fa-check"></i><b>4.4</b> Normal Distribution and Standard Deviation</a>
+<ul>
+<li class="chapter" data-level="" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#z-score"><i class="fa fa-check"></i>z-score</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#percentiles-and-quartiles"><i class="fa fa-check"></i><b>4.5</b> Percentiles and Quartiles</a></li>
+<li class="chapter" data-level="4.6" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#boxplot"><i class="fa fa-check"></i><b>4.6</b> Boxplot</a></li>
+<li class="chapter" data-level="4.7" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#group-comparison"><i class="fa fa-check"></i><b>4.7</b> Group Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#definitions-1"><i class="fa fa-check"></i><b>5.1</b> Definitions</a></li>
+<li class="chapter" data-level="5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#finding-probabilities"><i class="fa fa-check"></i><b>5.2</b> Finding Probabilities</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#disjoint-or-mutually-exclusive-outcomes"><i class="fa fa-check"></i><b>5.2.1</b> Disjoint or mutually exclusive outcomes</a></li>
+<li class="chapter" data-level="5.2.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#probabilities-when-events-are-not-disjoint-or-mutually-exclusive"><i class="fa fa-check"></i><b>5.2.2</b> Probabilities when events are NOT disjoint or mutually exclusive</a></li>
+<li class="chapter" data-level="5.2.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#complement-of-an-event"><i class="fa fa-check"></i><b>5.2.3</b> Complement of an event</a></li>
+<li class="chapter" data-level="5.2.4" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#multiplication-rule-for-independent-processes"><i class="fa fa-check"></i><b>5.2.4</b> Multiplication Rule | for independent processes</a></li>
+<li class="chapter" data-level="5.2.5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#marginal-and-joint-probabilities"><i class="fa fa-check"></i><b>5.2.5</b> Marginal and joint probabilities</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#probability-distributions"><i class="fa fa-check"></i><b>5.3</b> Probability Distributions</a></li>
+<li class="chapter" data-level="5.4" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#parameters-of-a-probability-distribution"><i class="fa fa-check"></i><b>5.4</b> Parameters of a Probability Distribution</a></li>
+<li class="chapter" data-level="5.5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.5</b> Binomial Probability Distribution</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#expected-value-of-the-binomial-distribution"><i class="fa fa-check"></i><b>5.5.1</b> Expected Value of the Binomial Distribution</a></li>
+<li class="chapter" data-level="5.5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#standard-deviation-of-the-binomial-distribution"><i class="fa fa-check"></i><b>5.5.2</b> Standard Deviation of the Binomial Distribution</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Normal Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#normal-distribution"><i class="fa fa-check"></i><b>6.1</b> Normal Distribution</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#standard-normal-distribution"><i class="fa fa-check"></i><b>6.1.1</b> Standard Normal Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#sampling-distribution-of-a-statistic"><i class="fa fa-check"></i><b>6.2</b> Sampling Distribution of a Statistic</a>
+<ul>
+<li class="chapter" data-level="" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#sampling-distribution-of-sample-mean"><i class="fa fa-check"></i>Sampling Distribution of Sample Mean</a></li>
+<li class="chapter" data-level="" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#sampling-distribution-of-a-sample-proportion"><i class="fa fa-check"></i>Sampling Distribution of a Sample Proportion</a></li>
+<li class="chapter" data-level="" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#sampling-distribution-of-a-sample-variance"><i class="fa fa-check"></i>Sampling Distribution of a Sample Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#central-limit-theorem"><i class="fa fa-check"></i><b>6.3</b> Central Limit Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html"><i class="fa fa-check"></i><b>7</b> Estimating Parameters and Determining Sample Sizes</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#estimate-a-population-proportion"><i class="fa fa-check"></i><b>7.1</b> Estimate a Population Proportion</a></li>
+<li class="chapter" data-level="7.2" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#confidence-intervals"><i class="fa fa-check"></i><b>7.2</b> Confidence Intervals</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#margin-of-error-me"><i class="fa fa-check"></i><b>7.2.1</b> Margin of Error (ME)</a></li>
+<li class="chapter" data-level="7.2.2" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#finding-sample-size-using-z-statistic"><i class="fa fa-check"></i><b>7.2.2</b> Finding sample Size Using <span class="math inline">\(z\)</span> Statistic</a></li>
+<li class="chapter" data-level="7.2.3" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#estimating-a-population-mean-when-sigma-is-known"><i class="fa fa-check"></i><b>7.2.3</b> Estimating a Population Mean When <span class="math inline">\(\sigma\)</span> is known</a></li>
+<li class="chapter" data-level="7.2.4" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#estimating-a-population-mean-when-sigma-is-not-known"><i class="fa fa-check"></i><b>7.2.4</b> Estimating a Population Mean When <span class="math inline">\(\sigma\)</span> is not known</a></li>
+<li class="chapter" data-level="7.2.5" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#text-student-t--text-distribution"><i class="fa fa-check"></i><b>7.2.5</b> <span class="math inline">\(\text {Student } t- \text { Distribution}\)</span></a></li>
+<li class="chapter" data-level="7.2.6" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#t-text-confidence-interval"><i class="fa fa-check"></i><b>7.2.6</b> <span class="math inline">\(t \text { Confidence Interval}\)</span></a></li>
+<li class="chapter" data-level="7.2.7" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#finding-sample-size-using-t-stat"><i class="fa fa-check"></i><b>7.2.7</b> Finding Sample Size Using <span class="math inline">\(t\)</span> Stat</a></li>
+<li class="chapter" data-level="7.2.8" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#choosing-between-student-t-and-z-distributions"><i class="fa fa-check"></i><b>7.2.8</b> Choosing between Student <span class="math inline">\(t\)</span> and <span class="math inline">\(z\)</span> Distributions</a></li>
+<li class="chapter" data-level="7.2.9" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#estimating-a-population-standard-deviation-or-variance"><i class="fa fa-check"></i><b>7.2.9</b> Estimating a Population Standard Deviation or Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#chi-squared-chi2-distribution"><i class="fa fa-check"></i><b>7.3</b> Chi-Squared <span class="math inline">\(\chi^2\)</span> Distribution</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#confidence-interval-for-estimating-a-population-standard-deviation-or-variance"><i class="fa fa-check"></i><b>7.3.1</b> Confidence Interval for Estimating a Population Standard Deviation or Variance</a></li>
+<li class="chapter" data-level="7.3.2" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#confidence-interval-for-estimating-a-population-standard-deviation-or-variance-1"><i class="fa fa-check"></i><b>7.3.2</b> Confidence Interval for Estimating a Population Standard Deviation or Variance</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="normal-probability-distributions" class="section level1" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Normal Probability Distributions</h1>
+<p><strong>Learning Outcome</strong></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Compute probability for binomial and normal distributions.</td>
+</tr>
+</tbody>
+</table>
+<p>In this chapter, we introduce continuous probability distributions, with the focus on normal probability distributions. We will learn how to calculate probabilities from the standard normal distribution and apply that knowledge to solve some practical problems. Finally, we will learn about <em>sampling distribution</em> and use it to state the <strong>Central Limit Theorem</strong>.</p>
+<div id="normal-distribution" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Normal Distribution</h2>
+<p><strong>Properties of a Normal Curve</strong></p>
+<ul>
+<li><p>A normal curve is unimodal and symmetric.</p></li>
+<li><p>The mean is equal to the median.</p></li>
+<li><p>Both are the center of the curve.</p></li>
+</ul>
+<p>Probability density function of the normal distribution:</p>
+<p><span class="math display">\[P(x) = \dfrac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2} \big( \frac{x-\mu}{\sigma} \big)^2 },  -\infty&lt;x&lt;+\infty\]</span></p>
+<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<p><span class="math inline">\(\mu\)</span> is called the <strong>location parameter</strong> because it determines where the distribution is located on the horizontal axis.</p>
+<p><span class="math inline">\(\sigma\)</span> is called the <strong>shape parameter</strong> because it determines the shape of the distribution.</p>
+<div id="linear-transformation-of-the-nonstandardized-normal-distribution-to-the-standardized-normal-distribution" class="section level5 unnumbered">
+<h5>Linear Transformation of the Nonstandardized Normal Distribution to the Standardized Normal Distribution</h5>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Recall</strong> : A <strong>z-score</strong> is the number of standard deviations that a given value <span class="math inline">\(x\)</span> is above or below the mean. The <span class="math inline">\(z\)</span> score is calculated by using one of the following:</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+\begin{align}
+z &amp;= \dfrac{x-\bar x}{s} \\
+x = \bar x - 2s  &amp;\implies  z = -2  \\
+x = \bar x - s  &amp;\implies  z = -1  \\
+x = \bar x &amp;\implies z = 0  \\
+x = \bar x + s  &amp;\implies  z = +1  \\
+x = \bar x + 2s  &amp;\implies  z = +2  \\
+\end{align}
+\]</span></p>
+<p><img src="nonstandard_to_standard.png" /></p>
+</div>
+<div id="standard-normal-distribution" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Standard Normal Distribution</h3>
+<p>The <strong>standard normal distribution</strong> is a normal distribution with the parameters of <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma = 1\)</span>. The total area under its density curve is equal to <span class="math inline">\(1\)</span>.</p>
+<p><span class="math display">\[ \bbox[yellow,5px]
+{
+\color{black}{{P(z)} = \frac {1}{\sqrt {2\pi}}\exp{-\frac{1}{2}z^2}, -\infty&lt;z&lt;+\infty}
+}
+\]</span></p>
+<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+<div id="finding-areas-between-two-z-scores" class="section level4 unnumbered">
+<h4>Finding Areas Between Two <span class="math inline">\(z\)</span> Scores</h4>
+<p><img src="z_score_left_right.png" /></p>
+<p><strong>Notation</strong></p>
+<p><span class="math display">\[
+\begin{cases}
+P(a &lt; z &lt; b) \ \text{ denotes the probability that the } z \text{ score is between } a \text{ and } b \\
+P(z &gt; a) \ \text{ denotes the probability that the } z \text{ score is greater than } a  \\
+P(z &lt; a) \ \text{ denotes the probability that the } z \text{ score is less than } a \end{cases}
+\]</span></p>
+<p><strong>Exercise:</strong></p>
+<p><span class="math display">\[
+\begin{align}
+&amp;1. \text { Find } P(z &lt; -1)  \\
+&amp;2. \text { Find } P(z &gt; 2)  \\
+&amp;3. \text { Find } P(-3 &lt; z &lt; 3)  \\
+\end{align}
+\]</span></p>
+</div>
+<div id="calculation-of-percentile-from-z-scores" class="section level4 unnumbered">
+<h4>Calculation of percentile from <span class="math inline">\(z\)</span> scores</h4>
+<p><strong>Example:</strong> Suppose cumulative SAT scores are approximated by a normal model with <span class="math inline">\(\mu = 1500 \text { and } \sigma = 300\)</span>. What is the probability that a randomly selected SAT taker scores at least <span class="math inline">\(1630\)</span> on the SAT?</p>
+<p><img src="satAbove1630.png" width="400px" />
+<br/></p>
+<p><span class="math inline">\(z = \frac{x-\mu}{\sigma}=\frac{1630-1500}{300}=\frac{130}{300}=0.43\)</span></p>
+<p><span class="math inline">\(P(z\ge0.43)=0.3336\)</span></p>
+<p>The probability that a randomly selected score is at least <span class="math inline">\(1630\)</span> on the SAT is <span class="math inline">\(33\%\)</span>. In order words, <span class="math inline">\(1630\)</span> is <span class="math inline">\((100 - 33) = 73\)</span> percentile score.</p>
+<p><strong>Example:</strong> Edward earned a <span class="math inline">\(1400\)</span> on his SAT. What is his percentile?</p>
+<div class="centered">
+
+<p><img src="satBelow1400.png" width="400px" /></p>
+<p><span class="math inline">\(z = \dfrac{x-\mu}{\sigma}=\dfrac{1400-1500}{300}=\dfrac{100}{300}=-0.33\)</span></p>
+<p><span class="math inline">\(P(z\le-0.33)=0.3707\)</span></p>
+<p>Edward is at the <span class="math inline">\(37\)</span>th percentile.</p>
+</div>
+<div id="calculation-of-z-score-from-percentile" class="section level4 unnumbered">
+<h4>Calculation of <span class="math inline">\(z\)</span> score from percentile</h4>
+<p><img src="percentile_to_zscore.png" /></p>
+<p><span class="math inline">\(z = 1.645\)</span></p>
+<p>Interpretation: <span class="math inline">\(95\%\)</span> of the area under the curve is below <span class="math inline">\(z = 1.645.\)</span></p>
+<p><strong>Example:</strong> Carlos believes he can get into his preferred college if he scores at least in the <span class="math inline">\(80\)</span>th percentile on the SAT. What score should he aim for?</p>
+<p><img src="satBelow1800.png" width="400px" />
+<br/></p>
+<p>At <span class="math inline">\(80th\)</span> percentile, <span class="math inline">\(z = 0.84\)</span></p>
+<p><span class="math display">\[
+\begin{align}
+z &amp; = \dfrac{x-\mu}{\sigma}    \\
+0.84 &amp; = \dfrac{x-1500}{300}   \\
+0.84 \times 300 + 1500 &amp; = x  \\
+x &amp; = 1752
+\end{align}
+\]</span></p>
+<p><br></p>
+<p>the 80th percentile on the SAT corresponds to a score of <span class="math inline">\(1752\)</span>.</p>
+</div>
+<div id="more-exercises" class="section level4 unnumbered">
+<h4>More Exercises</h4>
+<ol style="list-style-type: decimal">
+<li><p>The U.S. Air Force requires that pilots have heights between 64 in. and 77 in. Heights of women are normally distributed with a mean of <span class="math inline">\(63.7\)</span> in. and a standard deviation of <span class="math inline">\(2.9\)</span> in. What percentage of women meet that height requirement?</p></li>
+<li><p>To recruit more women pilots in the Air Force, if the height requirements are relaxed to allow middle <span class="math inline">\(95\%\)</span> of women based on the height distribution <span class="math inline">\((N \sim (63.7, 2.9))\)</span>, what will be the heights of the tallest and shortest women meeting the requirements?</p></li>
+<li><p>A professor gives a test and the scores are normally distributed with a mean of <span class="math inline">\(60\)</span> and a standard deviation of <span class="math inline">\(12\)</span>. She plans to curve the scores.</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>If she curves by adding <span class="math inline">\(15\)</span> to each grade, what is the new mean and standard deviation?</li>
+<li>If the grades are curved so that the grades of <span class="math inline">\(B\)</span> are given to scores above the bottom <span class="math inline">\(70\%\)</span> and below the top <span class="math inline">\(10\%\)</span>, find the new numerical limits for a grade of <span class="math inline">\(B\)</span>.</li>
+<li>Which method of curving the grades is fairer?</li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>What is the probability that when a value is randomly selected from a normal distribution, it is an outlier? Note: outliers are defined as data values that are above <span class="math inline">\(Q_3\)</span> by an amount greater than <span class="math inline">\(1.5 \times IQR\)</span> or below <span class="math inline">\(Q_1\)</span> by an amount greater than <span class="math inline">\(1.5 \times IQR\)</span>, where <span class="math inline">\(IQR\)</span> is the interquartile range.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="sampling-distribution-of-a-statistic" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Sampling Distribution of a Statistic</h2>
+<p>The sampling distribution of a statistic represents the distribution of all values of the statistic (e.g. <span class="math inline">\(\text { sample mean, sample proporton, sample variance, etc.}\)</span>) when all possible samples of the same size <span class="math inline">\(n\)</span> are drawn from the same population.</p>
+<p>Understanding the concept of a sampling distribution is central to understanding statistical inference.</p>
+<p><strong>Parameter and Statistics</strong></p>
+<p>A <strong>statistic</strong> is a value from our observed data.</p>
+<p>A <strong>parameter</strong> is a value that describes the population.</p>
+<p><span class="math display">\[
+\begin{array} {l|c}
+\text{Name} &amp; \text{Statistic} &amp; \text{Parameter} \\
+\hline
+\text {Proportion}             &amp; \hat p &amp; p         \\
+\text {Mean}                   &amp; \bar x &amp; \mu       \\
+\text {Std. Deviation}         &amp; s      &amp; \sigma    \\
+\text {Variance}               &amp; s^2    &amp; \sigma^2  \\
+\text {Correlation}            &amp; r      &amp; \rho      \\
+\text {Regression Coefficient} &amp; b      &amp; \beta     \\
+\end{array}
+\]</span></p>
+<div id="sampling-distribution-of-sample-mean" class="section level3 unnumbered">
+<h3>Sampling Distribution of Sample Mean</h3>
+<p>The sampling distribution of the sample mean is the distribution of all values of the <strong>sample mean</strong> (or the distribution of the variable <span class="math inline">\(\overline X\)</span>) when all possible samples of the same size <span class="math inline">\(n\)</span> are drawn from the same population (with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>).</p>
+<p><img src="sampling_dist_mean.png" alt="Sample Means of 10,000 Trials" />
+<strong>Recall: <span class="math inline">\(E(X) = \dfrac{1}{6}[1 + 2 + 3 + 4 + 5 + 6] = 3.5\)</span></strong></p>
+<p>We can show that</p>
+<p><span class="math display">\[
+\begin{cases}
+E(\overline X) = \mu  \\
+Var(\overline X) = \dfrac{\sigma^2}{n}
+\end{cases}
+\]</span></p>
+<div id="proof-optional-eoverline-x-mu" class="section level4 unnumbered">
+<h4>Proof (optional): <span class="math inline">\(E(\overline X) = \mu\)</span></h4>
+<p>Let <span class="math inline">\(X_1, X_2,...,X_n\)</span> be <span class="math inline">\(n\)</span> independently drawn observations from a population distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>.</p>
+<p>Let <span class="math inline">\(\overline X\)</span> be the mean of these <span class="math inline">\(n\)</span> independent observations:</p>
+<p><span class="math display">\[
+\begin{align}
+\overline X &amp;= \frac{X_1 + X_2 +...+ X_n}{n} \\ \\
+E(\overline X) &amp;= E\bigg( \frac{X_1 + X_2 +...+ X_n}{n} \bigg) \\
+       &amp;= \bigg( \frac {1}{n} \bigg) E(X_1 + X_2 +...+ X_n) \\
+       &amp;= \bigg( \frac {1}{n} \bigg) [E(X_1) + E(X_2) +...+ E(X_n)] \\
+       &amp;= \bigg( \frac {1}{n} \bigg) [\mu + \mu +...+ \mu] \\
+       &amp;= \bigg( \frac {1}{n} \bigg) [n.\mu] \\
+       &amp;= \mu \\
+\end{align}
+\]</span></p>
+</div>
+<div id="proof-optional-varoverline-x-sigma2n" class="section level4 unnumbered">
+<h4>Proof (optional): <span class="math inline">\(Var(\overline X) = \sigma^2/{n}\)</span></h4>
+<p><span class="math display">\[
+\begin{align}
+\overline X &amp;= \frac{X_1 + X_2 +...+ X_n}{n} \\ \\
+Var(\overline X) &amp;= Var \bigg( \frac{X_1 + X_2 +...+ X_n}{n} \bigg) \\
+       &amp;= \bigg( \frac {1}{n^2} \bigg)Var(X_1 + X_2 +...+ X_n \bigg) \\
+       &amp;= \bigg( \frac {1}{n^2} \bigg)[Var(X_1) + Var(X_2) +...+ Var(X_n)] \\
+       &amp;= \bigg( \frac {1}{n^2} \bigg)[\sigma^2 + \sigma^2 +...+ \sigma^2] \\
+       &amp;= \bigg( \frac {1}{n^2} \bigg)[n.\sigma^2] \\
+       &amp;= \frac{\sigma^2}{n} \\
+\sigma^2_{\overline X} &amp;= \frac{\sigma^2}{n} \\
+SD_{\overline X} = \sigma_{\overline X} &amp;= {\frac{\sigma}{\sqrt n}} 
+\end{align}
+\]</span></p>
+</div>
+</div>
+<div id="sampling-distribution-of-a-sample-proportion" class="section level3 unnumbered">
+<h3>Sampling Distribution of a Sample Proportion</h3>
+<p>The sampling distribution of the sample proportion is the distribution of <strong>sample proportions</strong> (or the distribution of the variable <span class="math inline">\(\mathbf { \hat p}\)</span>) with all samples having the same size <span class="math inline">\(n\)</span> drawn from the same population (with mean proportion <span class="math inline">\(p\)</span> and variance <span class="math inline">\(p(1-p)\)</span>).</p>
+<p><span class="math display">\[
+\begin{align}
+E(\mathbf { \hat p}) &amp;= p  \\ 
+Var(\mathbf { \hat p}) &amp;= \dfrac{p(1-p)}{n}
+\end{align}
+\]</span></p>
+<div class="figure">
+<img src="sampling_dist_prop.png" alt="" />
+<p class="caption">Sample Means of 10,000 Trials</p>
+</div>
+</div>
+<div id="sampling-distribution-of-a-sample-variance" class="section level3 unnumbered">
+<h3>Sampling Distribution of a Sample Variance</h3>
+<p>The sampling distribution of the sample variance is the distribution of sample variances (i.e. the variable <span class="math inline">\(s^2\)</span>), with all samples having the same sample size <span class="math inline">\(n\)</span> taken from the same population.</p>
+<div class="figure">
+<img src="sampling_dist_variance.png" alt="" />
+<p class="caption">Sample Means of 10,000 Trials</p>
+</div>
+<p><strong>Recall: <span class="math inline">\(\sigma^2 = \dfrac{1}{6}[(1 - 3.5)^2 + (2 - 3.5)^2 + (3 - 3.5)^2 + (4 - 3.5)^2 + (5 - 3.5)^2 + (6 - 3.5)^2] \\ = 2.9\)</span></strong></p>
+<p>Notice that the distribution of sample variances tends to be a distribution skewed to the right.</p>
+</div>
+</div>
+<div id="central-limit-theorem" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Central Limit Theorem</h2>
+<div id="when-taking-a-random-sample-of-independent-observations-from-a-population-with-a-fixed-mean-and-standard-deviation-the-distribution-of-bar-x-approaches-a-normal-distribution-with-mean-mu-and-standard-deviation-sigmasqrtn-as-n-increases." class="section level5 unnumbered">
+<h5><strong>When taking a random sample of independent observations from a population with a fixed mean and standard deviation, the distribution of <span class="math inline">\(\bar x\)</span> approaches a normal distribution with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma/\sqrt{n}\)</span>, as <span class="math inline">\(n\)</span> increases.</strong></h5>
+<div class="centered">
+<p><img src="cltSimulations.png" width="450px" /></p>
+</div>
+</div>
+<div id="normal-approximation-for-the-sampling-distribution" class="section level4 unnumbered">
+<h4>Normal Approximation for the Sampling Distribution</h4>
+<p><span style="color:#08519c">
+<strong>Three important facts about the distribution of a sample proportion <span class="math inline">\(\bar x\)</span></strong>
+</span></p>
+<p><strong>Population has a normal distribution or <span class="math inline">\(n &gt; 30\)</span></strong></p>
+<p><span class="math display">\[
+\begin{align}
+\text {Mean of all values of } \bar x &amp;: \mu_{\bar x} = \mu  \\
+\text {Standard deviation of all values of } \bar x &amp;: \sigma_{\bar x} = \dfrac{\sigma}{\sqrt n}  \\
+z \text { score conversion of } \bar x &amp;: z = \dfrac{\bar x - \mu}{\frac{\sigma}{\sqrt n}}  \\
+\end{align}
+\]</span></p>
+<p><strong>Original population is not normally distributed and <span class="math inline">\(n \le 30\)</span>:</strong> The distribution of <span class="math inline">\(\bar x\)</span> cannot be approximated well by a normal distribution, and the methods of this section do not apply.</p>
+<p></br></p>
+<p><span style="color:#08519c">
+<strong>Three important facts about the distribution of a sample proportion <span class="math inline">\(\hat p\)</span></strong>
+</span></p>
+<p><strong>When <span class="math inline">\(np \ge 10\)</span> and <span class="math inline">\(n(1-p) \ge 10\)</span></strong></p>
+<p><span class="math display">\[
+\begin{align}
+\text {Mean of all values of } \hat p &amp;: \mu_{\hat p} = p  \\
+\text {Standard deviation of all values of } \hat p &amp;: \sigma_{\hat p} = \sqrt{\dfrac{p(1-p)}{n}}  \\
+z \text { score conversion of } \hat p &amp;: z = \dfrac{\hat p - p}{\sqrt{\frac{p(1-p)}{n}}}  \\
+\end{align}
+\]</span></p>
+<p><strong>When <span class="math inline">\(np \lt 10\)</span> and <span class="math inline">\(n(1-p) \lt 10\)</span>:</strong> The distribution of <span class="math inline">\(\hat p\)</span> cannot be approximated well by a normal distribution, and the methods of this section do not apply.</p>
+<p></br></p>
+<p><strong>Problem 1:</strong></p>
+<p>In the 2012 Cherry Blossom 10 mile run, the average time for all of the runners is <span class="math inline">\(94.52\)</span> minutes with a standard deviation of <span class="math inline">\(8.97\)</span> minutes. The distribution of run times is approximately normal. Find the probability that a randomly selected runner completes the run in less than <span class="math inline">\(90\)</span> minutes.</p>
+<p><strong>Solution:</strong></p>
+<p>Because the distribution of run times is approximately normal, we can use normal approximation.</p>
+<p><span class="math display">\[
+\begin{align}
+z &amp;= \frac{\bar x-\mu_{\bar x}}{\sigma_{\bar x}} \\
+  &amp;= \frac{90-94.52}{8.97/\sqrt 1} \\
+  &amp;= -0.504 \\ \\
+P(z &lt; -0.504) &amp;= 0.3072
+\end{align}
+\]</span></p>
+<p>There is a <span class="math inline">\(30.72\%\)</span> probability that a randomly selected runner will complete the run in less than <span class="math inline">\(90\)</span> minutes.</p>
+<p><strong>Problem 2:</strong></p>
+<p>Find the probability that the average of 20 runners is less than 90 minutes.</p>
+<p><strong>Solution:</strong></p>
+<p>Here, <span class="math inline">\(n = 20 &lt; 30\)</span>, but the distribution of the population, that is, the distribution
+of run times is stated to be approximately normal. Because of this, the sampling
+distribution will be normal for any sample size.</p>
+<p><span class="math display">\[
+\begin{align}
+\sigma_{\bar x} &amp;= \frac{\sigma}{\sqrt n} = \frac{8.97}{\sqrt {20}} = 2.01 \\
+z &amp;= \frac{\bar x-\mu_{\bar x}}{\sigma_{\bar x}} = \frac{90-94.52}{2.01}= - 2.25 \\
+P(z&lt;-0.504) &amp;= 0.0123
+\end{align}
+\]</span>
+There is a <span class="math inline">\(1.23\%\)</span> probability that the average run time of 20 randomly selected runners will be less than 90 minutes.</p>
+<p><strong>Problem 3:</strong></p>
+<p>Find the probability that less than <span class="math inline">\(15\%\)</span> of the sample of <span class="math inline">\(400\)</span> people will be smokers if the true proportion is <span class="math inline">\(20\%.\)</span></p>
+<p><strong>Solutions:</strong></p>
+<p>The mean of the sample proportion is the population proportion: <span class="math inline">\(\mu_\hat p = 0.20.\)</span></p>
+<p>The standard deviation of <span class="math inline">\(\hat p\)</span> is described by the standard deviation for the proportion:</p>
+<p><span class="math display">\[\sigma_{\hat p}=\sqrt \frac{p(1-p)}{n} = \sqrt \frac{0.2(0.8)}{400} = 0.02\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+z &amp;= \frac{\hat p - \mu_\hat p}{\sigma_\hat p} = \frac{0.15 - 0.20}{0.02} = -2.5 \\ \\
+P(z&lt;-2.5) &amp;= 0.0062
+\end{align}
+\]</span></p>
+<p><strong>Problem 4:</strong></p>
+<p><span class="math inline">\(13\%\)</span> of the US population are left-handed. If an auditorium has <span class="math inline">\(15\)</span> lefty seats, what is the probability that there will not be enough lefty seats for a class of <span class="math inline">\(90\)</span> students (in other words, what is the probability that there will be more than <span class="math inline">\(15\)</span> lefty students in the group)?</p>
+<p><strong>Solutions:</strong></p>
+<p><span class="math display">\[
+\begin{align}
+\mu_\hat p &amp;= 0.13 \\
+\hat{p} &amp;= 15/90 = 0.167 \\
+\sigma_{\hat p}&amp;=\sqrt \frac{p(1- p)}{n} = \sqrt \frac{0.13(0.87)}{90} = 0.035 \\ \\
+z &amp;= \frac{\hat p - \mu_\hat p}{\sigma_\hat p} = \frac{0.167 - 0.13}{0.035} = 1.06 \\
+P(\hat{p}&gt;0.167) &amp;= P(z&gt;1.06) = 0.1446
+\end{align}
+\]</span></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="discrete-probability-distributions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="estimating-parameters-and-determining-sample-sizes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 3
+},
+"edit": {
+"link": "https://github.com/amlanbanerjee/introduction_to_statistics/edit/master/06-normal_probability_distribution.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/amlanbanerjee/introduction_to_statistics/blob/master/06-normal_probability_distribution.Rmd",
+"text": null
+},
+"download": "book.pdf",
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+h1:course-information Course Information
+h2:course-description Course Description
+h2:course-outcomes Course Outcomes
+h1:introduction Introduction
+h2:what-is-statistics What is Statistics?
+h2:statistical-thinking Statistical Thinking
+h4:definitions Definitions
+h2:types-of-data-or-variable Types of Data or Variable
+h4:levels-of-measurement-of-qualitative-data Levels of Measurement of Qualitative Data
+h4:levels-of-measurement-of-quantitative-data Levels of Measurement of Quantitative Data
+h2:sampling-methods Sampling Methods
+h3:sampling-from-a-population Sampling from a Population
+h3:simple-random-sampling-srs Simple Random Sampling (SRS)
+h3:stratified-sampling Stratified Sampling
+h3:cluster-sampling Cluster Sampling
+h3:nonrandom-sampling Nonrandom Sampling
+h2:sampling-errors Sampling Errors
+h4:statistical-inference Statistical Inference
+h2:bias-and-precision Bias and Precision
+h3:statistical-studies Statistical Studies
+h2:observational-studies Observational Studies
+h4:confounding-variable Confounding Variable
+h4:lurking-variable Lurking Variable
+h2:experimental-design Experimental Design
+h4:principles-of-experimental-design Principles of Experimental Design
+h3:randomized-blocked-design Randomized Blocked Design
+h3:completely-randomized-experimental-design Completely Randomized Experimental Design
+h1:exploring-data-with-tables-and-graphs Exploring Data with Tables and Graphs
+h2:frequency-distribution Frequency Distribution
+h4:relative-frequency-distribution Relative Frequency Distribution
+h4:cumulative-distribution Cumulative Distribution
+h2:histogram Histogram
+h4:density-histogram Density Histogram
+h2:other-charts Other Charts
+h1:describing-exploring-and-comparing-data Describing, Exploring, and Comparing Data
+h2:measures-of-shape Measures of Shape
+h2:measures-of-center Measures of Center
+h4:mean Mean
+h4:median Median
+h4:weighted-mean Weighted Mean
+h4:calculating-mean-from-a-frequency-distribution Calculating Mean from a Frequency Distribution
+h4:midrange Midrange
+h2:measures-of-spread-or-variation Measures of Spread or Variation
+h4:range Range
+h4:standard-deviation-of-a-sample Standard Deviation of a Sample
+h4:calculating-standard-deviation-from-a-frequency-distribution Calculating Standard Deviation from a Frequency Distribution
+h4:standard-deviation-of-a-population Standard Deviation of a Population
+h4:variance-of-a-sample-and-population Variance of a Sample and Population
+h4:coefficient-of-variation Coefficient of Variation
+h2:normal-distribution-and-standard-deviation Normal Distribution and Standard Deviation
+h3:z-score z-score
+h2:percentiles-and-quartiles Percentiles and Quartiles
+h4:finding-a-percentile Finding a Percentile
+h2:boxplot Boxplot
+h4:number-summary 5-Number Summary
+h4:outlier-and-fences Outlier and Fences
+h2:group-comparison Group Comparison
+h1:discrete-probability-distributions Discrete Probability Distributions
+h2:definitions-1 Definitions
+h2:finding-probabilities Finding Probabilities
+h3:disjoint-or-mutually-exclusive-outcomes Disjoint or mutually exclusive outcomes
+h3:probabilities-when-events-are-not-disjoint-or-mutually-exclusive Probabilities when events are NOT disjoint or mutually exclusive
+h3:complement-of-an-event Complement of an event
+h3:multiplication-rule-for-independent-processes Multiplication Rule | for independent processes
+h3:marginal-and-joint-probabilities Marginal and joint probabilities
+h2:probability-distributions Probability Distributions
+h5:probability-distribution-requirements Probability Distribution: Requirements
+h2:parameters-of-a-probability-distribution Parameters of a Probability Distribution
+h4:expected-value Expected Value
+h4:variability-in-discrete-random-variables Variability in Discrete Random Variables
+h5:exercise-1-coin-toss Exercise 1: Coin Toss
+h5:exercise-2-be-a-better-bettor Exercise 2: Be A Better Bettor
+h2:binomial-probability-distribution Binomial Probability Distribution
+h5:probability-distribution-of-3-independent-trials Probability Distribution of  independent Trials
+h4:binomial-probability-distribution-formula Binomial Probability Distribution Formula
+h5:sampling-with-replacement Sampling with Replacement
+h3:expected-value-of-the-binomial-distribution Expected Value of the Binomial Distribution
+h3:standard-deviation-of-the-binomial-distribution Standard Deviation of the Binomial Distribution
+h1:normal-probability-distributions Normal Probability Distributions
+h2:normal-distribution Normal Distribution
+h5:linear-transformation-of-the-nonstandardized-normal-distribution-to-the-standardized-normal-distribution Linear Transformation of the Nonstandardized Normal Distribution to the Standardized Normal Distribution
+h3:standard-normal-distribution Standard Normal Distribution
+h4:finding-areas-between-two-z-scores Finding Areas Between Two  Scores
+h4:calculation-of-percentile-from-z-scores Calculation of percentile from  scores
+h4:calculation-of-z-score-from-percentile Calculation of  score from percentile
+h4:more-exercises More Exercises
+h2:sampling-distribution-of-a-statistic Sampling Distribution of a Statistic
+h3:sampling-distribution-of-sample-mean Sampling Distribution of Sample Mean
+h4:proof-optional-eoverline-x-mu Proof (optional): 
+h4:proof-optional-varoverline-x-sigma2n Proof (optional): 
+h3:sampling-distribution-of-a-sample-proportion Sampling Distribution of a Sample Proportion
+h3:sampling-distribution-of-a-sample-variance Sampling Distribution of a Sample Variance
+h2:central-limit-theorem Central Limit Theorem
+h5:when-taking-a-random-sample-of-independent-observations-from-a-population-with-a-fixed-mean-and-standard-deviation-the-distribution-of-bar-x-approaches-a-normal-distribution-with-mean-mu-and-standard-deviation-sigmasqrtn-as-n-increases. 
+h4:normal-approximation-for-the-sampling-distribution Normal Approximation for the Sampling Distribution
+h1:estimating-parameters-and-determining-sample-sizes Estimating Parameters and Determining Sample Sizes
+h2:estimate-a-population-proportion Estimate a Population Proportion
+h4:point-estimate Point Estimate
+h2:confidence-intervals Confidence Intervals
+h4:constructing-a-95-confidence-interval 
+h4:simulating-confidence-intervals Simulating Confidence Intervals
+h4:generalizing-confidence-interval Generalizing Confidence Interval
+h4:calculating-confidence-intervals Calculating Confidence Intervals
+h3:margin-of-error-me Margin of Error (ME)
+h3:finding-sample-size-using-z-statistic Finding sample Size Using  Statistic
+h3:estimating-a-population-mean-when-sigma-is-known Estimating a Population Mean When  is known
+h3:estimating-a-population-mean-when-sigma-is-not-known Estimating a Population Mean When  is not known
+h3:text-student-t--text-distribution 
+h3:t-text-confidence-interval 
+h3:finding-sample-size-using-t-stat Finding Sample Size Using  Stat
+h3:choosing-between-student-t-and-z-distributions Choosing between Student  and  Distributions
+h3:estimating-a-population-standard-deviation-or-variance Estimating a Population Standard Deviation or Variance
+h2:chi-squared-chi2-distribution Chi-Squared  Distribution
+h3:confidence-interval-for-estimating-a-population-standard-deviation-or-variance Confidence Interval for Estimating a Population Standard Deviation or Variance
+h3:confidence-interval-for-estimating-a-population-standard-deviation-or-variance-1 Confidence Interval for Estimating a Population Standard Deviation or Variance
+

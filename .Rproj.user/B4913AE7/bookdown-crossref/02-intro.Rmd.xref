@@ -1,0 +1,25 @@
+h1:introduction Introduction
+h2:what-is-statistics What is Statistics?
+h2:statistical-thinking Statistical Thinking
+h4:definitions Definitions
+h2:types-of-data-or-variable Types of Data or Variable
+h4:levels-of-measurement-of-qualitative-data Levels of Measurement of Qualitative Data
+h4:levels-of-measurement-of-quantitative-data Levels of Measurement of Quantitative Data
+h2:sampling-methods Sampling Methods
+h3:sampling-from-a-population Sampling from a Population
+h3:simple-random-sampling-srs Simple Random Sampling (SRS)
+h3:stratified-sampling Stratified Sampling
+h3:cluster-sampling Cluster Sampling
+h3:nonrandom-sampling Nonrandom Sampling
+h2:sampling-errors Sampling Errors
+h4:statistical-inference Statistical Inference
+h2:bias-and-precision Bias and Precision
+h3:statistical-studies Statistical Studies
+h2:observational-studies Observational Studies
+h4:confounding-variable Confounding Variable
+h4:lurking-variable Lurking Variable
+h2:experimental-design Experimental Design
+h4:principles-of-experimental-design Principles of Experimental Design
+h3:randomized-blocked-design Randomized Blocked Design
+h3:completely-randomized-experimental-design Completely Randomized Experimental Design
+

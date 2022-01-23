@@ -1,0 +1,43 @@
+--- 
+title: "Introduction to Statistics"
+author: "Amlan Banerjee, Ph.D."
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+output: 
+  bookdown::gitbook:
+          config:
+            fontsettings: 
+              theme: 'white'
+              family: 'serif'
+              size: 3
+            download: ["book.pdf"]
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Course Information
+
+The purpose of this elementary statistics course is to introduce students to the relationship between statistics and the world through use of a wide variety of real applications that bring life to theory and methods.
+
+## Course Description
+
+The course covers sampling methods, classification of data, probability, frequency and probability distributions, confidence intervals, tests of statistical significance, and simple regression and correlation.
+
+## Course Outcomes
+
+Upon successful completion of this course, the student will be able to:
+
+1.	Interpret quantitative data using graphs and descriptive statistics with emphasis on histograms and boxplots.
+2.	Compute measures of expectation and variation for a discrete probability distribution
+3.	Compute probability for a binomial and normal distribution.
+4.	Perform calculations to estimate parameters using confidence intervals based on the normal distribution and $t$-distribution.
+5.	Perform hypotheses testing involving a sample mean, proportion, and standard deviation/variance
+6.	Perform hypotheses testing involving two sample means (independent and dependent), two population proportions, and two standard deviations/variances.
+7.	Construct linear regression models and correlation coefficients from datasets.
+

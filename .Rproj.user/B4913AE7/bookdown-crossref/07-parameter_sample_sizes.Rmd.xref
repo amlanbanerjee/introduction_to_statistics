@@ -1,0 +1,21 @@
+h1:estimating-parameters-and-determining-sample-sizes Estimating Parameters and Determining Sample Sizes
+h2:estimate-a-population-proportion Estimate a Population Proportion
+h4:point-estimate Point Estimate
+h2:confidence-intervals Confidence Intervals
+h4:constructing-a-95-confidence-interval 
+h4:simulating-confidence-intervals Simulating Confidence Intervals
+h4:generalizing-confidence-interval Generalizing Confidence Interval
+h4:calculating-confidence-intervals Calculating Confidence Intervals
+h3:margin-of-error-me Margin of Error (ME)
+h3:finding-sample-size-using-z-statistic Finding sample Size Using  Statistic
+h3:estimating-a-population-mean-when-sigma-is-known Estimating a Population Mean When  is known
+h3:estimating-a-population-mean-when-sigma-is-not-known Estimating a Population Mean When  is not known
+h3:text-student-t--text-distribution 
+h3:t-text-confidence-interval 
+h3:finding-sample-size-using-t-stat Finding Sample Size Using  Stat
+h3:choosing-between-student-t-and-z-distributions Choosing between Student  and  Distributions
+h3:estimating-a-population-standard-deviation-or-variance Estimating a Population Standard Deviation or Variance
+h2:chi-squared-chi2-distribution Chi-Squared  Distribution
+h3:confidence-interval-for-estimating-a-population-standard-deviation-or-variance Confidence Interval for Estimating a Population Standard Deviation or Variance
+h3:confidence-interval-for-estimating-a-population-standard-deviation-or-variance-1 Confidence Interval for Estimating a Population Standard Deviation or Variance
+
