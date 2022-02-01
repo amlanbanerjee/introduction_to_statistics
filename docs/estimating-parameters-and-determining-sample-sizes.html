@@ -24,7 +24,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-01-27" />
+<meta name="date" content="2022-02-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,12 +176,10 @@
 <li class="chapter" data-level="7.4.2" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#estimating-a-population-mean-when-sigma-is-not-known"><i class="fa fa-check"></i><b>7.4.2</b> Estimating a Population Mean When <span class="math inline">\(\sigma\)</span> Is Not Known</a></li>
 <li class="chapter" data-level="7.4.3" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#t-text-confidence-interval"><i class="fa fa-check"></i><b>7.4.3</b> <span class="math inline">\(t \text { Confidence Interval}\)</span></a></li>
 <li class="chapter" data-level="7.4.4" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#finding-the-sample-size-to-estimate-a-population-mean"><i class="fa fa-check"></i><b>7.4.4</b> Finding the Sample Size to Estimate a Population Mean</a></li>
-<li class="chapter" data-level="7.4.5" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#estimating-a-population-standard-deviation-or-variance"><i class="fa fa-check"></i><b>7.4.5</b> Estimating a Population Standard Deviation or Variance</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#chi-squared-chi2-distribution"><i class="fa fa-check"></i><b>7.5</b> Chi-Squared <span class="math inline">\(\chi^2\)</span> Distribution</a>
+<li class="chapter" data-level="7.5" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#estimating-a-population-standard-deviation-or-variance"><i class="fa fa-check"></i><b>7.5</b> Estimating a Population Standard Deviation or Variance</a>
 <ul>
 <li class="chapter" data-level="7.5.1" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#confidence-interval-for-estimating-a-population-standard-deviation-or-variance"><i class="fa fa-check"></i><b>7.5.1</b> Confidence Interval for Estimating a Population Standard Deviation or Variance</a></li>
-<li class="chapter" data-level="7.5.2" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#confidence-interval-for-estimating-a-population-standard-deviation-or-variance-1"><i class="fa fa-check"></i><b>7.5.2</b> Confidence Interval for Estimating a Population Standard Deviation or Variance</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -403,6 +401,7 @@ t^*_{149} &amp;= 1.976 \\
 \]</span></p>
 <p><img src="tscore_df_149.png" /></p>
 <p><span class="math display">\[
+\begin{align}
 \text {Confidence Interval of } \bar x: \\
 &amp;\bar x \pm t^*_{149} \times SE(\bar x) \\
 &amp;= 0.0913 \pm 1.976 \times 0.0040 \\
@@ -458,17 +457,16 @@ n &amp;\approx 10 \\ \\
 </tbody>
 </table>
 </div>
-<div id="estimating-a-population-standard-deviation-or-variance" class="section level3" number="7.4.5">
-<h3><span class="header-section-number">7.4.5</span> Estimating a Population Standard Deviation or Variance</h3>
+</div>
+<div id="estimating-a-population-standard-deviation-or-variance" class="section level2" number="7.5">
+<h2><span class="header-section-number">7.5</span> Estimating a Population Standard Deviation or Variance</h2>
 <p>This section presents methods for using a sample standard deviation <span class="math inline">\(s\)</span> (or a sample variance <span class="math inline">\(s^2\)</span>) to estimate the value of the corresponding population standard deviation <span class="math inline">\(\sigma\)</span> (or population variance <span class="math inline">\(\sigma^2\)</span>).</p>
 <ul>
 <li><p><strong>Point Estimate:</strong> The sample variance <span class="math inline">\(s^2\)</span> is the best point estimator of the population variance <span class="math inline">\(\sigma^2\)</span>. The sample standard deviation <span class="math inline">\(s\)</span> is commonly used as a point estimate of <span class="math inline">\(\sigma\)</span>, even though it is a biased estimator.</p></li>
 <li><p><strong>Confidence Interval:</strong> When constructing a <em>confidence interval</em> estimate of a population standard deviation (or population variance), we construct the confidence interval using the <span class="math inline">\(\chi^2 \text{ distribution}\)</span>.</p></li>
 </ul>
-</div>
-</div>
-<div id="chi-squared-chi2-distribution" class="section level2" number="7.5">
-<h2><span class="header-section-number">7.5</span> Chi-Squared <span class="math inline">\(\chi^2\)</span> Distribution</h2>
+<div id="chi-squared-chi2-distribution" class="section level4 unnumbered">
+<h4>Chi-Squared <span class="math inline">\(\chi^2\)</span> Distribution</h4>
 <ul>
 <li>In a normally distributed population with variance <span class="math inline">\(\sigma^2\)</span>, if we randomly select independent samples of size <span class="math inline">\(n\)</span> and, for each sample, compute the sample variance <span class="math inline">\(s^2\)</span>, the sample statistic <span class="math inline">\(\chi^2 = (n -1)s^2/{\sigma^2}\)</span> has sampling distribution called the <strong>chi-squared distribution,</strong></li>
 </ul>
@@ -484,6 +482,7 @@ n &amp;\approx 10 \\ \\
 <li>The chi-squared distribution is different for each number of degrees of freedom. As the degrees of freedom increases, chi-squared distribution approaches a normal distribution.</li>
 </ul>
 <p><img src="chiSquareDistributionWithInceasingDF.jpg" /></p>
+</div>
 <div id="confidence-interval-for-estimating-a-population-standard-deviation-or-variance" class="section level3" number="7.5.1">
 <h3><span class="header-section-number">7.5.1</span> Confidence Interval for Estimating a Population Standard Deviation or Variance</h3>
 <p><strong>Confidence Interval for the Population Variance <span class="math inline">\(\sigma^2\)</span></strong></p>
@@ -494,18 +493,17 @@ n &amp;\approx 10 \\ \\
 <p><span class="math display">\[
   \sqrt{\frac{(n-1)s^2}{\chi^2_L}} &lt; \sigma &lt; \sqrt{\frac{(n-1)s^2}{\chi^2_R}}
 \]</span></p>
-</div>
-<div id="confidence-interval-for-estimating-a-population-standard-deviation-or-variance-1" class="section level3" number="7.5.2">
-<h3><span class="header-section-number">7.5.2</span> Confidence Interval for Estimating a Population Standard Deviation or Variance</h3>
+<p><img src="chi-squared_table.png" /></p>
+<p><strong>Example:</strong> Confidence Interval for Estimating a Population Standard Deviation or Variance</p>
 <p><span class="math display">\[
 \begin{align}
 &amp;s = 14.29263 \\
 &amp;n = 22 \\
 &amp;CL = 95\%  \\ \\
 &amp;\frac{(n-1)s^2}{\chi^2_L} &lt; \sigma^2 &lt; \frac{(n-1)s^2}{\chi^2_R} \\ \\
-&amp;\frac{21.(14.29263)^2}{10.283^2} &lt; \sigma^2 &lt; \frac{21.(14.29263)^2}{35.479^2} \\ \\
-&amp;120.9 &lt; \sigma^2 &lt; 417.2 \\
-&amp;11.0 &lt; \sigma &lt; 20.4
+or, \ &amp;\frac{21.(14.29263)^2}{10.283^2} &lt; \sigma^2 &lt; \frac{21.(14.29263)^2}{35.479^2} \\ \\
+or, \ &amp;120.9 &lt; \sigma^2 &lt; 417.2 \\
+or, \ &amp;11.0 &lt; \sigma &lt; 20.4
 \end{align}
 \]</span></p>
 
