@@ -24,7 +24,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-02-04" />
+<meta name="date" content="2022-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -598,8 +598,8 @@ The weight <span class="math inline">\(4000\)</span> g is <span class="math inli
 <h2><span class="header-section-number">4.5</span> Percentiles and Quartiles</h2>
 <ul>
 <li>Percentiles are measures of location, denoted <span class="math inline">\(P_1, P_2, \cdots, P_{99}\)</span>, which divide a set of data into <span class="math inline">\(100\)</span> groups with about <span class="math inline">\(1\%\)</span> of the values in each group.</li>
-<li>Example - the <span class="math inline">\(50\)</span>th percentile, denoted <span class="math inline">\(P_{50}\)</span> has about <span class="math inline">\(50\%\)</span> of the data values below it and about <span class="math inline">\(50\%\)</span> of the data value above it.</li>
-<li>The <strong><span class="math inline">\(n^{th}\)</span> percentile</strong> is the data value such that <span class="math inline">\(n\)</span> percent of the data lies below that value and <span class="math inline">\((100-n)\)</span> percent of the data falls above that value.</li>
+<li>Example - the <span class="math inline">\(50th\)</span> percentile, denoted <span class="math inline">\(P_{50}\)</span> has about <span class="math inline">\(50\%\)</span> of the data values below it.</li>
+<li>The <strong><span class="math inline">\(n^{th}\)</span> percentile</strong> is the data value such that <span class="math inline">\(n\)</span> percent of the data lies below that value.</li>
 </ul>
 <p><span class="math display">\[
 \text{Percentile of value } x = \frac{\text{number of values less than } x}{\text{total number of values}} \times 100
@@ -613,14 +613,14 @@ The weight <span class="math inline">\(4000\)</span> g is <span class="math inli
 There are <span class="math inline">\(20\)</span> data speeds less than <span class="math inline">\(11.8\)</span> mbps.</p>
 <p><span class="math inline">\(\therefore\)</span> percentile of <span class="math inline">\(11.8 = \dfrac{20}{50} \cdot 100 = 40\)</span></p>
 <p>Interpretation: A data speed of <span class="math inline">\(11.8\)</span> mbps is in the <span class="math inline">\(40\)</span>th percentile. This means <span class="math inline">\(40\%\)</span> of the airports reported data speeds less than <span class="math inline">\(11.8\)</span> mbps.</p>
-<p><strong>Find the <span class="math inline">\(40\)</span>th percentile.</strong></p>
+<p><strong>Find the <span class="math inline">\(40th\)</span> percentile.</strong></p>
 <p>First, compute the locator, <span class="math inline">\(L = \dfrac{k}{100} \cdot n = \dfrac{40}{100} \cdot 50 = 20.\)</span>
 By definition, <span class="math inline">\(P_{40}\)</span> below which <span class="math inline">\(40\%\)</span> of the data points fall. Hence, the <span class="math inline">\(40\)</span>th percentile is midway between the <span class="math inline">\(20\)</span>th and <span class="math inline">\(21\)</span>st value. In the table above, <span class="math inline">\(20th\)</span> value is <span class="math inline">\(11.6\)</span> and <span class="math inline">\(21\)</span>st value is <span class="math inline">\(11.8\)</span>, so the midway between them is <span class="math inline">\(11.7\)</span> mbps.</p>
 <p><span class="math inline">\(\therefore P_{40} = 11.7\)</span> mbps.</p>
 <p>Note: in some references, a percentile value is chosen from the existing data. Therefore, the <span class="math inline">\(21st\)</span> data point <span class="math inline">\(11.8\)</span> can also be considered the <span class="math inline">\(40th\)</span> percentile value. This answer is consistent with the previous example.</p>
-<p><strong>Find the 25th percentile.</strong></p>
+<p><strong>Find the <span class="math inline">\(25th\)</span> percentile.</strong></p>
 <p><span class="math inline">\(L = \dfrac{k}{100} \cdot n = \dfrac{25}{100} \cdot 50 = 12.5.\)</span></p>
-<p>In this case, we round up the value of <span class="math inline">\(L\)</span> to get <span class="math inline">\(13\)</span> to make sure at least <span class="math inline">\(12.5\%\)</span> data points fall below that point.</p>
+<p>In this case, we round up the value of <span class="math inline">\(L\)</span> to get <span class="math inline">\(13\)</span> to make sure at least <span class="math inline">\(12.5\)</span> data points fall below that point.</p>
 <p><span class="math inline">\(\therefore P_{25} = 7.9\)</span> mbps.</p>
 <p><strong>Three Quartiles <span class="math inline">\((Q_1, Q_2, Q_3)\)</span></strong></p>
 <ul>
@@ -656,6 +656,14 @@ By definition, <span class="math inline">\(P_{40}\)</span> below which <span cla
 <p>Such points are marked using a dot or asterisk in a box plot.</p>
 <p><strong>Example:</strong></p>
 <p>Data: <strong><span class="math inline">\([5, 5, 9, 10, 15, 16, 20, 30, 40]\)</span></strong></p>
+<p><span class="math display">\[
+\text{Q}_1 = 9 \\
+\text{Q}_2 = 15 \\
+\text{Q}_3 = 20 \\
+\text{IQR} = 20 - 9 = 11 \\
+\text{LF} = \text{Q}_1 - 1.5 \times \text{IQR} = -7.5 \\
+\text{LF} = \text{Q}_3 + 1.5 \times \text{IQR} = 36.5 \\
+\]</span></p>
 <p><strong>Five Number Summary:</strong></p>
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
    5.00    9.00   15.00   16.67   20.00   40.00 </code></pre>
