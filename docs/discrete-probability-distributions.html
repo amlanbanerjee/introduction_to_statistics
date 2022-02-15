@@ -746,8 +746,8 @@ x &amp;: \text {number of successes in } n \text { trials}; 0 \le x \le n  \\
 \end{align}
 \]</span>
 </br></p>
-<div id="probability-distribution-of-3-independent-trials" class="section level5 unnumbered">
-<h5>Probability Distribution of <span class="math inline">\(3\)</span> independent Trials</h5>
+<div id="probability-distribution-of-random-variable-x-1-in-3-independent-rolls-of-a-dice" class="section level4 unnumbered">
+<h4>Probability Distribution of Random Variable ($X:  1 $) in <span class="math inline">\(3\)</span> independent Rolls of a dice</h4>
 <p><span style="color:#08519c"><strong>Probability distribution of the number of successes <span class="math inline">\((x)\)</span> in <span class="math inline">\(n = 3\)</span> independent success/failure trials, each of which is a success with chance <span class="math inline">\(p = \dfrac{1}{6}.\)</span></strong> </span></p>
 <p><span class="math display">\[
 \begin{array}{rclr}
@@ -946,94 +946,6 @@ P(X=k) &amp;= \binom{100}{k}(1/6)^k(1-1/6)^{100-k}, k = 0,1,2,...,100   \\ \\
 SE(X)  &amp;= \sqrt{100 \times 1/6 \times 5/6} \\
        &amp;= 3.73 
 \end{align}
-\]</span></p>
-</details>
-<p><strong>Empirical Rule</strong></p>
-<p>Probabilities for falling <span class="math inline">\(1,\)</span> <span class="math inline">\(2,\)</span> and <span class="math inline">\(3\)</span> standard deviations of the mean in a normal distribution.</p>
-<p><img src="6895997.png" width="800px" /></p>
-<p><strong>Linear Transformation of Normal Curve | Standardizing with Z-Scores</strong></p>
-<p>Consider a normally distributed random variable <span class="math inline">\(x\)</span> with mean <span class="math inline">\(\mu\)</span> and sd <span class="math inline">\(\sigma\)</span>: <span class="math inline">\(x \tilde \space N(\mu, \sigma)\)</span></p>
-<p>Two-step linear transformation of <span class="math inline">\(x\)</span></p>
-<ol style="list-style-type: decimal">
-<li>subtract <span class="math inline">\(\mu\)</span> from <span class="math inline">\(x\)</span><br />
-</li>
-<li>divide <span class="math inline">\((x-\mu)\)</span> by <span class="math inline">\(\sigma\)</span></li>
-</ol>
-<p><span class="math display">\[\bbox[yellow,5px]{\color{black}{\text{standard normal deviate: } z = \frac {x-\mu}{\sigma}}}\]</span></p>
-<p>The <strong>Z-score</strong> of an observation is defined as the number of standard deviations it falls above or below the mean. If the observation is one standard deviation above the mean, its Z-score is 1. If it is 1.5 standard deviations below the mean, then its Z-score is -1.5.</p>
-<p><strong>Linear Transformation | Normal Curve to Standard Normal Curve</strong></p>
-<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-40-1.png" width="672" />
-<span class="math display">\[ \bbox[yellow,5px]
-{
-\color{black}{{\text {Density at z}} = \frac {1}{\sqrt {2\pi}}\exp{-\frac{1}{2}z^2}, -\infty&lt;z&lt;+\infty}
-}
-\]</span></p>
-<p><strong>Example: Compute and Interpret a <span class="math inline">\(z\)</span>-Score</strong></p>
-<p>The 2014 draft picks for NBA basketball teams have heights that are approximately normally distributed with mean 79.1 inches and standard deviation 3.0 inches (Source: nbadraft.net). Shabazz Napier was the shortest 2014 draft pick with a height of 72 inches. Find the z-score for 72 inches. What does it mean?</p>
-<p><span class="math display">\[
-z = \frac {x - \mu}{\sigma} \\
-z = \frac {72 - 79.1}{3} \\
-z = - 2.37
-\]</span></p>
-<p>The z-score is –2.37, which means that Napier’s height is 2.37 standard deviations less than the mean.</p>
-<p><strong>Empirical Rules in terms of <span class="math inline">\(z\)</span>-scores</strong></p>
-<p>Because the z-score of an observation is the number of standard deviations that the observation is from the mean, we can restate the Empirical Rule in terms of <span class="math inline">\(z\)</span>-scores. So, if a distribution is normally distributed, then</p>
-<p><span class="math inline">\(68\%\)</span> of its z-scores lie between –1 and 1</p>
-<p><span class="math inline">\(95\%\)</span> of its z-scores lie between –2 and 2</p>
-<p><span class="math inline">\(99.7\%\)</span> of its z-scores lie between –3 and 3</p>
-<p><strong>Normal Probability Examples | z-score to percentile</strong></p>
-<div class="blue">
-<p>Cumulative SAT scores are approximated by a normal model with <span class="math inline">\(\mu = 1500 \text { and } \sigma = 300\)</span>.</p>
-</div>
-<p><strong>What is the probability that a randomly selected SAT taker scores at least 1630 on the SAT?</strong></p>
-<p><img src="satAbove1630.png" width="400px" /></p>
-<p><span class="math inline">\(z = \frac{x-\mu}{\sigma}=\frac{1630-1500}{300}=\frac{130}{300}=0.43\)</span></p>
-<p><span class="math inline">\(P(z\ge0.43)=0.3336\)</span></p>
-<p>The probability that a randomly selected score is at least 1630 on the SAT is 33%.</p>
-<p><strong>Exercise</strong></p>
-<p>People’s IQ scores are normally distributed with mean <span class="math inline">\(\textbf {100}\)</span> points and standard deviation <span class="math inline">\(\textbf {15}\)</span> points. Let X be the IQ (in points) of a randomly selected person. Find the probability that a randomly selected person has an IQ</p>
-<ol style="list-style-type: decimal">
-<li><p>less than <span class="math inline">\(\textbf {78}\)</span> points.</p></li>
-<li><p>greater than <span class="math inline">\(\textbf {117}\)</span> points.</p></li>
-</ol>
-<p><strong>Normal Probability Examples | z-score to percentile</strong></p>
-<p><strong>Edward earned a 1400 on his SAT. What is his percentile?</strong></p>
-<div class="centered">
-
-<p><img src="satBelow1400.png" width="400px" /></p>
-<p><span class="math inline">\(z = \frac{x-\mu}{\sigma}=\frac{1400-1500}{300}=\frac{100}{300}=-0.33\)</span></p>
-<p><span class="math inline">\(P(z\le-0.33)=0.3707\)</span></p>
-<p>Edward is at the <span class="math inline">\(37\)</span>th percentile.</p>
-<p><strong>Normal Probability Examples | percentile to z-score</strong></p>
-<p>Carlos believes he can get into his preferred college if he scores at least in the 80th percentile on the SAT. What score should he aim for?</p>
-<p><img src="satBelow1800.png" width="400px" /></p>
-<p>At <span class="math inline">\(80th\)</span> percentile, <span class="math inline">\(z = 0.84\)</span></p>
-<p><span class="math display">\[
-\begin{align}
-z &amp; = \frac{x-\mu}{\sigma} \\
-0.84 &amp; = \frac{x-1500}{300} \\
-0.84 \times 300 + 1500 &amp; = x \\
-x &amp; = 1752
-\end{align}
-\]</span></p>
-<p>The <span class="math inline">\(80\)</span>th percentile on the SAT corresponds to a score of <span class="math inline">\(1752\)</span>.</p>
-<p><strong>Practice Problems</strong></p>
-<ol style="list-style-type: decimal">
-<li><p>The scores on the Wechsler IQ test are normally distributed with mean <span class="math inline">\(100\)</span> points and standard deviation <span class="math inline">\(15\)</span> points. Film director Quentin Tarantino is reported to have a z-score of <span class="math inline">\(z = 4\)</span> (Source: Chicago Tribune). What is his IQ score?</p></li>
-<li><p>A professor gives a test to her calculus students. The scores are approximately normally distributed with mean <span class="math inline">\(75\)</span> points and standard deviation <span class="math inline">\(9\)</span> points. The professor decides to give As to approximately <span class="math inline">\(10\%\)</span> of the students but not less than 10%. Find the cutoff score for an A.</p></li>
-<li><p>Maria and Roberto took tests on probability in two different sections of prestatistics. Maria scored <span class="math inline">\(91\)</span> points on a test with mean <span class="math inline">\(77\)</span> points and standard deviation 6 points. Roberto scored <span class="math inline">\(80\)</span> points on a test with mean <span class="math inline">\(68\)</span> points and standard deviation <span class="math inline">\(4\)</span> points. The test scores on each test are approximately normally distributed.</p></li>
-</ol>
-<ul>
-<li>Find the <span class="math inline">\(z\)</span>-score for Maria’s test score. What does it mean in this situation?</li>
-<li>Find the <span class="math inline">\(z\)</span>-score for Roberto’s test score. What does it mean in this situation?</li>
-<li>Assuming a typical student in one class knows the material as well as a typical student in the other class, determine whether Maria did relatively better than Roberto.</li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li><p>Assuming the sodium levels per serving of the low-salt chips are approximately normally distributed with mean <span class="math inline">\(85\)</span> mg and standard deviation <span class="math inline">\(5\)</span> mg, find the probability that a randomly selected bag would have at least <span class="math inline">\(104\)</span> mg of sodium per serving.</p></li>
-<li><p>What is the probability that a randomly selected data point from a normal distribution can be classified as an outlier?</p></li>
-</ol>
-<p><span class="math display">\[ Q_3 + 1.5 \times IQR \le \text {outlier} \\
-\text {outlier} \le Q_1 - 1.5 \times IQR
 \]</span></p>
 
 </div>

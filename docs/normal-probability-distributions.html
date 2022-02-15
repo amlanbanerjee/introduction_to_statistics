@@ -233,7 +233,7 @@
 </ul>
 <p>Probability density function of the normal distribution:</p>
 <p><span class="math display">\[P(x) = \dfrac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2} \big( \frac{x-\mu}{\sigma} \big)^2 },  -\infty&lt;x&lt;+\infty\]</span></p>
-<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
 <p><span class="math inline">\(\mu\)</span> is called the <strong>location parameter</strong> because it determines where the distribution is located on the horizontal axis.</p>
 <p><span class="math inline">\(\sigma\)</span> is called the <strong>shape parameter</strong> because it determines the shape of the distribution.</p>
 <div id="linear-transformation-of-the-nonstandardized-normal-distribution-to-the-standardized-normal-distribution" class="section level5 unnumbered">
@@ -265,7 +265,15 @@ x = \bar x + 2s  &amp;\implies  z = +2  \\
 \color{black}{{P(z)} = \frac {1}{\sqrt {2\pi}}\exp{-\frac{1}{2}z^2}, -\infty&lt;z&lt;+\infty}
 }
 \]</span></p>
-<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+<p><strong>Example: Compute and Interpret a <span class="math inline">\(z\)</span>-Score</strong></p>
+<p>The 2014 draft picks for NBA basketball teams have heights that are approximately normally distributed with mean 79.1 inches and standard deviation 3.0 inches (Source: nbadraft.net). Shabazz Napier was the shortest 2014 draft pick with a height of 72 inches. Find the z-score for 72 inches. What does it mean?</p>
+<p><span class="math display">\[
+z = \frac {x - \mu}{\sigma} \\
+z = \frac {72 - 79.1}{3} \\
+z = - 2.37
+\]</span></p>
+<p>The z-score is –2.37, which means that Napier’s height is 2.37 standard deviations less than the mean.</p>
+<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
 <div id="finding-areas-between-two-z-scores" class="section level4 unnumbered">
 <h4>Finding Areas Between Two <span class="math inline">\(z\)</span> Scores</h4>
 <p><img src="z_score_left_right.png" /></p>
@@ -284,6 +292,16 @@ P(z &lt; a) \ \text{ denotes the probability that the } z \text{ score is less t
 &amp;3. \text { Find } P(-3 &lt; z &lt; 3)  \\
 \end{align}
 \]</span></p>
+<div id="empirical-rule" class="section level5 unnumbered">
+<h5>Empirical Rule</h5>
+<p>Probabilities for falling <span class="math inline">\(1,\)</span> <span class="math inline">\(2,\)</span> and <span class="math inline">\(3\)</span> standard deviations of the mean in a normal distribution.</p>
+<p><img src="6895997.png" width="800px" /></p>
+<p><strong>Empirical Rules in terms of <span class="math inline">\(z\)</span>-scores</strong></p>
+<p>Because the z-score of an observation is the number of standard deviations that the observation is from the mean, we can restate the Empirical Rule in terms of <span class="math inline">\(z\)</span>-scores. So, if a distribution is normally distributed, then</p>
+<p><span class="math inline">\(68\%\)</span> of its z-scores lie between –1 and 1</p>
+<p><span class="math inline">\(95\%\)</span> of its z-scores lie between –2 and 2</p>
+<p><span class="math inline">\(99.7\%\)</span> of its z-scores lie between –3 and 3</p>
+</div>
 </div>
 <div id="calculation-of-percentile-from-z-scores" class="section level4 unnumbered">
 <h4>Calculation of percentile from <span class="math inline">\(z\)</span> scores</h4>
