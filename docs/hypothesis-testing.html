@@ -24,7 +24,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-02-10" />
+<meta name="date" content="2022-02-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -184,7 +184,10 @@
 </ul></li>
 <li class="chapter" data-level="8" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>8</b> Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>8.1</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>8.1</b> Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>8.1.1</b> Type I and Type II Errors</a></li>
+</ul></li>
 <li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#inference-for-a-single-proportion"><i class="fa fa-check"></i><b>8.2</b> Inference for a Single Proportion</a></li>
 <li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#t-text--test-testing-hypothesis-about-mu-with-sigma-not-known"><i class="fa fa-check"></i><b>8.3</b> <span class="math inline">\(t \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Not Known</a></li>
 <li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#chi2-text-test-testing-hypothesis-about-a-variance"><i class="fa fa-check"></i><b>8.4</b> <span class="math inline">\(\chi^2 \text{-test}\)</span> | Testing Hypothesis About a Variance</a></li>
@@ -258,7 +261,7 @@ Hence, there is only <span class="math inline">\(1.27\%\)</span> probability tha
 <li><p>It has been common practice to interpret a <span class="math inline">\(\text{p-value}\)</span> by examining whether it is smaller than particular threshold values or <strong>“significance level”.</strong> In particular, <span class="math inline">\(\text{p-values}\)</span> less than <span class="math inline">\(5\%\)</span> are often reported as “statistically significant”, and interpreted as being small enough to justify rejection of the null hypothesis.
 By definition, the significance level <span class="math inline">\(\alpha\)</span> is the probability of mistakenly rejecting the null hypothesis when it is true.</p></li>
 </ul>
-<p><span class="math display">\[\textbf {Significance level } \alpha = P \textbf { (rejecting  } H_0 \textbf { when } H_0 \textbf { is true)} \]</span>.</p>
+<p><span class="math display">\[\textbf {Significance level } \alpha = P \textbf { (rejecting  } H_0 \textbf { when } H_0 \textbf { is true)} \]</span></p>
 <p>In common practice, <span class="math inline">\(\alpha\)</span> is set at <span class="math inline">\(10\%, 5\%\)</span> or <span class="math inline">\(1\%\)</span>.</p>
 <p>In the coin toss example:</p>
 <blockquote>
@@ -271,6 +274,12 @@ By definition, the significance level <span class="math inline">\(\alpha\)</span
 <p>Conclusion: The coin is biased towards heads.</p>
 </blockquote>
 </div>
+<div id="critical-value-method" class="section level4 unnumbered">
+<h4>Critical Value Method</h4>
+<p>In a hypothesis test, the <strong>critical value(s)</strong> separates the critical region (where we reject the null hypothesis) from the values of the test statistic that do not lead to rejection of the null hypothesis.</p>
+<p>With the critical value method of testing hypothesis, we make a decision by comparing the test statistic to the critical value(s).</p>
+<p><img src="critical_z_value.png" /></p>
+</div>
 <div id="one-sided-and-two-sided-tests" class="section level4 unnumbered">
 <h4>One-sided and two-sided tests</h4>
 <p>If the researchers are only interested in showing an increase or a decrease, but not
@@ -278,7 +287,118 @@ both, use a <strong>one-sided test</strong>. If the researchers would be interes
 from the null value - an increase or decrease - then the test should be <strong>two-sided</strong>.</p>
 <p>After observing data, it is tempting to turn a two-sided test into a one-sided test.
 Hypotheses must be set up before observing the data. If they are not, the test must be two-sided.</p>
-<p><img src="sidedness_example_figures.png" width="750px" /></p>
+<p><img src="sidedness_example_figures.png" width="800px" /></p>
+</div>
+<div id="type-i-and-type-ii-errors" class="section level3" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Type I and Type II Errors</h3>
+<p>When testing a null hypothesis, sometimes the test comes to a wrong conclusion by rejecting it or failing to reject it. There are two kinds of errors: <strong>type I</strong> and <strong>type II</strong> errors.</p>
+<ul>
+<li><span class="math inline">\(\textbf {Type I error} :\)</span> The error of rejecting the null hypothesis when it is actually true.</li>
+</ul>
+<p><span class="math inline">\(\alpha = P (\textbf{type I error}) = P (\text{rejecting } H_0 \text{ when } H_0 \text{ is true } )\)</span></p>
+<blockquote>
+<p>The probability of <span class="math inline">\(\text {Type I}\)</span> can be minimized by choosing a smaller <span class="math inline">\(\alpha\)</span>.</p>
+</blockquote>
+<ul>
+<li><span class="math inline">\(\textbf {Type II error} :\)</span> The error of failing to reject the null hypothesis when it is actually false.</li>
+</ul>
+<p><span class="math inline">\(\beta = P (\textbf{type II error}) = P (\text{failing to reject } H_0 \text{ when } H_0 \text{ is false} )\)</span></p>
+<blockquote>
+<p>The probability of <span class="math inline">\(\text {Type II}\)</span> can be minimized by choosing a larger sample size <span class="math inline">\(n\)</span>.</p>
+</blockquote>
+<div id="power-of-a-hypothesis-test" class="section level5 unnumbered">
+<h5>Power of a Hypothesis Test</h5>
+<p>The <strong>power</strong> of a hypothesis test is the probability <span class="math inline">\(1-\beta\)</span> of rejecting a false null hypothesis. The value of the power is computed by using a particular significance level <span class="math inline">\(\alpha\)</span> and a particular value of the population parameter that is an alternative to the value of assumed true in the null hypothesis.</p>
+<p>In practice, statistical studies are commonly designed with a statistical power of at least <span class="math inline">\(80%\)</span>.</p>
+<div class="figure">
+<img src="statistical_power.png" alt="" />
+<p class="caption">Figure: Statistical Power</p>
+</div>
+<p><strong>Post-hoc Power Calculation for One Study Group vs. Population</strong></p>
+<p>Suppose,</p>
+<p><span class="math display">\[
+H_0 : p = P_0  \\
+H_A : p \ne P_0  \\
+\]</span>
+<span class="math display">\[
+\begin{align}
+P_0 &amp;= \text{proportion of population} \\
+P_1 &amp;= \text{proportion observed from the data (an alternative population)}  \\
+N &amp;= \text{sample size} \\
+\alpha &amp;= \text{probability of type I error}  \\
+\beta &amp;= \text{probability of type II error}  \\
+z &amp;= \text{critical z score for a given } \alpha \text { or } \beta 
+\end{align}
+\]</span></p>
+<p>Suppose, <span class="math inline">\(P_1\)</span> is an alternative to the value assumed in <span class="math inline">\(H_0\)</span>.</p>
+<p>Under <span class="math inline">\(H_0\)</span>,</p>
+<p><span class="math display">\[
+P&#39;_0 = P_0 + z_{1-\alpha/2} \cdot \sqrt{\dfrac{P_0Q_0}{N}}
+\]</span></p>
+<p>Under <span class="math inline">\(H_A\)</span>,</p>
+<p><span class="math display">\[
+\therefore z_{\beta} = \dfrac{P&#39;_0 - P_1}{\sqrt{\dfrac{P_1Q_1}{N}}} = \dfrac{\Bigg( P_0 + z_{1-\alpha/2} \cdot \sqrt{\dfrac{P_0Q_0}{N}} \Bigg) - P_1}{\sqrt{\dfrac{P_1Q_1}{N}}}  \\
+\\
+P(\textbf{Type II error}) = 
+\beta = \Phi \left \{ \dfrac{\Bigg( P_0 + z_{1-\alpha/2} \cdot \sqrt{\dfrac{P_0Q_0}{N}} \Bigg) - P_1}{\sqrt{\dfrac{P_1Q_1}{N}}}  \right \} 
+\\
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+\text{where,} \\
+Q_0 &amp;= 1 - P_0 \\
+Q_1 &amp;= 1 - P_1 \\
+\Phi &amp;= \text{cumulative normal distribution function}
+\end{align}
+\]</span></p>
+<p><strong>Example: Calculate statistical power for various alternative hypotheses.</strong></p>
+<p><span class="math display">\[
+Suppose,
+\begin{cases}
+H_0: p = 0.5  \\
+H_A: p \ne 0.5  \\
+P(\text{type I error}) = \alpha = 0.05 \\
+\text{Critical z score, } z_{1 - \alpha/2} = 1.96 \\
+N = 14  \\
+\end{cases}
+\]</span></p>
+<p><span class="math display">\[
+\begin{array}{r|r|r}
+           P_1 &amp;  \Phi(z_{\beta}) = \beta    &amp; 1-\beta     \\ \hline
+           0.6 &amp;  \Phi(1.2367)  = 0.8919       &amp; 0.1081      \\
+           0.7 &amp;  \Phi(0.5055)  = 0.6934       &amp; 0.3066      \\
+           0.8 &amp;  \Phi(-0.3562) = 0.3608       &amp; 0.6392      \\
+           0.9 &amp;  \Phi(-1.7222) = 0.0425       &amp; 0.9575      \\ \hline
+\end{array}
+\]</span></p>
+<p><strong>Example: Sample size calculation to achieve power (when <span class="math inline">\(P_0\)</span> and <span class="math inline">\(P_1\)</span> are known)</strong></p>
+<p><span class="math display">\[
+\begin{align}
+z_{\beta} = \Phi^{-1}(\beta) &amp;= \dfrac{\Bigg( P_0 + z_{1-\alpha/2} \cdot \sqrt{\dfrac{P_0Q_0}{N}} \Bigg) - P_1}{\sqrt{\dfrac{P_1Q_1}{N}}} \\
+\\
+z_{1-\alpha/2} &amp;= 1.96  \\
+1- \beta &amp;= 0.8  \\
+\\
+\Phi^{-1}(0.2) = -0.84 &amp;= \dfrac{\Bigg( 0.5 + 1.96 \cdot \sqrt{\dfrac{(0.5) (0.5)}{N}} \Bigg) - 0.9}{\sqrt{\dfrac{(0.9)(0.1)}{N}}} \\
+\implies N &amp;= \Bigg( \dfrac{1.96\sqrt{0.25} + 0.84\sqrt{0.09}}{0.4}  \Bigg)^2  \\
+&amp;\approx 10 
+\end{align}
+\]</span></p>
+<p><strong>Example: Sample size calculation to achieve power (when <span class="math inline">\(P_0\)</span> and <span class="math inline">\(P_1\)</span> are unknown)</strong></p>
+<p><span class="math display">\[
+N = \Bigg(  \dfrac{z_{1-\alpha/2} + z_{1-\beta}}{ES} \Bigg)^2   \\
+\]</span>
+where,</p>
+<p><span class="math display">\[
+\text{effect size, } ES = \dfrac{|P_1-P_0|}{\sqrt{P_0Q_0}}
+\]</span></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Statistical power and design of experiment:</strong> When designing an experiment, it is essential to determine the minimize sample size that would be needed to detect an acceptable difference between the true value of the population parameter and what is observed from the data. A <span class="math inline">\(5\%\)</span> significance level <span class="math inline">\((\alpha)\)</span> and a statistical power of at least <span class="math inline">\(80\%\)</span> are common requirements for determining that a hypothesis test is effective.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="formal-test-of-hypothesis" class="section level4 unnumbered">
 <h4>Formal Test of Hypothesis</h4>
@@ -299,6 +419,7 @@ point estimate follows the appropriate distribution and is unbiased.<br />
 </p></li>
 <li><p>Write your conclusion in context.</p></li>
 </ol>
+</div>
 </div>
 </div>
 <div id="inference-for-a-single-proportion" class="section level2" number="8.2">
