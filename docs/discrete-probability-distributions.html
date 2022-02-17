@@ -24,7 +24,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-02-16" />
+<meta name="date" content="2022-02-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -147,6 +147,7 @@
 <li class="chapter" data-level="5.5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#expected-value-of-the-binomial-distribution"><i class="fa fa-check"></i><b>5.5.1</b> Expected Value of the Binomial Distribution</a></li>
 <li class="chapter" data-level="5.5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#standard-deviation-of-the-binomial-distribution"><i class="fa fa-check"></i><b>5.5.2</b> Standard Deviation of the Binomial Distribution</a></li>
 </ul></li>
+<li class="chapter" data-level="5.6" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-problems"><i class="fa fa-check"></i><b>5.6</b> Example Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Normal Probability Distributions</a>
 <ul>
@@ -938,7 +939,7 @@ SE(X)  &amp;= \sqrt{100 \times 0.5 \times 0.5} \\
 <summary>
 Solution:
 </summary>
-<p><span class="math display">\[
+<span class="math display">\[
 \begin{align}
 P(X=k) &amp;= \binom{100}{k}(1/6)^k(1-1/6)^{100-k}, k = 0,1,2,...,100   \\ \\
   E(X) &amp;= 100 \times 1/6 \\
@@ -946,9 +947,112 @@ P(X=k) &amp;= \binom{100}{k}(1/6)^k(1-1/6)^{100-k}, k = 0,1,2,...,100   \\ \\
 SE(X)  &amp;= \sqrt{100 \times 1/6 \times 5/6} \\
        &amp;= 3.73 
 \end{align}
-\]</span></p>
-
+\]</span>
+</details>
 </div>
+</div>
+<div id="example-problems" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Example Problems</h2>
+<p><strong>1. In a state’s pick 3 lottery game, a player pays <span class="math inline">\(\$1.46\)</span> to select a sequence of three digits (from <span class="math inline">\(0\)</span> to <span class="math inline">\(9\)</span>), such as <span class="math inline">\(822\)</span>. If someone selects the same sequence of three digits that are drawn, the player collects <span class="math inline">\(\$499.38\)</span>.</strong></p>
+<p><strong>(a)</strong> How many different selections are possible?</p>
+<p><span class="math display">\[
+10 \times 10 \times 10 = 1000
+\]</span></p>
+<p><strong>(b)</strong> What is the probability of winning?</p>
+<p><span class="math display">\[
+\dfrac{1}{1000}
+\]</span></p>
+<p><strong>(c)</strong> If a player wins, what is their net profit?</p>
+<p><span class="math inline">\(\$499.38 - \$1.46 = \$497.92\)</span></p>
+<p><strong>(d)</strong> Find the expected value.</p>
+<p><span class="math inline">\(E(X) = \$499.38 \times \dfrac{1}{1000} + (-\$1.46) \left( 1 - \dfrac{1}{1000}\right) = -\$0.96\)</span></p>
+<p></br></p>
+<p><strong>2. Based on data from Bloodjournal.org, <span class="math inline">\(10\%\)</span> of women 65 years of age or older suffers from anemia. In tests of anemia, blood samples from 8 women in that age group are combined. What is the probability that the combined sample tests positive for anemia?</strong></p>
+<p>For the combined sample to be positive, at least one of eight samples has to be positive.</p>
+<p><span class="math display">\[
+\begin{align}
+P(X \ge 1) &amp;= 1 - P(X = 0)  \\
+&amp;= 1- \displaystyle \binom {8}{0}(.1)^0(1-.9)^{8-0}  \\
+&amp;= 0.570  \\
+\end{align}
+\]</span>
+Therefore, there is a <span class="math inline">\(57\%\)</span> probability that the combined sample will be tested positive for anemia.</p>
+<p></br></p>
+<p><strong>3.</strong> The MedAssist Pharmaceutical Company receives large shipments of aspirin tablets and uses this acceptance sampling plan: Randomly select and test <span class="math inline">\(40\)</span> tablets, then accept the whole batch if there is only one or none that doesn’t meet the required specifications. If one shipment of <span class="math inline">\(5000\)</span> aspirin tablets actually has a <span class="math inline">\(3\%\)</span> rate of deficits, what is the probability that this whole shipment will be accepted?</p>
+<p></br></p>
+<p><strong>4. Results from a public hygiene poll found that <span class="math inline">\(70\%\)</span> of adults always wash their hands after using a public restroom.</strong></p>
+<p><strong>(a)</strong> Find the probability that among <span class="math inline">\(8\)</span> randomly selected adults, exactly <span class="math inline">\(5\)</span> always wash their hands after using a public restroom.</p>
+<p><span class="math display">\[
+\begin{align}
+p &amp;= 0.7  \\
+n &amp;= 8 \\
+\displaystyle P(x = 5) &amp;= \binom{8}{5}(.7)^5(1-.7)^{8-5} = 0.2541
+\end{align}
+\]</span></p>
+<p><strong>(b)</strong> Find the probability that among <span class="math inline">\(8\)</span> randomly selected adults, at least <span class="math inline">\(7\)</span> always wash their hands after using a public restroom.</p>
+<p><span class="math display">\[
+\begin{align}
+\displaystyle P(x \ge 7) &amp;= P(x = 7) + P(x = 8)  \\
+&amp;= \binom{8}{7}(.7)^7(1-.7)^{8-7} + \binom{8}{8}(.7)^8(1-.7)^{8-8} \\
+&amp;= 0.2553  \\
+\\
+&amp;\text{Alternatively,}  \\
+\displaystyle P(x \ge 7) &amp;= 1 - P(x \le 6) \\
+&amp;= 1 - 0.7447 \\
+&amp;= 0.2553
+\end{align}
+\]</span></p>
+<p><strong>(c)</strong> For groups of randomly selected adults, find the mean and standard deviation of the numbers in the groups who always wash their hands after using a public restroom.</p>
+<p>The mean (or expected value) and the standard deviation of a binomial distributed random variable is given by:</p>
+<p><span class="math display">\[
+\begin{align}
+\text{for, n trials} \\
+\\
+E(X) &amp;= np  \\
+SD(X) &amp;= \sqrt{np(1-p)} 
+\end{align}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+\text{In this problem,} \\
+\\
+E(X) &amp;= (8) \cdot (0.7) = 5.6 \text{ adults}  \\
+SD(X) &amp;= \sqrt{(8)(0.7)(1-0.7)} = 1.3 \text{ adults}
+\end{align}
+\]</span></p>
+<p></br></p>
+<p><strong>5. In a litter of seven kittens, three are female. You pick two kittens at random without replacement.</strong></p>
+<p><strong>(a)</strong> Create a probability model for the number of male kittens you get.</p>
+<p><span class="math display">\[
+\begin{array} {l|c|c|c}
+\text{number of males }(X) &amp; 0 &amp; 1 &amp; 2 \\
+\hline
+P(X) &amp; \dfrac{3}{7} \cdot \dfrac{2}{6} = \dfrac{6}{42} 
+&amp; \dfrac{4}{7} \cdot \dfrac{3}{6} + \dfrac{3}{7} \cdot \dfrac{4}{6} = \dfrac{24}{42}  
+&amp; \dfrac{4}{7} \cdot \dfrac{3}{6} = \dfrac{12}{42} \\
+\hline
+\end{array}
+\\
+\]</span></p>
+<p><strong>(b)</strong> Find the expected number of male kittens.</p>
+<p><span class="math display">\[
+E(X) = 0 \cdot \dfrac{6}{42} + 1 \cdot \dfrac{24}{42} + 2 \cdot \dfrac{12}{42} = 1.14 \text { males}  
+\\
+\]</span></p>
+<p><strong>(c)</strong> Find the standard deviation of the number of male of kittens.</p>
+<p><span class="math display">\[
+\begin{align}
+\sigma^2 &amp;= (0-1.14)^2 \cdot \dfrac{6}{42} + (1-1.14)^2 \cdot \dfrac{24}{42} 
++ (2-1.14)^2 \cdot \dfrac{12}{42} = 0.4082  \\
+\\
+\sigma &amp;= \sqrt {0.4082} = 0.64 \text { males} 
+\end{align}
+\]</span></p>
+<p></br></p>
+<p><strong>6.</strong> Since the stock market began in 1872, stock prices have risen in about <span class="math inline">\(73\%\)</span> of the years. Assuming that market performance is independent from year to year, what is the probability that the market will fall during at least one of the next <span class="math inline">\(5\)</span> years?</p>
+<p></br></p>
+<p><strong>7.</strong> The Center for Disease Control and Prevention say that about <span class="math inline">\(30\%\)</span> of high school students smoke tobacco. Suppose you randomly select high school students to survey them on their attitudes toward scenes of smoking in the movies. What is the probability that there are no more than <span class="math inline">\(2\)</span> smokers among <span class="math inline">\(10\)</span> people you randomly choose?</p>
+
 </div>
 </div>
             </section>
