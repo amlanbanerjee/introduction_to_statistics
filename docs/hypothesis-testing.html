@@ -449,16 +449,10 @@ point estimate follows the appropriate distribution and is unbiased.<br />
 <ol style="list-style-type: decimal">
 <li>The sample observations are simple random sample.<br />
 </li>
-<li>The trials independent with two possible outcomes.<br />
+<li>The trials are independent with two possible outcomes.<br />
 </li>
-<li>The sampling distribution for <span class="math inline">\(\hat p\)</span>, taken from a sample of size <span class="math inline">\(n\)</span> from a population with a true proportion <span class="math inline">\(p\)</span>, is nearly normal when</li>
+<li>The sampling distribution for <span class="math inline">\(\hat p\)</span>, taken from a sample of size <span class="math inline">\(n\)</span> from a population with a true proportion <span class="math inline">\(p\)</span>, is nearly normal when the sample observations are independent and we expect to see at least <span class="math inline">\(10\)</span> successes and <span class="math inline">\(10\)</span> failures in our sample, i.e. <span class="math inline">\(np \ge 10\)</span> and <span class="math inline">\(n(1-p) \ge 10\)</span>. This is called the <strong>success-failure condition.</strong> If the conditions are met, then the sampling distribution of <span class="math inline">\(\hat p\)</span> is nearly normal with mean <span class="math inline">\(\mu_{\hat p} = p\)</span> and standard deviation <span class="math inline">\(\sigma_{\hat p} = \sqrt \dfrac{p(1-p)}{n}\)</span>.</li>
 </ol>
-<ul>
-<li>the sample observations are independent and<br />
-</li>
-<li>we expect to see at least <span class="math inline">\(10\)</span> successes and <span class="math inline">\(10\)</span> failures in our sample, i.e. <span class="math inline">\(np \ge 10\)</span> and <span class="math inline">\(n(1-p) \ge 10\)</span>. This is called the <strong>success-failure condition.</strong><br />
-If the conditions are met, then the sampling distribution of <span class="math inline">\(\hat p\)</span> is nearly normal with mean <span class="math inline">\(\mu_{\hat p} = p\)</span> and standard deviation <span class="math inline">\(\sigma_{\hat p} = \sqrt \frac{p(1-p)}{n}\)</span>.</li>
-</ul>
 <p><span class="math display">\[
 \begin{cases}
 n = \text {samlpe size }  \\
@@ -493,7 +487,7 @@ n(1-p) \ge 10 \rightarrow 90 \times (1-0.80) \ge 10
 <span class="math display">\[
 \begin{align}
 \hat p &amp;= \frac {61}{90} = 0.678 \\ \\
-SD(\hat p) &amp;= \sqrt \frac{p_0q_0}{n} = \sqrt \frac{(0.80)(0.20)}{90} = 0.042  \\ \\
+SE(\hat p) &amp;= \sqrt \frac{pq}{n} = \sqrt \frac{(0.80)(0.20)}{90} = 0.042  \\ \\
 z &amp;= \frac {0.678-0.80}{0.042} = -2.90   \\ \\
 p\text{-value} &amp;= P(z &lt; -2.90) = 0.002 &lt; 0.05 
 \end{align}
@@ -518,7 +512,7 @@ n(1-p) \ge 10 \rightarrow 550 \times (1-0.517) \ge 10
 <p><span class="math display">\[
 \begin{align}
 \hat p &amp;= 0.569 \\ \\
-SD(\hat p) &amp;= \sqrt \frac{p_0q_0}{n} = \sqrt \frac{(0.517)(1-0.517)}{550} = 0.0213  \\ \\
+SE(\hat p) &amp;= \sqrt \frac{pq}{n} = \sqrt \frac{(0.517)(1-0.517)}{550} = 0.0213  \\ \\
 z &amp;= \frac {0.569-0.517}{0.0213} = 2.44   \\ \\
 p\text{-value} &amp;= 2 \times P(z &gt; 2.44) = 2 \times 0.0073 = 0.0146 &lt; 0.05 
 \end{align}
