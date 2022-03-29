@@ -24,7 +24,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-03-08" />
+<meta name="date" content="2022-03-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="estimating-parameters-and-determining-sample-sizes.html"/>
-
+<link rel="next" href="inferences-from-two-samples.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -193,6 +193,25 @@
 <li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#t-text--test-testing-hypothesis-about-mu-with-sigma-not-known"><i class="fa fa-check"></i><b>8.3</b> <span class="math inline">\(t \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Not Known</a></li>
 <li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#chi2-text-test-testing-hypothesis-about-a-variance"><i class="fa fa-check"></i><b>8.4</b> <span class="math inline">\(\chi^2 \text{-test}\)</span> | Testing Hypothesis About a Variance</a></li>
 </ul></li>
+<li class="chapter" data-level="9" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html"><i class="fa fa-check"></i><b>9</b> Inferences from Two Samples</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#inferences-about-two-proportions"><i class="fa fa-check"></i><b>9.1</b> Inferences about Two Proportions</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#hypothesis-test"><i class="fa fa-check"></i><b>9.1.1</b> Hypothesis Test</a></li>
+<li class="chapter" data-level="9.1.2" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#confidence-interval-estimate-of-p_1---p_2"><i class="fa fa-check"></i><b>9.1.2</b> Confidence Interval Estimate of <span class="math inline">\(p_1 - p_2\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#inferences-about-two-independent-sample-means"><i class="fa fa-check"></i><b>9.2</b> Inferences about Two Independent Sample Means</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#hypothesis-test-of-independent-samples-sigma_1-and-sigma_2-unknown-and-not-assumed-equal"><i class="fa fa-check"></i><b>9.2.1</b> Hypothesis Test of Independent Samples: <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> Unknown and Not Assumed Equal</a></li>
+<li class="chapter" data-level="9.2.2" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#confidence-interval-estimate-of-mu_1---mu_2-independent-samples-with-sigma_1-and-sigma_2-unknown-and-not-assumed-equal"><i class="fa fa-check"></i><b>9.2.2</b> Confidence Interval Estimate of <span class="math inline">\(\mu_1 - \mu_2\)</span>: Independent Samples with <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> Unknown and Not Assumed Equal</a></li>
+<li class="chapter" data-level="9.2.3" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#pooled-t-test-sigma_1-sigma_2"><i class="fa fa-check"></i><b>9.2.3</b> Pooled <span class="math inline">\(t\)</span>-test: <span class="math inline">\(\sigma_1 = \sigma_2\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#two-dependent-samples-matched-pairs"><i class="fa fa-check"></i><b>9.3</b> Two Dependent Samples (Matched Pairs)</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#hypothesis-testing-for-paired-data-the-paired-t-test"><i class="fa fa-check"></i><b>9.3.1</b> Hypothesis Testing for Paired Data: The paired <span class="math inline">\(t\)</span>-test</a></li>
+<li class="chapter" data-level="9.3.2" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#paired-t-interval"><i class="fa fa-check"></i><b>9.3.2</b> Paired <span class="math inline">\(t\)</span>-Interval</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -219,11 +238,11 @@
 <table>
 <tbody>
 <tr class="odd">
-<td>Perform hypotheses testing involving a sample mean, proportion, and standard deviation or variance.</td>
+<td>Perform hypotheses testing involving two sample means (independent and dependent), two population proportions, and two standard deviations/variances.</td>
 </tr>
 </tbody>
 </table>
-<p>This chapter introduces the statistical method of hypothesis testing to test a given claim about a population parameter, such as proportion, mean, standard deviation, or variance. This method combines the concepts learned in the previous chapters, including sampling distribution, standard error, critical scores, and probability theory.</p>
+<p>This chapter introduces the statistical method of hypothesis testing to test a given claim about a population parameter, such as proportion, mean, standard deviation, or variance. This method combines the concepts covered in the previous chapters, including sampling distribution, standard error, critical scores, and probability theory.</p>
 <div id="hypothesis-testing-1" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> Hypothesis Testing</h2>
 <p>In statistics, a <strong>hypothesis</strong> is a claim or statement about a property of a population.</p>
@@ -425,15 +444,34 @@ point estimate follows the appropriate distribution and is unbiased.<br />
 </div>
 <div id="inference-for-a-single-proportion" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> Inference for a Single Proportion</h2>
-<p><span style="color:#08519c"> <strong>Conditions of the sampling distributions of <span class="math inline">\(\hat p\)</span> being nearly normal</strong> </span></p>
-<p>The sampling distribution for <span class="math inline">\(\hat p\)</span>, taken from a sample of size <span class="math inline">\(n\)</span> from a population with a true proportion <span class="math inline">\(p\)</span>, is nearly normal when</p>
+<p>Conduct a formal hypothesis test of a claim about a population proportion <span class="math inline">\(p\)</span>.</p>
+<p><strong>Requirements:</strong></p>
 <ol style="list-style-type: decimal">
+<li>The sample observations are simple random sample.<br />
+</li>
+<li>The trials independent with two possible outcomes.<br />
+</li>
+<li>The sampling distribution for <span class="math inline">\(\hat p\)</span>, taken from a sample of size <span class="math inline">\(n\)</span> from a population with a true proportion <span class="math inline">\(p\)</span>, is nearly normal when</li>
+</ol>
+<ul>
 <li>the sample observations are independent and<br />
 </li>
-<li>we expect to see at least <span class="math inline">\(10\)</span> successes and <span class="math inline">\(10\)</span> failures in our sample, i.e. <span class="math inline">\(np \ge 10\)</span> and <span class="math inline">\(n(1-p) \ge 10\)</span>. This is called the <strong>success-failure condition.</strong></li>
-</ol>
-<p>If the conditions are met, then the sampling distribution of <span class="math inline">\(\hat p\)</span> is nearly normal with mean <span class="math inline">\(\mu_{\hat p} = p\)</span> and standard deviation <span class="math inline">\(\sigma_{\hat p} = \sqrt \frac{p(1-p)}{n}\)</span>.</p>
-<p><strong>Example 1:</strong></p>
+<li>we expect to see at least <span class="math inline">\(10\)</span> successes and <span class="math inline">\(10\)</span> failures in our sample, i.e. <span class="math inline">\(np \ge 10\)</span> and <span class="math inline">\(n(1-p) \ge 10\)</span>. This is called the <strong>success-failure condition.</strong><br />
+If the conditions are met, then the sampling distribution of <span class="math inline">\(\hat p\)</span> is nearly normal with mean <span class="math inline">\(\mu_{\hat p} = p\)</span> and standard deviation <span class="math inline">\(\sigma_{\hat p} = \sqrt \frac{p(1-p)}{n}\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\begin{cases}
+n = \text {samlpe size }  \\
+\hat p = \dfrac{x}{n} \text { (sample proportion) }  \\
+p = \text {population proportion  }  \\
+q = 1 - p  \\
+\end{cases}
+\]</span></p>
+<p><strong>Test Statistic for Testing a Claim About a Proportion</strong></p>
+<p><span class="math display">\[
+z = \dfrac{\hat p - p}{\sqrt {\dfrac{pq}{n}} }
+\]</span></p>
+<p><strong>Example:</strong></p>
 <p><strong>The DMV claims that <span class="math inline">\(80\%\)</span> of all drivers pass the driving test. In a survey of <span class="math inline">\(90\)</span> teens, only <span class="math inline">\(61\)</span> passed. Is there evidence that teen pass rates are significantly below <span class="math inline">\(80\%?\)</span></strong></p>
 <p>Let’s say, <span class="math inline">\(p\)</span> is the true population proportion.</p>
 <p><span class="math display">\[
@@ -461,7 +499,7 @@ p\text{-value} &amp;= P(z &lt; -2.90) = 0.002 &lt; 0.05
 \end{align}
 \]</span></p>
 <p>Hence, we reject <span class="math inline">\(H_0\)</span>. Teen pass rate is significantly below population pass rate.</p>
-<p><strong>Example 2:</strong></p>
+<p><strong>Example:</strong></p>
 <p><strong>Under natural conditions, <span class="math inline">\(51.7\%\)</span> of births are male. In Punjab India’s hospital <span class="math inline">\(56.9\%\)</span> of the <span class="math inline">\(550\)</span> births were male. Is there evidence that the proportion of male births is significantly different for this hospital?</strong></p>
 <p><span class="math display">\[
 \begin{align}
@@ -489,7 +527,27 @@ p\text{-value} &amp;= 2 \times P(z &gt; 2.44) = 2 \times 0.0073 = 0.0146 &lt; 0.
 </div>
 <div id="t-text--test-testing-hypothesis-about-mu-with-sigma-not-known" class="section level2" number="8.3">
 <h2><span class="header-section-number">8.3</span> <span class="math inline">\(t \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Not Known</h2>
-<p><strong>Example 1:</strong></p>
+<p>The null hypothesis claims about a population mean <span class="math inline">\(\mu\)</span>.</p>
+<p><strong>Notation:</strong></p>
+<p><span class="math display">\[
+\begin{cases}
+\mu_{\bar x} = \text {population mean }  \\
+s = \text {sample standard deviation }  \\
+n = \text {size of the sample drawn from the population }  \\
+\bar x = \text{sample mean}  \\
+\end{cases}
+\]</span></p>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>The sample is simple random sample.<br />
+</li>
+<li>The population is normally distributed or <span class="math inline">\(n &gt; 30\)</span>.</li>
+</ul>
+<p><strong>Test Statistic for Testing a Claim About a Mean</strong></p>
+<p><span class="math display">\[
+t_{n-1} = \dfrac{\bar x - \mu_{\bar x}}{\dfrac{s}{\sqrt n}}
+\]</span></p>
+<p><strong>Example :</strong></p>
 <p><strong>Average weight of a mice population of a particular breed and age is <span class="math inline">\(30 \text{ gm}\)</span>. Weights recorded from a random sample of <span class="math inline">\(5\)</span> mice from that population are <span class="math inline">\({31.8, 30.9, 34.2, 32.1, 28.8}.\)</span> Test whether the sample mean is significantly greater than the population mean.</strong></p>
 <p><span class="math display">\[
 \begin{align}
@@ -504,7 +562,7 @@ p-value &amp;= 7.5\% &gt; 5\%
 \end{align}
 \]</span></p>
 <p>Conclusion: <span class="math inline">\(H_0\)</span> cannot be rejected. The sample mean is not significantly greater than the population mean.</p>
-<p><strong>Example 2:</strong></p>
+<p><strong>Example :</strong></p>
 <p><strong>EPA recommended mirex screening is 0.08 ppm. A study of a sample of 150 salmon found an average mirex concentration of 0.0913 ppm with a std. deviation of 0.0495 ppm. Are farmed salmon contaminated beyond the permitted EPA level? Also, find a <span class="math inline">\(95\%\)</span> confidence interval for the mirex concentration in salmon.</strong></p>
 <p><span class="math display">\[
 \begin{align}
@@ -556,8 +614,8 @@ Hence, we reject <span class="math inline">\(H_0\)</span>.</p>
           </div>
         </div>
       </div>
-<a href="estimating-parameters-and-determining-sample-sizes.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="estimating-parameters-and-determining-sample-sizes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inferences-from-two-samples.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Exploring Data with Tables and Graphs | Introduction to Statistics</title>
-  <meta name="description" content="Chapter 3 Exploring Data with Tables and Graphs | Introduction to Statistics" />
+  <title>Chapter 9 Inferences from Two Samples | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 9 Inferences from Two Samples | Introduction to Statistics" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Exploring Data with Tables and Graphs | Introduction to Statistics" />
+  <meta property="og:title" content="Chapter 9 Inferences from Two Samples | Introduction to Statistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Exploring Data with Tables and Graphs | Introduction to Statistics" />
+  <meta name="twitter:title" content="Chapter 9 Inferences from Two Samples | Introduction to Statistics" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction.html"/>
-<link rel="next" href="describing-exploring-and-comparing-data.html"/>
+<link rel="prev" href="hypothesis-testing.html"/>
+
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -232,215 +232,361 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exploring-data-with-tables-and-graphs" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Exploring Data with Tables and Graphs</h1>
-<p><strong>Learning Outcome:</strong></p>
+<div id="inferences-from-two-samples" class="section level1" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Inferences from Two Samples</h1>
+<p><strong>Learning Outcome</strong></p>
 <table>
 <tbody>
 <tr class="odd">
-<td><em>Interpret quantitative data using tables and graphs, and descriptive statistics using histograms.</em></td>
+<td>Perform hypotheses testing involving a sample mean, proportion, and standard deviation or variance.</td>
 </tr>
 </tbody>
 </table>
-<p>The chapter introduces various techniques such as frequency table and histogram to organize quantitative data to explore its important characteristics.</p>
-<div id="frequency-distribution" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Frequency Distribution</h2>
-<p><span class="math inline">\(\text {Table: Drive-Through Service Times (seconds) for McDonald&#39;s Lunches}\)</span></p>
-<p><img src="mcdonalds_table.png" /></p>
-<p>A <strong>frequency distribution (or frequency table)</strong> shows how data are partitioned among several categories (or classes) by listing the categories along with the number (frequency) of data values in each of them.</p>
-<p><span class="math display">\[  
-\bbox[white,4px]
-{
-\color{black}
-{
-\begin{array}{c|c|c|c} 
-\text{Time(Seconds)}  &amp; \text{Frequency}  \\
-\hline
-\text{75-124} &amp; \text{11}  \\
-\text{125-174} &amp; \text{24}  \\
-\text{175-224} &amp; \text{10}  \\
-\text{225-274} &amp; \text{3}  \\
-\text{275-324} &amp; \text{2}  \\
-\hline
-\text{Total} &amp; 50
-\end{array}
-}
-}
-\]</span></p>
-<p>Lower class limits: <span class="math inline">\({75, 125, 175, 225, 275}\)</span><br />
-Upper class limits: <span class="math inline">\({124, 174, 224, 274, 324}\)</span><br />
-Class boundaries: <span class="math inline">\({74.5, 124.5, 174.5, 224.5, 274.5, 324.5}\)</span><br />
-Class midpoints: <span class="math inline">\({99.5, 149.5, 199.5, 249.5, 299.5}\)</span><br />
-Class width: <span class="math inline">\(124.5 - 74.5 = 50\)</span></p>
-<div id="relative-frequency-distribution" class="section level4 unnumbered">
-<h4>Relative Frequency Distribution</h4>
-<p>A <strong>relative frequency distribution (or percentage frequency distribution)</strong> is a variation of the basic frequency distribution in which a class frequency is replaced by a relative frequency (or proportion).</p>
-<p><span class="math display">\[
-\begin{align}
-\text{relative frequency for a class} &amp;= \dfrac{\text{frequency for a class}}{\text{sum of all frequencies}} \\
-\text{percentage of a class} &amp;= \dfrac{\text{frequency for a class}}{\text{sum of all frequencies}} \times 100\%\\
-\end{align}
-\]</span></p>
-<p><span class="math display">\[
-\bbox[white,4px]
-{
-\color{black}
-{
-\begin{array}{c|c} 
-\text{Time(Seconds)}  &amp; \text{Relative  Frequency}  \\
-\hline
-\text{75-124}  &amp; \text{22}\%  \\
-\text{125-174} &amp; \text{48}\%  \\
-\text{175-224} &amp; \text{20}\%  \\
-\text{225-274} &amp; \text{6}\%   \\
-\text{275-324} &amp; \text{4}\%   \\
-\hline
-               &amp; 100\% 
-\end{array}
-}
-}
-\]</span></p>
-</div>
-<div id="cumulative-distribution" class="section level4 unnumbered">
-<h4>Cumulative Distribution</h4>
-<p><span class="math display">\[
-\bbox[white,4px]
-{
-\color{black}
-{
-\begin{array}{c|c|c} 
-\text{Time(Seconds)}  &amp; \text{N}  &amp; \text{%}  \\
-\hline
-\text{75-124}  &amp; 11 &amp; \text{22}\%  \\
-\text{125-174} &amp; 35 &amp; \text{70}\%  \\
-\text{175-224} &amp; 45 &amp; \text{90}\%  \\
-\text{225-274} &amp; 48 &amp; \text{96}\%   \\
-\text{275-324} &amp; 50 &amp; \text{100}\%   \\
-\hline
-\end{array}
-}
-}
-\]</span></p>
-</div>
-</div>
-<div id="histogram" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Histogram</h2>
-<p>A histogram is a graph consisting of bars of equal width drawn adjacent to each other. The horizontal scale represents classes of quantitative data values; and the vertical scale represents frequencies.</p>
-<p>A <strong>relative frequency histogram</strong> has the same shape and horizontal scale as a histogram, but the vertical scale uses relative frequencies (as percentages) instead of actual frequencies.</p>
-<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
-<p><strong>Importance of Histogram</strong></p>
+<p>The previous chapters covered the methods of estimating values of population parameters using confidence intervals and testing hypotheses about population parameters with a sample from one population. This chapter extends these methods to situations involving two populations.</p>
+<div id="inferences-about-two-proportions" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Inferences about Two Proportions</h2>
+<p><strong>Objectives:</strong></p>
 <ul>
-<li>Visually displays the shape of the distribution of the data<br />
+<li>Hypothesis test: conduct a hypothesis test of a claim about two population proportions.<br />
 </li>
-<li>Shows the location of the center of the data<br />
-</li>
-<li>Shows the spread of the data<br />
-</li>
-<li>Identifies outliers</li>
+<li>Confidence interval: construct a confidence interval estimate of the difference between two population proportions.</li>
 </ul>
-<div id="density-histogram" class="section level4 unnumbered">
-<h4>Density Histogram</h4>
+<p>Notations:</p>
+<p><span class="math display">\[
+\begin{cases}
+p_1 = \text {proportion in population 1 }  \\
+n_1 = \text {size of the sample drawn from population 1 }  \\
+x_1 = \text {number of successes oberved in sample 1}  \\
+\hat p_1 = \dfrac{x_1}{n_1}  \ (\text{sample 1 proportion})  \\
+\hat q_1 = 1- \hat p_1 \ (\text{complement of sample 1 proportion})  \\
+\end{cases}
+\]</span>
+The corresponding notations <span class="math inline">\(p_2, n_2, x_2, \hat p_2, \hat q_2\)</span> apply to population 2.</p>
+<p><strong>Requirements</strong></p>
+<ul>
+<li><strong>Random</strong> - The sample proportions are from two simple random samples.<br />
+</li>
+<li><strong>Independent</strong> - The two samples are independent. If drawn from the same population, the samples are not related or they are not naturally paired or matched with the sample values from the other population.<br />
+</li>
+<li><strong>Sample size</strong> - For each of the two samples, there are at least <span class="math inline">\(5\)</span> successes and at least <span class="math inline">\(5\)</span> failures. (That is <span class="math inline">\(n \hat p \ge 5\)</span> and <span class="math inline">\(n \hat q \ge 5\)</span> for each of the two samples.)</li>
+</ul>
+<div id="hypothesis-test" class="section level3" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> Hypothesis Test</h3>
+<p>The null hypothesis claims that the two population proportions are equal. It implies that both samples came from the same population and have equal variance. Under the assumption of equal proportions, the best estimate of the common population proportion is estimated by pooling both samples into one large sample, so that <span class="math inline">\(\bar p\)</span> is the estimator of the common population proportion. Furthermore, pooled sample variance is calculated from <span class="math inline">\(\bar p\)</span>.</p>
+<p>Let’s consider, the difference in two population proportions: <span class="math inline">\(p_1 - p_2\)</span>.</p>
+<p>A reasonable point estimate of <span class="math inline">\(p_1 - p_2\)</span> based on the samples drawn from the same populations can be written in the form: <span class="math inline">\(\hat p_1 - \hat p_2\)</span>.</p>
+<p><span class="math display">\[
+H_0: p_1 - p_2 = 0 \\
+H_A: p_1 - p_2 \ne 0 \\
+\]</span></p>
+<p><strong>Pooled Sample Proportion</strong></p>
+<p><span class="math display">\[
+\bar p = \dfrac{x_1 + x_2}{n_1 + n_2} \\
+\bar q = 1 - \bar p
+\]</span></p>
+<p><strong>Hypothesis Test Statistic for Two Proportions</strong></p>
+<p>The mean of the sampling distribution of <span class="math inline">\((\hat p_1 - \hat p_2)\)</span> is <span class="math inline">\(p_1 - p_2\)</span>, and
+standard error</p>
+<p>The mean or expected value of <span class="math inline">\(\hat p_1 - \hat p_2\)</span> is <span class="math inline">\(p_1 - p_2\)</span>.</p>
+<p><span class="math inline">\(\sqrt{\dfrac{\bar p \bar q}{n_1}+\dfrac{\bar p \bar q }{n_2}}\)</span>.</p>
+<p>The <span class="math inline">\(z\)</span>-score at <span class="math inline">\((\hat p_1 - \hat p_2)\)</span>,</p>
+<p><span class="math display">\[
+z = \dfrac{(\hat p_1 - \hat p_2) - (p_1 - p_2)}{\sqrt{\dfrac{\bar p \bar q}{n_1}+\dfrac{\bar p \bar q }{n_2}}}  \\
+\text{where, } p_1 - p_2 = 0
+\]</span></p>
+</div>
+<div id="confidence-interval-estimate-of-p_1---p_2" class="section level3" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> Confidence Interval Estimate of <span class="math inline">\(p_1 - p_2\)</span></h3>
+<p>The confidence interval estimate of the difference <span class="math inline">\(p_1 - p_2\)</span> is</p>
+<p><span class="math inline">\((\hat p_1 - \hat p_2) - E \lt (p_1 - p_2) \lt (\hat p_1 - \hat p_2) + E\)</span></p>
+<p>where,</p>
+<p>the standard deviation: <span class="math inline">\(SE_{\hat p_1 - \hat p_2} = \sqrt{SE^2_{\hat p_1} + SE^2_{\hat p_2}} = \sqrt{\dfrac{\hat p_1 \hat q_1 }{n_1}+\dfrac{\hat p_2 \hat q_2}{n_2}}\)</span></p>
+<p>margin of error <span class="math inline">\(E = z^*_{\alpha/2} \sqrt{\dfrac{\hat p \hat q}{n_1}+\dfrac{\hat p \hat q }{n_2}}\)</span></p>
+<p><span class="math inline">\(z^*_{\alpha/2}\)</span> is the critical value that corresponds to the confidence level <span class="math inline">\((1-\alpha)\)</span>.</p>
+<p>Notice that the standard error calculation in the confidence interval is based on <span class="math inline">\(\hat p_1\)</span> and <span class="math inline">\(\hat p_2\)</span>, whereas the hypothesis test uses a standard error based on pooled proportion <span class="math inline">\(\bar p\)</span>.</p>
+<p><strong>Example (Two-proportional <span class="math inline">\(z\)</span>-interval):</strong></p>
+<p>How much difference is there in the proportion of male drivers who wear seat belts when sitting next to a man and the proportion when sitting next to a woman?<br />
+With female passengers: <span class="math inline">\(2777\)</span> wore seat belts, <span class="math inline">\(1431\)</span> did not.<br />
+With male passengers: <span class="math inline">\(1363\)</span> wore seat belts, <span class="math inline">\(1400\)</span> did not.</p>
+<p>Solution:</p>
 <p><span class="math display">\[
 \begin{align}
-\textbf{Density} &amp;= \dfrac{\textbf{relative frequency}}{\textbf{bin width}} \\
-\text {Density of class (75-124)}
-&amp;= \dfrac{\text{rel. freq of class (75-124)}}{\text{class width}} \\
-&amp;= \dfrac{0.22}{50}   \\                         
-&amp;= 0.0044
+n_F &amp;= 4208, \\
+n_M &amp;= 2763,    \\
+\hat p_F &amp;= \frac{2777}{4208} = 0.660, \\ 
+\hat p_M &amp;= \frac{1363}{2763} = 0.493 \\ \\
+SE_{\hat {p_F} - \hat p_M} &amp;= \sqrt{\frac{\hat p_F(1- \hat p_F)}{n_F}+\frac{\hat p_M(1-\hat p_M)}{n_M}} \\
+&amp;= \sqrt{\frac{(0.660)(1-0.660)}{4208}+\frac{0.493(1-0.493)}{2763}} \\
+&amp;= 0.012 \\ \\
+ME &amp;= z^* \times SE(\hat p_F - \hat p_M) = 1.96 \times 0.012 = 0.024 \\
+\\
+\hat p_F - \hat p_M &amp;= 0.660 - 0.493 = 0.167 \\ 
+\\
+\text{Confidence Interval:}
+\\
+(\hat p_F - \hat p_M) - ME &amp;\lt  ( p_F - p_M) \lt (\hat p_F - \hat p_M) + ME   \\
+\\
+0.167 - 0.024 &amp;\lt  ( p_F - p_M) \lt 0.167 + 0.024   \\
+\\
+0.143 &amp;\lt  ( p_F - p_M) \lt 0.191
 \end{align}
 \]</span></p>
-<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
-<p>In density histogram, area of each rectangular bar is the relative frequency of its class. <span class="math inline">\(\textbf{Total area of a density histogram is equal to 1.}\)</span></p>
-<p><strong>Practice - Construct a Density Histogram</strong></p>
-<p>The accompanying frequency distribution summarizes data on the number of times smokers attempted to quit before their final successful attempts.</p>
-<p><span class="math display">\[ \bbox[yellow,5px]
-{
-\color{black}
-{
-\begin{array}{r|c}
-\text{Number of attempts} &amp; \text{Frequency} &amp; \text{Relative  Frequency} &amp; \text{Density}
+<p><strong>Example (Two-proportional <span class="math inline">\(z\)</span>-test)</strong></p>
+<p>The Sleep in America Poll found that <span class="math inline">\(205\)</span> of <span class="math inline">\(293\)</span> of Gen-Y and <span class="math inline">\(235\)</span> of <span class="math inline">\(469\)</span> of Gen-X use the Internet before sleep. Is this difference real?</p>
+<p><span class="math display">\[
+\hat p_Y = \dfrac{205}{293} = 0.700  \\
+\hat p_X = \dfrac{235}{469} = 0.501  \\
+\hat p_Y - \hat p_X = 0.700 - 0.501 = 0.199 
+\]</span>
+The null hypothesis claims that the two proportions are equal. We want to test whether the difference observed in the sample is statistically different from <span class="math inline">\(0\)</span> or not.</p>
+<p>In other words,</p>
+<p>Null Model: <span class="math inline">\(p_Y - p_X = 0\)</span></p>
+<p>The sampling distribution of <span class="math inline">\((\hat p_Y - \hat p_X)\)</span> is centered around <span class="math inline">\(0\)</span>.</p>
+<p><span class="math display">\[
+\begin{align}
+\hat p_{pooled} &amp;= \frac{x_Y + x_X}{n_Y + n_X} = \frac{205+235}{293+469} = 0.5774 \\ \\
+SE_{pooled}(\hat p_Y - \hat p_X) &amp;= \sqrt{\frac{\hat p_{pooled}(1- \hat p_{pooled})}{n_X}+\frac{\hat p_{pooled}(1-\hat p_{pooled})}{n_Y}} \\
+&amp;= \sqrt{\frac{0.5774 \times (1- 0.5774)}{293}+\frac{0.5774 \times (1-0.5774)}{469}} \\
+&amp;= 0.0368 \\ \\
+\end{align}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+&amp;\text{Two-tailed two-proportional z-test} \\
 \\
+&amp;H_0: p_Y - p_X = 0 \\
+&amp;H_A: p_Y - p_X \ne 0 \\ \\
+&amp;\hat p_Y - \hat p_X = 0.700 - 0.501 = 0.199 \\ \\
+&amp;z = \frac{0.199 - 0}{0.0368} = 5.41 \\ \\
+&amp;p \text{-value} = 2 \times P(z&gt;5.41) \le 0.05
+\end{align}
+\]</span></p>
+<p>Hence, reject <span class="math inline">\(H_0\)</span>. The difference between the proportions of Gen Y and Gen X is significantly different.</p>
+<p><strong>Example (Two-proportional <span class="math inline">\(z\)</span>-test)</strong></p>
+<p><span class="math inline">\(62\)</span> of <span class="math inline">\(325\)</span> girls and <span class="math inline">\(75\)</span> of <span class="math inline">\(268\)</span> boys have online profiles. Is there a real difference between all boys and girls?</p>
+<p>Null Model:</p>
+<p>mean: <span class="math inline">\(p_B - p_G = 0\)</span></p>
+<p><span class="math display">\[
+\begin{align}
+\hat p_{pooled} &amp;= \frac{x_B + x_G}{n_B + n_G} = \frac{75+62}{268+325} = 0.231 \\ \\
+SE_{pooled}(\hat p_B - \hat p_G) &amp;= \sqrt{\frac{\hat p_{pooled}(1- \hat p_{pooled})}{n_B}+\frac{\hat p_{pooled}(1-\hat p_{pooled})}{n_G}} \\
+&amp;= \sqrt{\frac{0.231 \times (1- 0.231)}{268}+\frac{0.231 \times (1-0.231)}{325}} \\
+&amp;= 0.0348 \\ \\
+\end{align}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+&amp;\text{Two-tailed two-proportional z-test} \\
+&amp;H_0: p_B - p_G = 0 \\
+&amp;H_A: p_B - p_G \ne 0 \\ \\
+&amp;\hat p_B - \hat p_G = 0.28 - 0.19 = 0.09 \\ \\
+&amp;z = \frac{0.09 - 0}{0.0348} = 2.59 \\ \\
+&amp;p-value = 2 \times P(z&gt;2.59) = 0.0096 \le 0.05
+\end{align}
+\]</span></p>
+<p>Reject <span class="math inline">\(H_0\)</span>. There is strong evidence to say that there is a statistically significant difference between the proportions of boys and girls who have online profiles.</p>
+</div>
+</div>
+<div id="inferences-about-two-independent-sample-means" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Inferences about Two Independent Sample Means</h2>
+<p><strong>Objectives:</strong></p>
+<ul>
+<li>Hypothesis test: conduct a hypothesis test of a claim about two population means.<br />
+</li>
+<li>Confidence interval: construct a confidence interval estimate of the difference between two population means.</li>
+</ul>
+<p><em>Three Scenarios:</em></p>
+<ol style="list-style-type: decimal">
+<li>The standard deviations of the two populations are unknown and are not assumed to be equal.<br />
+</li>
+<li>The two population standard deviations are unknown but are assumed to be equal.<br />
+</li>
+<li>The two population standard deviations are both known.</li>
+</ol>
+<p>Notations:</p>
+<p><span class="math display">\[
+\begin{cases}
+\mu_1 = \text {mean of population 1 }  \\
+\sigma_1 = \text {standard deviation of population 1}  \\
+n_1 = \text {size of the sample drawn from population 1 }  \\
+\bar x_1 = \text{mean of sample 1}  \\
+\bar s_1 = \text{standard deviation of sample 1}  \\
+\end{cases}
+\]</span>
+The corresponding notations <span class="math inline">\(p_2, n_2, x_2, \hat p_2, \hat q_2\)</span> apply to population 2.</p>
+<div id="hypothesis-test-of-independent-samples-sigma_1-and-sigma_2-unknown-and-not-assumed-equal" class="section level3" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Hypothesis Test of Independent Samples: <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> Unknown and Not Assumed Equal</h3>
+<p><strong>Requirements</strong></p>
+<ul>
+<li><strong>Unequal variance</strong> - The values of <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> are unknown and we do not assume that they are equal.<br />
+</li>
+<li><strong>Independent</strong> - The two samples are independent. If drawn from the same population, the samples are not related or they are not naturally paired or matched with the sample values from the other population.<br />
+</li>
+<li><strong>Sample size</strong> - Both samples are simple random samples and either sample sizes are large (with <span class="math inline">\(n_1 \gt 30\)</span> and <span class="math inline">\(n_2 \gt 30\)</span>) or both samples come from populations having normal distributions. The methods presented in this section is robust against departures from normality, so they perform well on small samples as long as the departures from normality are not too extreme.</li>
+</ul>
+<p>The null hypothesis claims that the two population means are equal, i.e. the difference in two population means: <span class="math inline">\(\mu_1 - \mu_2 = 0\)</span>.</p>
+<p>A reasonable point estimate of <span class="math inline">\(\mu_1 - \mu_2\)</span> based on the samples drawn from two populations can be written in the form: <span class="math inline">\(\bar x_1 - \bar x_2\)</span>.</p>
+<p>The sampling distribution of <span class="math inline">\(\bar x_1 - \bar x_2\)</span> is distributed with a mean or expected value of <span class="math inline">\(\mu_1 - \mu_2\)</span> and
+standard error: <span class="math inline">\(SE_{\bar x_1 - \bar x_2} = \sqrt{SE^2_{\bar x_1} + SE^2_{\bar x_2}} = \sqrt{\dfrac{\sigma^2_1}{n_1}+\dfrac{\sigma^2_2}{n_2}}\)</span></p>
+<p>When sample size is small or population standard deviations <span class="math inline">\((\sigma_1, \sigma_2)\)</span> are unknown, each sample is assumed to follow <span class="math inline">\(t_{df=\nu}\)</span>-distribution with mean <span class="math inline">\(0\)</span> and <span class="math inline">\(SE_{\bar x_1 - \bar x_2} = \sqrt{\dfrac{s^2_1}{n_1}+\dfrac{s^2_2}{n_2}}\)</span>.</p>
+<p><strong>Hypothesis Test Statistic for Two Means</strong></p>
+<p><span class="math display">\[
+t_\nu = \dfrac{(\bar x_1 - \bar x_2) - (\mu_1 - \mu_2)}{\sqrt{\dfrac{s^2_1}{n_1}+\dfrac{s^2_2}{n_2}}}    
+\ \text{ where, } \mu_1 - \mu_2 = 0  \\
+\\
+\text{degrees of freedom } (\nu) = \dfrac{(A + B)^2}{\dfrac{A^2}{n_1 - 1} + \dfrac{B^2}{n_2 - 1}}  \\
+\\
+\text{where, } \  A = \dfrac{s^2_1}{n_1} \ \text{ and } \  B = \dfrac{s^2_2}{n_2} 
+\\
+\text{Alternatively, } df = min(n_1-1, n_2-1) \\
+\]</span></p>
+</div>
+<div id="confidence-interval-estimate-of-mu_1---mu_2-independent-samples-with-sigma_1-and-sigma_2-unknown-and-not-assumed-equal" class="section level3" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Confidence Interval Estimate of <span class="math inline">\(\mu_1 - \mu_2\)</span>: Independent Samples with <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> Unknown and Not Assumed Equal</h3>
+<p>The confidence interval estimate of the difference <span class="math inline">\(\mu_1 - \mu_2\)</span> is</p>
+<p><span class="math display">\[(\bar x_1 - \bar x_2) - E &lt;  \mu_1 - \mu_2 &lt;  (\bar x_1 - \bar x_2) + E  \]</span><br />
+where,</p>
+<p><span class="math display">\[ E = t^*_{\nu, \alpha/2} \times \sqrt{\dfrac{s^2_1}{n_1}+\dfrac{s^2_2}{n_2}}\]</span></p>
+<p><span class="math inline">\(t^*_{\nu, \alpha/2}\)</span> is the critical <span class="math inline">\(t\)</span> score that corresponds to the confidence level <span class="math inline">\((1-\alpha)\)</span>.</p>
+<p><strong>Example: Two-Sample <span class="math inline">\(t\)</span>-interval</strong></p>
+<p>Find the <span class="math inline">\(95\%\)</span> confidence interval about the difference in sample means.</p>
+<p><span class="math display">\[
+\begin{array}{c|c|c}
+&amp; \text{Sample 1} &amp; \text{Sample 2} \\
 \hline
-\textbf{0-10} &amp; 778 \\
-\textbf{10-20} &amp; 306 \\
-\textbf{20-30} &amp; 274  \\
-\textbf{30-40} &amp; 221 \\
-\textbf{40-50} &amp; 238 
+n &amp; 27 &amp; 27 \\
+\bar x &amp; 8.5 &amp; 14.7 \\
+s &amp; 6.1 &amp; 8.4
 \end{array}
-}
-}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+&amp; \bar x_1 - \bar x_2 = 14.7 - 8.5 = 6.2 \\
+&amp; t_{47.46} = 2.011 \text { at CL} = 95\% \\ \\
+&amp; SE = \sqrt{\frac{s^2_1}{n_1}+\frac{s^2_2}{n_2}} = \sqrt{\frac{8.4^2}{27}+\frac{6.1^2}{27}} = 2 \\ \\
+&amp; ME = 2.011 \times 2 = 4.02 \\
+&amp; CI: 6.2 \pm 4.02 = [2.18, 10.22]
+\end{align}
+\]</span></p>
+<p><strong>Example: Two-Sample <span class="math inline">\(t\)</span>-test: Testing for the Difference between the Two Means</strong></p>
+<p>Is there a statistically significant difference between two sample means?</p>
+<p>Generally, use unpooled <span class="math inline">\(t\)</span>-test. Equal variance assumption is often violated in small samples.</p>
+<p><span class="math display">\[
+\begin{array}{c|c|c}
+ &amp; \text{Sample 1} &amp; \text{Sample 2} \\
+\hline
+n &amp; 8 &amp; 7 \\
+\bar y &amp; 281.88 &amp; 211.43 \\
+s &amp; 18.31 &amp; 46.43
+\end{array}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+\text{Two-tailed t test} \\  \\
+H_0: \mu_1 - \mu_2 &amp;= 0 \\
+H_A: \mu_1 - \mu_2 &amp;\ne 0 \\ \\
+\bar y_1 - \bar y_2 &amp;= 0.281.88 - 211.43 = 70.45 \\ \\
+SE(\bar y_1 - \bar y_2) &amp;= \sqrt{\frac{18.31^2}{8}+\frac{46.43^2}{7}} = 18.70  \\
+t_{7.62} &amp;= \frac{70.45 - 0}{18.70} = 3.77 \\ \\
+p-value &amp;= 2 \times P(t&gt;3.77) = 0.006 \le 0.05
+\end{align}
+\]</span>
+Hence, we reject <span class="math inline">\(H_0\)</span>.</p>
+</div>
+<div id="pooled-t-test-sigma_1-sigma_2" class="section level3" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Pooled <span class="math inline">\(t\)</span>-test: <span class="math inline">\(\sigma_1 = \sigma_2\)</span></h3>
+<p>To use the pooled <span class="math inline">\(t\)</span>-test, we must make the <strong>Equal Variance Assumption</strong> that the variances of the two populations from which the samples have been drawn are equal. That is <span class="math inline">\(\sigma_1^2 = \sigma_2^2.\)</span></p>
+<p>Even when the specific values of <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> are unknown but assumed equal, the sample variances <span class="math inline">\(s_1^2\)</span> and <span class="math inline">\(s_2^2\)</span> can be pooled to obtain an estimate of the common population variance <span class="math inline">\(\sigma^2\)</span>.</p>
+<p><span class="math display">\[
+\begin{align}
+&amp;\text {Pooled variance:}  \\
+&amp;s^2_{p} = \frac{(n_1-1)s^2_1+(n_2-1)s^2_2}{(n_1-1)+(n_2-1)} \\
+&amp;SE_{p} = \sqrt{s^2_{p} \bigg (\dfrac{1}{n_1} + \dfrac{1}{n_2} \bigg )}
+\end{align}
+\]</span></p>
+<p><span class="math display">\[
+\text{Test Statistic: }  \
+t = \dfrac{(\bar x_1- \bar x_2) - (\bar \mu_1- \bar \mu_2)}{\sqrt{s^2_{p} \bigg (\dfrac{1}{n_1} + \dfrac{1}{n_2} \bigg )}}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+&amp;\text{Hypothesis test: }  \\\\
+&amp;H_0: \mu_1 - \mu_2 = 0 \\
+&amp;H_A: \mu_1 - \mu_2 \ne 0 \\ \\
+&amp;\text {pooled t-score, } t = \dfrac{(\bar x_1 - \bar x_2 )-0}{SE_{pooled}} \\
+&amp;df = (n_1 + n_2 - 2) \\ \\
+&amp;\text {Confidence Interval: } (\bar x_1- \bar x_2) \pm t_{df}^* \times SE_{p}(\bar y_1 - \bar y_2)
+&amp;\end{align}
 \]</span></p>
 </div>
 </div>
-<div id="other-charts" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Other Charts</h2>
-<p><strong>Dotplot</strong></p>
-<p>A dotplot uses dots to show the frequency, or number of occurrences, of the values in a data set. The higher the stack of dots, the greater the number of occurrences there are of the corresponding value.</p>
-<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
-<p><strong>Pie Charts</strong></p>
-<p>The distribution of a categorical variable can be described by a <strong>pie chart</strong>, which is a disk where slices represent the categories. The proportion of the total area for one slice is equal to the relative frequency for the category represented by the slice. The relative frequencies are usually written as percentages.</p>
-<p>Example 1: Construct and Interpret a Pie Chart</p>
-<p>A total of 273 children were surveyed about what job they would want to do. The jobs and the percentages of the children who voted for them are shown in the table.</p>
-<p><span class="math display">\[ \bbox[yellow,5px]
-{
-\color{black}
-{
-\begin{array}{r|c}
-\text{Job} &amp; \text{Percent} \\
-\hline
-\text{Spy/Agent} &amp; 16 \\
-\text{Veterinarian} &amp; 13 \\
-\text{Professional Athlete} &amp; 12  \\
-\text{Movie Star} &amp; 10 \\
-\text{Video Game Designer} &amp; 8 \\
-\text{Doctor} &amp; 6 \\
-\text{Other} &amp; 35 
-\end{array}
-}
-}
+<div id="two-dependent-samples-matched-pairs" class="section level2" number="9.3">
+<h2><span class="header-section-number">9.3</span> Two Dependent Samples (Matched Pairs)</h2>
+<p>This section presents methods for testing hypotheses and constructing confidence intervals involving the mean of the differences of the values from two populations that are dependent in the sense that the data consist of matched pairs. The pairs must be matched according to some relationship, such as before/after measurements from the same subjects or IQ scores of siblings.</p>
+<p><strong>Notation for Dependent Samples</strong></p>
+<p><span class="math display">\[
+\begin{cases}
+d = \text {individual difference between the two values in a single matched pair}  \\
+\mu_d = \text {mean value of the differences } d \text{ for  the population of all matched pairs}  \\
+\bar d = \text {mean value of the difference } d \text{ for the matched sample data}  \\
+s_d = \text{standard deviation of the differences } d \text{ for the paired sample data}  \\
+n = \text{ number of pairs of sample data}  \\
+\end{cases}
 \]</span></p>
-<p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
-<p>Questions:</p>
+<p><strong>Requirements</strong></p>
 <ol style="list-style-type: decimal">
-<li><p>Find the proportion of the observations that fall in the spy category.</p></li>
-<li><p>Find the proportion of the observations that do NOT fall in the spy category.</p></li>
-<li><p>Find the proportion of the observations that fall in the athlete category OR fall in the movie-star category.</p></li>
+<li>The sample data are dependent (matched pairs).<br />
+</li>
+<li>The matched pair are a simple random sample.<br />
+</li>
+<li>Either or both of these conditions are satisfied: the number of pairs of sample data is large <span class="math inline">\((n &gt; 30)\)</span> or the
+pairs of values have differences that are from a population having a distribution that is approximately normal.</li>
 </ol>
-<p><strong>Interpreting a Multiple Bar Graph</strong></p>
-<p>In a survey in 2012, 1960 adults were asked the following question: “Generally speaking, do you usually think of yourself as a Republican, Democrat, Independent, or other?” The results of the survey are described by the multiple bar graph.</p>
-<div id="htmlwidget-ea03a870eb85bdb407ae" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ea03a870eb85bdb407ae">{"x":{"visdat":{"2a1861ed650f":["function () ","plotlyVisDat"]},"cur_data":"2a1861ed650f","attrs":{"2a1861ed650f":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"type":"bar","text":[0.37,0.38,0.23,0.02],"textposition":"auto","name":"Women","marker":{"color":"rgb(158,202,225)","line":{"color":"rgb(8,48,107)","width":1.5}},"inherit":true},"2a1861ed650f.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"type":"bar","text":[0.29,0.43,0.24,0.03],"textposition":"auto","name":"Men","marker":{"color":"rgb(58,200,225)","line":{"color":"rgb(8,48,107)","width":1.5}},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"barmode":"group","xaxis":{"domain":[0,1],"automargin":true,"title":"Party","type":"category","categoryorder":"array","categoryarray":["Democrats","Independent","Other","Republican"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Relative Frequency"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Democrats","Independent","Republican","Other"],"y":[0.37,0.38,0.23,0.02],"type":"bar","text":[0.37,0.38,0.23,0.02],"textposition":["auto","auto","auto","auto"],"name":"Women","marker":{"color":"rgb(158,202,225)","line":{"color":"rgb(8,48,107)","width":1.5}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Democrats","Independent","Republican","Other"],"y":[0.29,0.43,0.24,0.03],"type":"bar","text":[0.29,0.43,0.24,0.03],"textposition":["auto","auto","auto","auto"],"name":"Men","marker":{"color":"rgb(58,200,225)","line":{"color":"rgb(8,48,107)","width":1.5}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-<ol style="list-style-type: decimal">
-<li><p>What proportion of women thought of themselves as Democrats?</p></li>
-<li><p>Which political party did the greatest proportion of men choose?</p></li>
-<li><p>Compare the proportion of women who thought of themselves as Independents to the proportion of men who thought of themselves as Independents.</p></li>
-<li><p>A total of 1081 women and 879 men responded to the survey. Were there more women or men who thought of themselves as Independents? How is this possible, given there was a smaller proportion of women who thought of themselves as Independents than men?</p></li>
-</ol>
-<p><strong>Two-Way (Contingency) Table</strong></p>
-<p>The table summarizes the responses from all 42 students who participated in the survey about whether they had read a novel in the past year.</p>
-<p><span class="math display">\[ \bbox[yellow,5px]
-{
-\color{black}
-{
-\begin{array}{l|c|c|c}
-\text{Gender} &amp; \text{Did Not Read Novel} &amp; \text{Read Novel} &amp; \text{Total}  \\
+<div id="hypothesis-testing-for-paired-data-the-paired-t-test" class="section level3" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Hypothesis Testing for Paired Data: The paired <span class="math inline">\(t\)</span>-test</h3>
+<p>The null hypothesis claims that the mean of the differences between two dependent samples (matched pairs) is equal to <span class="math inline">\(0\)</span>.</p>
+<p><strong>Test Statistic for Dependent Samples (with <span class="math inline">\(H_0: \mu_d = 0\)</span>)</strong></p>
+<p><span class="math display">\[
+t_{n-1} = \dfrac{\bar d - \mu_d}{\dfrac{s_d}{\sqrt n}}
+\]</span>
+<strong>Example:</strong></p>
+<p>The table shows the times recorded by <span class="math inline">\(17\)</span> track athletes to complete their inner and outer circles in an track and field competition. Conduct a hypothesis test to verify the claim that the recorded inner circle times are not significantly different from the outer circle times.</p>
+<p><span class="math display">\[
+\begin{array}{c|c|c}
+ &amp; \text{Inner Time} &amp; \text{Outer Time} &amp; Diff\\
 \hline
-\text{Female} &amp; 6 &amp; 19 &amp; 25 \\
-\text{Male} &amp; 6 &amp; 11 &amp; 17 \\
-\hline 
-\text{Total} &amp; 12 &amp; 30 &amp; 42 \\
-\hline 
+1 &amp; 125.75 &amp; 122.34 &amp; 3.41 \\
+2 &amp; 121.63 &amp; 122.12 &amp; -0.49 \\ 
+3 &amp; 122.24 &amp; 123.35 &amp; -1.11 \\
+4 &amp; 120.85 &amp; 120.45 &amp; 0.40 \\
+... &amp; ... &amp; ... &amp; ... \\
+17 &amp; 122.15 &amp; 122.75 &amp; -0.60
 \end{array}
-}
-}
 \]</span></p>
-<ol style="list-style-type: decimal">
-<li>How many of the students read a novel in the past year?</li>
-<li>What proportion of the students did not read a novel in the past year?</li>
-<li>What proportion of the women read a novel in the past year?</li>
-<li>What proportion of the students is men AND read a novel in the past year?</li>
-</ol>
+<p><span class="math display">\[
+\begin{align}
+&amp; H_0:\mu_d = 0 \\
+&amp; H_1: \mu_d \ne 0 \\ \\
+&amp; n = 17, \\ &amp;\bar d = 0.499, \\ &amp;s_d = 2.333 \\ \\
+&amp; SE(\bar d) = s_d/\sqrt n = 2.333/\sqrt 17 = 0.5658 \\ \\
+&amp; t_{16} = \frac{\bar d-0}{SE(\bar d)} = \frac{0.499}{0.5658} = 0.882 \\ \\
+&amp; p-value = 2 \times P(t_{16}&gt;0.882) = 0.39 &gt; 0.05
+\end{align}
+\]</span></p>
+<p>Hence, <span class="math inline">\(H_0\)</span> cannot be rejected. The inner and outer circle times are not significantly different.</p>
+</div>
+<div id="paired-t-interval" class="section level3" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> Paired <span class="math inline">\(t\)</span>-Interval</h3>
+<p>The <span class="math inline">\(95\%\)</span> confidence interval for the mean paired difference is</p>
+<p><span class="math display">\[
+\begin{align}
+&amp; \bar d \pm t_{n-1}^* \times \frac{s_d}{\sqrt n} \\ \\
+&amp; = 0.499 \pm 2.12 \times  0.5658 \\ \\
+CI &amp;=  [-0.7005, 1.6985]
+\end{align}
+\]</span></p>
 
+</div>
 </div>
 </div>
             </section>
@@ -448,8 +594,8 @@ Class width: <span class="math inline">\(124.5 - 74.5 = 50\)</span></p>
           </div>
         </div>
       </div>
-<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="describing-exploring-and-comparing-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="hypothesis-testing.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -480,7 +626,7 @@ gitbook.start({
 "size": 3
 },
 "edit": {
-"link": "https://github.com/amlanbanerjee/introduction_to_statistics/edit/master/03-exploring_data.Rmd",
+"link": "https://github.com/amlanbanerjee/introduction_to_statistics/edit/master/09-inferences_two_samples.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -488,7 +634,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/amlanbanerjee/introduction_to_statistics/blob/master/03-exploring_data.Rmd",
+"link": "https://github.com/amlanbanerjee/introduction_to_statistics/blob/master/09-inferences_two_samples.Rmd",
 "text": null
 },
 "download": "book.pdf",

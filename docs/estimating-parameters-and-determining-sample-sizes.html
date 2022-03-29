@@ -24,7 +24,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-03-08" />
+<meta name="date" content="2022-03-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -193,6 +193,25 @@
 <li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#t-text--test-testing-hypothesis-about-mu-with-sigma-not-known"><i class="fa fa-check"></i><b>8.3</b> <span class="math inline">\(t \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Not Known</a></li>
 <li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#chi2-text-test-testing-hypothesis-about-a-variance"><i class="fa fa-check"></i><b>8.4</b> <span class="math inline">\(\chi^2 \text{-test}\)</span> | Testing Hypothesis About a Variance</a></li>
 </ul></li>
+<li class="chapter" data-level="9" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html"><i class="fa fa-check"></i><b>9</b> Inferences from Two Samples</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#inferences-about-two-proportions"><i class="fa fa-check"></i><b>9.1</b> Inferences about Two Proportions</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#hypothesis-test"><i class="fa fa-check"></i><b>9.1.1</b> Hypothesis Test</a></li>
+<li class="chapter" data-level="9.1.2" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#confidence-interval-estimate-of-p_1---p_2"><i class="fa fa-check"></i><b>9.1.2</b> Confidence Interval Estimate of <span class="math inline">\(p_1 - p_2\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#inferences-about-two-independent-sample-means"><i class="fa fa-check"></i><b>9.2</b> Inferences about Two Independent Sample Means</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#hypothesis-test-of-independent-samples-sigma_1-and-sigma_2-unknown-and-not-assumed-equal"><i class="fa fa-check"></i><b>9.2.1</b> Hypothesis Test of Independent Samples: <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> Unknown and Not Assumed Equal</a></li>
+<li class="chapter" data-level="9.2.2" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#confidence-interval-estimate-of-mu_1---mu_2-independent-samples-with-sigma_1-and-sigma_2-unknown-and-not-assumed-equal"><i class="fa fa-check"></i><b>9.2.2</b> Confidence Interval Estimate of <span class="math inline">\(\mu_1 - \mu_2\)</span>: Independent Samples with <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> Unknown and Not Assumed Equal</a></li>
+<li class="chapter" data-level="9.2.3" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#pooled-t-test-sigma_1-sigma_2"><i class="fa fa-check"></i><b>9.2.3</b> Pooled <span class="math inline">\(t\)</span>-test: <span class="math inline">\(\sigma_1 = \sigma_2\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#two-dependent-samples-matched-pairs"><i class="fa fa-check"></i><b>9.3</b> Two Dependent Samples (Matched Pairs)</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#hypothesis-testing-for-paired-data-the-paired-t-test"><i class="fa fa-check"></i><b>9.3.1</b> Hypothesis Testing for Paired Data: The paired <span class="math inline">\(t\)</span>-test</a></li>
+<li class="chapter" data-level="9.3.2" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html#paired-t-interval"><i class="fa fa-check"></i><b>9.3.2</b> Paired <span class="math inline">\(t\)</span>-Interval</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -301,7 +320,7 @@ for such a point estimate can be constructed:</p>
 </div>
 <div id="calculating-confidence-intervals" class="section level4 unnumbered">
 <h4>Calculating Confidence Intervals</h4>
-<p><strong>Example:</strong> The heart patients who receive stents are <span class="math inline">\(9\%\)</span> more likely to suffer stroke from usage of the stent than those who do not have it. The estimate’s standard error <span class="math inline">\((SE)\)</span> is <span class="math inline">\(0.028\)</span>. Construct a <span class="math inline">\(95\%\)</span> confidence interval for the change in strole rates from the usage of stent.</p>
+<p><strong>Example:</strong> The heart patients who receive stents are <span class="math inline">\(9\%\)</span> more likely to suffer stroke from usage of the stent than those who do not have it. The estimate’s standard error <span class="math inline">\((SE)\)</span> is <span class="math inline">\(0.028\)</span>. Construct a <span class="math inline">\(95\%\)</span> confidence interval for the change in stroke rates from the usage of stent.</p>
 <p><span class="math display">\[
   \begin{align}
 \text {95% Confidence Interval} &amp;= \text {point estimate} \pm 1.96 \times SE \\
@@ -367,7 +386,7 @@ ME  = z_{\alpha/2}.\frac{\sigma}{\sqrt{n}} \text { ;  use with known } \sigma
 \]</span>
 <span class="math display">\[
 n = 15, \bar x = 30.9, \sigma = 2.9, CL = 95\% \\
-ME = 1.96.\frac{2.9}{\sqrt{15}} = 1.46760 \\
+ME = (1.96) \cdot \left( \frac{2.9}{\sqrt{15}} \right) = 1.46760 \\
 \bar x - ME &lt; \mu &lt; \bar x + ME \\
 30.9 - 1.46760 &lt; \mu &lt; 30.9 + 1.46760 \\
 29.4 &lt; \mu &lt; 32.4 
@@ -391,7 +410,7 @@ ME = 1.96.\frac{2.9}{\sqrt{15}} = 1.46760 \\
 </li>
 <li>As the sample size <span class="math inline">\(n\)</span> gets larger, the <span class="math inline">\(t\)</span> distribution gets closer to the standard normal distribution.</li>
 <li>The mean of the distribution is equal to <span class="math inline">\(0\)</span>.</li>
-<li>Unlike the variance of the standard normal distribution <span class="math inline">\((\sigma^2 = 1)\)</span>, The variance of <span class="math inline">\(t\)</span> distribution depends on the sample size <span class="math inline">\((n)\)</span> and is equal to <span class="math inline">\(\frac {v}{v-2}\)</span>, where <span class="math inline">\(v\)</span> is the DF and <span class="math inline">\(v \ge 2\)</span>.</li>
+<li>Unlike the variance of the standard normal distribution <span class="math inline">\((\sigma^2 = 1)\)</span>, The variance of <span class="math inline">\(t\)</span> distribution depends on the sample size <span class="math inline">\((n)\)</span> and is equal to <span class="math inline">\(\frac {\nu}{\nu-2}\)</span>, where <span class="math inline">\(\nu\)</span> is the DF and <span class="math inline">\(v \ge 2\)</span>.</li>
 </ul>
 <p><img src="tDistCompareToNormalDist.png" width="750" /></p>
 <p><img src="tDistConvergeToNormalDist.png" width="750" /></p>
@@ -424,7 +443,7 @@ t^*_{149} &amp;= 1.976 \\
 <div id="finding-the-sample-size-to-estimate-a-population-mean" class="section level3" number="7.4.4">
 <h3><span class="header-section-number">7.4.4</span> Finding the Sample Size to Estimate a Population Mean</h3>
 <p>Should you buy a movie download accelerator? To test the download times, find the minimum number of downloads that you need to do during a free trial period to obtain a <span class="math inline">\(95\%\)</span> CL with a ME &lt; <span class="math inline">\(8\)</span> minutes. Given, <span class="math inline">\(\sigma = 10 \space min\)</span></p>
-<p>First, calculate <span class="math inline">\(n\)</span> using <span class="math inline">\(z-score\)</span></p>
+<p>First, calculate <span class="math inline">\(n\)</span> using <span class="math inline">\(z\)</span> score</p>
 <p><span class="math display">\[
 \begin{align}
 ME &amp;&lt; 8 \\ \\
@@ -434,7 +453,7 @@ n &amp;&gt; 6.25 \\
 n &amp;\approx 7 \\ \\
 \end{align}
 \]</span></p>
-<p>Sample size turns out to be too small for normal approximation. Therefore, re-estimate <span class="math inline">\(n\)</span> using <span class="math inline">\(t-score\)</span>.
+<p>Sample size turns out to be too small for normal approximation. Therefore, re-estimate <span class="math inline">\(n\)</span> using <span class="math inline">\(t\)</span> score.
 Second, find the critical value of <span class="math inline">\(t_{\alpha/2}\)</span> corresponding to a <span class="math inline">\(95\%\)</span> confidence level, given that <span class="math inline">\(n = 6\)</span>.</p>
 <p><span class="math display">\[
   \begin{align}
@@ -498,11 +517,11 @@ n &amp;\approx 10 \\ \\
 <h3><span class="header-section-number">7.5.1</span> Confidence Interval for Estimating a Population Standard Deviation or Variance</h3>
 <p><strong>Confidence Interval for the Population Variance <span class="math inline">\(\sigma^2\)</span></strong></p>
 <p><span class="math display">\[
-  \frac{(n-1)s^2}{\chi^2_L} &lt; \sigma^2 &lt; \frac{(n-1)s^2}{\chi^2_R}
+  \frac{(n-1)s^2}{\chi^2_R} &lt; \sigma^2 &lt; \frac{(n-1)s^2}{\chi^2_L}
 \]</span></p>
 <p><strong>Confidence Interval for the Population Variance <span class="math inline">\(\sigma\)</span></strong></p>
 <p><span class="math display">\[
-  \sqrt{\frac{(n-1)s^2}{\chi^2_L}} &lt; \sigma &lt; \sqrt{\frac{(n-1)s^2}{\chi^2_R}}
+  \sqrt{\frac{(n-1)s^2}{\chi^2_R}} &lt; \sigma &lt; \sqrt{\frac{(n-1)s^2}{\chi^2_L}}
 \]</span></p>
 <p><img src="chi-squared_table.png" /></p>
 <p><strong>Example:</strong> Confidence Interval for Estimating a Population Standard Deviation or Variance</p>
@@ -511,7 +530,7 @@ n &amp;\approx 10 \\ \\
 &amp;s = 14.29263 \\
 &amp;n = 22 \\
 &amp;CL = 95\%  \\ \\
-&amp;\frac{(n-1)s^2}{\chi^2_L} &lt; \sigma^2 &lt; \frac{(n-1)s^2}{\chi^2_R} \\ \\
+&amp;\frac{(n-1)s^2}{\chi^2_R} &lt; \sigma^2 &lt; \frac{(n-1)s^2}{\chi^2_L} \\ \\
 or, \ &amp;\frac{21.(14.29263)^2}{10.283^2} &lt; \sigma^2 &lt; \frac{21.(14.29263)^2}{35.479^2} \\ \\
 or, \ &amp;120.9 &lt; \sigma^2 &lt; 417.2 \\
 or, \ &amp;11.0 &lt; \sigma &lt; 20.4
