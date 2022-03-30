@@ -24,7 +24,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-03-29" />
+<meta name="date" content="2022-03-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -285,9 +285,8 @@ H_A: p_1 - p_2 \ne 0 \\
 \bar q = 1 - \bar p
 \]</span></p>
 <p><strong>Hypothesis Test Statistic for Two Proportions</strong></p>
-<p>The mean of the sampling distribution of <span class="math inline">\((\hat p_1 - \hat p_2)\)</span> is <span class="math inline">\(p_1 - p_2\)</span>, and
-standard error</p>
-<p>The mean or expected value of <span class="math inline">\(\hat p_1 - \hat p_2\)</span> is <span class="math inline">\(p_1 - p_2\)</span>.</p>
+<p>The mean of the sampling distribution of <span class="math inline">\((\hat p_1 - \hat p_2)\)</span> is <span class="math inline">\(p_1 - p_2\)</span>,
+and standard error</p>
 <p><span class="math inline">\(\sqrt{\dfrac{\bar p \bar q}{n_1}+\dfrac{\bar p \bar q }{n_2}}\)</span>.</p>
 <p>The <span class="math inline">\(z\)</span>-score at <span class="math inline">\((\hat p_1 - \hat p_2)\)</span>,</p>
 <p><span class="math display">\[
@@ -300,7 +299,7 @@ z = \dfrac{(\hat p_1 - \hat p_2) - (p_1 - p_2)}{\sqrt{\dfrac{\bar p \bar q}{n_1}
 <p>The confidence interval estimate of the difference <span class="math inline">\(p_1 - p_2\)</span> is</p>
 <p><span class="math inline">\((\hat p_1 - \hat p_2) - E \lt (p_1 - p_2) \lt (\hat p_1 - \hat p_2) + E\)</span></p>
 <p>where,</p>
-<p>the standard deviation: <span class="math inline">\(SE_{\hat p_1 - \hat p_2} = \sqrt{SE^2_{\hat p_1} + SE^2_{\hat p_2}} = \sqrt{\dfrac{\hat p_1 \hat q_1 }{n_1}+\dfrac{\hat p_2 \hat q_2}{n_2}}\)</span></p>
+<p>the standard error: <span class="math inline">\(SE_{\hat p_1 - \hat p_2} = \sqrt{SE^2_{\hat p_1} + SE^2_{\hat p_2}} = \sqrt{\dfrac{\hat p_1 \hat q_1 }{n_1}+\dfrac{\hat p_2 \hat q_2}{n_2}}\)</span></p>
 <p>margin of error <span class="math inline">\(E = z^*_{\alpha/2} \sqrt{\dfrac{\hat p \hat q}{n_1}+\dfrac{\hat p \hat q }{n_2}}\)</span></p>
 <p><span class="math inline">\(z^*_{\alpha/2}\)</span> is the critical value that corresponds to the confidence level <span class="math inline">\((1-\alpha)\)</span>.</p>
 <p>Notice that the standard error calculation in the confidence interval is based on <span class="math inline">\(\hat p_1\)</span> and <span class="math inline">\(\hat p_2\)</span>, whereas the hypothesis test uses a standard error based on pooled proportion <span class="math inline">\(\bar p\)</span>.</p>
@@ -331,7 +330,7 @@ ME &amp;= z^* \times SE(\hat p_F - \hat p_M) = 1.96 \times 0.012 = 0.024 \\
 0.143 &amp;\lt  ( p_F - p_M) \lt 0.191
 \end{align}
 \]</span></p>
-<p><strong>Example (Two-proportional <span class="math inline">\(z\)</span>-test)</strong></p>
+<p><strong>Example (Two-proportional <span class="math inline">\(z\)</span>-test):</strong></p>
 <p>The Sleep in America Poll found that <span class="math inline">\(205\)</span> of <span class="math inline">\(293\)</span> of Gen-Y and <span class="math inline">\(235\)</span> of <span class="math inline">\(469\)</span> of Gen-X use the Internet before sleep. Is this difference real?</p>
 <p><span class="math display">\[
 \hat p_Y = \dfrac{205}{293} = 0.700  \\
@@ -362,7 +361,7 @@ SE_{pooled}(\hat p_Y - \hat p_X) &amp;= \sqrt{\frac{\hat p_{pooled}(1- \hat p_{p
 \end{align}
 \]</span></p>
 <p>Hence, reject <span class="math inline">\(H_0\)</span>. The difference between the proportions of Gen Y and Gen X is significantly different.</p>
-<p><strong>Example (Two-proportional <span class="math inline">\(z\)</span>-test)</strong></p>
+<p><strong>Example (Two-proportional <span class="math inline">\(z\)</span>-test):</strong></p>
 <p><span class="math inline">\(62\)</span> of <span class="math inline">\(325\)</span> girls and <span class="math inline">\(75\)</span> of <span class="math inline">\(268\)</span> boys have online profiles. Is there a real difference between all boys and girls?</p>
 <p>Null Model:</p>
 <p>mean: <span class="math inline">\(p_B - p_G = 0\)</span></p>
@@ -410,10 +409,10 @@ SE_{pooled}(\hat p_B - \hat p_G) &amp;= \sqrt{\frac{\hat p_{pooled}(1- \hat p_{p
 \sigma_1 = \text {standard deviation of population 1}  \\
 n_1 = \text {size of the sample drawn from population 1 }  \\
 \bar x_1 = \text{mean of sample 1}  \\
-\bar s_1 = \text{standard deviation of sample 1}  \\
+s_1 = \text{standard deviation of sample 1}  \\
 \end{cases}
 \]</span>
-The corresponding notations <span class="math inline">\(p_2, n_2, x_2, \hat p_2, \hat q_2\)</span> apply to population 2.</p>
+The corresponding notations <span class="math inline">\(\mu_2, \sigma_2, n_2, \bar x_2, s_2\)</span> apply to population 2.</p>
 <div id="hypothesis-test-of-independent-samples-sigma_1-and-sigma_2-unknown-and-not-assumed-equal" class="section level3" number="9.2.1">
 <h3><span class="header-section-number">9.2.1</span> Hypothesis Test of Independent Samples: <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> Unknown and Not Assumed Equal</h3>
 <p><strong>Requirements</strong></p>
@@ -513,9 +512,9 @@ t = \dfrac{(\bar x_1- \bar x_2) - (\bar \mu_1- \bar \mu_2)}{\sqrt{s^2_{p} \bigg 
 &amp;\text{Hypothesis test: }  \\\\
 &amp;H_0: \mu_1 - \mu_2 = 0 \\
 &amp;H_A: \mu_1 - \mu_2 \ne 0 \\ \\
-&amp;\text {pooled t-score, } t = \dfrac{(\bar x_1 - \bar x_2 )-0}{SE_{pooled}} \\
+&amp;\text {pooled t-score, } t = \dfrac{(\bar x_1 - \bar x_2 )-0}{SE_{p}} \\
 &amp;df = (n_1 + n_2 - 2) \\ \\
-&amp;\text {Confidence Interval: } (\bar x_1- \bar x_2) \pm t_{df}^* \times SE_{p}(\bar y_1 - \bar y_2)
+&amp;\text {Confidence Interval: } (\bar x_1- \bar x_2) \pm t_{df}^* \times SE_{p}
 &amp;\end{align}
 \]</span></p>
 </div>
@@ -560,16 +559,17 @@ t_{n-1} = \dfrac{\bar d - \mu_d}{\dfrac{s_d}{\sqrt n}}
 3 &amp; 122.24 &amp; 123.35 &amp; -1.11 \\
 4 &amp; 120.85 &amp; 120.45 &amp; 0.40 \\
 ... &amp; ... &amp; ... &amp; ... \\
-17 &amp; 122.15 &amp; 122.75 &amp; -0.60
+17 &amp; 122.15 &amp; 122.75 &amp; -0.60 \\
 \end{array}
 \]</span></p>
 <p><span class="math display">\[
 \begin{align}
+&amp; \text{Hypotheses} \\
 &amp; H_0:\mu_d = 0 \\
 &amp; H_1: \mu_d \ne 0 \\ \\
 &amp; n = 17, \\ &amp;\bar d = 0.499, \\ &amp;s_d = 2.333 \\ \\
-&amp; SE(\bar d) = s_d/\sqrt n = 2.333/\sqrt 17 = 0.5658 \\ \\
-&amp; t_{16} = \frac{\bar d-0}{SE(\bar d)} = \frac{0.499}{0.5658} = 0.882 \\ \\
+&amp; SE(\bar d) = \dfrac{s_d}{\sqrt n} = \dfrac{2.333}{\sqrt 17} = 0.5658 \\ \\
+&amp; t_{16} = \dfrac{\bar d-0}{SE(\bar d)} = \dfrac{0.499}{0.5658} = 0.882 \\ \\
 &amp; p-value = 2 \times P(t_{16}&gt;0.882) = 0.39 &gt; 0.05
 \end{align}
 \]</span></p>
