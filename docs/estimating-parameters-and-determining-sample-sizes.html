@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 Estimating Parameters and Determining Sample Sizes | Introduction to Statistics</title>
   <meta name="description" content="Chapter 7 Estimating Parameters and Determining Sample Sizes | Introduction to Statistics" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 Estimating Parameters and Determining Sample Sizes | Introduction to Statistics" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-04-19" />
+<meta name="date" content="2022-08-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="normal-probability-distributions.html"/>
 <link rel="next" href="hypothesis-testing.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
@@ -98,8 +97,8 @@
 <li class="chapter" data-level="2.4.3" data-path="introduction.html"><a href="introduction.html#cluster-sampling"><i class="fa fa-check"></i><b>2.4.3</b> Cluster Sampling</a></li>
 <li class="chapter" data-level="2.4.4" data-path="introduction.html"><a href="introduction.html#nonrandom-sampling"><i class="fa fa-check"></i><b>2.4.4</b> Nonrandom Sampling</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="introduction.html"><a href="introduction.html#sampling-errors"><i class="fa fa-check"></i><b>2.5</b> Sampling Errors</a></li>
-<li class="chapter" data-level="2.6" data-path="introduction.html"><a href="introduction.html#bias-and-precision"><i class="fa fa-check"></i><b>2.6</b> Bias and Precision</a>
+<li class="chapter" data-level="2.5" data-path="introduction.html"><a href="introduction.html#bias-and-precision"><i class="fa fa-check"></i><b>2.5</b> Bias and Precision</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction.html"><a href="introduction.html#sampling-errors"><i class="fa fa-check"></i><b>2.6</b> Sampling Errors</a>
 <ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#statistical-studies"><i class="fa fa-check"></i>Statistical Studies</a></li>
 </ul></li>
@@ -112,22 +111,29 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html"><i class="fa fa-check"></i><b>3</b> Exploring Data with Tables and Graphs</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#frequency-distribution"><i class="fa fa-check"></i><b>3.1</b> Frequency Distribution</a></li>
-<li class="chapter" data-level="3.2" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#histogram"><i class="fa fa-check"></i><b>3.2</b> Histogram</a></li>
-<li class="chapter" data-level="3.3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#other-charts"><i class="fa fa-check"></i><b>3.3</b> Other Charts</a></li>
+<li class="chapter" data-level="3.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#frequency-distribution"><i class="fa fa-check"></i><b>3.1</b> Frequency Distribution</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#bar-graphs"><i class="fa fa-check"></i><b>3.1.1</b> Bar Graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#frequency-distribution-for-quantitaive-data"><i class="fa fa-check"></i><b>3.2</b> Frequency Distribution for Quantitaive Data</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#histogram"><i class="fa fa-check"></i><b>3.2.1</b> Histogram</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#graphical-summaries-for-small-data-sets"><i class="fa fa-check"></i><b>3.3</b> Graphical Summaries for Small Data Sets</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html"><i class="fa fa-check"></i><b>4</b> Describing, Exploring, and Comparing Data</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-shape"><i class="fa fa-check"></i><b>4.1</b> Measures of Shape</a></li>
 <li class="chapter" data-level="4.2" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-center"><i class="fa fa-check"></i><b>4.2</b> Measures of Center</a></li>
 <li class="chapter" data-level="4.3" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-spread-or-variation"><i class="fa fa-check"></i><b>4.3</b> Measures of Spread or Variation</a></li>
-<li class="chapter" data-level="4.4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#normal-distribution-and-standard-deviation"><i class="fa fa-check"></i><b>4.4</b> Normal Distribution and Standard Deviation</a>
+<li class="chapter" data-level="4.4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#the-empirical-rule"><i class="fa fa-check"></i><b>4.4</b> The Empirical Rule</a>
 <ul>
-<li class="chapter" data-level="" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#z-score"><i class="fa fa-check"></i>z-score</a></li>
+<li class="chapter" data-level="4.4.1" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#chebyshevs-inequality"><i class="fa fa-check"></i><b>4.4.1</b> Chebyshev’s Inequality</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#percentiles-and-quartiles"><i class="fa fa-check"></i><b>4.5</b> Percentiles and Quartiles</a></li>
-<li class="chapter" data-level="4.6" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#boxplot"><i class="fa fa-check"></i><b>4.6</b> Boxplot</a></li>
-<li class="chapter" data-level="4.7" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#group-comparison"><i class="fa fa-check"></i><b>4.7</b> Group Comparison</a></li>
+<li class="chapter" data-level="4.5" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#z-score"><i class="fa fa-check"></i><b>4.5</b> Z-Score</a></li>
+<li class="chapter" data-level="4.6" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#percentiles-and-quartiles"><i class="fa fa-check"></i><b>4.6</b> Percentiles and Quartiles</a></li>
+<li class="chapter" data-level="4.7" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#boxplot"><i class="fa fa-check"></i><b>4.7</b> Boxplot</a></li>
+<li class="chapter" data-level="4.8" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#group-comparison"><i class="fa fa-check"></i><b>4.8</b> Group Comparison</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a>
 <ul>
@@ -218,7 +224,7 @@
 <ul>
 <li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#univariate-data"><i class="fa fa-check"></i>Univariate Data</a></li>
 <li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#bivariate-data---scatterplot"><i class="fa fa-check"></i>Bivariate Data - Scatterplot</a></li>
-<li><a href="correlation-and-regression.html#bivariate-data---positive-association">Bivariate Data - <em>Positive Association</em></a></li>
+<li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#bivariate-data---positive-association"><i class="fa fa-check"></i>Bivariate Data - <em>Positive Association</em></a></li>
 <li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#linear-association-between-variables"><i class="fa fa-check"></i>Linear Association between Variables</a></li>
 </ul></li>
 <li class="chapter" data-level="10.2" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#correlation-coefficient"><i class="fa fa-check"></i><b>10.2</b> Correlation Coefficient</a>
@@ -257,22 +263,18 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="estimating-parameters-and-determining-sample-sizes" class="section level1" number="7">
-<h1><span class="header-section-number">Chapter 7</span> Estimating Parameters and Determining Sample Sizes</h1>
+<div id="estimating-parameters-and-determining-sample-sizes" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Estimating Parameters and Determining Sample Sizes<a href="estimating-parameters-and-determining-sample-sizes.html#estimating-parameters-and-determining-sample-sizes" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Learning Outcome</strong></p>
-<table>
-<tbody>
-<tr class="odd">
-<td>Perform calculations to estimate parameters using confidence intervals based on the normal distribution and t-distribution.</td>
-</tr>
-</tbody>
-</table>
+<hr />
+<p>Perform calculations to estimate parameters using confidence intervals based on the normal distribution and t-distribution.</p>
+<hr />
 <p>In this chapter, we will use sample data to estimate values of population parameters (such as a population proportions or population mean). We will learn how to construct a confidence interval estimate of a population proportion and interpret such confidence interval estimates. Finally, we will learn how to determine the sample size necessary to estimate a population proportion.</p>
-<div id="estimate-a-population-proportion" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Estimate a Population Proportion</h2>
+<div id="estimate-a-population-proportion" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Estimate a Population Proportion<a href="estimating-parameters-and-determining-sample-sizes.html#estimate-a-population-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This section presents methods for using a sample proportion <span class="math inline">\((\hat p)\)</span> to make an inference about the value of the corresponding population proportion <span class="math inline">\((p)\)</span>.</p>
-<div id="point-estimate" class="section level4 unnumbered">
-<h4>Point Estimate</h4>
+<div id="point-estimate" class="section level4 unnumbered hasAnchor">
+<h4>Point Estimate<a href="estimating-parameters-and-determining-sample-sizes.html#point-estimate" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>A <strong>point estimate</strong> is a single value used to estimate a population parameter.</p>
 <p>For example, the sample proportion <span class="math inline">\(\hat p\)</span> is the best point estimate (also called <em>unbiased estimator</em>) of the population proportion <span class="math inline">\(p\)</span>.</p>
 <hr />
@@ -290,8 +292,8 @@
 <hr />
 </div>
 </div>
-<div id="confidence-intervals" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> Confidence Intervals</h2>
+<div id="confidence-intervals" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Confidence Intervals<a href="estimating-parameters-and-determining-sample-sizes.html#confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A point estimate provides a single plausible value for a parameter. However, a point
 estimate is rarely perfect; usually there is some error in the estimate. In addition to
 supplying a point estimate of a parameter, a next logical step would be to provide a
@@ -299,8 +301,8 @@ plausible range of values for the parameter.</p>
 <p>A <strong>confidence interval or (interval estimate)</strong> is a range (or an interval) of values used to estimate the true value of a population parameter. A confidence interval is sometimes abbreviated as CI.</p>
 <p>The <strong>confidence level</strong> is the probability <span class="math inline">\(1-\alpha\)</span> (such as <span class="math inline">\(0.95\)</span>, or <span class="math inline">\(95\%\)</span>) that the confidence interval actually does contain the population parameter, assuming that the estimate process is repeated a large number of times. (The confidence level is also called the <strong>degree of confidence</strong>, or the <strong>confidence coefficient</strong>.)</p>
 <p><span class="math inline">\(\alpha : \text { significance level }\)</span></p>
-<div id="constructing-a-95-confidence-interval" class="section level5 unnumbered">
-<h5><strong>Constructing a <span class="math inline">\(95\%\)</span> confidence interval</strong></h5>
+<div id="constructing-a-95-confidence-interval" class="section level5 unnumbered hasAnchor">
+<h5><strong>Constructing a <span class="math inline">\(95\%\)</span> confidence interval</strong><a href="estimating-parameters-and-determining-sample-sizes.html#constructing-a-95-confidence-interval" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>When the sampling distribution of a point estimate can reasonably be modeled as
 normal, the point estimate we observe will be within <span class="math inline">\(1.96\)</span> standard errors of the
 true value of interest about <span class="math inline">\(95\%\)</span> of the time. Thus, a <span class="math inline">\(95\%\)</span> confidence interval
@@ -311,8 +313,8 @@ for such a point estimate can be constructed:</p>
 <p class="caption">95% confidence interval</p>
 </div>
 </div>
-<div id="critical-value" class="section level4 unnumbered">
-<h4>Critical Value</h4>
+<div id="critical-value" class="section level4 unnumbered hasAnchor">
+<h4>Critical Value<a href="estimating-parameters-and-determining-sample-sizes.html#critical-value" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The values of the <span class="math inline">\(z\)</span> scores at the borderlines of the confidence interval are called the <strong>critical values.</strong></p>
 <div class="figure">
 <img src="critical_value.png" alt="" />
@@ -321,13 +323,13 @@ for such a point estimate can be constructed:</p>
 <p><strong>Example: </strong> Find the critical value <span class="math inline">\(z_{\alpha/2}\)</span> corresponding to a <span class="math inline">\(95\%\)</span> confidence level.</p>
 <p><img src="critical_value_example.png" /></p>
 <p><span class="math display">\[
-\begin{array} 
+\begin{array}
 {|c|c|}
-\hline 
-\text{Confidence Level}  &amp; \alpha &amp; \text{Critical Value, } z_{\alpha/2} \\ 
-\hline 
-90\% &amp; 0.1 &amp; 1.645 \\ 
-\hline 
+\hline
+\text{Confidence Level}  &amp; \alpha &amp; \text{Critical Value, } z_{\alpha/2} \\
+\hline
+90\% &amp; 0.1 &amp; 1.645 \\
+\hline
 95\% &amp; 0.05 &amp; 1.960 \\  
 \hline  
 99\% &amp; 0.01 &amp; 2.575 \\  
@@ -335,16 +337,16 @@ for such a point estimate can be constructed:</p>
 \end{array}\]</span></p>
 <p></br></p>
 </div>
-<div id="generalizing-confidence-interval" class="section level4 unnumbered">
-<h4>Generalizing Confidence Interval</h4>
+<div id="generalizing-confidence-interval" class="section level4 unnumbered hasAnchor">
+<h4>Generalizing Confidence Interval<a href="estimating-parameters-and-determining-sample-sizes.html#generalizing-confidence-interval" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>If the point estimate follows the normal model with standard error <span class="math inline">\(SE\)</span>, then a confidence interval for the population parameter is</p>
 <p><span class="math display">\[
 \text {point estimate} \pm z{^{\star}_{\alpha/2}} \times SE
 \]</span></p>
 <p>where <span class="math inline">\(z^\star\)</span> , the <strong>critical value</strong>, depends on the confidence level (<span class="math inline">\(CL\)</span>) selected, and <span class="math inline">\(\alpha = 1-CL\)</span></p>
 </div>
-<div id="calculating-confidence-intervals" class="section level4 unnumbered">
-<h4>Calculating Confidence Intervals</h4>
+<div id="calculating-confidence-intervals" class="section level4 unnumbered hasAnchor">
+<h4>Calculating Confidence Intervals<a href="estimating-parameters-and-determining-sample-sizes.html#calculating-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Example:</strong> The heart patients who receive stents are <span class="math inline">\(9\%\)</span> more likely to suffer stroke from usage of the stent than those who do not have it. The estimate’s standard error <span class="math inline">\((SE)\)</span> is <span class="math inline">\(0.028\)</span>. Construct a <span class="math inline">\(95\%\)</span> confidence interval for the change in stroke rates from the usage of stent.</p>
 <p><span class="math display">\[
   \begin{align}
@@ -361,19 +363,19 @@ for such a point estimate can be constructed:</p>
 \end{align}
 \]</span></p>
 </div>
-<div id="simulating-confidence-intervals" class="section level4 unnumbered">
-<h4>Simulating Confidence Intervals</h4>
+<div id="simulating-confidence-intervals" class="section level4 unnumbered hasAnchor">
+<h4>Simulating Confidence Intervals<a href="estimating-parameters-and-determining-sample-sizes.html#simulating-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><span class="math inline">\(50\)</span> samples of size <span class="math inline">\(n = 300\)</span> were drawn from a population with proportion parameter <span class="math inline">\(p = 0.30\)</span>. For each sample, a confidence interval was created to capture the true proportion <span class="math inline">\(p\)</span>. How many did not capture <span class="math inline">\(p = 0.30?\)</span></p>
 <p><img src="95PercentConfidenceInterval.png" width="750" /></p>
 </div>
-<div id="interpretation-of-confidence-intervals" class="section level4 unnumbered">
-<h4>Interpretation of Confidence Intervals</h4>
+<div id="interpretation-of-confidence-intervals" class="section level4 unnumbered hasAnchor">
+<h4>Interpretation of Confidence Intervals<a href="estimating-parameters-and-determining-sample-sizes.html#interpretation-of-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Suppose, the <span class="math inline">\(95\%\)</span> confidence interval estimate of the population proportion <span class="math inline">\(p\)</span> is <span class="math inline">\(0.405 \lt p \lt 0.455\)</span>.</p>
 <p><span class="math inline">\(\textbf {Correct }\)</span> We are <span class="math inline">\(95\%\)</span> confident that the interval from <span class="math inline">\(0.405\)</span> to <span class="math inline">\(0.455\)</span> actually does contain the true value of the population proportion <span class="math inline">\(p\)</span>.</p>
 <p><span class="math inline">\(\textbf {Wrong }\)</span> There is a <span class="math inline">\(95\%\)</span> chance that the true value of the population proportion <span class="math inline">\(p\)</span> will fall between <span class="math inline">\(0.405\)</span> to <span class="math inline">\(0.455\)</span>.</p>
 </div>
-<div id="margin-of-error-me" class="section level3" number="7.2.1">
-<h3><span class="header-section-number">7.2.1</span> Margin of Error (ME)</h3>
+<div id="margin-of-error-me" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Margin of Error (ME)<a href="estimating-parameters-and-determining-sample-sizes.html#margin-of-error-me" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <strong>margin of error (ME)</strong> is the distance between the point estimate and the lower or upper bound of a confidence interval.</p>
 <p><span class="math display">\[
 \begin{align}
@@ -383,8 +385,8 @@ for such a point estimate can be constructed:</p>
 \]</span></p>
 </div>
 </div>
-<div id="finding-the-sample-size-to-estimate-a-population-proportion" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Finding the Sample Size to Estimate a Population Proportion</h2>
+<div id="finding-the-sample-size-to-estimate-a-population-proportion" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Finding the Sample Size to Estimate a Population Proportion<a href="estimating-parameters-and-determining-sample-sizes.html#finding-the-sample-size-to-estimate-a-population-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We assume that the sampling distribution of sample proportion follows a normal distribution, which allows us to use critical <span class="math inline">\(z\)</span> score to determine the sample size from a given margin of error and confidence level.</p>
 <p><strong>Example: </strong> A pilot study showed that <span class="math inline">\(0.5\%\)</span> of credit card offers in the mail end up with the person signing up. To be within <span class="math inline">\(0.1\%\)</span> of the true rate with <span class="math inline">\(95\%\)</span> confidence, how big does the test mailing have to be?</p>
 <p><span class="math display">\[
@@ -398,12 +400,12 @@ n &amp;= 19112
 \end{align}
 \]</span></p>
 </div>
-<div id="estimating-a-population-mean" class="section level2" number="7.4">
-<h2><span class="header-section-number">7.4</span> Estimating a Population Mean</h2>
+<div id="estimating-a-population-mean" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Estimating a Population Mean<a href="estimating-parameters-and-determining-sample-sizes.html#estimating-a-population-mean" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The main goal of this section is to make an inference about the population mean <span class="math inline">\((\mu)\)</span> from the mean <span class="math inline">\((\bar x)\)</span> of a sample drawn from the same population.</p>
 <p>Therefore, <span class="math inline">\(\bar x\)</span> is the point estimate of the population <span class="math inline">\(\mu\)</span>.</p>
-<div id="estimating-a-population-mean-when-sigma-is-known" class="section level3" number="7.4.1">
-<h3><span class="header-section-number">7.4.1</span> Estimating a Population Mean When <span class="math inline">\(\sigma\)</span> Is Known</h3>
+<div id="estimating-a-population-mean-when-sigma-is-known" class="section level3 hasAnchor" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> Estimating a Population Mean When <span class="math inline">\(\sigma\)</span> Is Known<a href="estimating-parameters-and-determining-sample-sizes.html#estimating-a-population-mean-when-sigma-is-known" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>It is extremely rare that we want to estimate an unknown value of a population mean <span class="math inline">\(\mu\)</span> but we somehow know the value of the population standard deviation <span class="math inline">\(\sigma\)</span>. If we somehow do know the value of <span class="math inline">\(\sigma\)</span>, the confidence interval is constructed using the standard normal distribution.</p>
 <p><strong>Confidence interval estimate of the true population mean <span class="math inline">\(\mu\)</span>:</strong></p>
 <p><span class="math display">\[
@@ -414,16 +416,16 @@ n = 15, \bar x = 30.9, \sigma = 2.9, CL = 95\% \\
 ME = (1.96) \cdot \left( \frac{2.9}{\sqrt{15}} \right) = 1.46760 \\
 \bar x - ME &lt; \mu &lt; \bar x + ME \\
 30.9 - 1.46760 &lt; \mu &lt; 30.9 + 1.46760 \\
-29.4 &lt; \mu &lt; 32.4 
+29.4 &lt; \mu &lt; 32.4
 \]</span></p>
 </div>
-<div id="estimating-a-population-mean-when-sigma-is-not-known" class="section level3" number="7.4.2">
-<h3><span class="header-section-number">7.4.2</span> Estimating a Population Mean When <span class="math inline">\(\sigma\)</span> Is Not Known</h3>
+<div id="estimating-a-population-mean-when-sigma-is-not-known" class="section level3 hasAnchor" number="7.4.2">
+<h3><span class="header-section-number">7.4.2</span> Estimating a Population Mean When <span class="math inline">\(\sigma\)</span> Is Not Known<a href="estimating-parameters-and-determining-sample-sizes.html#estimating-a-population-mean-when-sigma-is-not-known" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math inline">\(\text {The sample mean } \bar x \text { is the best estimate of the population mean } \mu.\)</span></p>
 <p><strong>Normality:</strong> The method for finding a confidence interval estimate of <span class="math inline">\(\mu\)</span> is robust against a departure from normality, which means that the normality requirement is relaxed. The distribution need not be perfectly normal, but it has to be symmetric with one mode.</p>
 <p>In this case, population standard deviation <span class="math inline">\(\sigma\)</span> is estimated from the sample. The sampling distribution employed to calculate the confidence interval of <span class="math inline">\(\mu\)</span> from sample mean <span class="math inline">\(\bar x\)</span> is called <span class="math inline">\(\text{Student } t \text{ Distribution}.\)</span></p>
-<div id="text-student-t--text-distribution" class="section level4 unnumbered">
-<h4><span class="math inline">\(\text {Student } t- \text { Distribution}\)</span></h4>
+<div id="text-student-t--text-distribution" class="section level4 unnumbered hasAnchor">
+<h4><span class="math inline">\(\text {Student } t- \text { Distribution}\)</span><a href="estimating-parameters-and-determining-sample-sizes.html#text-student-t--text-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>According to the Central Limit Theorem, the sampling distribution of a statistic (e.g. sample mean) will follow a normal distribution, as long as the sample size is sufficiently large <span class="math inline">\((n&gt;30)\)</span>.</p>
 <p>But sample sizes are sometimes small, and often we do not know the standard deviation of the population. When either of these occurs, statisticians rely on the distribution of the <span class="math inline">\(\text {t-statistic (t-score)}\)</span> with the degrees of freedom <span class="math inline">\((n-1)\)</span>,</p>
 <p><span class="math inline">\(t = \dfrac {\bar x - \mu}{s/\sqrt n}\)</span></p>
@@ -441,8 +443,8 @@ ME = (1.96) \cdot \left( \frac{2.9}{\sqrt{15}} \right) = 1.46760 \\
 <p><img src="tDistConvergeToNormalDist.png" width="750" /></p>
 </div>
 </div>
-<div id="t-text-confidence-interval" class="section level3" number="7.4.3">
-<h3><span class="header-section-number">7.4.3</span> <span class="math inline">\(t \text { Confidence Interval}\)</span></h3>
+<div id="t-text-confidence-interval" class="section level3 hasAnchor" number="7.4.3">
+<h3><span class="header-section-number">7.4.3</span> <span class="math inline">\(t \text { Confidence Interval}\)</span><a href="estimating-parameters-and-determining-sample-sizes.html#t-text-confidence-interval" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Find a <span class="math inline">\(95\%\)</span> confidence interval for mirex concentrations in salmon.</p>
 <p><span class="math display">\[
 \begin{align}
@@ -461,12 +463,12 @@ t^*_{149} &amp;= 1.976 \\
 &amp;\bar x \pm t^*_{149} \times SE(\bar x) \\
 &amp;= 0.0913 \pm 1.976 \times 0.0040 \\
 &amp;= 0.0913 \pm 0.0079 \\
-&amp;= (0.0834, 0.0992) 
+&amp;= (0.0834, 0.0992)
 \end{align}
 \]</span></p>
 </div>
-<div id="finding-the-sample-size-to-estimate-a-population-mean" class="section level3" number="7.4.4">
-<h3><span class="header-section-number">7.4.4</span> Finding the Sample Size to Estimate a Population Mean</h3>
+<div id="finding-the-sample-size-to-estimate-a-population-mean" class="section level3 hasAnchor" number="7.4.4">
+<h3><span class="header-section-number">7.4.4</span> Finding the Sample Size to Estimate a Population Mean<a href="estimating-parameters-and-determining-sample-sizes.html#finding-the-sample-size-to-estimate-a-population-mean" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Should you buy a movie download accelerator? To test the download times, find the minimum number of downloads that you need to do during a free trial period to obtain a <span class="math inline">\(95\%\)</span> CL with a ME &lt; <span class="math inline">\(8\)</span> minutes. Given, <span class="math inline">\(\sigma = 10 \space min\)</span></p>
 <p>First, calculate <span class="math inline">\(n\)</span> using <span class="math inline">\(z\)</span> score</p>
 <p><span class="math display">\[
@@ -490,16 +492,9 @@ n &amp;\approx 10 \\ \\
 \end{align}
 \]</span></p>
 <p>Hence, at least 10 trial downloads need to be run to make sure ME remains less than <span class="math inline">\(8\)</span> min.</p>
-<table style="width:6%;">
-<colgroup>
-<col width="5%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Choosing between Student <span class="math inline">\(t\)</span> and <span class="math inline">\(z\)</span> Distributions</strong></td>
-</tr>
-<tr class="even">
-<td><span class="math display">\[
+<hr />
+<p><strong>Choosing between Student <span class="math inline">\(t\)</span> and <span class="math inline">\(z\)</span> Distributions</strong></p>
+<p><span class="math display">\[
 \begin{array}{l|c}
 \text{conditions} &amp; \text{method} \\
 \hline
@@ -507,21 +502,19 @@ n &amp;\approx 10 \\ \\
 \hline
 \sigma \text{ known; normally distributed population or n &gt;30} &amp; z
 \end{array}
-\]</span></td>
-</tr>
-</tbody>
-</table>
+\]</span></p>
+<hr />
 </div>
 </div>
-<div id="estimating-a-population-standard-deviation-or-variance" class="section level2" number="7.5">
-<h2><span class="header-section-number">7.5</span> Estimating a Population Standard Deviation or Variance</h2>
+<div id="estimating-a-population-standard-deviation-or-variance" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Estimating a Population Standard Deviation or Variance<a href="estimating-parameters-and-determining-sample-sizes.html#estimating-a-population-standard-deviation-or-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This section presents methods for using a sample standard deviation <span class="math inline">\(s\)</span> (or a sample variance <span class="math inline">\(s^2\)</span>) to estimate the value of the corresponding population standard deviation <span class="math inline">\(\sigma\)</span> (or population variance <span class="math inline">\(\sigma^2\)</span>).</p>
 <ul>
 <li><p><strong>Point Estimate:</strong> The sample variance <span class="math inline">\(s^2\)</span> is the best point estimator of the population variance <span class="math inline">\(\sigma^2\)</span>. The sample standard deviation <span class="math inline">\(s\)</span> is commonly used as a point estimate of <span class="math inline">\(\sigma\)</span>, even though it is a biased estimator.</p></li>
 <li><p><strong>Confidence Interval:</strong> When constructing a <em>confidence interval</em> estimate of a population standard deviation (or population variance), we construct the confidence interval using the <span class="math inline">\(\chi^2 \text{ distribution}\)</span>.</p></li>
 </ul>
-<div id="chi-squared-chi2-distribution" class="section level4 unnumbered">
-<h4>Chi-Squared <span class="math inline">\(\chi^2\)</span> Distribution</h4>
+<div id="chi-squared-chi2-distribution" class="section level4 unnumbered hasAnchor">
+<h4>Chi-Squared <span class="math inline">\(\chi^2\)</span> Distribution<a href="estimating-parameters-and-determining-sample-sizes.html#chi-squared-chi2-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>In a normally distributed population with variance <span class="math inline">\(\sigma^2\)</span>, if we randomly select independent samples of size <span class="math inline">\(n\)</span> and, for each sample, compute the sample variance <span class="math inline">\(s^2\)</span>, the sample statistic <span class="math inline">\(\chi^2 = (n -1)s^2/{\sigma^2}\)</span> has sampling distribution called the <strong>chi-squared distribution,</strong></li>
 </ul>
@@ -538,8 +531,8 @@ n &amp;\approx 10 \\ \\
 </ul>
 <p><img src="chiSquareDistributionWithInceasingDF.jpg" /></p>
 </div>
-<div id="confidence-interval-for-estimating-a-population-standard-deviation-or-variance" class="section level3" number="7.5.1">
-<h3><span class="header-section-number">7.5.1</span> Confidence Interval for Estimating a Population Standard Deviation or Variance</h3>
+<div id="confidence-interval-for-estimating-a-population-standard-deviation-or-variance" class="section level3 hasAnchor" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Confidence Interval for Estimating a Population Standard Deviation or Variance<a href="estimating-parameters-and-determining-sample-sizes.html#confidence-interval-for-estimating-a-population-standard-deviation-or-variance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Confidence Interval for the Population Variance <span class="math inline">\(\sigma^2\)</span></strong></p>
 <p><span class="math display">\[
   \frac{(n-1)s^2}{\chi^2_R} &lt; \sigma^2 &lt; \frac{(n-1)s^2}{\chi^2_L}
@@ -631,7 +624,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

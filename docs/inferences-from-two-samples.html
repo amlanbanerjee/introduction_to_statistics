@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 9 Inferences from Two Samples | Introduction to Statistics</title>
   <meta name="description" content="Chapter 9 Inferences from Two Samples | Introduction to Statistics" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 Inferences from Two Samples | Introduction to Statistics" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-04-19" />
+<meta name="date" content="2022-08-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="hypothesis-testing.html"/>
 <link rel="next" href="correlation-and-regression.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
@@ -98,8 +97,8 @@
 <li class="chapter" data-level="2.4.3" data-path="introduction.html"><a href="introduction.html#cluster-sampling"><i class="fa fa-check"></i><b>2.4.3</b> Cluster Sampling</a></li>
 <li class="chapter" data-level="2.4.4" data-path="introduction.html"><a href="introduction.html#nonrandom-sampling"><i class="fa fa-check"></i><b>2.4.4</b> Nonrandom Sampling</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="introduction.html"><a href="introduction.html#sampling-errors"><i class="fa fa-check"></i><b>2.5</b> Sampling Errors</a></li>
-<li class="chapter" data-level="2.6" data-path="introduction.html"><a href="introduction.html#bias-and-precision"><i class="fa fa-check"></i><b>2.6</b> Bias and Precision</a>
+<li class="chapter" data-level="2.5" data-path="introduction.html"><a href="introduction.html#bias-and-precision"><i class="fa fa-check"></i><b>2.5</b> Bias and Precision</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction.html"><a href="introduction.html#sampling-errors"><i class="fa fa-check"></i><b>2.6</b> Sampling Errors</a>
 <ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#statistical-studies"><i class="fa fa-check"></i>Statistical Studies</a></li>
 </ul></li>
@@ -112,22 +111,29 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html"><i class="fa fa-check"></i><b>3</b> Exploring Data with Tables and Graphs</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#frequency-distribution"><i class="fa fa-check"></i><b>3.1</b> Frequency Distribution</a></li>
-<li class="chapter" data-level="3.2" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#histogram"><i class="fa fa-check"></i><b>3.2</b> Histogram</a></li>
-<li class="chapter" data-level="3.3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#other-charts"><i class="fa fa-check"></i><b>3.3</b> Other Charts</a></li>
+<li class="chapter" data-level="3.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#frequency-distribution"><i class="fa fa-check"></i><b>3.1</b> Frequency Distribution</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#bar-graphs"><i class="fa fa-check"></i><b>3.1.1</b> Bar Graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#frequency-distribution-for-quantitaive-data"><i class="fa fa-check"></i><b>3.2</b> Frequency Distribution for Quantitaive Data</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#histogram"><i class="fa fa-check"></i><b>3.2.1</b> Histogram</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#graphical-summaries-for-small-data-sets"><i class="fa fa-check"></i><b>3.3</b> Graphical Summaries for Small Data Sets</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html"><i class="fa fa-check"></i><b>4</b> Describing, Exploring, and Comparing Data</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-shape"><i class="fa fa-check"></i><b>4.1</b> Measures of Shape</a></li>
 <li class="chapter" data-level="4.2" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-center"><i class="fa fa-check"></i><b>4.2</b> Measures of Center</a></li>
 <li class="chapter" data-level="4.3" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-spread-or-variation"><i class="fa fa-check"></i><b>4.3</b> Measures of Spread or Variation</a></li>
-<li class="chapter" data-level="4.4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#normal-distribution-and-standard-deviation"><i class="fa fa-check"></i><b>4.4</b> Normal Distribution and Standard Deviation</a>
+<li class="chapter" data-level="4.4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#the-empirical-rule"><i class="fa fa-check"></i><b>4.4</b> The Empirical Rule</a>
 <ul>
-<li class="chapter" data-level="" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#z-score"><i class="fa fa-check"></i>z-score</a></li>
+<li class="chapter" data-level="4.4.1" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#chebyshevs-inequality"><i class="fa fa-check"></i><b>4.4.1</b> Chebyshev’s Inequality</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#percentiles-and-quartiles"><i class="fa fa-check"></i><b>4.5</b> Percentiles and Quartiles</a></li>
-<li class="chapter" data-level="4.6" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#boxplot"><i class="fa fa-check"></i><b>4.6</b> Boxplot</a></li>
-<li class="chapter" data-level="4.7" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#group-comparison"><i class="fa fa-check"></i><b>4.7</b> Group Comparison</a></li>
+<li class="chapter" data-level="4.5" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#z-score"><i class="fa fa-check"></i><b>4.5</b> Z-Score</a></li>
+<li class="chapter" data-level="4.6" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#percentiles-and-quartiles"><i class="fa fa-check"></i><b>4.6</b> Percentiles and Quartiles</a></li>
+<li class="chapter" data-level="4.7" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#boxplot"><i class="fa fa-check"></i><b>4.7</b> Boxplot</a></li>
+<li class="chapter" data-level="4.8" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#group-comparison"><i class="fa fa-check"></i><b>4.8</b> Group Comparison</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a>
 <ul>
@@ -218,7 +224,7 @@
 <ul>
 <li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#univariate-data"><i class="fa fa-check"></i>Univariate Data</a></li>
 <li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#bivariate-data---scatterplot"><i class="fa fa-check"></i>Bivariate Data - Scatterplot</a></li>
-<li><a href="correlation-and-regression.html#bivariate-data---positive-association">Bivariate Data - <em>Positive Association</em></a></li>
+<li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#bivariate-data---positive-association"><i class="fa fa-check"></i>Bivariate Data - <em>Positive Association</em></a></li>
 <li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#linear-association-between-variables"><i class="fa fa-check"></i>Linear Association between Variables</a></li>
 </ul></li>
 <li class="chapter" data-level="10.2" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#correlation-coefficient"><i class="fa fa-check"></i><b>10.2</b> Correlation Coefficient</a>
@@ -257,19 +263,15 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="inferences-from-two-samples" class="section level1" number="9">
-<h1><span class="header-section-number">Chapter 9</span> Inferences from Two Samples</h1>
+<div id="inferences-from-two-samples" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Inferences from Two Samples<a href="inferences-from-two-samples.html#inferences-from-two-samples" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Learning Outcome</strong></p>
-<table>
-<tbody>
-<tr class="odd">
-<td>Perform hypotheses testing two population proportions and two sample means (independent and dependent).</td>
-</tr>
-</tbody>
-</table>
+<hr />
+<p>Perform hypotheses testing two population proportions and two sample means (independent and dependent).</p>
+<hr />
 <p>The previous chapters covered the methods of estimating values of population parameters using confidence intervals and testing hypotheses about population parameters with a sample from one population. This chapter extends these methods to situations involving two populations.</p>
-<div id="inferences-about-two-proportions" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> Inferences about Two Proportions</h2>
+<div id="inferences-about-two-proportions" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Inferences about Two Proportions<a href="inferences-from-two-samples.html#inferences-about-two-proportions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Objectives:</strong></p>
 <ul>
 <li>Hypothesis test: conduct a hypothesis test of a claim about two population proportions.<br />
@@ -295,8 +297,8 @@ The corresponding notations <span class="math inline">\(p_2, n_2, x_2, \hat p_2,
 </li>
 <li><strong>Sample size</strong> - For each of the two samples, there are at least <span class="math inline">\(5\)</span> successes and at least <span class="math inline">\(5\)</span> failures. (That is <span class="math inline">\(n \hat p \ge 5\)</span> and <span class="math inline">\(n \hat q \ge 5\)</span> for each of the two samples.)</li>
 </ul>
-<div id="hypothesis-test" class="section level3" number="9.1.1">
-<h3><span class="header-section-number">9.1.1</span> Hypothesis Test</h3>
+<div id="hypothesis-test" class="section level3 hasAnchor" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> Hypothesis Test<a href="inferences-from-two-samples.html#hypothesis-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The null hypothesis claims that the two population proportions are equal. It implies that both samples came from the same population and have equal variance. Under the assumption of equal proportions, the best estimate of the common population proportion is estimated by pooling both samples into one large sample, so that <span class="math inline">\(\bar p\)</span> is the estimator of the common population proportion. Furthermore, pooled sample variance is calculated from <span class="math inline">\(\bar p\)</span>.</p>
 <p>Let’s consider, the difference in two population proportions: <span class="math inline">\(p_1 - p_2\)</span>.</p>
 <p>A reasonable point estimate of <span class="math inline">\(p_1 - p_2\)</span> based on the samples drawn from the same populations can be written in the form: <span class="math inline">\(\hat p_1 - \hat p_2\)</span>.</p>
@@ -319,8 +321,8 @@ z = \dfrac{(\hat p_1 - \hat p_2) - (p_1 - p_2)}{\sqrt{\dfrac{\bar p \bar q}{n_1}
 \text{where, } p_1 - p_2 = 0
 \]</span></p>
 </div>
-<div id="confidence-interval-estimate-of-p_1---p_2" class="section level3" number="9.1.2">
-<h3><span class="header-section-number">9.1.2</span> Confidence Interval Estimate of <span class="math inline">\(p_1 - p_2\)</span></h3>
+<div id="confidence-interval-estimate-of-p_1---p_2" class="section level3 hasAnchor" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> Confidence Interval Estimate of <span class="math inline">\(p_1 - p_2\)</span><a href="inferences-from-two-samples.html#confidence-interval-estimate-of-p_1---p_2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The confidence interval estimate of the difference <span class="math inline">\(p_1 - p_2\)</span> is</p>
 <p><span class="math inline">\((\hat p_1 - \hat p_2) - E \lt (p_1 - p_2) \lt (\hat p_1 - \hat p_2) + E\)</span></p>
 <p>where,</p>
@@ -337,14 +339,14 @@ With male passengers: <span class="math inline">\(1363\)</span> wore seat belts,
 \begin{align}
 n_F &amp;= 4208, \\
 n_M &amp;= 2763,    \\
-\hat p_F &amp;= \frac{2777}{4208} = 0.660, \\ 
+\hat p_F &amp;= \frac{2777}{4208} = 0.660, \\
 \hat p_M &amp;= \frac{1363}{2763} = 0.493 \\ \\
 SE_{\hat {p_F} - \hat p_M} &amp;= \sqrt{\frac{\hat p_F(1- \hat p_F)}{n_F}+\frac{\hat p_M(1-\hat p_M)}{n_M}} \\
 &amp;= \sqrt{\frac{(0.660)(1-0.660)}{4208}+\frac{0.493(1-0.493)}{2763}} \\
 &amp;= 0.012 \\ \\
 ME &amp;= z^* \times SE(\hat p_F - \hat p_M) = 1.96 \times 0.012 = 0.024 \\
 \\
-\hat p_F - \hat p_M &amp;= 0.660 - 0.493 = 0.167 \\ 
+\hat p_F - \hat p_M &amp;= 0.660 - 0.493 = 0.167 \\
 \\
 \text{Confidence Interval:}
 \\
@@ -360,7 +362,7 @@ ME &amp;= z^* \times SE(\hat p_F - \hat p_M) = 1.96 \times 0.012 = 0.024 \\
 <p><span class="math display">\[
 \hat p_Y = \dfrac{205}{293} = 0.700  \\
 \hat p_X = \dfrac{235}{469} = 0.501  \\
-\hat p_Y - \hat p_X = 0.700 - 0.501 = 0.199 
+\hat p_Y - \hat p_X = 0.700 - 0.501 = 0.199
 \]</span>
 The null hypothesis claims that the two proportions are equal. We want to test whether the difference observed in the sample is statistically different from <span class="math inline">\(0\)</span> or not.</p>
 <p>In other words,</p>
@@ -411,8 +413,8 @@ SE_{pooled}(\hat p_B - \hat p_G) &amp;= \sqrt{\frac{\hat p_{pooled}(1- \hat p_{p
 <p>Reject <span class="math inline">\(H_0\)</span>. There is strong evidence to say that there is a statistically significant difference between the proportions of boys and girls who have online profiles.</p>
 </div>
 </div>
-<div id="inferences-about-two-independent-sample-means" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> Inferences about Two Independent Sample Means</h2>
+<div id="inferences-about-two-independent-sample-means" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Inferences about Two Independent Sample Means<a href="inferences-from-two-samples.html#inferences-about-two-independent-sample-means" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Objectives:</strong></p>
 <ul>
 <li>Hypothesis test: conduct a hypothesis test of a claim about two population means.<br />
@@ -438,8 +440,8 @@ s_1 = \text{standard deviation of sample 1}  \\
 \end{cases}
 \]</span>
 The corresponding notations <span class="math inline">\(\mu_2, \sigma_2, n_2, \bar x_2, s_2\)</span> apply to population 2.</p>
-<div id="hypothesis-test-of-independent-samples-sigma_1-and-sigma_2-unknown-and-not-assumed-equal" class="section level3" number="9.2.1">
-<h3><span class="header-section-number">9.2.1</span> Hypothesis Test of Independent Samples: <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> Unknown and Not Assumed Equal</h3>
+<div id="hypothesis-test-of-independent-samples-sigma_1-and-sigma_2-unknown-and-not-assumed-equal" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Hypothesis Test of Independent Samples: <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> Unknown and Not Assumed Equal<a href="inferences-from-two-samples.html#hypothesis-test-of-independent-samples-sigma_1-and-sigma_2-unknown-and-not-assumed-equal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Requirements</strong></p>
 <ul>
 <li><strong>Unequal variance</strong> - The values of <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> are unknown and we do not assume that they are equal.<br />
@@ -460,13 +462,13 @@ t_\nu = \dfrac{(\bar x_1 - \bar x_2) - (\mu_1 - \mu_2)}{\sqrt{\dfrac{s^2_1}{n_1}
 \\
 \text{degrees of freedom } (\nu) = \dfrac{(A + B)^2}{\dfrac{A^2}{n_1 - 1} + \dfrac{B^2}{n_2 - 1}}  \\
 \\
-\text{where, } \  A = \dfrac{s^2_1}{n_1} \ \text{ and } \  B = \dfrac{s^2_2}{n_2} 
+\text{where, } \  A = \dfrac{s^2_1}{n_1} \ \text{ and } \  B = \dfrac{s^2_2}{n_2}
 \\
 \text{Alternatively, } df = min(n_1-1, n_2-1) \\
 \]</span></p>
 </div>
-<div id="confidence-interval-estimate-of-mu_1---mu_2-independent-samples-with-sigma_1-and-sigma_2-unknown-and-not-assumed-equal" class="section level3" number="9.2.2">
-<h3><span class="header-section-number">9.2.2</span> Confidence Interval Estimate of <span class="math inline">\(\mu_1 - \mu_2\)</span>: Independent Samples with <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> Unknown and Not Assumed Equal</h3>
+<div id="confidence-interval-estimate-of-mu_1---mu_2-independent-samples-with-sigma_1-and-sigma_2-unknown-and-not-assumed-equal" class="section level3 hasAnchor" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Confidence Interval Estimate of <span class="math inline">\(\mu_1 - \mu_2\)</span>: Independent Samples with <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> Unknown and Not Assumed Equal<a href="inferences-from-two-samples.html#confidence-interval-estimate-of-mu_1---mu_2-independent-samples-with-sigma_1-and-sigma_2-unknown-and-not-assumed-equal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The confidence interval estimate of the difference <span class="math inline">\(\mu_1 - \mu_2\)</span> is</p>
 <p><span class="math display">\[(\bar x_1 - \bar x_2) - E &lt;  \mu_1 - \mu_2 &lt;  (\bar x_1 - \bar x_2) + E  \]</span><br />
 where,</p>
@@ -497,7 +499,7 @@ s &amp; 6.1 &amp; 8.4
 <p>Generally, use unpooled <span class="math inline">\(t\)</span>-test. Equal variance assumption is often violated in small samples.</p>
 <p><span class="math display">\[
 \begin{array}{c|c|c}
- &amp; \text{Sample 1} &amp; \text{Sample 2} \\
+&amp; \text{Sample 1} &amp; \text{Sample 2} \\
 \hline
 n &amp; 8 &amp; 7 \\
 \bar y &amp; 281.88 &amp; 211.43 \\
@@ -517,8 +519,8 @@ p-value &amp;= 2 \times P(t&gt;3.77) = 0.006 \le 0.05
 \]</span>
 Hence, we reject <span class="math inline">\(H_0\)</span>.</p>
 </div>
-<div id="pooled-t-test-sigma_1-sigma_2" class="section level3" number="9.2.3">
-<h3><span class="header-section-number">9.2.3</span> Pooled <span class="math inline">\(t\)</span>-test: <span class="math inline">\(\sigma_1 = \sigma_2\)</span></h3>
+<div id="pooled-t-test-sigma_1-sigma_2" class="section level3 hasAnchor" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Pooled <span class="math inline">\(t\)</span>-test: <span class="math inline">\(\sigma_1 = \sigma_2\)</span><a href="inferences-from-two-samples.html#pooled-t-test-sigma_1-sigma_2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To use the pooled <span class="math inline">\(t\)</span>-test, we must make the <strong>Equal Variance Assumption</strong> that the variances of the two populations from which the samples have been drawn are equal. That is <span class="math inline">\(\sigma_1^2 = \sigma_2^2.\)</span></p>
 <p>Even when the specific values of <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span> are unknown but assumed equal, the sample variances <span class="math inline">\(s_1^2\)</span> and <span class="math inline">\(s_2^2\)</span> can be pooled to obtain an estimate of the common population variance <span class="math inline">\(\sigma^2\)</span>.</p>
 <p><span class="math display">\[
@@ -544,8 +546,8 @@ t = \dfrac{(\bar x_1- \bar x_2) - (\bar \mu_1- \bar \mu_2)}{\sqrt{s^2_{p} \bigg 
 \]</span></p>
 </div>
 </div>
-<div id="two-dependent-samples-matched-pairs" class="section level2" number="9.3">
-<h2><span class="header-section-number">9.3</span> Two Dependent Samples (Matched Pairs)</h2>
+<div id="two-dependent-samples-matched-pairs" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Two Dependent Samples (Matched Pairs)<a href="inferences-from-two-samples.html#two-dependent-samples-matched-pairs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This section presents methods for testing hypotheses and constructing confidence intervals involving the mean of the differences of the values from two populations that are dependent in the sense that the data consist of matched pairs. The pairs must be matched according to some relationship, such as before/after measurements from the same subjects or IQ scores of siblings.</p>
 <p><strong>Notation for Dependent Samples</strong></p>
 <p><span class="math display">\[
@@ -566,8 +568,8 @@ n = \text{ number of pairs of sample data}  \\
 <li>Either or both of these conditions are satisfied: the number of pairs of sample data is large <span class="math inline">\((n &gt; 30)\)</span> or the
 pairs of values have differences that are from a population having a distribution that is approximately normal.</li>
 </ol>
-<div id="hypothesis-testing-for-paired-data-the-paired-t-test" class="section level3" number="9.3.1">
-<h3><span class="header-section-number">9.3.1</span> Hypothesis Testing for Paired Data: The paired <span class="math inline">\(t\)</span>-test</h3>
+<div id="hypothesis-testing-for-paired-data-the-paired-t-test" class="section level3 hasAnchor" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Hypothesis Testing for Paired Data: The paired <span class="math inline">\(t\)</span>-test<a href="inferences-from-two-samples.html#hypothesis-testing-for-paired-data-the-paired-t-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The null hypothesis claims that the mean of the differences between two dependent samples (matched pairs) is equal to <span class="math inline">\(0\)</span>.</p>
 <p><strong>Test Statistic for Dependent Samples (with <span class="math inline">\(H_0: \mu_d = 0\)</span>)</strong></p>
 <p><span class="math display">\[
@@ -577,10 +579,10 @@ t_{n-1} = \dfrac{\bar d - \mu_d}{\dfrac{s_d}{\sqrt n}}
 <p>The table shows the times recorded by <span class="math inline">\(17\)</span> track athletes to complete their inner and outer circles in an track and field competition. Conduct a hypothesis test to verify the claim that the recorded inner circle times are not significantly different from the outer circle times.</p>
 <p><span class="math display">\[
 \begin{array}{c|c|c}
- &amp; \text{Inner Time} &amp; \text{Outer Time} &amp; Diff\\
+&amp; \text{Inner Time} &amp; \text{Outer Time} &amp; Diff\\
 \hline
 1 &amp; 125.75 &amp; 122.34 &amp; 3.41 \\
-2 &amp; 121.63 &amp; 122.12 &amp; -0.49 \\ 
+2 &amp; 121.63 &amp; 122.12 &amp; -0.49 \\
 3 &amp; 122.24 &amp; 123.35 &amp; -1.11 \\
 4 &amp; 120.85 &amp; 120.45 &amp; 0.40 \\
 ... &amp; ... &amp; ... &amp; ... \\
@@ -600,8 +602,8 @@ t_{n-1} = \dfrac{\bar d - \mu_d}{\dfrac{s_d}{\sqrt n}}
 \]</span></p>
 <p>Hence, <span class="math inline">\(H_0\)</span> cannot be rejected. The inner and outer circle times are not significantly different.</p>
 </div>
-<div id="paired-t-interval" class="section level3" number="9.3.2">
-<h3><span class="header-section-number">9.3.2</span> Paired <span class="math inline">\(t\)</span>-Interval</h3>
+<div id="paired-t-interval" class="section level3 hasAnchor" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> Paired <span class="math inline">\(t\)</span>-Interval<a href="inferences-from-two-samples.html#paired-t-interval" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <span class="math inline">\(95\%\)</span> confidence interval for the mean paired difference is</p>
 <p><span class="math display">\[
 \begin{align}
@@ -680,7 +682,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

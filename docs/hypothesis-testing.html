@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 8 Hypothesis Testing | Introduction to Statistics</title>
   <meta name="description" content="Chapter 8 Hypothesis Testing | Introduction to Statistics" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 8 Hypothesis Testing | Introduction to Statistics" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-04-19" />
+<meta name="date" content="2022-08-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="estimating-parameters-and-determining-sample-sizes.html"/>
 <link rel="next" href="inferences-from-two-samples.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
@@ -98,8 +97,8 @@
 <li class="chapter" data-level="2.4.3" data-path="introduction.html"><a href="introduction.html#cluster-sampling"><i class="fa fa-check"></i><b>2.4.3</b> Cluster Sampling</a></li>
 <li class="chapter" data-level="2.4.4" data-path="introduction.html"><a href="introduction.html#nonrandom-sampling"><i class="fa fa-check"></i><b>2.4.4</b> Nonrandom Sampling</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="introduction.html"><a href="introduction.html#sampling-errors"><i class="fa fa-check"></i><b>2.5</b> Sampling Errors</a></li>
-<li class="chapter" data-level="2.6" data-path="introduction.html"><a href="introduction.html#bias-and-precision"><i class="fa fa-check"></i><b>2.6</b> Bias and Precision</a>
+<li class="chapter" data-level="2.5" data-path="introduction.html"><a href="introduction.html#bias-and-precision"><i class="fa fa-check"></i><b>2.5</b> Bias and Precision</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction.html"><a href="introduction.html#sampling-errors"><i class="fa fa-check"></i><b>2.6</b> Sampling Errors</a>
 <ul>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#statistical-studies"><i class="fa fa-check"></i>Statistical Studies</a></li>
 </ul></li>
@@ -112,22 +111,29 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html"><i class="fa fa-check"></i><b>3</b> Exploring Data with Tables and Graphs</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#frequency-distribution"><i class="fa fa-check"></i><b>3.1</b> Frequency Distribution</a></li>
-<li class="chapter" data-level="3.2" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#histogram"><i class="fa fa-check"></i><b>3.2</b> Histogram</a></li>
-<li class="chapter" data-level="3.3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#other-charts"><i class="fa fa-check"></i><b>3.3</b> Other Charts</a></li>
+<li class="chapter" data-level="3.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#frequency-distribution"><i class="fa fa-check"></i><b>3.1</b> Frequency Distribution</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#bar-graphs"><i class="fa fa-check"></i><b>3.1.1</b> Bar Graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#frequency-distribution-for-quantitaive-data"><i class="fa fa-check"></i><b>3.2</b> Frequency Distribution for Quantitaive Data</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#histogram"><i class="fa fa-check"></i><b>3.2.1</b> Histogram</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html#graphical-summaries-for-small-data-sets"><i class="fa fa-check"></i><b>3.3</b> Graphical Summaries for Small Data Sets</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html"><i class="fa fa-check"></i><b>4</b> Describing, Exploring, and Comparing Data</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-shape"><i class="fa fa-check"></i><b>4.1</b> Measures of Shape</a></li>
 <li class="chapter" data-level="4.2" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-center"><i class="fa fa-check"></i><b>4.2</b> Measures of Center</a></li>
 <li class="chapter" data-level="4.3" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#measures-of-spread-or-variation"><i class="fa fa-check"></i><b>4.3</b> Measures of Spread or Variation</a></li>
-<li class="chapter" data-level="4.4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#normal-distribution-and-standard-deviation"><i class="fa fa-check"></i><b>4.4</b> Normal Distribution and Standard Deviation</a>
+<li class="chapter" data-level="4.4" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#the-empirical-rule"><i class="fa fa-check"></i><b>4.4</b> The Empirical Rule</a>
 <ul>
-<li class="chapter" data-level="" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#z-score"><i class="fa fa-check"></i>z-score</a></li>
+<li class="chapter" data-level="4.4.1" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#chebyshevs-inequality"><i class="fa fa-check"></i><b>4.4.1</b> Chebyshev’s Inequality</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#percentiles-and-quartiles"><i class="fa fa-check"></i><b>4.5</b> Percentiles and Quartiles</a></li>
-<li class="chapter" data-level="4.6" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#boxplot"><i class="fa fa-check"></i><b>4.6</b> Boxplot</a></li>
-<li class="chapter" data-level="4.7" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#group-comparison"><i class="fa fa-check"></i><b>4.7</b> Group Comparison</a></li>
+<li class="chapter" data-level="4.5" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#z-score"><i class="fa fa-check"></i><b>4.5</b> Z-Score</a></li>
+<li class="chapter" data-level="4.6" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#percentiles-and-quartiles"><i class="fa fa-check"></i><b>4.6</b> Percentiles and Quartiles</a></li>
+<li class="chapter" data-level="4.7" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#boxplot"><i class="fa fa-check"></i><b>4.7</b> Boxplot</a></li>
+<li class="chapter" data-level="4.8" data-path="describing-exploring-and-comparing-data.html"><a href="describing-exploring-and-comparing-data.html#group-comparison"><i class="fa fa-check"></i><b>4.8</b> Group Comparison</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a>
 <ul>
@@ -218,7 +224,7 @@
 <ul>
 <li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#univariate-data"><i class="fa fa-check"></i>Univariate Data</a></li>
 <li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#bivariate-data---scatterplot"><i class="fa fa-check"></i>Bivariate Data - Scatterplot</a></li>
-<li><a href="correlation-and-regression.html#bivariate-data---positive-association">Bivariate Data - <em>Positive Association</em></a></li>
+<li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#bivariate-data---positive-association"><i class="fa fa-check"></i>Bivariate Data - <em>Positive Association</em></a></li>
 <li class="chapter" data-level="" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#linear-association-between-variables"><i class="fa fa-check"></i>Linear Association between Variables</a></li>
 </ul></li>
 <li class="chapter" data-level="10.2" data-path="correlation-and-regression.html"><a href="correlation-and-regression.html#correlation-coefficient"><i class="fa fa-check"></i><b>10.2</b> Correlation Coefficient</a>
@@ -257,19 +263,15 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="hypothesis-testing" class="section level1" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Hypothesis Testing</h1>
+<div id="hypothesis-testing" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Hypothesis Testing<a href="hypothesis-testing.html#hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Learning Outcome</strong></p>
-<table>
-<tbody>
-<tr class="odd">
-<td>Perform hypotheses testing involving two sample means (independent and dependent), two population proportions, and two standard deviations/variances.</td>
-</tr>
-</tbody>
-</table>
+<hr />
+<p>Perform hypotheses testing involving two sample means (independent and dependent), two population proportions, and two standard deviations/variances.</p>
+<hr />
 <p>This chapter introduces the statistical method of hypothesis testing to test a given claim about a population parameter, such as proportion, mean, standard deviation, or variance. This method combines the concepts covered in the previous chapters, including sampling distribution, standard error, critical scores, and probability theory.</p>
-<div id="hypothesis-testing-1" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Hypothesis Testing</h2>
+<div id="hypothesis-testing-1" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Hypothesis Testing<a href="hypothesis-testing.html#hypothesis-testing-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In statistics, a <strong>hypothesis</strong> is a claim or statement about a property of a population.</p>
 <p>A <strong>hypothesis test (or test of significance)</strong> is a procedure for testing a claim about a property of a population.</p>
 <p>The <strong>null hypothesis (<span class="math inline">\(H_0\)</span>)</strong> is a statement that the value of a population parameter (such as proportion, mean, or standard deviation) is equal to some claimed value.</p>
@@ -279,8 +281,8 @@
 <p>Therefore, expected value of the number of heads from <span class="math inline">\(20\)</span> tosses = <span class="math inline">\(10\)</span>.</p>
 <p>Suppose, you have tossed a coin <span class="math inline">\(20\)</span> times and seen <span class="math inline">\(15\)</span> heads, <span class="math inline">\(\hat p = 0.75\)</span>.</p>
 <p><strong>Is the coin fair, or is it biased towards heads?</strong></p>
-<div id="null-and-alternative-hypotheses" class="section level4 unnumbered">
-<h4>Null and Alternative Hypotheses</h4>
+<div id="null-and-alternative-hypotheses" class="section level4 unnumbered hasAnchor">
+<h4>Null and Alternative Hypotheses<a href="hypothesis-testing.html#null-and-alternative-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Null hypothesis <span class="math inline">\((H_0)\)</span>: states that any deviation from what was expected is due to chance error (i.e. the coin is fair).</p>
 <p>Alternative hypothesis <span class="math inline">\((H_A)\)</span>: asserts that the observed deviation is too large to be explained by chance alone (i.e. the coin is biased towards heads).</p>
 <p><span class="math display">\[
@@ -294,13 +296,13 @@ H_A: p &gt; 0.5
 p &amp;= 0.5 \\
 se &amp;= \sqrt{(0.5)(0.5)/20} = 0.112 \\
 z &amp;= (0.75 - 0.50)/0.112 = 2.236  \\ \\
-P(z\ge2.236) &amp;= 0.0127 \Leftarrow \text {this probability is also called p-value} 
+P(z\ge2.236) &amp;= 0.0127 \Leftarrow \text {this probability is also called p-value}
 \end{align}
 \]</span>
 Hence, there is only <span class="math inline">\(1.27\%\)</span> probability that observing <span class="math inline">\(15\)</span> heads from <span class="math inline">\(20\)</span> tosses is merely a chance. Then the question is, if the coin is indeed fair, is the p-value too small?</p>
 </div>
-<div id="interpretation-of-textp-value" class="section level4 unnumbered">
-<h4>Interpretation of <span class="math inline">\(\text{p-value}\)</span></h4>
+<div id="interpretation-of-textp-value" class="section level4 unnumbered hasAnchor">
+<h4>Interpretation of <span class="math inline">\(\text{p-value}\)</span><a href="hypothesis-testing.html#interpretation-of-textp-value" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><p>A <span class="math inline">\(\text{p-value}\)</span> is the probability of obtaining the observed effect (or larger) under a “null hypothesis”. Thus, a <span class="math inline">\(\text{p-value}\)</span> that is very small indicates that the observed effect is very unlikely to have arisen purely by chance, and therefore provides evidence against the null hypothesis.</p></li>
 <li><p>It has been common practice to interpret a <span class="math inline">\(\text{p-value}\)</span> by examining whether it is smaller than particular threshold values or <strong>“significance level”.</strong> In particular, <span class="math inline">\(\text{p-values}\)</span> less than <span class="math inline">\(5\%\)</span> are often reported as “statistically significant”, and interpreted as being small enough to justify rejection of the null hypothesis.
@@ -319,14 +321,14 @@ By definition, the significance level <span class="math inline">\(\alpha\)</span
 <p>Conclusion: The coin is biased towards heads.</p>
 </blockquote>
 </div>
-<div id="critical-value-method" class="section level4 unnumbered">
-<h4>Critical Value Method</h4>
+<div id="critical-value-method" class="section level4 unnumbered hasAnchor">
+<h4>Critical Value Method<a href="hypothesis-testing.html#critical-value-method" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>In a hypothesis test, the <strong>critical value(s)</strong> separates the critical region (where we reject the null hypothesis) from the values of the test statistic that do not lead to rejection of the null hypothesis.</p>
 <p>With the critical value method of testing hypothesis, we make a decision by comparing the test statistic to the critical value(s).</p>
 <p><img src="critical_z_value.png" /></p>
 </div>
-<div id="one-sided-and-two-sided-tests" class="section level4 unnumbered">
-<h4>One-sided and two-sided tests</h4>
+<div id="one-sided-and-two-sided-tests" class="section level4 unnumbered hasAnchor">
+<h4>One-sided and two-sided tests<a href="hypothesis-testing.html#one-sided-and-two-sided-tests" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>If the researchers are only interested in showing an increase or a decrease, but not
 both, use a <strong>one-sided test</strong>. If the researchers would be interested in any difference
 from the null value - an increase or decrease - then the test should be <strong>two-sided</strong>.</p>
@@ -334,8 +336,8 @@ from the null value - an increase or decrease - then the test should be <strong>
 Hypotheses must be set up before observing the data. If they are not, the test must be two-sided.</p>
 <p><img src="sidedness_example_figures.png" width="800px" /></p>
 </div>
-<div id="type-i-and-type-ii-errors" class="section level3" number="8.1.1">
-<h3><span class="header-section-number">8.1.1</span> Type I and Type II Errors</h3>
+<div id="type-i-and-type-ii-errors" class="section level3 hasAnchor" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Type I and Type II Errors<a href="hypothesis-testing.html#type-i-and-type-ii-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When testing a null hypothesis, sometimes the test comes to a wrong conclusion by rejecting it or failing to reject it. There are two kinds of errors: <strong>type I</strong> and <strong>type II</strong> errors.</p>
 <ul>
 <li><span class="math inline">\(\textbf {Type I error} :\)</span> The error of rejecting the null hypothesis when it is actually true.</li>
@@ -351,8 +353,8 @@ Hypotheses must be set up before observing the data. If they are not, the test m
 <blockquote>
 <p>The probability of <span class="math inline">\(\text {Type II}\)</span> can be minimized by choosing a larger sample size <span class="math inline">\(n\)</span>.</p>
 </blockquote>
-<div id="power-of-a-hypothesis-test" class="section level5 unnumbered">
-<h5>Power of a Hypothesis Test</h5>
+<div id="power-of-a-hypothesis-test" class="section level5 unnumbered hasAnchor">
+<h5>Power of a Hypothesis Test<a href="hypothesis-testing.html#power-of-a-hypothesis-test" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>The <strong>power</strong> of a hypothesis test is the probability <span class="math inline">\(1-\beta\)</span> of rejecting a false null hypothesis. The value of the power is computed by using a particular significance level <span class="math inline">\(\alpha\)</span> and a particular value of the population parameter that is an alternative to the value of assumed true in the null hypothesis.</p>
 <p>In practice, statistical studies are commonly designed with a statistical power of at least <span class="math inline">\(80%\)</span>.</p>
 <div class="figure">
@@ -372,7 +374,7 @@ P_1 &amp;= \text{proportion observed from the data (an alternative population)} 
 N &amp;= \text{sample size} \\
 \alpha &amp;= \text{probability of type I error}  \\
 \beta &amp;= \text{probability of type II error}  \\
-z &amp;= \text{critical z score for a given } \alpha \text { or } \beta 
+z &amp;= \text{critical z score for a given } \alpha \text { or } \beta
 \end{align}
 \]</span></p>
 <p>Suppose, <span class="math inline">\(P_1\)</span> is an alternative to the value assumed in <span class="math inline">\(H_0\)</span>.</p>
@@ -384,8 +386,8 @@ P&#39;_0 = P_0 + z_{1-\alpha/2} \cdot \sqrt{\dfrac{P_0Q_0}{N}}
 <p><span class="math display">\[
 \therefore z_{\beta} = \dfrac{P&#39;_0 - P_1}{\sqrt{\dfrac{P_1Q_1}{N}}} = \dfrac{\Bigg( P_0 + z_{1-\alpha/2} \cdot \sqrt{\dfrac{P_0Q_0}{N}} \Bigg) - P_1}{\sqrt{\dfrac{P_1Q_1}{N}}}  \\
 \\
-P(\textbf{Type II error}) = 
-\beta = \Phi \left \{ \dfrac{\Bigg( P_0 + z_{1-\alpha/2} \cdot \sqrt{\dfrac{P_0Q_0}{N}} \Bigg) - P_1}{\sqrt{\dfrac{P_1Q_1}{N}}}  \right \} 
+P(\textbf{Type II error}) =
+\beta = \Phi \left \{ \dfrac{\Bigg( P_0 + z_{1-\alpha/2} \cdot \sqrt{\dfrac{P_0Q_0}{N}} \Bigg) - P_1}{\sqrt{\dfrac{P_1Q_1}{N}}}  \right \}
 \\
 \]</span></p>
 <p><span class="math display">\[
@@ -426,7 +428,7 @@ z_{1-\alpha/2} &amp;= 1.96  \\
 \\
 \Phi^{-1}(0.2) = -0.84 &amp;= \dfrac{\Bigg( 0.5 + 1.96 \cdot \sqrt{\dfrac{(0.5) (0.5)}{N}} \Bigg) - 0.9}{\sqrt{\dfrac{(0.9)(0.1)}{N}}} \\
 \implies N &amp;= \Bigg( \dfrac{1.96\sqrt{0.25} + 0.84\sqrt{0.09}}{0.4}  \Bigg)^2  \\
-&amp;\approx 10 
+&amp;\approx 10
 \end{align}
 \]</span></p>
 <p><strong>Example: Sample size calculation to achieve power (when <span class="math inline">\(P_0\)</span> and <span class="math inline">\(P_1\)</span> are unknown)</strong></p>
@@ -437,16 +439,12 @@ where,</p>
 <p><span class="math display">\[
 \text{effect size, } ES = \dfrac{|P_1-P_0|}{\sqrt{P_0Q_0}}
 \]</span></p>
-<table>
-<tbody>
-<tr class="odd">
-<td><strong>Statistical power and design of experiment:</strong> When designing an experiment, it is essential to determine the minimize sample size that would be needed to detect an acceptable difference between the true value of the population parameter and what is observed from the data. A <span class="math inline">\(5\%\)</span> significance level <span class="math inline">\((\alpha)\)</span> and a statistical power of at least <span class="math inline">\(80\%\)</span> are common requirements for determining that a hypothesis test is effective.</td>
-</tr>
-</tbody>
-</table>
+<hr />
+<p><strong>Statistical power and design of experiment:</strong> When designing an experiment, it is essential to determine the minimize sample size that would be needed to detect an acceptable difference between the true value of the population parameter and what is observed from the data. A <span class="math inline">\(5\%\)</span> significance level <span class="math inline">\((\alpha)\)</span> and a statistical power of at least <span class="math inline">\(80\%\)</span> are common requirements for determining that a hypothesis test is effective.</p>
+<hr />
 </div>
-<div id="formal-test-of-hypothesis" class="section level4 unnumbered">
-<h4>Formal Test of Hypothesis</h4>
+<div id="formal-test-of-hypothesis" class="section level4 unnumbered hasAnchor">
+<h4>Formal Test of Hypothesis<a href="hypothesis-testing.html#formal-test-of-hypothesis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Follow these seven steps when carrying out a hypothesis test.</p>
 <ol style="list-style-type: decimal">
 <li><p>State the name of the test being used.<br />
@@ -467,8 +465,8 @@ point estimate follows the appropriate distribution and is unbiased.<br />
 </div>
 </div>
 </div>
-<div id="inference-for-a-single-proportion" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Inference for a Single Proportion</h2>
+<div id="inference-for-a-single-proportion" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Inference for a Single Proportion<a href="hypothesis-testing.html#inference-for-a-single-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Conduct a formal hypothesis test of a claim about a population proportion <span class="math inline">\(p\)</span>.</p>
 <p><strong>Requirements:</strong></p>
 <ol style="list-style-type: decimal">
@@ -514,7 +512,7 @@ n(1-p) \ge 10 \rightarrow 90 \times (1-0.80) \ge 10
 \hat p &amp;= \frac {61}{90} = 0.678 \\ \\
 SE(\hat p) &amp;= \sqrt \frac{pq}{n} = \sqrt \frac{(0.80)(0.20)}{90} = 0.042  \\ \\
 z &amp;= \frac {0.678-0.80}{0.042} = -2.90   \\ \\
-p\text{-value} &amp;= P(z &lt; -2.90) = 0.002 &lt; 0.05 
+p\text{-value} &amp;= P(z &lt; -2.90) = 0.002 &lt; 0.05
 \end{align}
 \]</span></p>
 <p>Hence, we reject <span class="math inline">\(H_0\)</span>. Teen pass rate is significantly below population pass rate.</p>
@@ -539,13 +537,13 @@ n(1-p) \ge 10 \rightarrow 550 \times (1-0.517) \ge 10
 \hat p &amp;= 0.569 \\ \\
 SE(\hat p) &amp;= \sqrt \frac{pq}{n} = \sqrt \frac{(0.517)(1-0.517)}{550} = 0.0213  \\ \\
 z &amp;= \frac {0.569-0.517}{0.0213} = 2.44   \\ \\
-p\text{-value} &amp;= 2 \times P(z &gt; 2.44) = 2 \times 0.0073 = 0.0146 &lt; 0.05 
+p\text{-value} &amp;= 2 \times P(z &gt; 2.44) = 2 \times 0.0073 = 0.0146 &lt; 0.05
 \end{align}
 \]</span></p>
 <p>Hence, we reject <span class="math inline">\(H_0\)</span>. Male birth rate is significantly higher at the hospital than the natural birth rate.</p>
 </div>
-<div id="t-text--test-testing-hypothesis-about-mu-with-sigma-not-known" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> <span class="math inline">\(t \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Not Known</h2>
+<div id="t-text--test-testing-hypothesis-about-mu-with-sigma-not-known" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> <span class="math inline">\(t \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Not Known<a href="hypothesis-testing.html#t-text--test-testing-hypothesis-about-mu-with-sigma-not-known" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The null hypothesis claims about a population mean <span class="math inline">\(\mu\)</span>.</p>
 <p><strong>Notation:</strong></p>
 <p><span class="math display">\[
@@ -597,11 +595,11 @@ p-value &amp;= P(t_{149}&gt;2.795)= 0.29\% &lt; 5\%
 \]</span></p>
 <p>Conclusion: Reject <span class="math inline">\(H_0\)</span>. The sample mean mirex level significantly higher that the EPA screening level.</p>
 </div>
-<div id="chi2-text-test-testing-hypothesis-about-a-variance" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> <span class="math inline">\(\chi^2 \text{-test}\)</span> | Testing Hypothesis About a Variance</h2>
+<div id="chi2-text-test-testing-hypothesis-about-a-variance" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> <span class="math inline">\(\chi^2 \text{-test}\)</span> | Testing Hypothesis About a Variance<a href="hypothesis-testing.html#chi2-text-test-testing-hypothesis-about-a-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Listed below are the heights (cm) for the simple random sample of female supermodels. Use a <span class="math inline">\(0.01\)</span> significance level to test the claim that supermodels have heights with a standard deviation that is less than <span class="math inline">\(\sigma=7.5 \text { cm}\)</span> for the population of women. Does it appear that heights of supermodels vary less than heights of women from the population?</p>
 <p><span class="math display">\[
-\text{178, 177, 176, 174, 175, 178, 175, 178} \\ 
+\text{178, 177, 176, 174, 175, 178, 175, 178} \\
 \text{178, 177, 180, 176, 180, 178, 180, 176}  \\
 s^2 = 3.4
 \]</span></p>
@@ -694,7 +692,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
