@@ -23,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-08-29" />
+<meta name="date" content="2022-08-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -146,14 +146,15 @@
 <li class="chapter" data-level="5.2.4" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#multiplication-rule-for-independent-processes"><i class="fa fa-check"></i><b>5.2.4</b> Multiplication Rule | for independent processes</a></li>
 <li class="chapter" data-level="5.2.5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#marginal-and-joint-probabilities"><i class="fa fa-check"></i><b>5.2.5</b> Marginal and joint probabilities</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#probability-distributions"><i class="fa fa-check"></i><b>5.3</b> Probability Distributions</a></li>
-<li class="chapter" data-level="5.4" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#parameters-of-a-probability-distribution"><i class="fa fa-check"></i><b>5.4</b> Parameters of a Probability Distribution</a></li>
-<li class="chapter" data-level="5.5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.5</b> Binomial Probability Distribution</a>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#random-variables"><i class="fa fa-check"></i><b>5.3</b> Random Variables</a></li>
+<li class="chapter" data-level="5.4" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#probability-distribution-for-a-discrete-random-variable"><i class="fa fa-check"></i><b>5.4</b> Probability Distribution for a Discrete Random Variable</a></li>
+<li class="chapter" data-level="5.5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#parameters-of-a-probability-distribution"><i class="fa fa-check"></i><b>5.5</b> Parameters of a Probability Distribution</a></li>
+<li class="chapter" data-level="5.6" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.6</b> Binomial Probability Distribution</a>
 <ul>
-<li class="chapter" data-level="5.5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#expected-value-of-the-binomial-distribution"><i class="fa fa-check"></i><b>5.5.1</b> Expected Value of the Binomial Distribution</a></li>
-<li class="chapter" data-level="5.5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#standard-deviation-of-the-binomial-distribution"><i class="fa fa-check"></i><b>5.5.2</b> Standard Deviation of the Binomial Distribution</a></li>
+<li class="chapter" data-level="5.6.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#expected-value-of-the-binomial-distribution"><i class="fa fa-check"></i><b>5.6.1</b> Expected Value of the Binomial Distribution</a></li>
+<li class="chapter" data-level="5.6.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#standard-deviation-of-the-binomial-distribution"><i class="fa fa-check"></i><b>5.6.2</b> Standard Deviation of the Binomial Distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-problems"><i class="fa fa-check"></i><b>5.6</b> Example Problems</a></li>
+<li class="chapter" data-level="5.7" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-problems"><i class="fa fa-check"></i><b>5.7</b> Example Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Normal Probability Distributions</a>
 <ul>
@@ -581,9 +582,8 @@ P(\text{A or B}) &amp;= P(A)+P(B) \tag 2
 <p></br></p>
 </div>
 </div>
-<div id="probability-distributions" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Probability Distributions<a href="discrete-probability-distributions.html#probability-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>DEFINITIONS</strong></p>
+<div id="random-variables" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Random Variables<a href="discrete-probability-distributions.html#random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A <strong>random variable</strong> is a numerical measure of an outcome from a random experiment. It has a single numerical value, determined by chance, for each outcome of an event. We often use a capital letter such as <span class="math inline">\(X\)</span> to stand for a random variable.</p>
 <p>Let <span class="math inline">\(X\)</span> be a random variable representing all possible outcomes of rolling a six-sided die once. Find the given probability:</p>
 <p><span class="math inline">\(1. P(X=4)\)</span></p>
@@ -594,9 +594,12 @@ P(\text{A or B}) &amp;= P(A)+P(B) \tag 2
 <li><p>A <strong>discrete random variable</strong> has a collection of values that is finite or countable, such as number of tosses of a coin before getting heads.</p></li>
 <li><p>A <strong>continuous random variable</strong> has infinitely many values, and the collection of values is not countable, such as body temperature.</p></li>
 </ul>
-<p>A <strong>probability distribution</strong> is a description that gives the probability for each value of the random variable. It can be expressed as a table or graph, or formula.</p>
-<div id="probability-distribution-requirements" class="section level5 unnumbered hasAnchor">
-<h5>Probability Distribution: Requirements<a href="discrete-probability-distributions.html#probability-distribution-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+</div>
+<div id="probability-distribution-for-a-discrete-random-variable" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Probability Distribution for a Discrete Random Variable<a href="discrete-probability-distributions.html#probability-distribution-for-a-discrete-random-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A <strong>probability distribution</strong> for a discrete random variable is a description that gives the probability for each value of the random variable. It can be expressed as a table or graph, or formula.</p>
+<div id="properties" class="section level5 unnumbered hasAnchor">
+<h5>Properties<a href="discrete-probability-distributions.html#properties" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <ol style="list-style-type: decimal">
 <li><p>There is a numerical (not categorical) random variable <span class="math inline">\(x\)</span>, and its number values are associated with corresponding probabilities.</p></li>
 <li><p><span class="math inline">\(\sum P(x)=1\)</span>, where <span class="math inline">\(x\)</span> assumes all possible values.</p></li>
@@ -620,8 +623,8 @@ x: \text{  number of heads} \\ \text {when two coins are tossed} &amp; P(x) \\
 </ol>
 </div>
 </div>
-<div id="parameters-of-a-probability-distribution" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Parameters of a Probability Distribution<a href="discrete-probability-distributions.html#parameters-of-a-probability-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="parameters-of-a-probability-distribution" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Parameters of a Probability Distribution<a href="discrete-probability-distributions.html#parameters-of-a-probability-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Mean <span class="math inline">\(\mu\)</span> of a probability distribution</strong></p>
 <p><span class="math inline">\(\mu = \sum [x_i \cdot P(x_i)]\)</span></p>
 <p><strong>Variance <span class="math inline">\(\sigma^2\)</span> for a probability distribution</strong></p>
@@ -741,8 +744,8 @@ E(X) = (- \$ 5) \cdot (\frac{251}{495}) +  (\$5) \cdot (\frac{244}{495}) = -\$.0
 </div>
 </div>
 </div>
-<div id="binomial-probability-distribution" class="section level2 hasAnchor" number="5.5">
-<h2><span class="header-section-number">5.5</span> Binomial Probability Distribution<a href="discrete-probability-distributions.html#binomial-probability-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="binomial-probability-distribution" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Binomial Probability Distribution<a href="discrete-probability-distributions.html#binomial-probability-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A <strong>binomial probability distribution</strong> results from a procedure that meets the following requirements:</p>
 <ul>
 <li><p>The procedure has a fixed number of trials (A trial is a single observation).</p></li>
@@ -884,8 +887,8 @@ P((.3)(10) \le X \le (.4)(10))
 </details>
 </div>
 </div>
-<div id="expected-value-of-the-binomial-distribution" class="section level3 hasAnchor" number="5.5.1">
-<h3><span class="header-section-number">5.5.1</span> Expected Value of the Binomial Distribution<a href="discrete-probability-distributions.html#expected-value-of-the-binomial-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="expected-value-of-the-binomial-distribution" class="section level3 hasAnchor" number="5.6.1">
+<h3><span class="header-section-number">5.6.1</span> Expected Value of the Binomial Distribution<a href="discrete-probability-distributions.html#expected-value-of-the-binomial-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math inline">\(X:\)</span> number of successes with probability <span class="math inline">\(p\)</span> of success on each trial.</p>
 <p><strong>Probability distribution table for <span class="math inline">\(X:\)</span></strong></p>
 <p><span class="math display">\[
@@ -903,8 +906,8 @@ P(x) &amp; p &amp; 1-p
 \end{align}
 \]</span></p>
 </div>
-<div id="standard-deviation-of-the-binomial-distribution" class="section level3 hasAnchor" number="5.5.2">
-<h3><span class="header-section-number">5.5.2</span> Standard Deviation of the Binomial Distribution<a href="discrete-probability-distributions.html#standard-deviation-of-the-binomial-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="standard-deviation-of-the-binomial-distribution" class="section level3 hasAnchor" number="5.6.2">
+<h3><span class="header-section-number">5.6.2</span> Standard Deviation of the Binomial Distribution<a href="discrete-probability-distributions.html#standard-deviation-of-the-binomial-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math inline">\(X:\)</span> number of successes with probability <span class="math inline">\(p\)</span> of success on each trial.</p>
 <p>Probability distribution table for <span class="math inline">\(X:\)</span></p>
 <p><span class="math display">\[
@@ -954,8 +957,8 @@ SE(X)  &amp;= \sqrt{100 \times 1/6 \times 5/6} \\
 </details>
 </div>
 </div>
-<div id="example-problems" class="section level2 hasAnchor" number="5.6">
-<h2><span class="header-section-number">5.6</span> Example Problems<a href="discrete-probability-distributions.html#example-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-problems" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Example Problems<a href="discrete-probability-distributions.html#example-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>1. In a state’s pick 3 lottery game, a player pays <span class="math inline">\(\$1.46\)</span> to select a sequence of three digits (from <span class="math inline">\(0\)</span> to <span class="math inline">\(9\)</span>), such as <span class="math inline">\(822\)</span>. If someone selects the same sequence of three digits that are drawn, the player collects <span class="math inline">\(\$499.38\)</span>.</strong></p>
 <p><strong>(a)</strong> How many different selections are possible?</p>
 <p><span class="math display">\[

@@ -40,7 +40,8 @@ probabilities-when-events-are-not-disjoint-or-mutually-exclusive
 complement-of-an-event
 multiplication-rule-for-independent-processes
 marginal-and-joint-probabilities
-probability-distributions
+random-variables
+probability-distribution-for-a-discrete-random-variable
 parameters-of-a-probability-distribution
 binomial-probability-distribution
 expected-value-of-the-binomial-distribution
