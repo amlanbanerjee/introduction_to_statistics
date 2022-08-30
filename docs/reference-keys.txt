@@ -47,6 +47,7 @@ expected-value-of-the-binomial-distribution
 standard-deviation-of-the-binomial-distribution
 example-problems
 normal-probability-distributions
+continuous-random-variable-and-probability-density-function
 normal-distribution
 standard-normal-distribution
 sampling-distribution-of-a-statistic

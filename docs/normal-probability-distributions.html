@@ -23,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-08-25" />
+<meta name="date" content="2022-08-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -157,17 +157,18 @@
 </ul></li>
 <li class="chapter" data-level="6" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Normal Probability Distributions</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#normal-distribution"><i class="fa fa-check"></i><b>6.1</b> Normal Distribution</a>
+<li class="chapter" data-level="6.1" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#continuous-random-variable-and-probability-density-function"><i class="fa fa-check"></i><b>6.1</b> Continuous Random Variable and Probability Density Function</a></li>
+<li class="chapter" data-level="6.2" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#normal-distribution"><i class="fa fa-check"></i><b>6.2</b> Normal Distribution</a>
 <ul>
-<li class="chapter" data-level="6.1.1" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#standard-normal-distribution"><i class="fa fa-check"></i><b>6.1.1</b> Standard Normal Distribution</a></li>
+<li class="chapter" data-level="6.2.1" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#standard-normal-distribution"><i class="fa fa-check"></i><b>6.2.1</b> Standard Normal Distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#sampling-distribution-of-a-statistic"><i class="fa fa-check"></i><b>6.2</b> Sampling Distribution of a Statistic</a>
+<li class="chapter" data-level="6.3" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#sampling-distribution-of-a-statistic"><i class="fa fa-check"></i><b>6.3</b> Sampling Distribution of a Statistic</a>
 <ul>
-<li class="chapter" data-level="6.2.1" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#sampling-distribution-of-sample-mean"><i class="fa fa-check"></i><b>6.2.1</b> Sampling Distribution of Sample Mean</a></li>
-<li class="chapter" data-level="6.2.2" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#sampling-distribution-of-a-sample-proportion"><i class="fa fa-check"></i><b>6.2.2</b> Sampling Distribution of a Sample Proportion</a></li>
-<li class="chapter" data-level="6.2.3" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#sampling-distribution-of-a-sample-variance"><i class="fa fa-check"></i><b>6.2.3</b> Sampling Distribution of a Sample Variance</a></li>
+<li class="chapter" data-level="6.3.1" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#sampling-distribution-of-sample-mean"><i class="fa fa-check"></i><b>6.3.1</b> Sampling Distribution of Sample Mean</a></li>
+<li class="chapter" data-level="6.3.2" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#sampling-distribution-of-a-sample-proportion"><i class="fa fa-check"></i><b>6.3.2</b> Sampling Distribution of a Sample Proportion</a></li>
+<li class="chapter" data-level="6.3.3" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#sampling-distribution-of-a-sample-variance"><i class="fa fa-check"></i><b>6.3.3</b> Sampling Distribution of a Sample Variance</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#central-limit-theorem"><i class="fa fa-check"></i><b>6.3</b> Central Limit Theorem</a></li>
+<li class="chapter" data-level="6.4" data-path="normal-probability-distributions.html"><a href="normal-probability-distributions.html#central-limit-theorem"><i class="fa fa-check"></i><b>6.4</b> Central Limit Theorem</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html"><i class="fa fa-check"></i><b>7</b> Estimating Parameters and Determining Sample Sizes</a>
 <ul>
@@ -270,8 +271,20 @@
 <p>Compute probability for binomial and normal distributions.</p>
 <hr />
 <p>In this chapter, we introduce continuous probability distributions, with the focus on normal probability distributions. We will learn how to calculate probabilities from the standard normal distribution and apply that knowledge to solve some practical problems. Finally, we will learn about <em>sampling distribution</em> and use it to state the <strong>Central Limit Theorem</strong>.</p>
-<div id="normal-distribution" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Normal Distribution<a href="normal-probability-distributions.html#normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="continuous-random-variable-and-probability-density-function" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Continuous Random Variable and Probability Density Function<a href="normal-probability-distributions.html#continuous-random-variable-and-probability-density-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A random variable <span class="math inline">\(X\)</span> is <strong>continuous</strong> if possible values comprise either a single interval
+on the number line or a union of disjoint intervals.</p>
+<p>Variables such as weight, height, and temperature are continuous.</p>
+<p>The <strong>probability density function (PDF), <span class="math inline">\(f_X(x)\)</span>,</strong> is used to specify the probability of the random variable falling within a particular range of values <span class="math inline">\(a \le X \le b\)</span>. This also means that the area under a probability density curve between two values <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> represents the proportion of a population whose values are between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+<p>For any probability density curve, the area under the entire curve is <span class="math inline">\(1\)</span>, because this
+area represents the entire population.</p>
+<p><span class="math display">\[
+\displaystyle P[a \le X \le b] = \int_a^b f_X(x) dx
+\]</span></p>
+</div>
+<div id="normal-distribution" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Normal Distribution<a href="normal-probability-distributions.html#normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Properties of a Normal Curve</strong></p>
 <ul>
 <li><p>A normal curve is unimodal and symmetric.</p></li>
@@ -279,7 +292,7 @@
 <li><p>Both are the center of the curve.</p></li>
 </ul>
 <p>Probability density function of the normal distribution:</p>
-<p><span class="math display">\[P(x) = \dfrac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2} \big( \frac{x-\mu}{\sigma} \big)^2 },  -\infty&lt;x&lt;+\infty\]</span></p>
+<p><span class="math display">\[f_X(x) = \dfrac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2} \big( \frac{x-\mu}{\sigma} \big)^2 },  -\infty&lt;x&lt;+\infty\]</span></p>
 <p><img src="introduction_to_statistics_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
 <p><span class="math inline">\(\mu\)</span> is called the <strong>location parameter</strong> because it determines where the distribution is located on the horizontal axis.</p>
 <p><span class="math inline">\(\sigma\)</span> is called the <strong>shape parameter</strong> because it determines the shape of the distribution.</p>
@@ -300,12 +313,12 @@ x = \bar x + 2s  &amp;\implies  z = +2  \\
 \]</span></p>
 <p><img src="nonstandard_to_standard.png" /></p>
 </div>
-<div id="standard-normal-distribution" class="section level3 hasAnchor" number="6.1.1">
-<h3><span class="header-section-number">6.1.1</span> Standard Normal Distribution<a href="normal-probability-distributions.html#standard-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="standard-normal-distribution" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Standard Normal Distribution<a href="normal-probability-distributions.html#standard-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <strong>standard normal distribution</strong> is a normal distribution with the parameters of <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma = 1\)</span>. The total area under its density curve is equal to <span class="math inline">\(1\)</span>.</p>
 <p><span class="math display">\[ \bbox[yellow,5px]
 {
-\color{black}{{P(z)} = \frac {1}{\sqrt {2\pi}}\exp{-\frac{1}{2}z^2}, -\infty&lt;z&lt;+\infty}
+\color{black}{{P_Z(z)} = \frac {1}{\sqrt {2\pi}}\exp{-\frac{1}{2}z^2}, -\infty&lt;z&lt;+\infty}
 }
 \]</span></p>
 <p><strong>Example: Compute and Interpret a <span class="math inline">\(z\)</span>-Score</strong></p>
@@ -400,8 +413,8 @@ x &amp; = 1752
 </div>
 </div>
 </div>
-<div id="sampling-distribution-of-a-statistic" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Sampling Distribution of a Statistic<a href="normal-probability-distributions.html#sampling-distribution-of-a-statistic" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sampling-distribution-of-a-statistic" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Sampling Distribution of a Statistic<a href="normal-probability-distributions.html#sampling-distribution-of-a-statistic" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The sampling distribution of a statistic represents the distribution of all values of the statistic (e.g. <span class="math inline">\(\text { sample mean, sample proporton, sample variance, etc.}\)</span>) when all possible samples of the same size <span class="math inline">\(n\)</span> are drawn from the same population.</p>
 <p>Understanding the concept of a sampling distribution is central to understanding statistical inference.</p>
 <p><strong>Parameter and Statistics</strong></p>
@@ -420,8 +433,8 @@ x &amp; = 1752
 \hline
 \end{array}
 \]</span></p>
-<div id="sampling-distribution-of-sample-mean" class="section level3 hasAnchor" number="6.2.1">
-<h3><span class="header-section-number">6.2.1</span> Sampling Distribution of Sample Mean<a href="normal-probability-distributions.html#sampling-distribution-of-sample-mean" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="sampling-distribution-of-sample-mean" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Sampling Distribution of Sample Mean<a href="normal-probability-distributions.html#sampling-distribution-of-sample-mean" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The sampling distribution of the sample mean is the distribution of all values of the <strong>sample mean</strong> (or the distribution of the variable <span class="math inline">\(\overline X\)</span>) when all possible samples of the same size <span class="math inline">\(n\)</span> are drawn from the same population (with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>).</p>
 <p><img src="sampling_dist_mean.png" alt="Sample Means of 10,000 Trials" />
 <strong>Recall: <span class="math inline">\(E(X) = \dfrac{1}{6}[1 + 2 + 3 + 4 + 5 + 6] = 3.5\)</span></strong></p>
@@ -465,8 +478,8 @@ SD_{\overline X} = \sigma_{\overline X} &amp;= {\frac{\sigma}{\sqrt n}}
 \]</span></p>
 </div>
 </div>
-<div id="sampling-distribution-of-a-sample-proportion" class="section level3 hasAnchor" number="6.2.2">
-<h3><span class="header-section-number">6.2.2</span> Sampling Distribution of a Sample Proportion<a href="normal-probability-distributions.html#sampling-distribution-of-a-sample-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="sampling-distribution-of-a-sample-proportion" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Sampling Distribution of a Sample Proportion<a href="normal-probability-distributions.html#sampling-distribution-of-a-sample-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The sampling distribution of the sample proportion is the distribution of <strong>sample proportions</strong> (or the distribution of the variable <span class="math inline">\(\mathbf { \hat p}\)</span>) with all samples having the same size <span class="math inline">\(n\)</span> drawn from the same population (with mean proportion <span class="math inline">\(p\)</span> and variance <span class="math inline">\(p(1-p)\)</span>).</p>
 <p><span class="math display">\[
 \begin{align}
@@ -479,8 +492,8 @@ Var(\mathbf { \hat p}) &amp;= \dfrac{p(1-p)}{n}
 <p class="caption">Sample Means of 10,000 Trials</p>
 </div>
 </div>
-<div id="sampling-distribution-of-a-sample-variance" class="section level3 hasAnchor" number="6.2.3">
-<h3><span class="header-section-number">6.2.3</span> Sampling Distribution of a Sample Variance<a href="normal-probability-distributions.html#sampling-distribution-of-a-sample-variance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="sampling-distribution-of-a-sample-variance" class="section level3 hasAnchor" number="6.3.3">
+<h3><span class="header-section-number">6.3.3</span> Sampling Distribution of a Sample Variance<a href="normal-probability-distributions.html#sampling-distribution-of-a-sample-variance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The sampling distribution of the sample variance is the distribution of sample variances (i.e. the variable <span class="math inline">\(s^2\)</span>), with all samples having the same sample size <span class="math inline">\(n\)</span> taken from the same population.</p>
 <div class="figure">
 <img src="sampling_dist_variance.png" alt="" />
@@ -490,8 +503,8 @@ Var(\mathbf { \hat p}) &amp;= \dfrac{p(1-p)}{n}
 <p>Notice that the distribution of sample variances tends to be a distribution skewed to the right.</p>
 </div>
 </div>
-<div id="central-limit-theorem" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Central Limit Theorem<a href="normal-probability-distributions.html#central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="central-limit-theorem" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Central Limit Theorem<a href="normal-probability-distributions.html#central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="when-taking-a-random-sample-of-independent-observations-from-a-population-with-a-fixed-mean-and-standard-deviation-the-distribution-of-bar-x-approaches-a-normal-distribution-with-mean-mu-and-standard-deviation-sigmasqrtn-as-n-increases." class="section level5 unnumbered hasAnchor">
 <h5><strong>When taking a random sample of independent observations from a population with a fixed mean and standard deviation, the distribution of <span class="math inline">\(\bar x\)</span> approaches a normal distribution with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma/\sqrt{n}\)</span>, as <span class="math inline">\(n\)</span> increases.</strong><a href="normal-probability-distributions.html#when-taking-a-random-sample-of-independent-observations-from-a-population-with-a-fixed-mean-and-standard-deviation-the-distribution-of-bar-x-approaches-a-normal-distribution-with-mean-mu-and-standard-deviation-sigmasqrtn-as-n-increases." class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <div class="centered">
