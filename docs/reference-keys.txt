@@ -57,9 +57,9 @@ sampling-distribution-of-a-sample-proportion
 sampling-distribution-of-a-sample-variance
 central-limit-theorem
 estimating-parameters-and-determining-sample-sizes
-estimate-a-population-proportion
 confidence-intervals
 margin-of-error-me
+estimate-a-population-proportion
 finding-the-sample-size-to-estimate-a-population-proportion
 estimating-a-population-mean
 estimating-a-population-mean-when-sigma-is-known

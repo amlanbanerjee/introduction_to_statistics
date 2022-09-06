@@ -23,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-09-01" />
+<meta name="date" content="2022-09-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -173,11 +173,12 @@
 </ul></li>
 <li class="chapter" data-level="7" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html"><i class="fa fa-check"></i><b>7</b> Estimating Parameters and Determining Sample Sizes</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#estimate-a-population-proportion"><i class="fa fa-check"></i><b>7.1</b> Estimate a Population Proportion</a></li>
-<li class="chapter" data-level="7.2" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#confidence-intervals"><i class="fa fa-check"></i><b>7.2</b> Confidence Intervals</a>
+<li class="chapter" data-level="" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#point-estimate"><i class="fa fa-check"></i>Point Estimate</a></li>
+<li class="chapter" data-level="7.1" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#confidence-intervals"><i class="fa fa-check"></i><b>7.1</b> Confidence Intervals</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#margin-of-error-me"><i class="fa fa-check"></i><b>7.2.1</b> Margin of Error (ME)</a></li>
+<li class="chapter" data-level="7.1.1" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#margin-of-error-me"><i class="fa fa-check"></i><b>7.1.1</b> Margin of Error (ME)</a></li>
 </ul></li>
+<li class="chapter" data-level="7.2" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#estimate-a-population-proportion"><i class="fa fa-check"></i><b>7.2</b> Estimate a Population Proportion</a></li>
 <li class="chapter" data-level="7.3" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#finding-the-sample-size-to-estimate-a-population-proportion"><i class="fa fa-check"></i><b>7.3</b> Finding the Sample Size to Estimate a Population Proportion</a></li>
 <li class="chapter" data-level="7.4" data-path="estimating-parameters-and-determining-sample-sizes.html"><a href="estimating-parameters-and-determining-sample-sizes.html#estimating-a-population-mean"><i class="fa fa-check"></i><b>7.4</b> Estimating a Population Mean</a>
 <ul>
@@ -272,11 +273,8 @@
 <p>Perform calculations to estimate parameters using confidence intervals based on the normal distribution and t-distribution.</p>
 <hr />
 <p>In this chapter, we will use sample data to estimate values of population parameters (such as a population proportions or population mean). We will learn how to construct a confidence interval estimate of a population proportion and interpret such confidence interval estimates. Finally, we will learn how to determine the sample size necessary to estimate a population proportion.</p>
-<div id="estimate-a-population-proportion" class="section level2 hasAnchor" number="7.1">
-<h2><span class="header-section-number">7.1</span> Estimate a Population Proportion<a href="estimating-parameters-and-determining-sample-sizes.html#estimate-a-population-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This section presents methods for using a sample proportion <span class="math inline">\((\hat p)\)</span> to make an inference about the value of the corresponding population proportion <span class="math inline">\((p)\)</span>.</p>
-<div id="point-estimate" class="section level4 unnumbered hasAnchor">
-<h4>Point Estimate<a href="estimating-parameters-and-determining-sample-sizes.html#point-estimate" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="point-estimate" class="section level2 unnumbered hasAnchor">
+<h2>Point Estimate<a href="estimating-parameters-and-determining-sample-sizes.html#point-estimate" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A <strong>point estimate</strong> is a single value used to estimate a population parameter.</p>
 <p>For example, the sample proportion <span class="math inline">\(\hat p\)</span> is the best point estimate (also called <em>unbiased estimator</em>) of the population proportion <span class="math inline">\(p\)</span>.</p>
 <hr />
@@ -293,9 +291,8 @@
 <p>Source: <a href="https://en.wikipedia.org/wiki/Consistent_estimator">Wikipedia</a></p>
 <hr />
 </div>
-</div>
-<div id="confidence-intervals" class="section level2 hasAnchor" number="7.2">
-<h2><span class="header-section-number">7.2</span> Confidence Intervals<a href="estimating-parameters-and-determining-sample-sizes.html#confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="confidence-intervals" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Confidence Intervals<a href="estimating-parameters-and-determining-sample-sizes.html#confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A point estimate provides a single plausible value for a parameter. However, a point
 estimate is rarely perfect; usually there is some error in the estimate. In addition to
 supplying a point estimate of a parameter, a next logical step would be to provide a
@@ -347,12 +344,33 @@ for such a point estimate can be constructed:</p>
 \]</span></p>
 <p>where <span class="math inline">\(z^\star\)</span> , the <strong>critical value</strong>, depends on the confidence level (<span class="math inline">\(CL\)</span>) selected, and <span class="math inline">\(\alpha = 1-CL\)</span></p>
 </div>
-<div id="calculating-confidence-intervals" class="section level4 unnumbered hasAnchor">
-<h4>Calculating Confidence Intervals<a href="estimating-parameters-and-determining-sample-sizes.html#calculating-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><strong>Example:</strong> The heart patients who receive stents are <span class="math inline">\(9\%\)</span> more likely to suffer stroke from usage of the stent than those who do not have it. The estimate’s standard error <span class="math inline">\((SE)\)</span> is <span class="math inline">\(0.028\)</span>. Construct a <span class="math inline">\(95\%\)</span> confidence interval for the change in stroke rates from the usage of stent.</p>
+<div id="margin-of-error-me" class="section level3 hasAnchor" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Margin of Error (ME)<a href="estimating-parameters-and-determining-sample-sizes.html#margin-of-error-me" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <strong>margin of error (ME)</strong> is the distance between the point estimate and the lower or upper bound of a confidence interval.</p>
+<p><span class="math display">\[
+\begin{align}
+\text{confidence interval} &amp;= \text {point estimate} \pm z{^{\star}_{\alpha/2}} \times SE \\
+&amp;= \text {point estimate} \pm \text{margin of error}
+\end{align}
+\]</span></p>
+</div>
+</div>
+<div id="estimate-a-population-proportion" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Estimate a Population Proportion<a href="estimating-parameters-and-determining-sample-sizes.html#estimate-a-population-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section presents methods for using a sample proportion <span class="math inline">\((\hat p)\)</span> to make an inference about the value of the corresponding population proportion <span class="math inline">\((p)\)</span>.</p>
+<p><strong>Assumptions:</strong></p>
+<ul>
+<li>Simple random sample</li>
+<li>The population is at least <span class="math inline">\(20\)</span> times larger than the sample</li>
+<li>The population can be divided into two mutually exclusive groups and one group in the sample contains <span class="math inline">\(10\)</span> or more subjects.</li>
+</ul>
+<div id="calculating-confidence-interval-for-a-population-proportion" class="section level4 unnumbered hasAnchor">
+<h4>Calculating Confidence Interval for a Population Proportion<a href="estimating-parameters-and-determining-sample-sizes.html#calculating-confidence-interval-for-a-population-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Example 1:</strong> The heart patients who receive stents are <span class="math inline">\(9\%\)</span> more likely to suffer stroke from usage of the stent than those who do not have it. The estimate’s standard error <span class="math inline">\((SE)\)</span> is <span class="math inline">\(0.028\)</span>. Construct a <span class="math inline">\(95\%\)</span> confidence interval for the change in stroke rates from the usage of stent.</p>
 <p><span class="math display">\[
   \begin{align}
-\text {95% Confidence Interval} &amp;= \text {point estimate} \pm 1.96 \times SE \\
+\text {95% Confidence Interval} &amp;= \text {point estimate} \pm z^*_{\alpha/2} \times SE \\
+&amp;= \hat p \pm z^*_{\alpha/2} \cdot \sqrt{\dfrac{\hat p (1 - \hat p)}{n}} \\
 &amp;= 0.090 \pm 1.96 \times 0.028 \\
 &amp;=(0.035, 0.145)
 \end{align}
@@ -364,27 +382,49 @@ for such a point estimate can be constructed:</p>
 &amp;=(0.044, 0.136)
 \end{align}
 \]</span></p>
-</div>
-<div id="simulating-confidence-intervals" class="section level4 unnumbered hasAnchor">
-<h4>Simulating Confidence Intervals<a href="estimating-parameters-and-determining-sample-sizes.html#simulating-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><span class="math inline">\(50\)</span> samples of size <span class="math inline">\(n = 300\)</span> were drawn from a population with proportion parameter <span class="math inline">\(p = 0.30\)</span>. For each sample, a confidence interval was created to capture the true proportion <span class="math inline">\(p\)</span>. How many did not capture <span class="math inline">\(p = 0.30?\)</span></p>
-<p><img src="95PercentConfidenceInterval.png" width="750" /></p>
+<p><strong>Example 2:</strong> In a survey of <span class="math inline">\(800\)</span> parents, <span class="math inline">\(632\)</span> said that music education has a positive effect
+on academic performance. Construct a <span class="math inline">\(95\%\)</span> confidence interval for the
+proportion of parents who believe that music education has a positive effect.</p>
+<p><span class="math display">\[
+\begin{align}
+\hat p = \dfrac{632}{800} = 0.79\\
+\text {95% Confidence Interval} &amp;= \text {point estimate} \pm z^*_{\alpha/2} \times SE \\
+&amp;= \hat p \pm z^*_{\alpha/2} \cdot \sqrt{\dfrac{\hat p (1 - \hat p)}{n}} \\
+&amp;= 0.79 \pm 1.96 \times \sqrt{\dfrac{ .79 (1 - .79 )}{800}} \\
+&amp;=(0.762, 0.818)
+\end{align}
+\]</span></p>
+<p>We are <span class="math inline">\(95\%\)</span> confident that the proportion of parents who believe that
+music education has a positive effect is between <span class="math inline">\(0.762\)</span> and <span class="math inline">\(0.818\)</span>.</p>
 </div>
 <div id="interpretation-of-confidence-intervals" class="section level4 unnumbered hasAnchor">
 <h4>Interpretation of Confidence Intervals<a href="estimating-parameters-and-determining-sample-sizes.html#interpretation-of-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Suppose, the <span class="math inline">\(95\%\)</span> confidence interval estimate of the population proportion <span class="math inline">\(p\)</span> is <span class="math inline">\(0.405 \lt p \lt 0.455\)</span>.</p>
 <p><span class="math inline">\(\textbf {Correct }\)</span> We are <span class="math inline">\(95\%\)</span> confident that the interval from <span class="math inline">\(0.405\)</span> to <span class="math inline">\(0.455\)</span> actually does contain the true value of the population proportion <span class="math inline">\(p\)</span>.</p>
 <p><span class="math inline">\(\textbf {Wrong }\)</span> There is a <span class="math inline">\(95\%\)</span> chance that the true value of the population proportion <span class="math inline">\(p\)</span> will fall between <span class="math inline">\(0.405\)</span> to <span class="math inline">\(0.455\)</span>.</p>
+<hr />
 </div>
-<div id="margin-of-error-me" class="section level3 hasAnchor" number="7.2.1">
-<h3><span class="header-section-number">7.2.1</span> Margin of Error (ME)<a href="estimating-parameters-and-determining-sample-sizes.html#margin-of-error-me" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <strong>margin of error (ME)</strong> is the distance between the point estimate and the lower or upper bound of a confidence interval.</p>
+<div id="method-for-constructing-confidence-intervals-with-small-samples" class="section level4 unnumbered hasAnchor">
+<h4>Method for constructing confidence intervals with small samples<a href="estimating-parameters-and-determining-sample-sizes.html#method-for-constructing-confidence-intervals-with-small-samples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Adjusted sample proportion <span class="math inline">\(\tilde p\)</span></strong></p>
+<p>The method presented for constructing a confidence interval for a
+proportion requires that we have at least <span class="math inline">\(10\)</span> individuals in each
+category. When this condition is not met, we can still construct a
+confidence interval by adjusting the sample proportion a bit.</p>
+<p><span class="math inline">\(\tilde p = \dfrac{x + 2}{n + 4}\)</span></p>
 <p><span class="math display">\[
-\begin{align}
-\text{confidence interval} &amp;= \text {point estimate} \pm z{^{\star}_{\alpha/2}} \times SE \\
-&amp;= \text {point estimate} \pm \text{margin of error}
-\end{align}
+\text {Confidence Interval}
+= \tilde p \pm z^*_{\alpha/2} \cdot \sqrt{\dfrac{\tilde p (1 - \tilde p)}{n+4}} \\
 \]</span></p>
+<hr />
+<p></br></p>
+<hr />
+</div>
+<div id="simulating-confidence-intervals" class="section level4 unnumbered hasAnchor">
+<h4>Simulating Confidence Intervals<a href="estimating-parameters-and-determining-sample-sizes.html#simulating-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(50\)</span> samples of size <span class="math inline">\(n = 300\)</span> were drawn from a population with proportion parameter <span class="math inline">\(p = 0.30\)</span>. For each sample, a confidence interval was created to capture the true proportion <span class="math inline">\(p\)</span>. How many did not capture <span class="math inline">\(p = 0.30?\)</span></p>
+<p><img src="95PercentConfidenceInterval.png" width="750" /></p>
+<hr />
 </div>
 </div>
 <div id="finding-the-sample-size-to-estimate-a-population-proportion" class="section level2 hasAnchor" number="7.3">
