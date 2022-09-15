@@ -23,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-09-06" />
+<meta name="date" content="2022-09-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -571,31 +571,64 @@ n &amp;\approx 10 \\ \\
 </li>
 <li>The chi-squared distribution is different for each number of degrees of freedom. As the degrees of freedom increases, chi-squared distribution approaches a normal distribution.</li>
 </ul>
-<p><img src="chiSquareDistributionWithInceasingDF.jpg" /></p>
+<p><img src="chiSquareDistributionWithInceasingDF_2.png" /></p>
+<p><strong>Critical Chi-Squared <span class="math inline">\(\chi^2\)</span> Values</strong></p>
+<p>The critical values for a level <span class="math inline">\(100(1-\alpha)\%\)</span> confidence interval
+are the values that contain the middle <span class="math inline">\(100(1-\alpha)\%\)</span> of the
+area under the curve between them.</p>
+<p>The notation for the critical values tells how much area is to
+the right of the critical value. For a level <span class="math inline">\(1-\alpha\)</span> confidence
+interval, the critical values are denoted <span class="math inline">\(\chi^2_{1-\alpha/2}\)</span> and <span class="math inline">\(\chi^2_{\alpha/2}\)</span></p>
+<p><img src="chiSquareCriticalvalue.png" /></p>
 </div>
 <div id="confidence-interval-for-estimating-a-population-standard-deviation-or-variance" class="section level3 hasAnchor" number="7.5.1">
 <h3><span class="header-section-number">7.5.1</span> Confidence Interval for Estimating a Population Standard Deviation or Variance<a href="estimating-parameters-and-determining-sample-sizes.html#confidence-interval-for-estimating-a-population-standard-deviation-or-variance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let <span class="math inline">\(s^2\)</span> be the sample variance from a simple random sample of size <span class="math inline">\(n\)</span> from a normal population.
+A level <span class="math inline">\(100(1-\alpha)\%\)</span> confidence interval for the population variance <span class="math inline">\(\sigma^2\)</span> is</p>
 <p><strong>Confidence Interval for the Population Variance <span class="math inline">\(\sigma^2\)</span></strong></p>
 <p><span class="math display">\[
-  \frac{(n-1)s^2}{\chi^2_R} &lt; \sigma^2 &lt; \frac{(n-1)s^2}{\chi^2_L}
+  \frac{(n-1)s^2}{\chi^2_{\alpha/2}} &lt; \sigma^2 &lt; \frac{(n-1)s^2}{1- \alpha/2}
 \]</span></p>
 <p><strong>Confidence Interval for the Population Variance <span class="math inline">\(\sigma\)</span></strong></p>
 <p><span class="math display">\[
-  \sqrt{\frac{(n-1)s^2}{\chi^2_R}} &lt; \sigma &lt; \sqrt{\frac{(n-1)s^2}{\chi^2_L}}
+  \sqrt{\frac{(n-1)s^2}{\chi^2_{\alpha/2}}} &lt; \sigma &lt; \sqrt{\frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}}
 \]</span></p>
+<p>The critical values are taken from a chi-square distribution
+with <span class="math inline">\(n ??? 1\)</span> degrees of freedom.</p>
 <p><img src="chi-squared_table.png" /></p>
-<p><strong>Example:</strong> Confidence Interval for Estimating a Population Standard Deviation or Variance</p>
+<p><strong>Example 1:</strong> Confidence Interval for Estimating a Population Standard Deviation or Variance</p>
 <p><span class="math display">\[
 \begin{align}
 &amp;s = 14.29263 \\
 &amp;n = 22 \\
 &amp;CL = 95\%  \\ \\
-&amp;\frac{(n-1)s^2}{\chi^2_R} &lt; \sigma^2 &lt; \frac{(n-1)s^2}{\chi^2_L} \\ \\
+&amp;\frac{(n-1)s^2}{\chi^2_{\alpha/2}} &lt; \sigma^2 &lt; \frac{(n-1)s^2}{\chi^2_{1-\alpha/2}} \\ \\
 or, \ &amp;\frac{21.(14.29263)^2}{35.479} &lt; \sigma^2 &lt; \frac{21.(14.29263)^2}{10.283} \\ \\
 or, \ &amp;120.9 &lt; \sigma^2 &lt; 417.2 \\
 or, \ &amp;11.0 &lt; \sigma &lt; 20.4
 \end{align}
 \]</span></p>
+<p><strong>Example 2:</strong> The compressive strengths of seven concrete blocks, in pounds per square
+inch, are measured, with the following results.</p>
+<p><span class="math inline">\(1989.9 \ 1993.8 \ 2074.5 \ 2070.5 \ 2070.9 \ 2033.6 \ 1939.6\)</span></p>
+<p>Assume these values are a simple random sample from a normal population.
+Construct a <span class="math inline">\(95\%\)</span> confidence interval for the population standard deviation.</p>
+<p>Solution:</p>
+<p><span class="math display">\[
+s^2 = \dfrac{\sum(x - \bar x)^2}{7-1} = 2699.8648
+\]</span>
+Next, find <span class="math inline">\(\chi^2_{0.975}\)</span> and <span class="math inline">\(\chi^2_{0.0025}\)</span> for <span class="math inline">\(\text {df} = 6\)</span>.</p>
+<p>From the table, <span class="math inline">\(\chi^2_{0.975} = 1.237\)</span> and <span class="math inline">\(\chi^2_{0.0025} = 14.449\)</span>.</p>
+<p><span class="math display">\[
+\begin{align}
+\frac{(n-1)s^2}{\chi^2_{\alpha/2}} &amp; &lt;  \sigma^2 &lt; \frac{(n-1)s^2}{\chi^2_{1-\alpha/2}} \\ \\
+\frac{(7-1)(2699.8648)^2}{14.449} &amp; &lt;  \sigma^2 &lt; \frac{(7-1)(2699.8648)^2}{1.237} \\ \\
+or, \  1121.129 &amp; &lt; \sigma^2 &lt; 13095.545 \\
+or, \ 33.48 &amp; &lt; \sigma &lt; 114.44
+\end{align}
+\]</span></p>
+<p>We are <span class="math inline">\(95\%\)</span> confident that the population standard deviation of the
+strengths of the concrete blocks is between <span class="math inline">\(33.48\)</span> and <span class="math inline">\(114.44\)</span>.</p>
 
 </div>
 </div>
