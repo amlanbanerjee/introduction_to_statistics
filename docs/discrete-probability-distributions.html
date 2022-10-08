@@ -23,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-09-15" />
+<meta name="date" content="2022-10-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -903,9 +903,22 @@ P(x) &amp; p &amp; 1-p
 <p><span class="math display">\[
 \begin{align}
 \text{Average successes per trial:  } E(X) &amp;= 1 \times p + 0 \times (1-p) = p \\
-\text{Expected total successes from } n \text { trials:  } E(X) &amp;= n \times [1 \times p + 0 \times (1-p)] = np
+\text{Expected total successes from } n \text { trials:  } E(X) &amp;= \sum_{i=0}^n x_i \cdot p(x_i) \\
+                                                                &amp;= np
 \end{align}
 \]</span></p>
+<hr />
+<p><strong>Example:</strong> From the probability distribution of the number of observing <span class="math inline">\(1\)</span> in <span class="math inline">\(3\)</span> independent Rolls of a dice:</p>
+<p><span class="math display">\[
+\begin{align}
+&amp;E(X) \\
+&amp;= (0) \times (0.5787) + (1) \times (0.3472) + (2) \times (0.0694) + (3) \times (0.0046)      \\
+\text{alternatively,}   \\
+&amp;= 3 \times  \dfrac{1}{6} \\
+&amp;= 0.5
+\end{align}
+\]</span></p>
+<hr />
 </div>
 <div id="standard-deviation-of-the-binomial-distribution" class="section level3 hasAnchor" number="5.6.2">
 <h3><span class="header-section-number">5.6.2</span> Standard Deviation of the Binomial Distribution<a href="discrete-probability-distributions.html#standard-deviation-of-the-binomial-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -921,14 +934,33 @@ P(x) &amp; p &amp; 1-p
 <p><span class="math display">\[
 \begin{align}
 \text {for one trial} \\
-SD(X) &amp;= \sqrt{(1-p)^2 \times p + (0-p)^2 \times (1-p)} \\
-      &amp;= \sqrt{(1-p)^2 \times p + p^2 \times (1-p)} \\
-      &amp;= \sqrt{p(1-p)(1-p+p)} \\
-      &amp;= \sqrt{p(1-p)} \\
+VAR(X) &amp;= (1-p)^2 \times p + (0-p)^2 \times (1-p) \\
+      &amp;= (1-p)^2 \times p + p^2 \times (1-p) \\
+      &amp;= p(1-p)(1-p+p) \\
+      \\
+SD(X)      &amp;= \sqrt{p(1-p)} \\
+\\
 \text {for } n \text{  trials} \\
+VAR(X) &amp;= \sum_{i=0}^n (x_i - E(X))^2 \cdot p(x_i) \\
+       &amp;= np(1-p)  \\
+       \\
 SD(X) &amp;= \sqrt{np(1-p)}
 \end{align}
 \]</span></p>
+<hr />
+<p><strong>Example:</strong> From the probability distribution of the number of observing <span class="math inline">\(1\)</span> in <span class="math inline">\(3\)</span> independent Rolls of a dice:</p>
+<p><span class="math display">\[
+\begin{align}
+&amp;VAR(X) \\
+&amp;= (0 - 0.5)^2 \times (0.5787) + (1-0.5)^2 \times (0.3472) + (2-0.5)^2 \times (0.0694) + (3-0.5)^2 \times (0.0046)  \\
+\text{alternatively,}   \\
+&amp;= 3 \times  \dfrac{1}{6}  \times \dfrac{5}{6}  \\
+&amp;= 0.4167 \\
+\\
+SD(X) &amp;= \sqrt{0.4167} = 0.6455
+\end{align}
+\]</span></p>
+<hr />
 <p><strong>Example: Calculate expected total number of heads from <span class="math inline">\(100\)</span> tosses</strong></p>
 <p><span class="math inline">\(X\)</span> is a binomial distributed random variable with parameters <span class="math inline">\(n=100\)</span> and <span class="math inline">\(p=0.5\)</span></p>
 <p><span class="math display">\[
