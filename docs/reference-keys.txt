@@ -70,8 +70,9 @@ estimating-a-population-standard-deviation-or-variance
 confidence-interval-for-estimating-a-population-standard-deviation-or-variance
 hypothesis-testing
 hypothesis-testing-1
-type-i-and-type-ii-errors
+power-of-a-hypothesis-test-optional
 inference-for-a-single-proportion
+z-text--test-testing-hypothesis-about-mu-with-sigma-known
 t-text--test-testing-hypothesis-about-mu-with-sigma-not-known
 chi2-text-test-testing-hypothesis-about-a-variance
 inferences-from-two-samples

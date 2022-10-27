@@ -23,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-10-11" />
+<meta name="date" content="2022-10-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -196,11 +196,20 @@
 <ul>
 <li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>8.1</b> Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>8.1.1</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#null-and-alternative-hypotheses"><i class="fa fa-check"></i>Null and Alternative Hypotheses</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#interpretation-of-textp-value"><i class="fa fa-check"></i>Interpretation of <span class="math inline">\(\text{p-value}\)</span></a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i>Type I and Type II Errors</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#significance-level"><i class="fa fa-check"></i>Significance Level</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#critical-value-method"><i class="fa fa-check"></i>Critical Value Method</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#stating-the-conclusion-in-a-hypothesis-test"><i class="fa fa-check"></i>Stating the Conclusion in a Hypothesis Test</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#one-sided-and-two-sided-tests"><i class="fa fa-check"></i>One-sided and two-sided tests</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#steps-of-a-formal-test-of-hypothesis"><i class="fa fa-check"></i>Steps of a Formal Test of Hypothesis</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#inference-for-a-single-proportion"><i class="fa fa-check"></i><b>8.2</b> Inference for a Single Proportion</a></li>
-<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#t-text--test-testing-hypothesis-about-mu-with-sigma-not-known"><i class="fa fa-check"></i><b>8.3</b> <span class="math inline">\(t \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Not Known</a></li>
-<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#chi2-text-test-testing-hypothesis-about-a-variance"><i class="fa fa-check"></i><b>8.4</b> <span class="math inline">\(\chi^2 \text{-test}\)</span> | Testing Hypothesis About a Variance</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#power-of-a-hypothesis-test-optional"><i class="fa fa-check"></i><b>8.2</b> Power of a Hypothesis Test (Optional)</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#inference-for-a-single-proportion"><i class="fa fa-check"></i><b>8.3</b> Inference for a Single Proportion</a></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#z-text--test-testing-hypothesis-about-mu-with-sigma-known"><i class="fa fa-check"></i><b>8.4</b> <span class="math inline">\(z \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Known</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#t-text--test-testing-hypothesis-about-mu-with-sigma-not-known"><i class="fa fa-check"></i><b>8.5</b> <span class="math inline">\(t \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Not Known</a></li>
+<li class="chapter" data-level="8.6" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#chi2-text-test-testing-hypothesis-about-a-variance"><i class="fa fa-check"></i><b>8.6</b> <span class="math inline">\(\chi^2 \text{-test}\)</span> | Testing Hypothesis About a Variance</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html"><i class="fa fa-check"></i><b>9</b> Inferences from Two Samples</a>
 <ul>
@@ -279,33 +288,64 @@
 <p>A <strong>hypothesis test (or test of significance)</strong> is a procedure for testing a claim about a property of a population.</p>
 <p>The <strong>null hypothesis (<span class="math inline">\(H_0\)</span>)</strong> is a statement that the value of a population parameter (such as proportion, mean, or standard deviation) is equal to some claimed value.</p>
 <p>The <strong>alternative hypothesis (<span class="math inline">\(H_A\)</span>)</strong> is a statement that the parameter has a value that somehow differs from the null hypothesis.</p>
+<div id="purpose-of-a-hypothesis-test" class="section level4 unnumbered hasAnchor">
+<h4>Purpose of a Hypothesis Test<a href="hypothesis-testing.html#purpose-of-a-hypothesis-test" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The purpose of a hypothesis test is to determine how
+plausible the null hypothesis is. At the start of a hypothesis test, we assume that the null hypothesis is true. Then we look at the evidence, which comes from data that have been collected. If the data strongly indicate
+that the null hypothesis is false, we abandon our assumption
+that it is true and believe the alternate hypothesis instead. This
+is referred to as rejecting the null hypothesis.</p>
+<p>The evidence comes in the form of a
+test statistic. When the difference between the test
+statistic (such as, <span class="math inline">\(z\)</span> or <span class="math inline">\(t\)</span> scores) and the value in the null hypothesis is sufficiently
+large, we reject the null hypothesis.</p>
+<p><span class="math display">\[
+\fbox{Assume the null hypothesis is true} \xrightarrow{} \fbox{consider the evidence}
+\xrightarrow{} \fbox{decide whether to accept or reject the null hypothesis}
+\]</span></p>
 <p><strong>Example:</strong></p>
 <p>Probability of getting head from a single toss of coin, <span class="math inline">\(p = 0.5\)</span>.</p>
 <p>Therefore, expected value of the number of heads from <span class="math inline">\(20\)</span> tosses = <span class="math inline">\(10\)</span>.</p>
-<p>Suppose, you have tossed a coin <span class="math inline">\(20\)</span> times and seen <span class="math inline">\(15\)</span> heads, <span class="math inline">\(\hat p = 0.75\)</span>.</p>
+<p>Suppose, on your first trial, you have tossed a coin <span class="math inline">\(20\)</span> times and seen <span class="math inline">\(15\)</span> heads, <span class="math inline">\(\hat p = 0.75\)</span>.<br />
+On your second trial, you have tossed a coin <span class="math inline">\(20\)</span> times again and seen <span class="math inline">\(12\)</span> heads, <span class="math inline">\(\hat p = 0.60\)</span>.</p>
 <p><strong>Is the coin fair, or is it biased towards heads?</strong></p>
-<div id="null-and-alternative-hypotheses" class="section level4 unnumbered hasAnchor">
-<h4>Null and Alternative Hypotheses<a href="hypothesis-testing.html#null-and-alternative-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="null-and-alternative-hypotheses" class="section level3 unnumbered hasAnchor">
+<h3>Null and Alternative Hypotheses<a href="hypothesis-testing.html#null-and-alternative-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Null hypothesis <span class="math inline">\((H_0)\)</span>: states that any deviation from what was expected is due to chance error (i.e. the coin is fair).</p>
 <p>Alternative hypothesis <span class="math inline">\((H_A)\)</span>: asserts that the observed deviation is too large to be explained by chance alone (i.e. the coin is biased towards heads).</p>
 <p><span class="math display">\[
 H_0: p = 0.5 \\
 H_A: p &gt; 0.5
 \]</span></p>
-<p>Now, what is the probability of <span class="math inline">\(p \ge 0.75?\)</span></p>
+<p>Now, what is the probability of <span class="math inline">\(p \ge 0.75?\)</span>
+What is the probability of <span class="math inline">\(p \ge 0.60?\)</span></p>
 <p>From normal approximation of the sampling distribution of <span class="math inline">\(\hat p\)</span>,</p>
 <p><span class="math display">\[
 \begin{align}
 p &amp;= 0.5 \\
 se &amp;= \sqrt{(0.5)(0.5)/20} = 0.112 \\
-z &amp;= (0.75 - 0.50)/0.112 = 2.236  \\ \\
-P(z\ge2.236) &amp;= 0.0127 \Leftarrow \text {this probability is also called p-value}
+z_1 &amp;= (0.75 - 0.50)/0.112 = 2.236  \\ \\
+z_2 &amp;= (0.60 - 0.50)/0.112 = 0.893  \\ \\
+\text {p-value} &amp;=
+\begin{cases}
+P(z\ge 2.236) &amp;= 0.0127  \\
+P(z\ge 0.893) &amp;= 0.1860
+\end{cases}
 \end{align}
-\]</span>
-Hence, there is only <span class="math inline">\(1.27\%\)</span> probability that observing <span class="math inline">\(15\)</span> heads from <span class="math inline">\(20\)</span> tosses is merely a chance. Then the question is, if the coin is indeed fair, is the p-value too small?</p>
+\]</span></p>
+<p>We see that the farther the test statistic is from the
+values specified by <span class="math inline">\(H_0\)</span>, the less likely the difference is due to
+chance - and the less plausible becomes. The question
+then is: <strong>How big should the difference be before we reject <span class="math inline">\(H_0\)</span>?</strong></p>
+<p>To answer this question, we need methods that enable
+us to calculate just how plausible <span class="math inline">\(H_0\)</span> is. Hypothesis tests
+provide these methods taking into account things such
+as the size of the sample and the amount of spread in
+the distribution.</p>
 </div>
-<div id="interpretation-of-textp-value" class="section level4 unnumbered hasAnchor">
-<h4>Interpretation of <span class="math inline">\(\text{p-value}\)</span><a href="hypothesis-testing.html#interpretation-of-textp-value" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="interpretation-of-textp-value" class="section level3 unnumbered hasAnchor">
+<h3>Interpretation of <span class="math inline">\(\text{p-value}\)</span><a href="hypothesis-testing.html#interpretation-of-textp-value" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p>A <span class="math inline">\(\text{p-value}\)</span> is the probability of obtaining the observed effect (or larger) under a “null hypothesis”. Thus, a <span class="math inline">\(\text{p-value}\)</span> that is very small indicates that the observed effect is very unlikely to have arisen purely by chance, and therefore provides evidence against the null hypothesis.</p></li>
 <li><p>It has been common practice to interpret a <span class="math inline">\(\text{p-value}\)</span> by examining whether it is smaller than particular threshold values or <strong>“significance level”.</strong> In particular, <span class="math inline">\(\text{p-values}\)</span> less than <span class="math inline">\(5\%\)</span> are often reported as “statistically significant”, and interpreted as being small enough to justify rejection of the null hypothesis.
@@ -324,23 +364,8 @@ By definition, the significance level <span class="math inline">\(\alpha\)</span
 <p>Conclusion: The coin is biased towards heads.</p>
 </blockquote>
 </div>
-<div id="critical-value-method" class="section level4 unnumbered hasAnchor">
-<h4>Critical Value Method<a href="hypothesis-testing.html#critical-value-method" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>In a hypothesis test, the <strong>critical value(s)</strong> separates the critical region (where we reject the null hypothesis) from the values of the test statistic that do not lead to rejection of the null hypothesis.</p>
-<p>With the critical value method of testing hypothesis, we make a decision by comparing the test statistic to the critical value(s).</p>
-<p><img src="critical_z_value.png" /></p>
-</div>
-<div id="one-sided-and-two-sided-tests" class="section level4 unnumbered hasAnchor">
-<h4>One-sided and two-sided tests<a href="hypothesis-testing.html#one-sided-and-two-sided-tests" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>If the researchers are only interested in showing an increase or a decrease, but not
-both, use a <strong>one-sided test</strong>. If the researchers would be interested in any difference
-from the null value - an increase or decrease - then the test should be <strong>two-sided</strong>.</p>
-<p>After observing data, it is tempting to turn a two-sided test into a one-sided test.
-Hypotheses must be set up before observing the data. If they are not, the test must be two-sided.</p>
-<p><img src="sidedness_example_figures.png" width="800px" /></p>
-</div>
-<div id="type-i-and-type-ii-errors" class="section level3 hasAnchor" number="8.1.1">
-<h3><span class="header-section-number">8.1.1</span> Type I and Type II Errors<a href="hypothesis-testing.html#type-i-and-type-ii-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="type-i-and-type-ii-errors" class="section level3 unnumbered hasAnchor">
+<h3>Type I and Type II Errors<a href="hypothesis-testing.html#type-i-and-type-ii-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When testing a null hypothesis, sometimes the test comes to a wrong conclusion by rejecting it or failing to reject it. There are two kinds of errors: <strong>type I</strong> and <strong>type II</strong> errors.</p>
 <ul>
 <li><span class="math inline">\(\textbf {Type I error} :\)</span> The error of rejecting the null hypothesis when it is actually true.</li>
@@ -356,8 +381,76 @@ Hypotheses must be set up before observing the data. If they are not, the test m
 <blockquote>
 <p>The probability of <span class="math inline">\(\text {Type II}\)</span> can be minimized by choosing a larger sample size <span class="math inline">\(n\)</span>.</p>
 </blockquote>
-<div id="power-of-a-hypothesis-test" class="section level5 unnumbered hasAnchor">
-<h5>Power of a Hypothesis Test<a href="hypothesis-testing.html#power-of-a-hypothesis-test" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>In general, a <span class="math inline">\(\text{Type I}\)</span> error is more serious than a <span class="math inline">\(\text{Type II}\)</span> error.
+This is because a <span class="math inline">\(\text{Type I}\)</span> error results in a false conclusion,
+while a <span class="math inline">\(\text{Type II}\)</span> error results only in no conclusion.
+Ideally, we would like to minimize the probability of both
+errors. Unfortunately, with a fixed sample size, decreasing
+the probability of one type increases the probability of the
+other.</p>
+<p>Hypothesis tests are often designed so that the probability
+of a <span class="math inline">\(\text{Type I}\)</span> error will be acceptably small, often <span class="math inline">\(0.05\)</span> or <span class="math inline">\(0.01\)</span>.
+This value is called the <strong>significance level</strong> of the test.</p>
+</div>
+<div id="significance-level" class="section level3 unnumbered hasAnchor">
+<h3>Significance Level<a href="hypothesis-testing.html#significance-level" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Notice that if <span class="math inline">\(H_0\)</span> is actually true, but <span class="math inline">\(\hat p\)</span> falls in the critical region, then a
+<span class="math inline">\(\text{Type I}\)</span> Error occurs. We begin a hypothesis test by setting the probability
+of a <span class="math inline">\(\text{Type I}\)</span> Error. This value is called the <strong>significance level</strong> and is denoted
+by <span class="math inline">\(\alpha\)</span>. The area of critical region is equal to <span class="math inline">\(\alpha\)</span>. The choice of <span class="math inline">\(\alpha\)</span> is
+determined by how strong we require the evidence against <span class="math inline">\(H_0\)</span> to be in order to reject it.
+The smaller the value of <span class="math inline">\(\alpha\)</span>, the stronger we require the evidence to be.</p>
+</div>
+<div id="critical-value-method" class="section level3 unnumbered hasAnchor">
+<h3>Critical Value Method<a href="hypothesis-testing.html#critical-value-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In a hypothesis test, the <strong>critical value(s)</strong> separates the critical region (where we reject the null hypothesis) from the values of the test statistic that do not lead to rejection of the null hypothesis.</p>
+<p>With the critical value method of testing hypothesis, we make a decision by comparing the test statistic to the critical value(s).</p>
+<p><img src="critical_z_value.png" /></p>
+</div>
+<div id="stating-the-conclusion-in-a-hypothesis-test" class="section level3 unnumbered hasAnchor">
+<h3>Stating the Conclusion in a Hypothesis Test<a href="hypothesis-testing.html#stating-the-conclusion-in-a-hypothesis-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If the null hypothesis is rejected, the conclusion of the hypothesis test is
+straightforward: We conclude that the alternate
+hypothesis, <span class="math inline">\(H_0\)</span>, is true.</p>
+<p>If the null hypothesis is not rejected, we say that there is not
+enough evidence to conclude that the alternate hypothesis, <span class="math inline">\(H_a\)</span>, is true.
+This is not saying the null hypothesis is true. What we are saying is that
+the null hypothesis might be true.</p>
+<p><img src="hypothesis_conclusion.png" /></p>
+</div>
+<div id="one-sided-and-two-sided-tests" class="section level3 unnumbered hasAnchor">
+<h3>One-sided and two-sided tests<a href="hypothesis-testing.html#one-sided-and-two-sided-tests" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If the researchers are only interested in showing an increase or a decrease, but not
+both, use a <strong>one-sided test</strong>. If the researchers would be interested in any difference
+from the null value - an increase or decrease - then the test should be <strong>two-sided</strong>.</p>
+<p>After observing data, it is tempting to turn a two-sided test into a one-sided test.
+Hypotheses must be set up before observing the data. If they are not, the test must be two-sided.</p>
+<p><img src="sidedness_example_figures.png" width="800px" /></p>
+</div>
+<div id="steps-of-a-formal-test-of-hypothesis" class="section level3 unnumbered hasAnchor">
+<h3>Steps of a Formal Test of Hypothesis<a href="hypothesis-testing.html#steps-of-a-formal-test-of-hypothesis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Follow these seven steps when carrying out a hypothesis test.</p>
+<ol style="list-style-type: decimal">
+<li>State the name of the test being used.<br />
+</li>
+<li>Verify conditions to ensure the standard error estimate is reasonable and the
+point estimate follows the appropriate distribution and is unbiased.<br />
+</li>
+<li>Write the hypotheses and set them up in mathematical notation.<br />
+</li>
+<li>Identify the significance level <span class="math inline">\(\alpha\)</span>.<br />
+</li>
+<li>Calculate the test statistics (e.g. <span class="math inline">\(z\)</span>), using an appropriate point estimate of the paramater of interest and its standard error.
+<span class="math display">\[\text{test statistics} = \frac{\text{point estimate - null value}}{\text{SE of estimate}}\]</span><br />
+</li>
+<li>Find the <span class="math inline">\(\text{p-value}\)</span>, compare it to <span class="math inline">\(\alpha\)</span>, and state whether to reject or not reject the null hypothesis.<br />
+</li>
+<li>Write your conclusion in context.</li>
+</ol>
+</div>
+</div>
+<div id="power-of-a-hypothesis-test-optional" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Power of a Hypothesis Test (Optional)<a href="hypothesis-testing.html#power-of-a-hypothesis-test-optional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <strong>power</strong> of a hypothesis test is the probability <span class="math inline">\(1-\beta\)</span> of rejecting a false null hypothesis. The value of the power is computed by using a particular significance level <span class="math inline">\(\alpha\)</span> and a particular value of the population parameter that is an alternative to the value of assumed true in the null hypothesis.</p>
 <p>In practice, statistical studies are commonly designed with a statistical power of at least <span class="math inline">\(80%\)</span>.</p>
 <div class="figure">
@@ -446,30 +539,8 @@ where,</p>
 <p><strong>Statistical power and design of experiment:</strong> When designing an experiment, it is essential to determine the minimize sample size that would be needed to detect an acceptable difference between the true value of the population parameter and what is observed from the data. A <span class="math inline">\(5\%\)</span> significance level <span class="math inline">\((\alpha)\)</span> and a statistical power of at least <span class="math inline">\(80\%\)</span> are common requirements for determining that a hypothesis test is effective.</p>
 <hr />
 </div>
-<div id="formal-test-of-hypothesis" class="section level4 unnumbered hasAnchor">
-<h4>Formal Test of Hypothesis<a href="hypothesis-testing.html#formal-test-of-hypothesis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Follow these seven steps when carrying out a hypothesis test.</p>
-<ol style="list-style-type: decimal">
-<li><p>State the name of the test being used.<br />
-</p></li>
-<li><p>Verify conditions to ensure the standard error estimate is reasonable and the
-point estimate follows the appropriate distribution and is unbiased.<br />
-</p></li>
-<li><p>Write the hypotheses and set them up in mathematical notation.<br />
-</p></li>
-<li><p>Identify the significance level <span class="math inline">\(\alpha\)</span>.<br />
-</p></li>
-<li><p>Calculate the test statistics (e.g. <span class="math inline">\(z\)</span>), using an appropriate point estimate of the paramater of interest and its standard error.
-<span class="math display">\[\text{test statistics} = \frac{\text{point estimate - null value}}{\text{SE of estimate}}\]</span></p></li>
-<li><p>Find the <span class="math inline">\(\text{p-value}\)</span>, compare it to <span class="math inline">\(\alpha\)</span>, and state whether to reject or not reject the null hypothesis.<br />
-</p></li>
-<li><p>Write your conclusion in context.</p></li>
-</ol>
-</div>
-</div>
-</div>
-<div id="inference-for-a-single-proportion" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> Inference for a Single Proportion<a href="hypothesis-testing.html#inference-for-a-single-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="inference-for-a-single-proportion" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Inference for a Single Proportion<a href="hypothesis-testing.html#inference-for-a-single-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Conduct a formal hypothesis test of a claim about a population proportion <span class="math inline">\(p\)</span>.</p>
 <p><strong>Requirements:</strong></p>
 <ol style="list-style-type: decimal">
@@ -545,8 +616,52 @@ p\text{-value} &amp;= 2 \times P(z &gt; 2.44) = 2 \times 0.0073 = 0.0146 &lt; 0.
 \]</span></p>
 <p>Hence, we reject <span class="math inline">\(H_0\)</span>. Male birth rate is significantly higher at the hospital than the natural birth rate.</p>
 </div>
-<div id="t-text--test-testing-hypothesis-about-mu-with-sigma-not-known" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> <span class="math inline">\(t \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Not Known<a href="hypothesis-testing.html#t-text--test-testing-hypothesis-about-mu-with-sigma-not-known" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="z-text--test-testing-hypothesis-about-mu-with-sigma-known" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> <span class="math inline">\(z \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Known<a href="hypothesis-testing.html#z-text--test-testing-hypothesis-about-mu-with-sigma-known" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The null hypothesis claims about a population mean <span class="math inline">\(\mu\)</span>.</p>
+<p><strong>Notation:</strong></p>
+<p><span class="math display">\[
+\begin{cases}
+\mu_{\bar x} = \text {population mean }  \\
+\sigma = \text {population standard deviation }  \\
+n = \text {size of the sample drawn from the population }  \\
+\bar x = \text{sample mean}  \\
+\end{cases}
+\]</span></p>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>The sample is simple random sample.<br />
+</li>
+<li>The population is normally distributed or <span class="math inline">\(n &gt; 30\)</span>.</li>
+</ul>
+<p><strong>Test Statistic for Testing a Claim About a Mean</strong></p>
+<p><span class="math display">\[
+z = \dfrac{\bar x - \mu_{\bar x}}{\dfrac{\sigma}{\sqrt n}}
+\]</span></p>
+<p><strong>Example :</strong></p>
+<p>The American Automobile Association reported that the mean price of a
+gallon of regular gasoline in the city of Los Angeles in July 2019 was
+<span class="math inline">\(\$4.07\)</span>. A recently taken simple random sample of <span class="math inline">\(50\)</span> gas stations had an
+average price of <span class="math inline">\(\$4.02\)</span>. Assume that the standard deviation of prices is
+<span class="math inline">\(\$0.15\)</span>. An economist is interested in determining whether the mean price is
+less than <span class="math inline">\(\$4.07\)</span>. Perform a hypothesis test at the <span class="math inline">\(\alpha = 0.05\)</span> level of
+significance.</p>
+<p><span class="math display">\[
+\begin{align}
+H_0&amp;: \mu = 4.07   \\
+H_A&amp;: \mu &lt; 4.07   \\ \\
+\bar x &amp;= 4.02 \\
+\sigma &amp;= 0.15 \\
+SE(\bar x) &amp;= 0.15/\sqrt {50} = 0.0212 \\ \\
+z &amp;= (4.02 - 4.07)/0.0212 = -2.36 \\
+p-value &amp;= 0.09\% &lt; 5\%
+\end{align}
+\]</span></p>
+<p>Therefore, we reject <span class="math inline">\(H_0\)</span> at the <span class="math inline">\(\alpha = 0.05\)</span> level. We conclude that the mean
+price of a gallon of regular gasoline in Los Angeles is less than <span class="math inline">\(\$4.07\)</span>.</p>
+</div>
+<div id="t-text--test-testing-hypothesis-about-mu-with-sigma-not-known" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> <span class="math inline">\(t \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Not Known<a href="hypothesis-testing.html#t-text--test-testing-hypothesis-about-mu-with-sigma-not-known" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The null hypothesis claims about a population mean <span class="math inline">\(\mu\)</span>.</p>
 <p><strong>Notation:</strong></p>
 <p><span class="math display">\[
@@ -598,8 +713,12 @@ p-value &amp;= P(t_{149}&gt;2.795)= 0.29\% &lt; 5\%
 \]</span></p>
 <p>Conclusion: Reject <span class="math inline">\(H_0\)</span>. The sample mean mirex level significantly higher that the EPA screening level.</p>
 </div>
-<div id="chi2-text-test-testing-hypothesis-about-a-variance" class="section level2 hasAnchor" number="8.4">
-<h2><span class="header-section-number">8.4</span> <span class="math inline">\(\chi^2 \text{-test}\)</span> | Testing Hypothesis About a Variance<a href="hypothesis-testing.html#chi2-text-test-testing-hypothesis-about-a-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="chi2-text-test-testing-hypothesis-about-a-variance" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> <span class="math inline">\(\chi^2 \text{-test}\)</span> | Testing Hypothesis About a Variance<a href="hypothesis-testing.html#chi2-text-test-testing-hypothesis-about-a-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+<p><strong>Caution:</strong> The method of this section applies only for samples drawn from a normal distribution.
+If the distribution differs even slightly from normal, this method should not be used.</p>
+<hr />
 <p>Listed below are the heights (cm) for the simple random sample of female supermodels. Use a <span class="math inline">\(0.01\)</span> significance level to test the claim that supermodels have heights with a standard deviation that is less than <span class="math inline">\(\sigma=7.5 \text { cm}\)</span> for the population of women. Does it appear that heights of supermodels vary less than heights of women from the population?</p>
 <p><span class="math display">\[
 \text{178, 177, 176, 174, 175, 178, 175, 178} \\

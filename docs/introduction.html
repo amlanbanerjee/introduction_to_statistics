@@ -23,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2022-10-11" />
+<meta name="date" content="2022-10-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -196,11 +196,20 @@
 <ul>
 <li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>8.1</b> Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>8.1.1</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#null-and-alternative-hypotheses"><i class="fa fa-check"></i>Null and Alternative Hypotheses</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#interpretation-of-textp-value"><i class="fa fa-check"></i>Interpretation of <span class="math inline">\(\text{p-value}\)</span></a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i>Type I and Type II Errors</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#significance-level"><i class="fa fa-check"></i>Significance Level</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#critical-value-method"><i class="fa fa-check"></i>Critical Value Method</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#stating-the-conclusion-in-a-hypothesis-test"><i class="fa fa-check"></i>Stating the Conclusion in a Hypothesis Test</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#one-sided-and-two-sided-tests"><i class="fa fa-check"></i>One-sided and two-sided tests</a></li>
+<li class="chapter" data-level="" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#steps-of-a-formal-test-of-hypothesis"><i class="fa fa-check"></i>Steps of a Formal Test of Hypothesis</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#inference-for-a-single-proportion"><i class="fa fa-check"></i><b>8.2</b> Inference for a Single Proportion</a></li>
-<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#t-text--test-testing-hypothesis-about-mu-with-sigma-not-known"><i class="fa fa-check"></i><b>8.3</b> <span class="math inline">\(t \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Not Known</a></li>
-<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#chi2-text-test-testing-hypothesis-about-a-variance"><i class="fa fa-check"></i><b>8.4</b> <span class="math inline">\(\chi^2 \text{-test}\)</span> | Testing Hypothesis About a Variance</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#power-of-a-hypothesis-test-optional"><i class="fa fa-check"></i><b>8.2</b> Power of a Hypothesis Test (Optional)</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#inference-for-a-single-proportion"><i class="fa fa-check"></i><b>8.3</b> Inference for a Single Proportion</a></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#z-text--test-testing-hypothesis-about-mu-with-sigma-known"><i class="fa fa-check"></i><b>8.4</b> <span class="math inline">\(z \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Known</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#t-text--test-testing-hypothesis-about-mu-with-sigma-not-known"><i class="fa fa-check"></i><b>8.5</b> <span class="math inline">\(t \text {-test}\)</span> | Testing Hypothesis About <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span> Not Known</a></li>
+<li class="chapter" data-level="8.6" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#chi2-text-test-testing-hypothesis-about-a-variance"><i class="fa fa-check"></i><b>8.6</b> <span class="math inline">\(\chi^2 \text{-test}\)</span> | Testing Hypothesis About a Variance</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="inferences-from-two-samples.html"><a href="inferences-from-two-samples.html"><i class="fa fa-check"></i><b>9</b> Inferences from Two Samples</a>
 <ul>
@@ -637,7 +646,7 @@ The <span class="math inline">\(y\)</span> variable is called the <strong><em>re
 <li>It is possible to correctly infer causation in nonexperimental designs, but the hurdles are much greater. As an example, think about the causal link cigarette smoking and lung cancer.</li>
 </ul>
 <p>Types of observational studies:</p>
-<p><img src="observational_studies.png" /><!-- --></p>
+<p><img src="observational_studies.png" width="656" /></p>
 <p>In a <strong>cohort study</strong>, a group of subjects is studied to
 determine whether various factors of interest are
 associated with an outcome.</p>
@@ -685,7 +694,7 @@ greater than for those who had not undergone surgery.</p>
 <p>A <strong>confounding variable</strong> is a variable that is associated with both the explanatory (or treatment) and response variables (or outcomes). Simultaneously with the explanatory variable, it may cause the response variable to change during the study. Because of the confounding variable’s association with both variables, we do not know if the response is due to the explanatory variable or due to the confounding variable.</p>
 <p></br></p>
 <div class="centered">
-<p><img src="confound_1.png" /><!-- --></p>
+<p><img src="confound_1.png" width="674" /></p>
 </div>
 <p><strong>Sun exposure</strong> is a confounding factor because it is associated with both the use of
 sunscreen and the development of skin cancer. People who are out in the sun all day are
@@ -708,7 +717,7 @@ skin cancer (outcome).</p>
 \end{array}
 \]</span></p>
 <p><strong>Are smokers less likely to die?</strong></p>
-<p><img src="lurking%20var%20-%20smokers.png" /><!-- --></p>
+<p><img src="lurking%20var%20-%20smokers.png" width="1053" /></p>
 </div>
 </div>
 <div id="experimental-design" class="section level2 hasAnchor" number="2.8">
