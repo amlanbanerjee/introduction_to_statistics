@@ -92,10 +92,12 @@ correlation-coefficient
 calculating-correlation-coefficient
 hypothesis-testing-for-correlation-coefficient
 estimation-from-one-variable
-regression-estimation-from-two-variables
-regression-line
-derivation-of-bivariate-regression-model
+regression-model-estimation-from-two-variables
+a-linear-probabilistic-model
+least-squares-estimation-of-beta_0-and-beta_1
 interpretation-of-regression-equation
 residuals
 least-squared-line
 coefficient-of-determination
+constructing-confidence-intervals-for-the-slope
+test-hypotheses-about-the-slope
