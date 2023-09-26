@@ -457,15 +457,7 @@ P(\text{neither email nor text}) &amp;= 1 - (0.24 + 0.49 + 0.13) = 0.14
 \color{black} {P(A_1\text{ and }A_2 \text{ and ... and }A_k)=P(A_1)\times P(A_2)\times...\times P(A_k)}
 }
 \]</span></p>
-<p><strong>Example 1:</strong>
-If a card is randomly drawn from a well-shuffled deck, what is the probability that it is the ace of hearts? [Note: Ace and Hearts are two independent events.]</p>
-<p><span class="math display">\[
-\begin{align}
-P(Ace \text{ and } Hearts) &amp;= P(Ace) \times P(Hearts) \\
-&amp;= (4/52) \times (13/52) = 1/52
-\end{align}
-\]</span></p>
-<p><strong>Example 2:</strong></p>
+<p><strong>Example 1:</strong></p>
 <p>About <span class="math inline">\(9\%\)</span> of people are left-handed. Suppose <span class="math inline">\(5\)</span> people are selected at random from the US population.<br />
 (a) What is the probability that all are right-handed?<br />
 (b) What is the probability that all are left-handed?<br />
@@ -485,6 +477,14 @@ P(Ace \text{ and } Hearts) &amp;= P(Ace) \times P(Hearts) \\
 {\color{black}{P(A \space and \space B) = P(A|B) \times P(B)}}
 \]</span></p>
 <hr />
+<p><strong>Example 2:</strong>
+If a card is randomly drawn from a well-shuffled deck, what is the probability that it is the ace of hearts? [Note: Ace and Hearts are two independent events.]</p>
+<p><span class="math display">\[
+\begin{align}
+P(Ace \text{ and } Hearts) &amp;= P(Hearts) \times P(Ace \text { | } Hearts) \\
+&amp;= (13/52) \times (1/13) = 1/52
+\end{align}
+\]</span></p>
 <p><strong>Example 3:</strong></p>
 <p>During the smallpox outbreak, <span class="math inline">\(96.08\%\)</span> of Boston residents were not inoculated, and <span class="math inline">\(85.88\%\)</span> of the residents who were not inoculated ended up surviving. What is the probability that a resident was not inoculated and lived?</p>
 <p>To answer the question, we want to determine <span class="math inline">\(\text {P(lived and not inoculated)}\)</span>,</p>
