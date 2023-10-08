@@ -23,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2023-09-26" />
+<meta name="date" content="2023-10-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1035,6 +1035,10 @@ P(X \ge 1) &amp;= 1 - P(X = 0)  \\
 Therefore, there is a <span class="math inline">\(57\%\)</span> probability that the combined sample will be tested positive for anemia.</p>
 <p></br></p>
 <p><strong>3.</strong> The MedAssist Pharmaceutical Company receives large shipments of aspirin tablets and uses this acceptance sampling plan: Randomly select and test <span class="math inline">\(40\)</span> tablets, then accept the whole batch if there is only one or none that doesn’t meet the required specifications. If one shipment of <span class="math inline">\(5000\)</span> aspirin tablets actually has a <span class="math inline">\(3\%\)</span> rate of deficits, what is the probability that this whole shipment will be accepted?</p>
+<details>
+<summary>
+Solution:
+</summary>
 <p>Given,</p>
 <p><span class="math display">\[
 \begin{align}
@@ -1051,17 +1055,27 @@ P(X \le 1) &amp;= P(X = 0) + P(X = 1)   \\
 \end{align}
 \]</span></p>
 <p>Therefore, there is a <span class="math inline">\(66.15\%\)</span> chance that the whole shipment will be accepted.</p>
+</details>
 <p></br></p>
 <p><strong>4.</strong> Results from a public hygiene poll found that <span class="math inline">\(70\%\)</span> of adults always wash their hands after using a public restroom.</p>
 <p><strong>(a)</strong> Find the probability that among <span class="math inline">\(8\)</span> randomly selected adults, exactly <span class="math inline">\(5\)</span> always wash their hands after using a public restroom.</p>
-<p><span class="math display">\[
+<details>
+<summary>
+Solution:
+</summary>
+<span class="math display">\[
 \begin{align}
 p &amp;= 0.7  \\
 n &amp;= 8 \\
 \displaystyle P(x = 5) &amp;= \binom{8}{5}(.7)^5(1-.7)^{8-5} = 0.2541
 \end{align}
-\]</span></p>
+\]</span>
+</details>
 <p><strong>(b)</strong> Find the probability that among <span class="math inline">\(8\)</span> randomly selected adults, at least <span class="math inline">\(7\)</span> always wash their hands after using a public restroom.</p>
+<details>
+<summary>
+Solution:
+</summary>
 <p><span class="math display">\[
 \begin{align}
 \displaystyle P(x \ge 7) &amp;= P(x = 7) + P(x = 8)  \\
@@ -1074,7 +1088,12 @@ n &amp;= 8 \\
 &amp;= 0.2553
 \end{align}
 \]</span></p>
+</details>
 <p><strong>(c)</strong> For groups of randomly selected adults, find the mean and standard deviation of the numbers in the groups who always wash their hands after using a public restroom.</p>
+<details>
+<summary>
+Solution:
+</summary>
 <p>The mean (or expected value) and the standard deviation of a binomial distributed random variable is given by:</p>
 <p><span class="math display">\[
 \begin{align}
@@ -1092,6 +1111,7 @@ E(X) &amp;= (8) \cdot (0.7) = 5.6 \text{ adults}  \\
 SD(X) &amp;= \sqrt{(8)(0.7)(1-0.7)} = 1.3 \text{ adults}
 \end{align}
 \]</span></p>
+</details>
 <p></br></p>
 <p><strong>5.</strong> In a litter of seven kittens, three are female. You pick two kittens at random without replacement.</p>
 <p><strong>(a)</strong> Create a probability model for the number of male kittens you get.</p>
@@ -1122,6 +1142,10 @@ E(X) = 0 \cdot \dfrac{6}{42} + 1 \cdot \dfrac{24}{42} + 2 \cdot \dfrac{12}{42} =
 \]</span></p>
 <p></br></p>
 <p><strong>6.</strong> Since the stock market began in 1872, stock prices have risen in about <span class="math inline">\(73\%\)</span> of the years. Assuming that market performance is independent from year to year, what is the probability that the market will fall during at least one of the next <span class="math inline">\(5\)</span> years?</p>
+<details>
+<summary>
+Solution:
+</summary>
 <p><span class="math display">\[P\text{(market will fall at least once in 5 yr.)} = 1 - P\text{(market will not fall at all in 5 yr.)}\]</span></p>
 <p><span class="math display">\[
 \begin{align}
@@ -1131,8 +1155,13 @@ P(X \ge 1 ) &amp;=  1 - P(X = 0)  \\
 \end{align}
 \]</span>
 Hence, there is <span class="math inline">\(79.27\%\)</span> probability that the market will fall during at least one of the next <span class="math inline">\(5\)</span> years</p>
+</details>
 <p></br></p>
 <p><strong>7.</strong> The Center for Disease Control and Prevention say that about <span class="math inline">\(30\%\)</span> of high school students smoke tobacco. Suppose you randomly select high school students to survey them on their attitudes toward scenes of smoking in the movies. What is the probability that there are no more than <span class="math inline">\(2\)</span> smokers among <span class="math inline">\(10\)</span> people you randomly choose?</p>
+<details>
+<summary>
+Solution:
+</summary>
 <p>Given,</p>
 <p><span class="math display">\[
 \begin{align}
@@ -1148,9 +1177,14 @@ P(X \le 2) &amp;= P(X = 0) + P(X = 1) + P(X = 2)  \\
 \end{align}
 \]</span>
 Therefore, there is <span class="math inline">\(38.38\%\)</span> probability that there are no more than <span class="math inline">\(2\)</span> smokers among <span class="math inline">\(10\)</span> people chosen.</p>
+</details>
 <p></br></p>
 <p><strong>8.</strong> Your statistics test has <span class="math inline">\(10\)</span> multiple choice questions each with <span class="math inline">\(5\)</span> answer choices.</p>
 <p><strong>(a)</strong> If you randomly select an answer from each question, what is the probability that you will pass the exam?</p>
+<details>
+<summary>
+Solution:
+</summary>
 <p><span class="math display">\[
 \begin{align}
 p &amp;= \dfrac{1}{5} = 0.2  \\
@@ -1159,11 +1193,17 @@ P(X \ge 6) &amp;= 1 - P(X \le 5) = 0.0064 = 0.64\%
 \end{align}
 \]</span>
 <span class="math inline">\(\therefore\)</span> there is less than <span class="math inline">\(1\%\)</span> chance of passing the test by random guessing.</p>
+</details>
 <p><strong>(b)</strong> What are the expected value and standard deviation of your test score?</p>
+<details>
+<summary>
+Solution:
+</summary>
 <p><span class="math display">\[
 E(X) = np = 10 \cdot 0.2 = 2  \\
 SD(X) = \sqrt{np(1-p)} = \sqrt{10 \cdot 0.2 \cdot 0.8 } =  1.265
 \]</span></p>
+</details>
 
 </div>
 </div>
