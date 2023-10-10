@@ -23,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2023-10-08" />
+<meta name="date" content="2023-10-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1057,58 +1057,49 @@ P(X \le 1) &amp;= P(X = 0) + P(X = 1)   \\
 <p>Therefore, there is a <span class="math inline">\(66.15\%\)</span> chance that the whole shipment will be accepted.</p>
 </details>
 <p></br></p>
-<p><strong>4.</strong> Results from a public hygiene poll found that <span class="math inline">\(70\%\)</span> of adults always wash their hands after using a public restroom.</p>
-<p><strong>(a)</strong> Find the probability that among <span class="math inline">\(8\)</span> randomly selected adults, exactly <span class="math inline">\(5\)</span> always wash their hands after using a public restroom.</p>
+<p><strong>4.</strong> In a poll conducted by the General Social Survey, <span class="math inline">\(75\%\)</span> of respondents said that their jobs were sometimes or always stressful. Eleven workers are chosen at random. Round the answers to at least four decimal places.</p>
+<p><strong>(a)</strong> What is the probability that exactly <span class="math inline">\(10\)</span> of them find their job stressful<span class="math inline">\(?\)</span></p>
 <details>
 <summary>
 Solution:
 </summary>
 <span class="math display">\[
 \begin{align}
-p &amp;= 0.7  \\
-n &amp;= 8 \\
-\displaystyle P(x = 5) &amp;= \binom{8}{5}(.7)^5(1-.7)^{8-5} = 0.2541
+p &amp;= 0.75  \\
+n &amp;= 11 \\
+\displaystyle P(x = 10) &amp;= \binom{11}{10}(.75)^{10}(1-.75)^{11-10} = 0.1549
 \end{align}
 \]</span>
 </details>
-<p><strong>(b)</strong> Find the probability that among <span class="math inline">\(8\)</span> randomly selected adults, at least <span class="math inline">\(7\)</span> always wash their hands after using a public restroom.</p>
+<p><strong>(b)</strong> What is the probability that more than <span class="math inline">\(8\)</span> find their jobs stressful<span class="math inline">\(?\)</span></p>
 <details>
 <summary>
 Solution:
 </summary>
 <p><span class="math display">\[
 \begin{align}
-\displaystyle P(x \ge 7) &amp;= P(x = 7) + P(x = 8)  \\
-&amp;= \binom{8}{7}(.7)^7(1-.7)^{8-7} + \binom{8}{8}(.7)^8(1-.7)^{8-8} \\
-&amp;= 0.2553  \\
+\displaystyle P(x \gt 8) &amp;= P(x = 9) + P(x = 10)  \\
+&amp;= \binom{11}{9}(.75)^9(1-.75)^{11-9} + \binom{11}{10}(.75)^{10}(1-.75)^{11-10} \\
+&amp;= 0.4552  \\
 \\
 &amp;\text{Alternatively,}  \\
-\displaystyle P(x \ge 7) &amp;= 1 - P(x \le 6) \\
-&amp;= 1 - 0.7447 \\
-&amp;= 0.2553
+\displaystyle P(x \gt 8) &amp;= 1 - P(x \le 8) \\
+&amp;= 1 - 0.5448 \\
+&amp;= 0.4552
 \end{align}
 \]</span></p>
 </details>
-<p><strong>(c)</strong> For groups of randomly selected adults, find the mean and standard deviation of the numbers in the groups who always wash their hands after using a public restroom.</p>
+<p><strong>(c)</strong> What is the probability that fewer than <span class="math inline">\(4\)</span> find their jobs stressful<span class="math inline">\(?\)</span></p>
 <details>
 <summary>
 Solution:
 </summary>
-<p>The mean (or expected value) and the standard deviation of a binomial distributed random variable is given by:</p>
 <p><span class="math display">\[
 \begin{align}
-\text{for, n trials} \\
-\\
-E(X) &amp;= np  \\
-SD(X) &amp;= \sqrt{np(1-p)}
-\end{align}
-\]</span></p>
-<p><span class="math display">\[
-\begin{align}
-\text{In this problem,} \\
-\\
-E(X) &amp;= (8) \cdot (0.7) = 5.6 \text{ adults}  \\
-SD(X) &amp;= \sqrt{(8)(0.7)(1-0.7)} = 1.3 \text{ adults}
+\displaystyle P(x \lt 4) &amp;= P(x = 0) + P(x = 1) + P(x = 2) + P(x = 3)  \\
+&amp;= \binom{11}{0}(.75)^0(1-.75)^{11-0} + \binom{11}{1}(.75)^{1}(1-.75)^{11-1} + \\
+    &amp;  \binom{11}{2}(.75)^2(1-.75)^{11-2} + \binom{11}{3}(.75)^3(1-.75)^{11-3} \\
+&amp;= 0.0012  \\
 \end{align}
 \]</span></p>
 </details>
@@ -1146,11 +1137,13 @@ E(X) = 0 \cdot \dfrac{6}{42} + 1 \cdot \dfrac{24}{42} + 2 \cdot \dfrac{12}{42} =
 <summary>
 Solution:
 </summary>
-<p><span class="math display">\[P\text{(market will fall at least once in 5 yr.)} = 1 - P\text{(market will not fall at all in 5 yr.)}\]</span></p>
+<p>In any given year, the probability that the market will fall <span class="math inline">\(= 1 - 0.73 = 0.27\)</span></p>
+<p><span class="math display">\[P\text{(market will fall at least once in 5 yr.)} \\
+= 1 - P\text{(market will not fall at all in 5 yr.)}\]</span></p>
 <p><span class="math display">\[
 \begin{align}
 P(X \ge 1 ) &amp;=  1 - P(X = 0)  \\
-&amp;= 1 - \binom{5}{0}(1-0.73)^0(0.73)^5  \\
+&amp;= 1 - \binom{5}{0}(0.27)^0(1- 0.27)^5  \\
 &amp;= 0.7927  
 \end{align}
 \]</span>
