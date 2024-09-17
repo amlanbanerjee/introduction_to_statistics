@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Introduction | Introduction to Statistics</title>
   <meta name="description" content="Chapter 2 Introduction | Introduction to Statistics" />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Introduction | Introduction to Statistics" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Amlan Banerjee, Ph.D." />
 
 
-<meta name="date" content="2023-10-26" />
+<meta name="date" content="2024-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,7 +53,7 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.10.2/plotly.js"></script>
+<script src="libs/plotly-binding-4.10.3/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
 <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
@@ -111,6 +111,7 @@
 <ul>
 <li class="chapter" data-level="2.8.1" data-path="introduction.html"><a href="introduction.html#randomized-blocked-design"><i class="fa fa-check"></i><b>2.8.1</b> Randomized Blocked Design</a></li>
 <li class="chapter" data-level="2.8.2" data-path="introduction.html"><a href="introduction.html#completely-randomized-experimental-design"><i class="fa fa-check"></i><b>2.8.2</b> Completely Randomized Experimental Design</a></li>
+<li class="chapter" data-level="2.8.3" data-path="introduction.html"><a href="introduction.html#matched-pairs-design"><i class="fa fa-check"></i><b>2.8.3</b> Matched-Pairs Design</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="exploring-data-with-tables-and-graphs.html"><a href="exploring-data-with-tables-and-graphs.html"><i class="fa fa-check"></i><b>3</b> Exploring Data with Tables and Graphs</a>
@@ -643,7 +644,7 @@ The <span class="math inline">\(y\)</span> variable is called the <strong><em>re
 </div>
 <div id="observational-studies" class="section level2 hasAnchor" number="2.7">
 <h2><span class="header-section-number">2.7</span> Observational Studies<a href="introduction.html#observational-studies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Generally, data in observational studies are collected on specific characteristics only by passively monitoring study participants, but the observers don’t attempt to modify the individuals being studied. These studies are inexpensive and good for discovering relationships related to rare outcomes. They are generally only sufficient to show associations.</p>
+<p>Generally, data in observational studies are collected on specific characteristics only by passively monitoring study participants, but the observers don’t attempt to modify the individuals being studied, or, in other words, don’t attempt to influence the value of either the response or explanatory variables. That is, in an observational study, the researcher simply observes the behavior of the individuals in the study and records the values of the explanatiry and response variables. These studies are inexpensive and good for discovering relationships related to rare outcomes. They are generally only sufficient to show associations.</p>
 <p><strong>Key points:</strong></p>
 <ul>
 <li>Observational studies seldom support causal inference, <span class="math inline">\(X \rightarrow Y\)</span>.</li>
@@ -697,7 +698,7 @@ greater than for those who had not undergone surgery.</p>
 <p>How would you interpret the result?</p>
 <div id="confounding-variable" class="section level4 unnumbered hasAnchor">
 <h4>Confounding Variable<a href="introduction.html#confounding-variable" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>A <strong>confounding variable</strong> is a variable that is associated with both the explanatory (or treatment) and response variables (or outcomes). Simultaneously with the explanatory variable, it may cause the response variable to change during the study. Because of the confounding variable’s association with both variables, we do not know if the response is due to the explanatory variable or due to the confounding variable.</p>
+<p>A <strong>confounding variable</strong> is an explanatory variable that is associated with both the explanatory (or treatment) and response variables (or outcomes). Simultaneously with the explanatory variable, it may cause the response variable to change during the study. Because of the confounding variable’s association with both variables, we do not know if the response is due to the explanatory variable or due to the confounding variable.</p>
 <p></br></p>
 <div class="centered">
 <p><img src="confound_1.png" width="674" /></p>
@@ -709,7 +710,7 @@ skin cancer (outcome).</p>
 </div>
 <div id="lurking-variable" class="section level4 unnumbered hasAnchor">
 <h4>Lurking Variable<a href="introduction.html#lurking-variable" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><strong>Lurking variables</strong> are variables that are not considered in the analysis, but may affect the nature of the relationship between the explanatory variable and the outcome.</p>
+<p><strong>Lurking variables</strong> are variables that are not considered in the analysis, but may affect the nature of the relationship between the explanatory variable and the outcome. Lurking variables are related to both the explanatory and response variables, and this relation is what creates the apparent association between the explanatory variable and response variable in the study. For example, lifestyle (healthy or not) is associated with the likelihood of getting an influenza shot as well as the likelihood of contracting pneumonia or influenza.</p>
 <div class="centered">
 
 <p>Table: 20-year survival status of women by smoking status</p>
@@ -724,6 +725,8 @@ skin cancer (outcome).</p>
 \]</span></p>
 <p><strong>Are smokers less likely to die?</strong></p>
 <p><img src="lurking%20var%20-%20smokers.png" width="1053" /></p>
+<p>The big difference between lurking variables and confounding variables is that lurking variables are not considered in the study (for example, we did not consider lifestyle in the pneumonia study), whereas confounding variables are measured in the study (for example, we measured morning versus afternoon classes).</p>
+<p>The bottom line is that both lurking variables and confounding variables can confound the results of a study, so a researcher should be mindful of their potential existence.</p>
 </div>
 </div>
 <div id="experimental-design" class="section level2 hasAnchor" number="2.8">
@@ -874,6 +877,11 @@ treatments.</li>
 \end{array}
 }
 \]</span></p>
+</div>
+<div id="matched-pairs-design" class="section level3 hasAnchor" number="2.8.3">
+<h3><span class="header-section-number">2.8.3</span> Matched-Pairs Design<a href="introduction.html#matched-pairs-design" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A <strong>Matched-Pairs design</strong> is an experimental design in which the experimental units are paired up. The pairs are selected so that they are related in some way (that is, the same person before and after a treatment, twins, spouses, same geographical location, and so on). There are only two levels of treatment in a Matched-Pairs design.</p>
+<p>In Matched-Pairs design, one matched individual will receive one treatment and the other receives a different treatment. The matched pair is randomly assigned to the treatment using a coin flip or a random-number generator. We then look at the difference in the results of each matched pair. One common type of Matched-Pairs design is to measure a response variable on an experimental unit before and after a treatment is applied. In this case, the individual is matched against themself. These experiments are sometimes called before-after or pretest-posttest experiments.</p>
 <p><strong>Components of a Well-Designed Study</strong></p>
 <ul>
 <li>There should be a control group and at least one treatment group.</li>

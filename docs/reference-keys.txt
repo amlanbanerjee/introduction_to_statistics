@@ -16,6 +16,7 @@ observational-studies
 experimental-design
 randomized-blocked-design
 completely-randomized-experimental-design
+matched-pairs-design
 exploring-data-with-tables-and-graphs
 frequency-distribution
 bar-graphs
